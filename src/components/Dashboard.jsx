@@ -6,7 +6,7 @@ function Dashboard() {
     <section className="dashboard">
 
       <div className="dashboard-left">
-        <img src={dashboardImg} alt="dashboard" />
+        <img src={DashboardImg} alt="dashboard" />
       </div>
 
       <div className="dashboard-right">
