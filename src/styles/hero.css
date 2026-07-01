@@ -34,6 +34,11 @@
   gap:20px;
 }
 
+button:hover{
+ transform: scale(1.05);
+ transition:0.3s;
+}
+
 .primary-btn{
   background:#4f46e5;
   color:white;

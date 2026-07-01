@@ -7,7 +7,7 @@ function Features() {
   return (
     <section className="features">
 
-       <h4> Key Features</h4>
+       <p className="feature-tag">Key Features</p>
 
       <h2>Everything You Need to Manage Internships</h2>
       <p className="subtitle">
