@@ -1,0 +1,44 @@
+.cta{
+  background:#2f73d9;
+  padding:100px 80px;
+  text-align:center;
+  color:white;
+}
+
+.cta h2{
+  font-size:52px;
+  margin-bottom:20px;
+  font-weight:700;
+}
+
+.cta-subtitle{
+  font-size:18px;
+  color:#dbeafe;
+  margin-bottom:45px;
+}
+
+.cta-buttons{
+  display:flex;
+  justify-content:center;
+  gap:25px;
+}
+
+.trial{
+  background:white;
+  color:#111827;
+  border:none;
+  padding:18px 40px;
+  border-radius:10px;
+  font-size:17px;
+  cursor:pointer;
+}
+
+.sales{
+  background:transparent;
+  border:1px solid rgba(255,255,255,0.5);
+  color:white;
+  padding:18px 40px;
+  border-radius:10px;
+  font-size:17px;
+  cursor:pointer;
+}

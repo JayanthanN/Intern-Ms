@@ -1,0 +1,49 @@
+.dashboard{
+  padding:120px 80px;
+  display:flex;
+  gap:90px;
+  align-items:center;
+  background:white;
+}
+
+.dashboard-left,
+.dashboard-right{
+  flex:1;
+}
+
+.dashboard-left img{
+  width:100%;
+  border-radius:20px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+.dashboard-tag{
+  color:#6366f1;
+  font-size:14px;
+  font-weight:600;
+  letter-spacing:2px;
+  margin-bottom:20px;
+}
+
+.dashboard-right h2{
+  font-size:52px;
+  margin-bottom:25px;
+  line-height:1.2;
+}
+
+.dashboard-right p{
+  color:#666;
+  line-height:1.8;
+  margin-bottom:35px;
+  font-size:18px;
+}
+
+.dashboard-right button{
+  background:#4f46e5;
+  border:none;
+  color:white;
+  padding:16px 34px;
+  border-radius:10px;
+  font-size:16px;
+  box-shadow:0 4px 12px rgba(79,70,229,0.25);
+}

@@ -1,0 +1,46 @@
+.footer{
+  background:#0b1f73;
+  color:white;
+  padding:80px 60px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:70px;
+}
+
+.footer-box h3{
+  font-size:38px;
+  margin-bottom:20px;
+}
+
+.footer-box h4{
+  font-size:14px;
+  letter-spacing:2px;
+  margin-bottom:25px;
+}
+
+.footer-box p{
+  color:#cbd5e1;
+  margin-bottom:18px;
+  line-height:1.7;
+  cursor:pointer;
+}
+
+.socials{
+  display:flex;
+  gap:15px;
+  margin-top:25px;
+}
+
+.socials span{
+  width:40px;
+  height:40px;
+  background:#162a85;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:6px;
+  cursor:pointer;
+}
