@@ -1,0 +1,260 @@
+
+@media (max-width: 1200px){
+
+  .hero{
+    padding: 60px 40px;
+    gap: 40px;
+  }
+
+  .hero-left h1{
+    font-size: 58px;
+  }
+
+  .hero-left p{
+    font-size: 18px;
+  }
+
+  .features-top h2,
+  .audience-left h2{
+    font-size: 46px;
+  }
+
+  .audience-image{
+    width: 430px;
+    height: 520px;
+  }
+
+  .footer-top{
+    gap: 50px;
+  }
+}
+
+
+
+@media (max-width: 992px){
+
+  .navbar{
+    padding: 18px 30px;
+  }
+
+  .logo{
+    font-size: 26px;
+  }
+
+  
+  .hero{
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 30px;
+    min-height: auto;
+  }
+
+  .hero::after{
+    display: none;
+  }
+
+  .hero-left,
+  .hero-right{
+    width: 100%;
+  }
+
+  .hero-left h1{
+    font-size: 50px;
+  }
+
+  .hero-left p{
+    margin: auto;
+    margin-bottom: 30px;
+  }
+
+  .hero-buttons{
+    justify-content: center;
+  }
+
+  .floating-card{
+    left: 10px;
+    bottom: 10px;
+  }
+
+  
+  .stats{
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .stat-box{
+    border-right: none;
+    border-bottom: 1px solid #eee;
+  }
+
+  .stat-box:last-child{
+    border-bottom: none;
+  }
+
+
+  .features{
+    padding: 70px 30px;
+  }
+
+  .features-top{
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .features-top p{
+    width: 100%;
+  }
+
+  .features-grid{
+    grid-template-columns: 1fr;
+  }
+
+ 
+  .audience{
+    flex-direction: column;
+    padding: 70px 30px;
+  }
+
+  .audience-left{
+    text-align: center;
+  }
+
+  .point{
+    text-align: left;
+  }
+
+  .audience-buttons{
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .audience-image{
+    width: 420px;
+    height: auto;
+  }
+
+
+  .footer-top{
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-bottom{
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+
+
+
+@media (max-width: 768px){
+
+  .navbar{
+    padding: 15px 20px;
+  }
+
+  .nav-buttons{
+    gap: 10px;
+  }
+
+  .register-btn{
+    padding: 12px 18px;
+    font-size: 14px;
+  }
+
+  .login-btn{
+    font-size: 14px;
+  }
+
+  .hero{
+    padding: 50px 20px;
+  }
+
+  .hero-left h1{
+    font-size: 38px;
+  }
+
+  .hero-left p{
+    font-size: 15px;
+  }
+
+  .hero-buttons{
+    flex-direction: column;
+  }
+
+  .start-btn,
+  .demo-btn{
+    width: 100%;
+  }
+
+  .floating-card{
+    position: relative;
+    width: 100%;
+    left: 0;
+    margin-top: 20px;
+  }
+
+  .features-top h2,
+  .audience-left h2{
+    font-size: 34px;
+  }
+
+  .feature-card{
+    padding: 24px;
+    min-height: auto;
+  }
+
+  .audience-buttons{
+    flex-direction: column;
+  }
+
+  .audience-buttons button{
+    width: 100%;
+    min-width: auto;
+  }
+
+  .audience-image{
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
+
+  .footer{
+    padding: 50px 20px 25px;
+  }
+
+  .footer-brand p{
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 480px){
+
+  .logo{
+    font-size: 22px;
+  }
+
+  .hero-left h1{
+    font-size: 30px;
+  }
+
+  .hero-badge{
+    font-size: 13px;
+    padding: 10px 14px;
+  }
+
+  .stat-box h2{
+    font-size: 34px;
+  }
+
+  .features-top h2,
+  .audience-left h2{
+    font-size: 28px;
+  }
+
+  .footer-brand h2{
+    font-size: 30px;
+  }
+}
