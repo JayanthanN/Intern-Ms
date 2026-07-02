@@ -34,8 +34,15 @@
   padding: 12px 22px;
   border-radius: 28px;
   margin-bottom: 30px;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
+}
+
+.hero-badge img{
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
+  margin-right: 8px;
 }
 
 .hero-left h1{
@@ -79,18 +86,32 @@
 
 .start-btn,
 .demo-btn{
-  padding: 18px 34px;
+  padding: 25px 48px;
   border: none;
   cursor: pointer;
   border-radius: 14px;
-  font-size: 17px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   transition: 0.3s ease;
+
 }
 
 .start-btn{
   background: #2563eb;
   color: white;
   box-shadow: 0 8px 18px rgba(37, 99, 235, 0.2);
+}
+
+.start-btn img{
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  margin-left: 8px;
+ 
+  
 }
 
 .demo-btn{
@@ -158,14 +179,3 @@
   flex-shrink: 0;
 }
 
-@keyframes float{
-  0%{
-    transform: translateY(0px);
-  }
-  50%{
-    transform: translateY(-8px);
-  }
-  100%{
-    transform: translateY(0px);
-  }
-}

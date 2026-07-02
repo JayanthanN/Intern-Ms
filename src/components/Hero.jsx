@@ -1,6 +1,8 @@
 import "../styles/hero.css";
 import heroImg from "../assets/InternshipDashboard.png";
 import successIcon from "../assets/Background.png";
+import Icon from "../assets/Icon (1).png";
+import NextGenIcon from "../assets/Icon.png";
 
 function Hero() {
   return (
@@ -9,7 +11,8 @@ function Hero() {
       <div className="hero-left">
 
        <div className="hero-badge">
-          ✦ Next-Generation Placement OS
+          <img src={NextGenIcon} alt="Next-Generation Icon" />
+           Next-Generation Placement OS
        </div>
         <h1>
           Seamless <br />
@@ -24,7 +27,7 @@ function Hero() {
         </p>
 
         <div className="hero-buttons">
-          <button className="start-btn">Get Started →</button>
+          <button className="start-btn">Get Started<img src={Icon} alt="Icon" /></button>
           <button className="demo-btn">Book a Demo</button>
         </div>
 

@@ -2,6 +2,7 @@ import "../styles/features.css";
 import icon1 from "../assets/Overlay (1).png";
 import icon2 from "../assets/Overlay.png";
 import icon3 from "../assets/Overlay (2).png";
+import featureImg from "../assets/Icon (2).png";
 
 function Features() {
   return (
@@ -16,7 +17,7 @@ function Features() {
           </p>
         </div>
 
-        <a href="/">Explore all features →</a>
+        <a href="/">Explore all features <img src={featureImg} alt="Feature Icon" /> </a>
       </div>
 
       <div className="features-grid">
