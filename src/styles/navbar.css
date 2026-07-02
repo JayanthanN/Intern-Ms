@@ -1,47 +1,59 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
 .navbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:25px 80px;
-    background:white;
-    border-bottom:1px solid #eee;
-    position: sticky;
-    top:0;
-    z-index:1000;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:18px 50px;         
+  background:#ffffff;
+  border-bottom:1px solid #ececec;
 }
 
 .logo{
-    font-size:22px;
-    font-weight:700;
-    color:#4f46e5;
-}
-
-.nav-links{
-    display:flex;
-    list-style:none;
-    gap:40px;
-    font-size:15px;
-    color:#444;
-    font-weight:600;
-
+  font-size:32px;        
+  font-weight:800;
+  color:#0b63ce;
+  cursor:pointer;
+  letter-spacing:-0.5px;
 }
 
 .nav-buttons{
-    display:flex;
-    align-items:center;
-    gap:20px;
+  display:flex;
+  align-items:center;
+  gap:22px;                  
 }
 
-.login{
-    color:#4f46e5;
-    cursor:pointer;
+.login-btn{
+  background:transparent;
+  border:none;
+  font-size:17px;
+  font-weight:600;
+  cursor:pointer;
+  padding:10px 12px;
+  transition:0.3s ease;
 }
 
-.nav-buttons button{
-    background:#4f46e5;
-    border:none;
-    padding:12px 20px;
-    color:white;
-    border-radius:8px;
-    cursor:pointer;
+.register-btn{
+  background:#000;
+  color:white;
+  border:none;
+  padding:16px 34px;        
+  border-radius:12px;
+  font-size:17px;
+  font-weight:500;
+  cursor:pointer;
+  transition:0.3s ease;
+}
+
+.login-btn:hover{
+  color:#0b63ce;
+}
+
+.register-btn:hover{
+  transform:translateY(-2px);
 }

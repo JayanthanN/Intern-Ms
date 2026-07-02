@@ -1,50 +1,50 @@
 import "../styles/footer.css";
 
+import icon1 from "../assets/Container (3).png";
+import icon2 from "../assets/Container (4).png";
+
 function Footer() {
   return (
     <footer className="footer">
 
-      <div className="footer-grid">
+      <div className="footer-top">
 
-        <div className="footer-box">
-          <h3>InternMS</h3>
+        <div className="footer-brand">
+          <h2>InternMS</h2>
 
           <p>
-            A complete solution to manage internships seamlessly from registration to placement.
+            The ultimate platform for managing internships,
+            connecting talent, and building the future of work.
           </p>
 
-          <div className="socials">
-            <span>f</span>
-            <span>t</span>
-            <span>in</span>
+          <div className="social-icons">
+             <img src={icon2} alt="icon2" className="social-icon-img" />
+             <img src={icon1} alt="icon1" className="social-icon-img" />
+           
           </div>
         </div>
 
-
-        <div className="footer-box">
-          <h4>QUICK LINKS</h4>
-          <p>Home</p>
-          <p>About Us</p>
-          <p>Features</p>
-          <p>Internships</p>
+        <div className="footer-links">
+          <h4>Product</h4>
+          <p>For Students</p>
+          <p>For Employers</p>
+          <p>For Universities</p>
+          <p>Pricing</p>
         </div>
 
-
-        <div className="footer-box">
-          <h4>SUPPORT</h4>
-          <p>FAQ</p>
-          <p>Help Desk</p>
+        <div className="footer-links">
+          <h4>Company</h4>
           <p>Privacy Policy</p>
           <p>Terms of Service</p>
+          <p>Resources</p>
+          <p>Contact Us</p>
         </div>
 
+      </div>
 
-        <div className="footer-box">
-          <h4>CONTACT US</h4>
-          <p>hello@internhub.com</p>
-          <p>+91 9876543210</p>
-        </div>
-
+      <div className="footer-bottom">
+        <p>© 2026 InternMS. All rights reserved.</p>
+        <p>Made with ❤️ for future workforce</p>
       </div>
 
     </footer>

@@ -5,23 +5,18 @@ function Stats() {
     <section className="stats">
 
       <div className="stat-box">
-        <h2>5000+</h2>
-        <p>INTERNS</p>
+        <h2>500+</h2>
+        <p>UNIVERSITIES</p>
       </div>
 
       <div className="stat-box">
-        <h2>250+</h2>
-        <p>COMPANIES</p>
+        <h2>10K+</h2>
+        <p>GLOBAL COMPANIES</p>
       </div>
 
       <div className="stat-box">
-        <h2>300+</h2>
-        <p>MENTORS</p>
-      </div>
-
-      <div className="stat-box">
-        <h2>95%</h2>
-        <p>SUCCESS RATE</p>
+        <h2>1M+</h2>
+        <p>PLACEMENTS</p>
       </div>
 
     </section>

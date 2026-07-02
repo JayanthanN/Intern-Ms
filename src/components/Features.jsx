@@ -1,55 +1,54 @@
 import "../styles/features.css";
-import svgImg from "../assets/SVG.png";
-import bgImg from "../assets/Background.png";
-import vectorImg from "../assets/Vector (1).png";
+import icon1 from "../assets/Overlay (1).png";
+import icon2 from "../assets/Overlay.png";
+import icon3 from "../assets/Overlay (2).png";
 
 function Features() {
   return (
     <section className="features">
 
-       <p className="feature-tag">Key Features</p>
+      <div className="features-top">
+        <div>
+          <h2>Engineered for Efficiency</h2>
+          <p>
+            Complex placement workflows simplified into an intuitive,
+            high-speed ecosystem designed for scale.
+          </p>
+        </div>
 
-      <h2>Everything You Need to Manage Internships</h2>
-      <p className="subtitle">
-        Powerful tools designed for educational institutions and companies
-      </p>
+        <a href="/">Explore all features →</a>
+      </div>
 
-      <div className="feature-grid">
+      <div className="features-grid">
 
         <div className="feature-card">
-        <div className="icon-box"> 
-         <img src={svgImg} alt="SVG" className="feature-icon" />
-        </div>
-          <h3>Intern Management</h3>
-          <ul>
-            <li>Register and manage interns easily</li>
-            <li>Track attendance and performance</li>
-            <li>Generate reports and analytics</li>
-          </ul>
+          <div className="icon-box">
+            <img src={icon1} alt="icon" />
+          </div>
+          <h3>Automated Matching</h3>
+          <p>
+            Our AI-driven algorithm pairs candidates with their ideal roles based on skills, culture fit, and academic requirements.
+          </p>
         </div>
 
         <div className="feature-card">
           <div className="icon-box">
-            <img src={bgImg} alt="Background" className="feature-icon" />
+            <img src={icon2} alt="icon" />
           </div>
-          <h3>Mentor Management</h3>
-          <ul>
-            <li>Assign mentors to interns</li>
-            <li>Monitor the internship guidance process</li>
-            <li>Receive mentor feedback and reports</li>
-          </ul>
+          <h3>Real-time Tracking</h3>
+          <p>
+            Monitor progress from application to final evaluation with granular dashboards for all stakeholders.
+          </p>
         </div>
 
         <div className="feature-card">
           <div className="icon-box">
-            <img src={vectorImg} alt="Vector" className="feature-icon" />
+            <img src={icon3} alt="icon" />
           </div>
-          <h3>Company Portal</h3>
-          <ul>
-            <li>Post internship opportunities</li>
-            <li>Evaluate and select candidates </li>
-            <li>Communicate with interns and mentors</li>
-          </ul>
+          <h3>Secure Documents</h3>
+          <p>
+            Enterprise-grade encryption for contracts, NDAs, and compliance certifications with automated reminders.
+          </p>
         </div>
 
       </div>
