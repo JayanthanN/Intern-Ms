@@ -6,10 +6,11 @@ function Audience() {
     <section className="audience">
 
       <div className="audience-left">
-        <h2>
+        <h1>
           For Students: <br />
-          <span>Your Career Launchpad.</span>
-        </h2>
+        </h1>
+          <h2>Your Career Launchpad.</h2>
+        
 
         <div className="audience-points">
 

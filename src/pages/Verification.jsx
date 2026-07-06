@@ -1,0 +1,122 @@
+import { useState } from "react";
+import shieldicon from "../assets/shield-icon.png";
+import leftarrow from "../assets/left-arrow.png";
+import rightarrow from "../assets/right-arrow.png";
+import verifymail from "../assets/verify-mail.png";
+import verifymobile from "../assets/verify-mobile.png";
+import dividerline from"../assets/Divider.png";
+import"./Verification.css";
+
+
+function Verification(){
+
+    const[selected,setSelected]=useState("");
+    return(
+
+        <div className="verification-container">
+            
+            <div className="left-container">
+            <h2 className= "verify-heading">Secure Your Account</h2>
+
+            <p className="verify-text">
+                Protecting your professional profile and
+                application history is our top priority. Choose a
+                method to verify your identity.
+            </p>
+
+          <div className="verify-stats">
+                <div className="shield-box">
+                   <img src={shieldicon} className="shield-icon"/>
+                </div>
+
+                <div className="verify-statbox">
+                  
+                   <h4>256-bit Encryption</h4>
+                   <p>Bank-grade security standards</p>
+                </div>
+
+           </div> 
+
+               <p className="verify-footer">
+                &copy; 2024 InternMS
+               </p>
+             </div>  
+
+            <div className="right-container">
+                
+                
+               <div className="verify-mail">
+                   <h1 className="Two-step">Two-Step Verification</h1>
+
+                   <p className="Two-step-text">Choose how you'd like to verify your identity.</p>
+              </div>
+
+               <label className= "Mail-card ">
+                      
+
+                <div className="icon-section">
+
+                     <img src={verifymail} className="verify-mail-icon"/>
+                </div>    
+
+                <div className="info">
+                     <h4>Email Verification</h4>
+
+                      <p>j**n@g***l.com</p>
+                </div>      
+
+
+                <input  type="radio" 
+                        name="verification"
+                        className="verification" />
+                       
+
+               </label>
+
+               <label className="Mobile-card">
+
+                <div className="icon-section2">
+
+                     <img src={verifymobile} className="verify-mobile-icon"/>
+                </div>
+
+                 <div className="info">
+                     <h4>Mobile Verification</h4>
+
+                     <p>+91 9**** *5678</p>
+                </div>
+                 
+                  <input type="radio" 
+                         name="verification"
+                        className="verification"/>
+                
+               </label>
+
+               <button className="send-btn" type="submit">Send Verification Code
+
+                <img src={rightarrow} className="right-arrow"/>
+
+               </button>
+
+                <a href="/" className="back-login"><img src={leftarrow} className="left-arrow" />Back to login </a>
+
+                <img src={dividerline} className="divider-line"/>
+
+                 <p className="help">Need help?
+
+                    <a href="/">Contact Support</a>
+                 </p>
+
+             </div>
+             
+
+        </div>
+
+
+         
+
+
+    );
+}
+
+export default Verification;

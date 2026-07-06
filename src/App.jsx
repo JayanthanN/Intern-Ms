@@ -1,25 +1,23 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Stats from "./components/Stats";
-import Features from "./components/Features";
-import Audience from "./components/Audience";
-import Footer from "./components/Footer";
+import { BrowserRouter,Routes,Route } from "react-router-dom";
+import Landing from "./Landing";
+import Login from "./pages/Login";
+import Verification from "./pages/Verification";
 import "./App.css"; 
-
-
 
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <Hero />
-      <Stats />
-      <Features/>
-      <Audience />
-      <Footer /> 
+  
+     <BrowserRouter>
+     <Routes>
+      <Route path="/" element={<Landing/>}/>
+      <Route path="/login" element={<Login/>}/>
+      <Route path="/verification" element={<Verification/>}/>
       
-    </>
+     </Routes>
+     </BrowserRouter>
+      
+   
   );
 }
 

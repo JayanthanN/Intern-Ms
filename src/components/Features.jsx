@@ -17,7 +17,7 @@ function Features() {
           </p>
         </div>
 
-        <a href="/">Explore all features <img src={featureImg} alt="Feature Icon" /> </a>
+        <a href="/">Explore all features <img src={featureImg} className="Feature-Icon" /> </a>
       </div>
 
       <div className="features-grid">

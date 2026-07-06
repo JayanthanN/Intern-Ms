@@ -13,17 +13,19 @@
   margin-top: 25px;           
 }
 
-.audience-left h2{
+.audience-left h1{
   font-size: 58px;
   font-weight: 400;
-  margin-bottom: 55px;
+  margin-bottom: 10px;
   color: #111827;
   line-height: 1.15;
   letter-spacing: -0.5px;
 }
 
-.audience-left h2 span{
+.audience-left h2{
+  font-size: 48px;
   color: #2563eb;
+  margin-bottom: 15px;
 }
 
 

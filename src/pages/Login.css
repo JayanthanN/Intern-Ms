@@ -1,0 +1,258 @@
+.login-page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.login-form{
+    width: 100%;
+    max-width: 420px;
+    margin-bottom: 80px;
+  
+}
+
+.login-container{
+    width:50%;
+    min-height:100vh;
+    display:flex;
+    background-color: white;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+   
+    
+    
+}
+
+.login-heading{
+    font-family: Manrope;
+    font-weight: 600;
+    font-size: 32px;
+    margin-left: 10px;
+    
+
+}
+
+.login-text{
+    font-weight: 400;
+    font-size: 16px;
+    color: #464555;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    margin-left: 10px;
+  
+
+}
+
+.login-mail{
+    margin-left: 10px;
+}
+
+.email-box{
+    position: relative;
+    width: 400px;
+    margin-left: 10px;
+}
+
+.mail-icon{
+    width: 20px;
+    height: 16px;
+    position: absolute;
+    left: 12px;
+    top: 12px;
+}
+
+.mail-input{
+    width: 80%;
+    padding: 12px 40px;
+    padding-left: 45px;
+    border: 1px solid gray;
+    border-radius: 8px;
+
+
+}
+
+.pass-input{
+    width: 80%;
+    padding: 12px 40px;
+    padding-left: 45px;
+    border: 1px solid gray;
+    border-radius: 8px;
+}
+
+.login-pass{
+    margin-left: 10px;
+    margin-bottom: -6px;
+    
+}
+
+.password-box{
+    position: relative;
+    width: 400px;
+    margin-left: 10px;
+}
+
+.password-top{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 420px;
+   margin-top: 20px;
+   margin-bottom: 8px;
+}
+
+.forgot-pass{
+    font-size:12px ;
+    font-weight: 500;
+    text-decoration: none;
+    color:#2A49E2;
+    margin-left: auto;
+    margin-right: 80px;
+    
+    
+
+}
+
+.lock-icon{
+    width: 16px;
+    height: 21px;
+    position: absolute;
+    left: 12px;
+    top: 12px;
+}
+
+.eye-icon{
+    width: 22px;
+    height: 15px;
+    position: absolute;
+    right: 120px;
+    top: 16px;
+    cursor: pointer;
+}
+
+.error{
+   color:red;
+   font-size:12px;
+   margin:6px 0 12px 5px;
+   font-weight: 500;
+}
+
+.checkbox{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding: 5px;
+    margin-bottom:15px;
+    font-size:14px;
+    color:#555;
+    margin-left: 12px
+}
+
+.sign-in{
+    width:312px;
+    height:45px;
+    border:none;
+    border-radius:10px;
+    background:#3525CD;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    font-size:16px;
+    cursor:pointer;
+    margin-left: 12px;
+}
+
+.arrow{
+    width: 15px;
+
+}
+
+.line{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 20px 0;
+    width: 80%;
+
+}
+
+.text{
+     color: #464555;
+     
+    
+}
+
+.divider{
+
+    width: 100%;
+    max-width:70px;
+}
+
+
+
+.google-btn{
+    width: 180px;
+    height:46px;
+    border:1px solid #d9d9d9;
+    border-radius:6px;
+    background:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    cursor:pointer;
+    font-size:15px;
+    margin-left: 19%;
+
+}
+
+.google-btn img{
+    width: 20px;
+    height: 20px;
+}
+
+.google a{
+      color:#2A49E2;
+      text-decoration: none;
+      
+}
+
+.createAcct{
+    text-decoration: none;
+    color: gray;
+    padding: 15px;
+  
+}
+
+.footer-line{
+    display: flex;
+
+}
+.footer-line a{
+    text-decoration: none;
+    color: #464555;
+    font-size: 12px;
+    padding: 10px;
+    margin: 5px;
+    margin-top: 60px;
+    
+}
+
+span{
+    width: 4px;
+    height: 4px;
+    border-radius: 9999px;
+    background:#C7C4D8;
+    display: inline-block;
+    margin: 5px;
+    margin-top: 75px;
+;
+}
+
+

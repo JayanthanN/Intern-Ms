@@ -1,7 +1,7 @@
 import "../styles/footer.css";
-
 import icon1 from "../assets/Container (3).png";
 import icon2 from "../assets/Container (4).png";
+import heart from "../assets/heart.png";
 
 function Footer() {
   return (
@@ -44,7 +44,7 @@ function Footer() {
 
       <div className="footer-bottom">
         <p>© 2026 InternMS. All rights reserved.</p>
-        <p>Made with ❤️ for future workforce</p>
+        <p>Made with <img src ={heart} className="heart-icon"/> for future workforce</p>
       </div>
 
     </footer>

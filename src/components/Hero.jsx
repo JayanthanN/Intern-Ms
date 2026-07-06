@@ -15,10 +15,12 @@ function Hero() {
            Next-Generation Placement OS
        </div>
         <h1>
-          Seamless <br />
-          Internships. <br />
-          <span>Smarter Management.</span>
-        </h1>
+          Seamless <br/>
+          Internships. <br/></h1>
+
+          <h2> Smarter <br/>
+           Management.</h2>
+       
 
         <p>
           Bridging the gap between ambitious talent and global
