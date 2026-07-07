@@ -7,6 +7,75 @@
     min-height: 100vh;
 }
 
+
+.hero-container{
+    width:50%;
+    min-height:95vh;
+    background: linear-gradient(150.72deg, #181D3C 0%, #2A49E2 100%);
+    color:white;
+    padding: 60px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    
+}
+
+.hero-logo{
+    font-family: Manrope;
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: -1px;
+    vertical-align: middle;
+    margin-top: 70px;
+    margin-left: 50px;
+
+}
+
+.hero-heading{
+    font-family: Manrope;
+    font-weight: 700;
+    font-size: 35px;
+    width: 400px;
+    line-height: 40px;
+    letter-spacing: -0.8px;
+    vertical-align: middle;
+    margin-top: 50px;
+    margin-left: 50px;
+
+}
+
+.hero-text{
+    width: 400px;
+    font-size: 16px;
+    line-height: 28px;
+    color:#FFFFFFCC;
+    vertical-align: middle;
+    margin-top: 20px;
+    margin-left: 50px;
+
+}
+
+.hero-stats{
+    display: flex;
+    gap: 70px;
+    margin-top: 50px;
+    margin-left: 50px;
+
+}
+
+.hero-statbox h3{
+    font-size: 32px;
+    margin-bottom: 4px;
+}
+
+.hero-footer{
+    margin-top: 200px; 
+    font-size: 14px; 
+    font-weight: 400;
+    color: #FFFFFF80;
+    margin-left: -28px;
+
+}
+
 .login-form{
     width: 100%;
     max-width: 420px;
@@ -22,6 +91,7 @@
     flex-direction: column;
     justify-content: center;
     padding: 40px;
+    
    
     
 }
@@ -30,7 +100,7 @@
     font-family: Manrope;
     font-weight: 600;
     font-size: 32px;
-    margin-left: 10px;
+    margin-left: 30px;
     
 
 }
@@ -41,19 +111,19 @@
     color: #464555;
     margin-top: 5px;
     margin-bottom: 30px;
-    margin-left: 10px;
+    margin-left: 30px;
   
 
 }
 
 .login-mail{
-    margin-left: 10px;
+    margin-left: 30px;
 }
 
 .email-box{
     position: relative;
     width: 400px;
-    margin-left: 10px;
+    margin-left: 30px;
 }
 
 .mail-icon{
@@ -83,7 +153,7 @@
 }
 
 .login-pass{
-    margin-left: 10px;
+    margin-left: 30px;
     margin-bottom: -6px;
     
 }
@@ -91,7 +161,7 @@
 .password-box{
     position: relative;
     width: 400px;
-    margin-left: 10px;
+    margin-left: 30px;
 }
 
 .password-top{
@@ -147,7 +217,7 @@
     margin-bottom:15px;
     font-size:14px;
     color:#555;
-    margin-left: 12px
+    margin-left: 30px
 }
 
 .sign-in{
@@ -163,7 +233,7 @@
     gap:10px;
     font-size:16px;
     cursor:pointer;
-    margin-left: 12px;
+    margin-left: 30px;
 }
 
 .arrow{
@@ -176,7 +246,7 @@
     align-items: center;
     justify-content: center;
     gap: 12px;
-    margin: 20px 0;
+    margin: 30px 15px;
     width: 80%;
 
 }
@@ -191,9 +261,8 @@
 
     width: 100%;
     max-width:70px;
+    
 }
-
-
 
 .google-btn{
     width: 180px;
@@ -207,7 +276,7 @@
     gap:10px;
     cursor:pointer;
     font-size:15px;
-    margin-left: 19%;
+    margin-left: 21%;
 
 }
 
@@ -226,11 +295,13 @@
     text-decoration: none;
     color: gray;
     padding: 15px;
+    margin-left: 10px;
   
 }
 
 .footer-line{
     display: flex;
+    margin-left: 10px;
 
 }
 .footer-line a{
@@ -240,6 +311,7 @@
     padding: 10px;
     margin: 5px;
     margin-top: 60px;
+   
     
 }
 
@@ -251,7 +323,7 @@ span{
     display: inline-block;
     margin: 5px;
     margin-top: 75px;
-;
+
 }
 
 

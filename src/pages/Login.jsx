@@ -6,8 +6,6 @@ import eyeIcon from "../assets/eye-icon.png";
 import ArrowIcon from "../assets/Arrow-icon.png";
 import GoogleIcon from "../assets/Google-icon.png";
 import Divider from "../assets/Divider.png";
-import HeroText from "./HeroText"
-
 import "./Login.css";
 
 
@@ -63,10 +61,37 @@ function Login() {
         
         <div className="login-page">
 
-          <HeroText/>
+           <div className="hero-container">
+
+              <h2 className="hero-logo">InternHub</h2>
+
+               <h2 className= "hero-heading">Your next big leap starts here</h2>
+
+               <p className="hero-text">
+                Connect with industry leaders, manage your applications,
+                and accelerate your career path with our comprehensive internship management platform.
+               </p>
+
+                <div className="hero-stats">
+            
+                      <div className="hero-statbox">
+                           <h3>500+</h3>
+                           <p>Partner Companies</p>
+                      </div>
+
+                      <div className="hero-statbox">
+                           <h3>10k+</h3>
+                           <p>Success Stories</p>
+                     </div>
+                </div> 
+
+                    <p className="hero-footer">
+                        &copy; 2024 InternMS
+                     </p>
+            </div>
           
 
-        <div className="login-container">
+         <div className="login-container">
           
                <form className="login-form" onSubmit={handleSubmit}>
 
@@ -102,8 +127,8 @@ function Login() {
                     placeholder="Enter Password" 
                     className="pass-input"
                     value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                />
+                    onChange={(e) => setPassword(e.target.value)}/>
+
                  <img src={eyeIcon} 
                  className="eye-icon"
                  onClick={() => setShowPassword(!showPassword)} />

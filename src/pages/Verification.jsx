@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import shieldicon from "../assets/shield-icon.png";
 import leftarrow from "../assets/left-arrow.png";
 import rightarrow from "../assets/right-arrow.png";
@@ -6,11 +6,21 @@ import verifymail from "../assets/verify-mail.png";
 import verifymobile from "../assets/verify-mobile.png";
 import dividerline from"../assets/Divider.png";
 import"./Verification.css";
+import { useState } from "react";
 
 
 function Verification(){
-
+      
     const[selected,setSelected]=useState("");
+    const navigate = useNavigate();
+
+    const handleSend =()=>{
+            navigate("/Otp",{
+                state:{
+                    method:selected
+                },
+            });
+        }
     return(
 
         <div className="verification-container">
@@ -51,7 +61,8 @@ function Verification(){
                    <p className="Two-step-text">Choose how you'd like to verify your identity.</p>
               </div>
 
-               <label className= "Mail-card ">
+               <label className= "Mail-card "
+                    onClick={()=>setSelected("email")}>
                       
 
                 <div className="icon-section">
@@ -73,7 +84,8 @@ function Verification(){
 
                </label>
 
-               <label className="Mobile-card">
+               <label className="Mobile-card"
+                      onClick={()=>setSelected("mobile")}>
 
                 <div className="icon-section2">
 
@@ -92,13 +104,13 @@ function Verification(){
                 
                </label>
 
-               <button className="send-btn" type="submit">Send Verification Code
+               <button className="send-btn" type="button" onClick={handleSend}>Send Verification Code
 
                 <img src={rightarrow} className="right-arrow"/>
 
                </button>
 
-                <a href="/" className="back-login"><img src={leftarrow} className="left-arrow" />Back to login </a>
+                <a href="/login" className="back-login"><img src={leftarrow} className="left-arrow" />Back to login </a>
 
                 <img src={dividerline} className="divider-line"/>
 
