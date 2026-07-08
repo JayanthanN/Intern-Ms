@@ -3,6 +3,7 @@ import Landing from "./Landing";
 import Login from "./pages/Login";
 import Verification from "./pages/Verification";
 import Otp from "./pages/Otp";
+import ForgotPassword from "./pages/ForgotPassword";
 import "./App.css"; 
 
 
@@ -15,6 +16,7 @@ function App() {
       <Route path="/login" element={<Login/>}/>
       <Route path="/verification" element={<Verification/>}/>
       <Route path="/otp" element={<Otp/>}/>
+      <Route path="/Forgot-password" element={<ForgotPassword/>}/>
       
      </Routes>
      </BrowserRouter>

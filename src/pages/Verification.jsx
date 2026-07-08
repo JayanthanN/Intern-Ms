@@ -61,7 +61,7 @@ function Verification(){
                    <p className="Two-step-text">Choose how you'd like to verify your identity.</p>
               </div>
 
-               <label className= "Mail-card "
+               <label className= {`Mail-card ${selected ==="email"?"active":""}`}
                     onClick={()=>setSelected("email")}>
                       
 
@@ -79,12 +79,14 @@ function Verification(){
 
                 <input  type="radio" 
                         name="verification"
+                        checked={selected === "email"}
+                        onChange={()=> setSelected("email")}
                         className="verification" />
                        
 
                </label>
 
-               <label className="Mobile-card"
+               <label className= {`Mobile-card ${selected ==="mobile"?"active":""}`}
                       onClick={()=>setSelected("mobile")}>
 
                 <div className="icon-section2">
@@ -100,7 +102,9 @@ function Verification(){
                  
                   <input type="radio" 
                          name="verification"
-                        className="verification"/>
+                         checked={selected === "mobile"}
+                         onChange={()=> setSelected("mobile")}
+                         className="verification"/>
                 
                </label>
 
@@ -122,10 +126,7 @@ function Verification(){
              </div>
              
 
-        </div>
-
-
-         
+        </div> 
 
 
     );

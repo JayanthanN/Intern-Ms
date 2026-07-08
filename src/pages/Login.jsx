@@ -86,7 +86,7 @@ function Login() {
                 </div> 
 
                     <p className="hero-footer">
-                        &copy; 2024 InternMS
+                        &copy;2024 InternMS
                      </p>
             </div>
           
@@ -116,7 +116,11 @@ function Login() {
             <div className="password-top">
 
                 <label className="login-pass">Password</label>
-                <a href="#"className="forgot-pass">Forgot Password?</a>
+
+                <a href="#" onClick ={(e) =>{ e.preventDefault();
+                             navigate("/Forgot-password");}}>
+                    Forgot Password?
+                   </a>
             </div>
 
             <div className="password-box">

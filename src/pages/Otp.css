@@ -105,6 +105,8 @@
     border: none;
     width: 440px;
     height: 48px;
+    font-size: 14px;
+    font-weight: 600px;
     gap: 8px;
     border-radius: 8px;
     margin-left: 90px;
