@@ -4,7 +4,9 @@ import Login from "./pages/Login";
 import Verification from "./pages/Verification";
 import Otp from "./pages/Otp";
 import ForgotPassword from "./pages/ForgotPassword";
+import ForgotOtp from "./pages/ForgotOtp";
 import "./App.css"; 
+
 
 
 function App() {
@@ -17,7 +19,8 @@ function App() {
       <Route path="/verification" element={<Verification/>}/>
       <Route path="/otp" element={<Otp/>}/>
       <Route path="/Forgot-password" element={<ForgotPassword/>}/>
-      
+      <Route path="/Forgot-otp" element={<ForgotOtp/>}/>
+
      </Routes>
      </BrowserRouter>
       

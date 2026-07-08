@@ -167,9 +167,9 @@ function Login() {
 
                          <div className="footer-line">
                              <a href="/">Help</a>
-                               <span></span> 
+                               <span className="dots"></span> 
                              <a href="/">Privacy</a>
-                               <span></span>
+                               <span className="dots"></span>
                              <a href="/">Terms</a>
                           </div>
             </form>

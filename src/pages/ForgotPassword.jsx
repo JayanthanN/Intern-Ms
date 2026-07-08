@@ -11,7 +11,7 @@ function ForgotPassword(){
     const navigate = useNavigate();
 
     const handleSend =()=>{
-            navigate("/Login",{
+            navigate("/forgot-otp",{
                 state:{
                     method:selected
                 },
@@ -102,9 +102,10 @@ function ForgotPassword(){
                       </label> 
                   </div>  
 
-                         <button className="sendv-code">
+                         <button className="sendv-code"
+                           onClick={handleSend}>
                             Send Verification Code
-                            <img src={Rarrow} className="Rarrow"/>
+                         <img src={Rarrow} className="Rarrow"/>
 
                          </button>
 

@@ -313,14 +313,13 @@
     
 }
 
-span{
+.dots{
     width: 4px;
     height: 4px;
     border-radius: 9999px;
-    background:#C7C4D8;
-    display: inline-block;
+    background:gray;
     margin: 5px;
-    margin-top: 75px;
+    margin-top:75px;
 
 }
 
