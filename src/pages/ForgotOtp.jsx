@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import Guard from "../assets/guard.png";
 import proshield from "../assets/shields.png";
 import locked from "../assets/lock-icon.png";
@@ -6,6 +7,12 @@ import split from "../assets/Divider.png";
 import "./ForgotOtp.css";
 
 function ForgotOtp(){
+
+    const navigate = useNavigate();
+
+    const handleVerify=()=> {navigate("/Reset-password");
+
+    };
     return(
          
         <div className="Forgototp-page">
@@ -44,8 +51,11 @@ function ForgotOtp(){
 
                  </div>
 
-                <button className="otp-send" type="button">Verify and Continue 
-                    <img src={forgotright} className="forgotright"/>
+                <button onClick={handleVerify} 
+                         className="otp-send" type="button">Verify and Continue 
+                         
+                        <img src={forgotright} className="forgotright"/>
+
                 </button>
 
                 <p className="code-resend">Didn't receive the code? Resend (in 00:55)</p>

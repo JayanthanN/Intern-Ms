@@ -5,6 +5,7 @@ import Verification from "./pages/Verification";
 import Otp from "./pages/Otp";
 import ForgotPassword from "./pages/ForgotPassword";
 import ForgotOtp from "./pages/ForgotOtp";
+import ResetPassword from "./pages/ResetPassword";
 import "./App.css"; 
 
 
@@ -20,6 +21,7 @@ function App() {
       <Route path="/otp" element={<Otp/>}/>
       <Route path="/Forgot-password" element={<ForgotPassword/>}/>
       <Route path="/Forgot-otp" element={<ForgotOtp/>}/>
+      <Route path="/Reset-password" element={<ResetPassword/>}/>
 
      </Routes>
      </BrowserRouter>
