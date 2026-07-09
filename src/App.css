@@ -146,6 +146,8 @@
   }
 }
 
+
+
 @media (max-width: 768px) {
 
   .hero-container {
@@ -219,6 +221,90 @@
     margin-left: 0;
   }
 }
+
+@media (max-width:480px){
+
+  .hero{
+    padding:40px 16px;
+  }
+
+  .hero-left,
+  .hero-right{
+    width:100%;
+  }
+
+  .hero-left h1{
+    font-size:30px;
+    line-height:38px;
+  }
+
+  .hero-left h2{
+    font-size:30px;
+    line-height:38px;
+  }
+
+  .hero-left p{
+    font-size:14px;
+    line-height:24px;
+  }
+
+  .hero-image{
+    width:100%;
+    height:auto;
+  }
+
+  .floating-card{
+    width:100%;
+    padding:16px;
+  }
+
+  .stats{
+    padding:15px;
+  }
+
+  .stat-box{
+    padding:20px 10px;
+  }
+
+  .features{
+    padding:50px 16px;
+  }
+
+  .features-grid{
+    gap:20px;
+  }
+
+  .feature-card{
+    padding:20px;
+  }
+
+  .audience{
+    padding:50px 16px;
+  }
+
+  .audience-image{
+    width:100%;
+    max-width:280px;
+    margin:auto;
+  }
+
+  .audience-buttons button{
+    width:100%;
+  }
+
+  .footer{
+    padding:40px 16px 20px;
+  }
+
+  .footer-top{
+    gap:30px;
+  }
+
+  .footer-bottom{
+    font-size:12px;
+  }
+}
+
 @media (max-width: 480px) {
 
   .login-container {
