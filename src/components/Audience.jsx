@@ -14,8 +14,8 @@ function Audience() {
 
         <div className="audience-points">
 
-          <div className="point">
-            <span>✓</span>
+          <div className="points">
+            <span className="tick">✓</span>
             <div>
               <h4>One-click Applications</h4>
               <p>
@@ -24,8 +24,8 @@ function Audience() {
             </div>
           </div>
 
-          <div className="point">
-            <span>✓</span>
+          <div className="points">
+            <span className="tick">✓</span>
             <div>
               <h4>AI Career Coaching</h4>
               <p>
@@ -34,8 +34,8 @@ function Audience() {
             </div>
           </div>
 
-          <div className="point">
-            <span>✓</span>
+          <div className="points">
+            <span className="tick">✓</span>
             <div>
               <h4>Verified Credentials</h4>
               <p>

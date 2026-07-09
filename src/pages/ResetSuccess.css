@@ -1,0 +1,139 @@
+.Reset-successpage{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+}
+.success-left-container{
+    width: 45%;
+    height: 100vh;
+    background: linear-gradient(191.75deg, #2656BF 0.41%, #050D1B 99.38%);
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;  
+   
+}
+
+.successtick{
+    width: 53px;
+    height: 53px;
+    
+}
+
+.success-tick{
+    width: 118px;
+    height: 118px;
+    border-radius: 50%;
+    background: #FFFFFF1A;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+
+
+.success-left-container h1{
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.8px;
+    text-align: center;
+    color: #FFFFFF;
+    width: 400px;
+    margin-top: 10px;
+
+}
+
+.success-left-container p{
+  
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    color:#C3C0FF;
+    width: 400px;
+    margin-left: 30px;
+
+}
+
+.successimg{
+    width: 364px;
+    height: 245px;
+    margin-left: 30px;
+   
+}
+
+.success-rightcontainer{
+    width: 55%;
+    height: 100vh;
+    background:white;
+
+}
+
+.action{
+    display: flex;
+    align-items: center;
+    border-radius: 999px;
+    background: #E7EEFF;
+    width: fit-content;
+    margin-top: 250px;
+    margin-left: 100px;
+
+   
+}
+
+.successicon{
+    width: 15px;
+    height: 15px;
+
+}
+
+.action p{
+    font-size: 14px;
+    color:#3525CD;
+}
+
+.success-text h1{
+    margin-left: 100px;
+    margin-top: 20px;
+}
+
+.success-text p{
+    margin-left: 100px;
+    margin-top: 20px;
+    width: 380px;
+    font-size: 16px;
+    color: #464555;
+
+}    
+
+.success-login{
+    background: #3525CD;
+    color: white;
+    border: none;
+    margin-left: 100px;
+    margin-top: 30px;
+    width: 446px;
+    height: 48px;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 8px;
+}
+
+.divline{
+    width: 60%;
+    margin-left: 80px;
+    margin-top: 30px;
+}
+
+
+
+
+

@@ -11,10 +11,21 @@ function ResetPassword(){
 
         const [Password,setPassword] = useState("");
         const [confirmPassword,setConfirmPassword]=useState("");
-        const navigate = useNavigate();
 
+        const isLengthValid = Password.length >=8;
+
+        const isPasswordMatch= 
+            Password !==""&&
+            confirmPassword !==""&&
+            Password === confirmPassword;
+
+        const isPasswordMisMatch= 
+            confirmPassword !==""&&
+            Password !== confirmPassword;    
+
+        const navigate = useNavigate();
         const handleUpdate = ()=>{
-            navigate("/login");
+            navigate("/Reset-success");
         }
 
     
@@ -47,8 +58,12 @@ function ResetPassword(){
              </div>
 
              <div className="reset-right-container">
+                 
+                 <div className="lock-top">
 
-                <img src={lockicon} className="lockicon"/>
+                      <img src={lockicon} className="lockicon"/>
+
+                 </div>
 
                 <div className="reset-head">
 
@@ -84,18 +99,31 @@ function ResetPassword(){
                  </div>
 
                  <div className="validation-box">
+
+                    <div className="validation-item">
+                       
+                       <span className= {isLengthValid ? "status success" :"status"}></span>
+
                        <p>At least 8 characters</p>
-                       <p>Passwords match</p>
-
-                </div> 
-
-                   <button onClick={handleUpdate}>Update Password
                     
-                    <img src={resetarrow}/>
+                   </div>
+                       <div className="validation-item">
+
+                          <span className= {isPasswordMatch ? "status success" :
+                                          isPasswordMisMatch ? "status error" :"status"}></span>
+                       
+                           <p>Passwords match</p>
+                    
+                      </div>
+                 </div> 
+
+                   <button onClick={handleUpdate} className="update-btn">Update Password
+                    
+                    <img src={resetarrow} className="resetarrow"/>
 
                     </button>   
 
-                    <a href="/login">Back to Login</a>
+                    <a href="/login" className="reset-login">Back to Login</a>
      
                  
              </div>
