@@ -1,165 +1,141 @@
-.Forgototp-page{
-    width:100%;
-    min-height:100vh;
-    display: flex;
+.Forgototp-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
 }
 
-.Forgot-left{
-    width: 45%;
-    height: 100vh;
-    background: linear-gradient(171.62deg, #5883F0 3.15%, #323B50 97.7%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
+.Forgot-left {
+  width: 45%;
+  height: 100vh;
+  background: linear-gradient(171.62deg, #5883f0 3.15%, #323b50 97.7%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-
-.proshield{
-    width: 32px;
-    height: 40px;
-   
-    
+.proshield {
+  width: 32px;
+  height: 40px;
 }
 
-.proshield-icon{
-    width: 96px;
-    height: 96px;
-    background: #4F46E54D;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-      
-   
+.proshield-icon {
+  width: 96px;
+  height: 96px;
+  background: #4f46e54d;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.Forgot-left h1{
-    font-size: 40px;
-    color: #FFFFFF;
-    margin-top: 10px;
-    
+.Forgot-left h1 {
+  font-size: 40px;
+  color: #ffffff;
+  margin-top: 10px;
 }
 
-.Forgot-left p{
-    font-size: 18px;
-    color: #C3C0FF;
-    margin-top: 10px;
-    width: 397px;
+.Forgot-left p {
+  font-size: 18px;
+  color: #c3c0ff;
+  margin-top: 10px;
+  width: 397px;
 }
 
-.Forgot-right{
-    width: 55%;
-    height: 100vh;
-    background:white;
-      
+.Forgot-right {
+  width: 55%;
+  height: 100vh;
+  background: white;
 }
 
-.otp-container{
-    width: 50%;
-    margin-left: 80px;
-  
+.otp-container {
+  width: 50%;
+  margin-left: 80px;
 }
 
-.forgot-heading{
-    font-size: 32px;
-    color: #111C2D;
-  
+.forgot-heading {
+  font-size: 32px;
+  color: #111c2d;
 }
 
-.para-forgot{
-    font-size: 16px;
-    width: 350px;
-    color:#464555;
-    margin-left: 35px;
-    line-height: 24px;
-  
-     
+.para-forgot {
+  font-size: 16px;
+  width: 350px;
+  color: #464555;
+  margin-left: 35px;
+  line-height: 24px;
 }
 
-.num{
-    color: #3525CD;
-
+.num {
+  color: #3525cd;
 }
 
-.forgototp-box{
-    display: flex;
-    gap: 16px;
-    margin: 40px 0;
-    margin-left: 10px;
+.forgototp-box {
+  display: flex;
+  gap: 16px;
+  margin: 40px 0;
+  margin-left: 10px;
 }
 
-.forgototp-input{
-    width: 60px;
-    height: 60px;
-    border-radius: 12px;
-    border-width: 2px;
-    background-color: #F9F9FF;
-    border: 2px solid #E2E8F0;
-    text-align: center;
-    
+.forgototp-input {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  border-width: 2px;
+  background-color: #f9f9ff;
+  border: 2px solid #e2e8f0;
+  text-align: center;
 }
 
-.otp-send{
-    border: none;
-    color: #FFFFFF;
-    background:#3525CD;
-    font-size: 14px;
-    width:480px;
-    height: 52px;
-    border-radius: 8px;
-
+.otp-send {
+  border: none;
+  color: #ffffff;
+  background: #3525cd;
+  font-size: 14px;
+  width: 480px;
+  height: 52px;
+  border-radius: 8px;
 }
 
-.forgotright{
-    width: 12px;
-    height: 12px;
-    margin-left: 8px;
+.forgotright {
+  width: 12px;
+  height: 12px;
+  margin-left: 8px;
 }
 
-.code-resend{
-    font-size: 14px;
-    margin-top: 15px;
-    margin-left: 110px;
-    color: #777587;
+.code-resend {
+  font-size: 14px;
+  margin-top: 15px;
+  margin-left: 110px;
+  color: #777587;
 }
 
-.split{
-    width: 110%;
-    margin-left: 10px;
-    
+.split {
+  width: 110%;
+  margin-left: 10px;
 }
 
-.forgot-end{
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-    margin-left: 20px;
-   
+.forgot-end {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-left: 20px;
 }
 
-.locked{
-    width: 11px;
-    height: 14px;
-    margin-top: 4px;
-   
-
+.locked {
+  width: 11px;
+  height: 14px;
+  margin-top: 4px;
 }
 
-.Guard{
-    width: 11px;
-    height: 14px;
-    margin-top: 4px;
-    
+.Guard {
+  width: 11px;
+  height: 14px;
+  margin-top: 4px;
 }
-.forgot-end p{
-    font-size: 12px;
-    color: #777587;
-    margin: 5px;
-   
-   
-
+.forgot-end p {
+  font-size: 12px;
+  color: #777587;
+  margin: 5px;
 }
-

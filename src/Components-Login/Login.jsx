@@ -89,7 +89,7 @@ function Login() {
           <label className="login-mail">Email Address</label>
 
           <div className="email-box">
-            <img src={MailIcon} className="mail-icon" />
+            <img src={MailIcon} className="mail-icon" alt="mail-icon" />
             <input
               type="email"
               placeholder="Enter Email Address"
@@ -104,18 +104,15 @@ function Login() {
             <label className="login-pass">Password</label>
 
             <a
-              href="#"
-              onClick={(e) => {
+              href="#"onClick={(e) => {
                 e.preventDefault();
-                navigate("/");
-              }}
-            >
-              Forgot Password?
+                navigate("/Forgot-password");
+              }}>Forgot Password?
             </a>
           </div>
 
           <div className="password-box">
-            <img src={lockIcon} className="lock-icon" />
+            <img src={lockIcon} className="lock-icon" alt="lock-icon" />
             <input
               type={showPassword ? "text" : "password"}
               placeholder="Enter Password"
@@ -139,7 +136,7 @@ function Login() {
 
           <button className="sign-in" type="submit">
             Sign In
-            <img src={ArrowIcon} className="arrow-icon" />
+            <img src={ArrowIcon} className="arrow-icon"alt="arrow-icon" />
           </button>
 
           <div className="line">

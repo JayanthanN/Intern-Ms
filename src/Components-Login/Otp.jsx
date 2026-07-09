@@ -1,80 +1,74 @@
 import { useLocation } from "react-router-dom";
-import shields from "../assets/shields.png";
-import contact from "../assets/contact.png";
+import shields from "../assets/pages/shield2.png";
+import contact from "../assets/pages/contact.png";
 import sendcode from "../assets/right-arrow.png";
 import divide from "../assets/Divider.png";
 import "./Otp.css";
 
-function Otp(){
+function Otp() {
+  const location = useLocation();
 
-    const location = useLocation();
+  const method = location.state?.method;
+  return (
+    <div className="otp-content">
+      <div className="otp-left-container">
+        <div className="shields-box">
+          <img src={shields} className="shields-icon" alt="shields-icon" />
+        </div>
 
-    const method = location.state?.method;
-    return(
-        
-          <div className="otp-content">
+        <h2>Security first.</h2>
 
-            <div className="otp-left-container">
+        <p>
+          We take your account security seriously. Verify your identity to
+          protect your internship applications and sensitive professional data.
+        </p>
 
-                 <div className="shields-box">
+        <div className="otp-footer">
+          <p>Joined by 10k+ professionals</p>
+        </div>
+      </div>
 
-                     <img src={shields} className="shields-icon"/>
-                </div>
+      <div className="otp-right-container">
+        <h1 className="otp-heading">Enter Verification Code</h1>
 
-                 <h2>Security first.</h2>
+        <p className="otp-text">
+          {method === "email"
+            ? "We've sent a 6-digit code to your email j**n@g***l.com"
+            : "We've sent a 6-digit code to your mobile number +91 9•••• 5678"}
+        </p>
 
-                  <p>We take your account security seriously. Verify your
-                     identity to protect your internship applications and
-                     sensitive professional data.</p>
+        <div className="otp-boxes">
+          <input maxLength="1" className="otp-input" />
+          <input maxLength="1" className="otp-input" />
+          <input maxLength="1" className="otp-input" />
+          <input maxLength="1" className="otp-input" />
+          <input maxLength="1" className="otp-input" />
+          <input maxLength="1" className="otp-input" />
+        </div>
 
-                 <div className="otp-footer">
+        <button className="code-send" type="button">
+          {" "}
+          Verify Identity
+          <img src={sendcode} className="send-code" alt="send-btn" />
+        </button>
 
-                    <p>Joined by 10k+ professionals</p>
+        <p className="resend">Didn't receive the code? Resend in 00.58 </p>
 
-                 </div>
+        <img src={divide} className="divide" alt="line" />
 
-            </div>
+        <div className="footer-otp">
+          <img src={contact} className="contact-icon" alt="contact-icon" />
 
+          <a href="/verification" className="back-option">
+            Back to verification options{" "}
+          </a>
 
-            <div className="otp-right-container">
-
-                <h1 className="otp-heading">Enter Verification Code</h1>
-
-                <p className="otp-text">{method === "email"? "We've sent a 6-digit code to your email j**n@g***l.com"
-                             :"We've sent a 6-digit code to your mobile number +91 9•••• 5678"}</p>
-
-                <div className="otp-boxes">
-                   
-                    <input maxLength="1"className="otp-input"/>
-                    <input maxLength="1"className="otp-input"/>
-                    <input maxLength="1"className="otp-input"/>
-                    <input maxLength="1"className="otp-input"/>
-                    <input maxLength="1"className="otp-input"/>
-                    <input maxLength="1"className="otp-input"/>
-
-                </div>
-
-                <button className="code-send" type="button"> Verify Identity
-                
-                        <img src={sendcode} className="send-code"/>
-                
-                </button>
-
-                <p className="resend">Didn't receive the code? Resend in 00.58 </p>
-
-                <img src={divide}className="divide"/>
-
-                <div className="footer-otp">
-
-                    <img src={contact} className="contact-icon"/>
-
-                  <a href="/verification" className="back-option">Back to verification options </a>  
-
-                  <a href= "/" className="support">Contact Support</a>
-                </div>
-            </div>
-          </div>
-
-    );
+          <a href="/" className="support">
+            Contact Support
+          </a>
+        </div>
+      </div>
+    </div>
+  );
 }
 export default Otp;

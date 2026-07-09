@@ -216,8 +216,9 @@
   margin-left: 30px;
 }
 
-.arrow {
-  width: 15px;
+.arrow-icon {
+  width: 13px;
+  height: 13px;
 }
 
 .line {
