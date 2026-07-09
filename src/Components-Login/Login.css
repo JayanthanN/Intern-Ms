@@ -28,11 +28,10 @@
 }
 
 .hero-heading {
-  font-family: Manrope;
   font-weight: 700;
-  font-size: 35px;
+  font-size: 42px;
   width: 400px;
-  line-height: 40px;
+  line-height: 50px;
   letter-spacing: -0.8px;
   vertical-align: middle;
   margin-top: 50px;
@@ -40,9 +39,9 @@
 }
 
 .hero-text {
-  width: 400px;
+  max-width: 360px;
   font-size: 16px;
-  line-height: 28px;
+  line-height: 30px;
   color: #ffffffcc;
   vertical-align: middle;
   margin-top: 20px;
@@ -82,6 +81,7 @@
   background-color: white;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: 40px;
 }
 
@@ -89,7 +89,7 @@
   font-family: Manrope;
   font-weight: 600;
   font-size: 32px;
-  margin-left: 30px;
+  
 }
 
 .login-text {
@@ -98,17 +98,13 @@
   color: #464555;
   margin-top: 5px;
   margin-bottom: 30px;
-  margin-left: 30px;
-}
-
-.login-mail {
-  margin-left: 30px;
+ 
 }
 
 .email-box {
   position: relative;
   width: 400px;
-  margin-left: 30px;
+  
 }
 
 .mail-icon {
@@ -136,14 +132,14 @@
 }
 
 .login-pass {
-  margin-left: 30px;
+  
   margin-bottom: -6px;
 }
 
 .password-box {
   position: relative;
   width: 400px;
-  margin-left: 30px;
+  
 }
 
 .password-top {
@@ -197,7 +193,7 @@
   margin-bottom: 15px;
   font-size: 14px;
   color: #555;
-  margin-left: 30px;
+  
 }
 
 .sign-in {
@@ -213,7 +209,7 @@
   gap: 10px;
   font-size: 16px;
   cursor: pointer;
-  margin-left: 30px;
+  
 }
 
 .arrow-icon {
@@ -226,21 +222,27 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
-  margin: 30px 15px;
-  width: 80%;
+  margin: 20px 15px;
+  width: 90%;
+  margin-left: -20px;
 }
+
+
 
 .text {
   color: #464555;
+ 
 }
 
 .divider {
   width: 100%;
-  max-width: 70px;
+  max-width: 80px;
+  
+
 }
 
 .google-btn {
-  width: 180px;
+  width: 312px;
   height: 46px;
   border: 1px solid #d9d9d9;
   border-radius: 6px;
@@ -251,7 +253,8 @@
   gap: 10px;
   cursor: pointer;
   font-size: 15px;
-  margin-left: 21%;
+  
+  
 }
 
 .google-btn img {
@@ -273,14 +276,18 @@
 
 .footer-line {
   display: flex;
-  margin-left: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top:70px;
+  margin-right: 150px;
 }
 .footer-line a {
   text-decoration: none;
   color: #464555;
   font-size: 12px;
-  padding: 10px;
-  margin: 5px;
+  padding:0;
+  margin:0;
   margin-top: 60px;
 }
 

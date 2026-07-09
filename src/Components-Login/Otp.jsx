@@ -47,7 +47,6 @@ function Otp() {
         </div>
 
         <button className="code-send" type="button">
-          {" "}
           Verify Identity
           <img src={sendcode} className="send-code" alt="send-btn" />
         </button>
@@ -57,10 +56,9 @@ function Otp() {
         <img src={divide} className="divide" alt="line" />
 
         <div className="footer-otp">
-          <img src={contact} className="contact-icon" alt="contact-icon" />
-
           <a href="/verification" className="back-option">
-            Back to verification options{" "}
+            <img src={contact} className="contact-icon" alt="contact-icon" />
+            Back to verification options
           </a>
 
           <a href="/" className="support">
