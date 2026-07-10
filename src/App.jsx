@@ -7,6 +7,7 @@ import ForgotPassword from "./Components-Login/ForgotPassword";
 import ForgotOtp from "./Components-Login/ForgotOtp";
 import ResetPassword from "./Components-Login/ResetPassword";
 import ResetSuccess from "./Components-Login/ResetSuccess";
+import HRRegister from "./Components-Register/HRRegister";
 import "./App.css";
 
 function App() {
@@ -21,6 +22,8 @@ function App() {
         <Route path="/Forgot-otp" element={<ForgotOtp />} />
         <Route path="/Reset-password" element={<ResetPassword />} />
         <Route path="/Reset-success" element={<ResetSuccess />} />
+
+        <Route path="/HR-Register" element={<HRRegister/>}/>
       </Routes>
     </BrowserRouter>
   );

@@ -1,0 +1,330 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+
+  
+}
+
+.HR-page{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+}
+
+.hr-leftpage{
+    width: 40%;
+    min-height: 100vh;
+    background: linear-gradient(165.73deg, #3571CA 2.49%, #29436B 100%);
+    justify-content: space-between;
+    padding: 64px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+
+.inter-logo{
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: 700;
+
+}
+
+.hr-heading h1{
+    width: 400px;
+    font-size: 40px;
+    color: #FFFFFF;
+    margin-top: 100px;
+    line-height: 1.2;
+    
+}
+
+.hr-heading p{
+    font-size: 18px;
+    color: #DAD7FF;
+    width: 400px;
+    margin-top: 16px;
+}
+
+.hr-dashboard{
+    width: 400px;
+    padding: 20px;
+    background: #FFFFFF1A;
+    backdrop-filter: blur(4px);
+    margin-top: 28px;
+    border: 1px solid #FFFFFF33;
+    border-radius: 16px;
+}
+
+.hr-dashboard-header{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.hr-dashboard-content h3,
+.hr-dashboard-content h5{
+    margin: 0;
+    color: #DAD7FF;
+    font-size: 14px;
+
+}
+
+.hr-dashboard-content h5{
+    margin-top: 5px;
+
+}
+
+.group{
+    width:24px;
+    height:12px;
+}
+
+.group-icon{
+    background: #8A4CFC;
+    width: 48px;
+    height: 48px;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.line{
+    width: 100%;
+    margin: 20px 0;
+}
+
+.hr-dashboard-footer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    color: #DAD7FF;
+    font-size: 10px;
+}
+
+.hr-footer{
+    display: flex;
+    gap: 60px;
+    margin-top:100px;
+    
+}
+
+.hr-stat h3{
+    color: #FFFFFF;
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+
+.hr-stat p{
+    color: #DAD7FF;
+    font-size: 16px;
+        
+}
+
+.hr-rightpage{
+    width: 55%;
+    min-height: 100vh;
+    padding: 48px;
+   
+}
+
+.hr-rightpage h1{
+    font-size: 32px;
+    color: #111C2D;
+    margin-top: 10px;
+    letter-spacing:-0.32px;
+    
+}
+
+.hr-rightpage p{
+    color: #464555;
+    font-size: 15px;
+    margin-top: 10px;
+    
+}
+
+.role-title{
+    margin-top: 12px;
+
+}
+
+.role-container{
+    display: flex;
+    gap: 16px;
+}
+
+.role-card{
+    width: 110px;
+    height: 90px;
+    border: 1px solid #C7C4D8;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 5px;
+    margin-top: 5px;
+
+}
+
+.role-card img{
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+.role-card h4{
+    font-size: 16px;
+}
+
+.role-card.active{
+    background: #C7E6FF;
+}
+
+.required{
+    color: #EF4444;
+}
+
+.hr-form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row{
+    display: flex;
+    gap: 20px;
+}
+
+.inputgroup{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.inputgroup label{
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.inputgroup input{
+    width:100%;
+    height: 50px;
+    padding: 0 16px;
+    border: 1px solid #C7C4D8;
+    border-radius: 8px;
+    outline: none;
+}
+
+.inputgroup select{
+    width: 100%;
+    height: 52px;
+    border: 1px solid #C7C4D8;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+}
+
+
+.phone-input{
+    display: flex;
+    gap: 8;
+    
+   
+}
+
+.phone-input input{
+    height: 50px;
+    padding: 0 16px;
+    border: 1px solid #C7C4D8;
+    border-radius: 8px;
+    outline: none;
+    margin-left: 8px;
+    flex: 1;
+    
+}
+
+.country-code{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #C7C4D8;
+    border-radius: 8px;
+    
+}
+
+
+.inputgroup-full input{
+    width:80%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    border: 1px solid #C7C4D8;
+}
+
+.inputgroup-full img{
+    width: 20px;
+    height: 18px;
+    margin-left: 0;
+    
+}
+
+.company-input{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #C7C4D8;
+    border-radius: 8px;
+    padding: 0 14px;
+    gap: 10px;
+}
+.company-input input{
+    flex: 1;
+    border: none;
+    outline: none;
+    height: 100%;
+    font-size: 14px;
+}
+
+.password-input {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.password-input input{
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    border: 1px solid #C7C4D8;
+    cursor: pointer;
+
+}
+.eye{
+    position: absolute;
+    right: 8px;
+    top: 40px;
+    width:15px;
+    height: 10px;
+}
+
+
+
+
+

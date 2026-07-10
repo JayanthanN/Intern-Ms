@@ -10,9 +10,14 @@ function Navbar() {
 
       <div className="nav-buttons">
         <button onClick={() => navigate("/login")} className="login-btn">
+
           Login
         </button>
-        <button className="register-btn">Register</button>
+        
+        <button onClick={() => navigate("/HR-Register")} className="register-btn">
+
+        Register
+        </button>
       </div>
     </nav>
   );
