@@ -29,7 +29,6 @@ function LandingPage() {
           </h1>
 
           <h2>
-
             Smarter <br />
             Management.
           </h2>

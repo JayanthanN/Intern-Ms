@@ -104,10 +104,13 @@ function Login() {
             <label className="login-pass">Password</label>
 
             <a
-              href="#"onClick={(e) => {
+              href="#"
+              onClick={(e) => {
                 e.preventDefault();
                 navigate("/Forgot-password");
-              }}>Forgot Password?
+              }}
+            >
+              Forgot Password?
             </a>
           </div>
 
@@ -136,7 +139,7 @@ function Login() {
 
           <button className="sign-in" type="submit">
             Sign In
-            <img src={ArrowIcon} className="arrow-icon"alt="arrow-icon" />
+            <img src={ArrowIcon} className="arrow-icon" alt="arrow-icon" />
           </button>
 
           <div className="line">

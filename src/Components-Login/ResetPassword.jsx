@@ -19,6 +19,8 @@ function ResetPassword() {
   const isPasswordMisMatch =
     confirmPassword !== "" && Password !== confirmPassword;
 
+  const isFormValid = isLengthValid && isPasswordMatch;
+
   const navigate = useNavigate();
   const handleUpdate = () => {
     navigate("/Reset-success");
@@ -99,13 +101,24 @@ function ResetPassword() {
                   : isPasswordMisMatch
                     ? "status error"
                     : "status"
-              }></span>
+              }
+            ></span>
 
-            <p>Passwords match</p>
+            <p>
+              {confirmPassword === ""
+                ? "Passwords match"
+                : isPasswordMatch
+                  ? "Passwords match"
+                  : "Passwords do not match"}
+            </p>
           </div>
         </div>
 
-        <button onClick={handleUpdate} className="update-btn">
+        <button
+          className="update-btn"
+          disabled={!isFormValid}
+          onClick={handleUpdate}
+        >
           Update Password
           <img src={resetarrow} className="resetarrow" />
         </button>

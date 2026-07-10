@@ -244,7 +244,6 @@
   width: 9px;
   height: 9px;
   margin-left: 5px;
-  
 }
 .features-grid {
   display: grid;
@@ -344,10 +343,9 @@
   justify-content: center;
   flex-shrink: 0;
   margin-top: 5px;
-  
 }
 
-.tick img{
+.tick img {
   width: 10px;
   height: 8px;
   object-fit: contain;
@@ -361,7 +359,7 @@
 }
 
 .point p {
-  color:#45464D;
+  color: #45464d;
   line-height: 1.7;
   font-size: 16px;
   max-width: 470px;
@@ -407,4 +405,225 @@
   display: block;
   border: 8px solid #e5e7eb;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 1200px) {
+  .hero {
+    padding: 60px 40px;
+    gap: 40px;
+  }
+
+  .hero-left h1 {
+    font-size: 58px;
+  }
+
+  .hero-left p {
+    font-size: 18px;
+  }
+
+  .features-top h2,
+  .audience-left h2 {
+    font-size: 46px;
+  }
+
+  .audience-image {
+    width: 430px;
+    height: 520px;
+  }
+
+  .footer-top {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    padding: 18px 30px;
+  }
+
+  .logo {
+    font-size: 26px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 30px;
+    min-height: auto;
+  }
+
+  .hero::after {
+    display: none;
+  }
+
+  .hero-left,
+  .hero-right {
+    width: 100%;
+  }
+
+  .hero-left h1 {
+    font-size: 50px;
+  }
+
+  .hero-left p {
+    margin: auto;
+    margin-bottom: 30px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .floating-card {
+    left: 10px;
+    bottom: 10px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .stat-box {
+    border-right: none;
+    border-bottom: 1px solid #eee;
+  }
+
+  .stat-box:last-child {
+    border-bottom: none;
+  }
+
+  .features {
+    padding: 70px 30px;
+  }
+
+  .features-top {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .features-top p {
+    width: 100%;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .audience {
+    flex-direction: column;
+    padding: 70px 30px;
+  }
+
+  .audience-left {
+    text-align: center;
+  }
+
+  .points {
+    text-align: left;
+  }
+
+  .audience-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .audience-image {
+    width: 420px;
+    height: auto;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 40px 16px;
+  }
+
+  .hero-left,
+  .hero-right {
+    width: 100%;
+  }
+
+  .hero-left h1 {
+    font-size: 48px;
+    line-height: 38px;
+  }
+
+  .hero-left h2 {
+    font-size: 48px;
+    line-height: 38px;
+    margin-bottom: 10px;
+  }
+
+  .hero-left p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .floating-card {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .stats {
+    padding: 15px;
+  }
+
+  .stat-box {
+    padding: 20px 10px;
+  }
+
+  .features {
+    padding: 50px 16px;
+  }
+
+  .features-grid {
+    gap: 20px;
+  }
+
+  .feature-card {
+    padding: 20px;
+  }
+
+  .audience {
+    padding: 50px 16px;
+  }
+
+  .audience-image {
+    width: 100%;
+    max-width: 280px;
+    margin: auto;
+  }
+
+  .audience-buttons button {
+    width: 100%;
+  }
+
+  .footer {
+    padding: 40px 16px 20px;
+  }
+
+  .footer-top {
+    gap: 30px;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+  }
 }

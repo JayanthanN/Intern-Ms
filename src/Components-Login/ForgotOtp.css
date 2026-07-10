@@ -139,3 +139,166 @@
   color: #777587;
   margin: 5px;
 }
+
+@media (max-width: 1024px) {
+  .Forgot-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .otp-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .forgot-end {
+    margin-top: 40px;
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .split {
+    width: 100%;
+    margin: 30px auto 0;
+    display: block;
+  }
+
+  .code-resend {
+    text-align: center;
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .Forgototp-page {
+    flex-direction: column;
+  }
+
+  .Forgot-left,
+  .Forgot-right {
+    width: 100%;
+    height: auto;
+  }
+
+  .Forgot-left {
+    padding: 50px 30px;
+  }
+
+  .Forgot-left h1 {
+    font-size: 36px;
+  }
+
+  .Forgot-left p {
+    width: 100%;
+    max-width: 450px;
+  }
+
+  .Forgot-right {
+    padding: 40px 30px;
+  }
+
+  .otp-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .forgot-heading,
+  .para-forgot {
+    margin-left: 0;
+  }
+
+  .forgototp-box {
+    margin-left: 0;
+  }
+
+  .otp-send {
+    width: 100%;
+  }
+
+  .code-resend {
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .split {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .forgot-end {
+    margin: 30px 0 0;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .Forgot-left,
+  .Forgot-right {
+    padding: 25px;
+  }
+
+  .proshield-icon {
+    width: 72px;
+    height: 72px;
+  }
+
+  .proshield {
+    width: 26px;
+    height: 32px;
+  }
+
+  .Forgot-left h1 {
+    font-size: 30px;
+  }
+
+  .Forgot-left p {
+    width: 100%;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .forgot-heading {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .para-forgot {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .forgototp-box {
+    justify-content: center;
+    gap: 8px;
+    margin: 30px 0;
+  }
+
+  .forgototp-input {
+    width: 48px;
+    height: 56px;
+  }
+
+  .otp-send {
+    width: 100%;
+  }
+
+  .code-resend {
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .forgot-end {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .forgot-end p {
+    font-size: 11px;
+  }
+}

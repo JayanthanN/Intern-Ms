@@ -9,9 +9,7 @@ function Navbar() {
       <div className="logo">InternMS</div>
 
       <div className="nav-buttons">
-        <button 
-        onClick={() => navigate("/login")} 
-        className="login-btn">
+        <button onClick={() => navigate("/login")} className="login-btn">
           Login
         </button>
         <button className="register-btn">Register</button>

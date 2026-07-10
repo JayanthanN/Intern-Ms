@@ -116,7 +116,6 @@
   color: #464555;
   margin: 30px 0;
   text-align: center;
-  
 }
 
 .divide {
@@ -128,7 +127,6 @@
 .contact-icon {
   width: 13px;
   height: 16px;
-
 }
 
 .footer-otp {
@@ -146,12 +144,111 @@
   gap: 8px;
   color: #464555;
   font-size: 14px;
-  margin:0;
+  margin: 0;
 }
 
 .support {
   text-decoration: none;
-   margin-top: 15px;
+  margin-top: 15px;
   font-size: 12px;
   color: #777587;
+}
+
+@media (max-width: 992px) {
+  .otp-content {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .otp-left-container,
+  .otp-right-container {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .otp-left-container {
+    padding: 40px 30px;
+  }
+
+  .otp-right-container {
+    padding: 40px 30px;
+  }
+
+  .otp-footer {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .otp-heading {
+    margin: 0;
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .otp-text {
+    margin: 15px 0 0;
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .otp-boxes {
+    justify-content: center;
+    gap: 8px;
+    margin: 30px 0;
+  }
+
+  .otp-input {
+    width: 48px;
+    height: 56px;
+  }
+
+  .code-send {
+    width: 100%;
+    margin: 0;
+  }
+
+  .resend {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .divide {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .footer-otp {
+    align-items: center;
+  }
+
+  .contact-icon {
+    margin: 0 0 5px;
+  }
+
+  .back-option {
+    margin: 0;
+    text-align: center;
+  }
+
+  .support {
+    margin: 15px 0 0;
+    text-align: center;
+  }
+
+  .otp-left-container h2 {
+    font-size: 30px;
+  }
+
+  .otp-left-container p {
+    width: 100%;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .shields-box {
+    margin-top: 0;
+  }
 }
