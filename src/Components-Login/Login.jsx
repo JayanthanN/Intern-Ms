@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import MailIcon from "../assets/pages/mail-icon.png";
-import lockIcon from "../assets/pages/lock-icon.png";
-import eyeIcon from "../assets/pages/eye-icon.png";
-import ArrowIcon from "../assets/pages/arrow.png";
-import GoogleIcon from "../assets/pages/Google-icon.png";
+import MailIcon from "../assets/login/mail-icon.png";
+import lockIcon from "../assets/login/lock-icon.png";
+import eyeIcon from "../assets/login/eye-icon.png";
+import ArrowIcon from "../assets/login/arrow.png";
+import GoogleIcon from "../assets/login/Google-icon.png";
 import Divider from "../assets/Divider.png";
 import "./Login.css";
 

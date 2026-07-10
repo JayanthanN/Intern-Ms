@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import shieldicon from "../assets/pages/shield.png";
-import leftarrow from "../assets/pages/left-arrow.png";
+import shieldicon from "../assets/login/shield.png";
+import leftarrow from "../assets/login/left-arrow.png";
 import rightarrow from "../assets/right-arrow.png";
-import verifymail from "../assets/pages/verify-mail.png";
-import verifymobile from "../assets/pages/mobile.png";
+import verifymail from "../assets/login/verify-mail.png";
+import verifymobile from "../assets/login/mobile.png";
 import dividerline from "../assets/Divider.png";
 import "./Verification.css";
 

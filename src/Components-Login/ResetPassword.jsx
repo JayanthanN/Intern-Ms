@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import guardicon from "../assets/pages/guard.png";
-import resetsafe from "../assets/pages/resetsafe.png";
-import lockicon from "../assets/pages/forgot.png";
-import Lockedicon from "../assets/pages/lock-icon.png";
+import guardicon from "../assets/login/guard.png";
+import resetsafe from "../assets/login/resetsafe.png";
+import lockicon from "../assets/login/forgot.png";
+import Lockedicon from "../assets/login/lock-icon.png";
 import resetarrow from "../assets/right-arrow.png";
 import "./ResetPassword.css";
 

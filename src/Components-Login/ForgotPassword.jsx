@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import lock from "../assets/pages/forgot.png";
+import lock from "../assets/login/forgot.png";
 import RightArrow from "../assets/right-arrow.png";
-import backarrow from "../assets/pages/backarrow.png";
+import backarrow from "../assets/login/backarrow.png";
 import "./ForgotPassword.css";
 
 function ForgotPassword() {

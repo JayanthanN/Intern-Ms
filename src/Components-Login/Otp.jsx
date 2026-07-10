@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
-import shields from "../assets/pages/shield2.png";
-import contact from "../assets/pages/contact.png";
+import shields from "../assets/login/shield2.png";
+import contact from "../assets/login/contact.png";
 import sendcode from "../assets/right-arrow.png";
 import divide from "../assets/Divider.png";
 import "./Otp.css";

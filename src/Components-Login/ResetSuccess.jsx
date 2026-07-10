@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
-import successicon from "../assets/pages/success-icon.png";
-import successimg from "../assets/pages/success-img.png";
-import successtick from "../assets/pages/success-tick.png";
+import successicon from "../assets/login/success-icon.png";
+import successimg from "../assets/login/success-img.png";
+import successtick from "../assets/login/success-tick.png";
 import Divline from "../assets/Divider.png";
 import "./ResetSuccess.css";
 

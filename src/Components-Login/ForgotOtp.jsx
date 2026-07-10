@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
-import Guard from "../assets/pages/guard.png";
-import shield2 from "../assets/pages/shield2.png";
-import locked from "../assets/pages/lock-icon.png";
+import Guard from "../assets/login/guard.png";
+import shield2 from "../assets/login/shield2.png";
+import locked from "../assets/login/lock-icon.png";
 import forgotright from "../assets/right-arrow.png";
 import split from "../assets/Divider.png";
 import "./ForgotOtp.css";
