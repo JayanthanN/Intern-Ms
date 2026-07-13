@@ -111,10 +111,11 @@ function Verification() {
           <img src={rightarrow} className="right-arrow" alt="right-arrow" />
         </button>
 
-        <a href="/login" className="back-login">
+        <p className="back-login" 
+           onClick= {()=> navigate ("/login")}>
           <img src={leftarrow} className="left-arrow" alt="left-arrow" />
           Back to login{" "}
-        </a>
+        </p>
 
         <img src={dividerline} className="divider-line" alt="divider-line" />
 

@@ -37,8 +37,8 @@ function ForgotPassword() {
 
       <div className="forgot-right-container">
         <div className="forgot-nav">
-          <a href="/">Help</a>
-          <a href="/login">Login</a>
+          <p>Help</p>
+          <p onClick={() => navigate("/login")}> Login </p>
         </div>
 
         <div className="forgot-header">
@@ -105,9 +105,9 @@ function ForgotPassword() {
         <div className="right-footer">
           <img src={backarrow} className="backarrow" alt="backarrow" />
 
-          <a href="/login" className="login-back">
+          <p className="login-back" onClick={() => navigate("/login")}>
             Back to Login
-          </a>
+          </p>
         </div>
       </div>
     </div>

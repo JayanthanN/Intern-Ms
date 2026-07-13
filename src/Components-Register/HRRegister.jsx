@@ -40,16 +40,25 @@ function HRRegister() {
   const validate = () => {
     let newErrors = {};
 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneRegex = /^[0-9]{10}$/;
+    const passwordRegex =
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
+
     if (!formData.fullName.trim()) {
       newErrors.fullName = "Full Name is required";
     }
 
     if (!formData.email.trim()) {
       newErrors.email = "Email is required";
+    } else if (!emailRegex.test(formData.email)) {
+      newErrors.email = "Enter a valid email address";
     }
 
     if (!formData.phone.trim()) {
       newErrors.phone = "Phone Number is required";
+    } else if (!phoneRegex.test(formData.phone)) {
+      newErrors.phone = "Enter a valid 10-digit phone number";
     }
 
     if (!formData.department) {
@@ -62,17 +71,14 @@ function HRRegister() {
 
     if (!formData.password) {
       newErrors.password = "Password is required";
+    } else if (!passwordRegex.test(formData.password)) {
+      newErrors.password =
+        "Password must contain 8+ characters, uppercase, lowercase, number & special character";
     }
 
     if (!formData.confirmPassword) {
       newErrors.confirmPassword = "Confirm Password is required";
-    }
-
-    if (
-      formData.password &&
-      formData.confirmPassword &&
-      formData.password !== formData.confirmPassword
-    ) {
+    } else if (formData.password !== formData.confirmPassword) {
       newErrors.confirmPassword = "Passwords do not match";
     }
 

@@ -18,12 +18,12 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/verification" element={<Verification />} />
         <Route path="/otp" element={<Otp />} />
-        <Route path="/Forgot-password" element={<ForgotPassword />} />
-        <Route path="/Forgot-otp" element={<ForgotOtp />} />
-        <Route path="/Reset-password" element={<ResetPassword />} />
-        <Route path="/Reset-success" element={<ResetSuccess />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/forgot-otp" element={<ForgotOtp />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
+        <Route path="/reset-success" element={<ResetSuccess />} />
 
-        <Route path="/HR-Register" element={<HRRegister/>}/>
+        <Route path="/hr-register" element={<HRRegister/>}/>
       </Routes>
     </BrowserRouter>
   );

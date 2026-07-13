@@ -10,7 +10,7 @@ function ForgotOtp() {
   const navigate = useNavigate();
 
   const handleVerify = () => {
-    navigate("/Reset-password");
+    navigate("/reset-password");
   };
   return (
     <div className="Forgototp-page">

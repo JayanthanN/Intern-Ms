@@ -124,7 +124,11 @@
   width: 100%;
   max-width: 760px;
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
+
 
 .hr-rightpage h1 {
   font-size: 32px;
@@ -196,12 +200,7 @@
 .required {
   color: #ef4444;
 }
-
-.hr-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
+ 
 
 .form-row {
   display: flex;
@@ -242,7 +241,7 @@
 
 .phone-input {
   display: flex;
-  gap: 8;
+  gap: 8px;
 }
 
 .phone-input input {

@@ -65,7 +65,7 @@
   font-size: 14px;
   font-weight: 400;
   color: #ffffff80;
-  margin-left: -28px;
+  margin-left:50px
 }
 
 .login-form {
@@ -129,7 +129,7 @@
 }
 
 .login-pass {
-  margin-bottom: -6px;
+ 
 }
 
 .password-box {
@@ -143,7 +143,7 @@
   align-items: center;
   width: 100%;
   margin-top: 20px;
-  margin-bottom: 8px;
+  margin-bottom: 2px;
 }
 
 .password-top a {

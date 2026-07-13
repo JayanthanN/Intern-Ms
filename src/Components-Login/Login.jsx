@@ -106,7 +106,7 @@ function Login() {
               href="#"
               onClick={(e) => {
                 e.preventDefault();
-                navigate("/Forgot-password");
+                navigate("/forgot-password");
               }}
             >
               Forgot Password?
@@ -155,7 +155,7 @@ function Login() {
 
             <p className="createAcct">
               Don't have an account?
-              <span onClick={() => navigate("/HR-Register")}>
+              <span onClick={() => navigate("/hr-register")}>
                 {" "}
                 Create Account
               </span>

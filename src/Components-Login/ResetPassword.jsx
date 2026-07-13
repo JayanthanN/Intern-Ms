@@ -23,7 +23,7 @@ function ResetPassword() {
 
   const navigate = useNavigate();
   const handleUpdate = () => {
-    navigate("/Reset-success");
+    navigate("/reset-success");
   };
 
   return (
@@ -123,9 +123,9 @@ function ResetPassword() {
           <img src={resetarrow} className="resetarrow" />
         </button>
 
-        <a href="/login" className="reset-login">
+        <p onClick={() => navigate("/login")} className="reset-login">
           Back to Login
-        </a>
+        </p>
       </div>
     </div>
   );
