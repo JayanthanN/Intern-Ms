@@ -5,7 +5,6 @@ import lockIcon from "../assets/login/lock-icon.png";
 import eyeIcon from "../assets/login/eye-icon.png";
 import ArrowIcon from "../assets/login/arrow.png";
 import GoogleIcon from "../assets/login/Google-icon.png";
-import Divider from "../assets/Divider.png";
 import "./Login.css";
 
 function Login() {
@@ -143,9 +142,9 @@ function Login() {
           </button>
 
           <div className="line">
-            <img src={Divider} className="divider" />
-            <div className="text">OR CONTINUE WITH</div>
-            <img src={Divider} className="divider" />
+            <hr />
+            <p>OR CONTINUE WITH</p>
+            <hr />
           </div>
 
           <div className="google">
@@ -156,7 +155,10 @@ function Login() {
 
             <p className="createAcct">
               Don't have an account?
-              <a href="/"> Create Account</a>
+              <span onClick={() => navigate("/HR-Register")}>
+                {" "}
+                Create Account
+              </span>
             </p>
           </div>
 
