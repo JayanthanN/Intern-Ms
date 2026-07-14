@@ -39,7 +39,7 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>© 2026 InternMS. All rights reserved.</p>
+        <p>&copy; 2026 InternMS. All rights reserved.</p>
         <p>
           Made with <img src={heart} className="heart-icon" /> for future
           workforce

@@ -1,22 +1,25 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import group from "../assets/register/group.png";
-import line from "../assets/register/progressline.png";
 import HRicon from "../assets/register/HR-icon.png";
 import mentor from "../assets/register/mentor.png";
 import intern from "../assets/register/intern.png";
 import company from "../assets/register/company.png";
-import internhub from "../assets/register/internhub.png";
+import shield1 from "../assets/register/shield1.png";
+import connection from "../assets/register/connection.png";
+import growth from "../assets/register/growth.png";
 import eyeicon from "../assets/register/eye-icon.png";
-import "./HRRegister.css";
+import office from "../assets/register/office.png";
+import "./MentorRegister.css";
 
-function HRRegister() {
+function MentorRegister() {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
     phone: "",
-    department: "",
-    company: "",
+    title: "",
+    skills: "",
+    experience: "",
+    bio: "",
     password: "",
     confirmPassword: "",
   });
@@ -25,7 +28,7 @@ function HRRegister() {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [acceptedTerms, setAcceptedTerms] = useState(false);
-  const [selectedRole, setSelectedRole] = useState("HR");
+  const [selectedRole, setSelectedRole] = useState("mentor");
 
   const navigate = useNavigate();
 
@@ -37,13 +40,14 @@ function HRRegister() {
       [name]: value,
     }));
   };
-  
+
   const validate = () => {
     let newErrors = {};
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const phoneRegex = /^[6-9]\d{9}$/;
-    const passwordRegex =/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
+    const passwordRegex =
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
 
     if (!formData.fullName.trim()) {
       newErrors.fullName = "Full Name is required";
@@ -61,12 +65,20 @@ function HRRegister() {
       newErrors.phone = "Enter a valid 10-digit phone number";
     }
 
-    if (!formData.department) {
-      newErrors.department = "Department is required";
+    if (!formData.title.trim()) {
+      newErrors.title = "Professional Title is required";
     }
 
-    if (!formData.company.trim()) {
-      newErrors.company = "Company Name is required";
+    if (!formData.skills.trim()) {
+      newErrors.skills = "Skills / Expertise is required";
+    }
+
+    if (!formData.experience) {
+      newErrors.experience = "Experience is required";
+    }
+
+    if (!formData.bio.trim()) {
+      newErrors.bio = "Bio is required";
     }
 
     if (!formData.password) {
@@ -90,6 +102,7 @@ function HRRegister() {
 
     return Object.keys(newErrors).length === 0;
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -101,56 +114,75 @@ function HRRegister() {
   };
 
   return (
-    <div className="HR-page">
-      <div className="hr-leftpage">
-        <h3 className="inter-logo">InternMS</h3>
+    <div className="mentor-page">
+      <div className="mentor-leftpage">
+        <h3 className="intern-logo">InternMS</h3>
 
-        <div className="hr-heading">
-          <h1>Empower your team with top-tier talent.</h1>
+        <div className="mentor-heading">
+          <h1>Empower the next generation of talent.</h1>
 
-          <p className="hr-text">
-            Streamline your recruitment process, manage internships with ease,
-            and connect with the next generation of industry leaders.
+          <p className="mentor-text">
+            Join a community of experts dedicated to guiding students through
+            their career journey. Share your wisdom, foster growth, and shape
+            the industry's future.
           </p>
         </div>
 
-        <div className="hr-dashboard">
-          <div className="hr-dashboard-header">
-            <div className="group-icon">
-              <img src={group} className="group" alt="group-icon" />
+        <div className="mentor-dashboard">
+          <div className="dashboard-item">
+            <div className="dashboard-icon">
+              <img src={shield1} className="shield1" alt="shield-icon" />
             </div>
+            <div className="mentor-dashboard-content">
+              <h4>Industry Impact</h4>
 
-            <div className="hr-dashboard-content">
-              <h3>Unified Talent Dashboard</h3>
-
-              <h5>Monitor all applications in real-time.</h5>
+              <p>
+                Bridge the gap between academic learning and real-world
+                excellence.
+              </p>
             </div>
           </div>
 
-          <img src={line} className="line" alt="line-icon" />
+          <div className="dashboard-item">
+            <div className="dashboard-icon">
+              <img
+                src={connection}
+                className="connection"
+                alt="connection-icon"
+              />
+            </div>
+            <div className="mentor-dashboard-content">
+              <h4>Meaningful Connections</h4>
 
-          <div className="hr-dashboard-footer">
-            <p>75% Efficiency Boost</p>
+              <p>
+                Build lasting professional relationships with ambitious young
+                minds.
+              </p>
+            </div>
+          </div>
 
-            <p>120+ Placements</p>
+          <div className="dashboard-item">
+            <div className="dashboard-icon">
+              <img src={growth} className="growth" alt="growth-icon" />
+            </div>
+            <div className="mentor-dashboard-content">
+              <h4>Personal Growth</h4>
+
+              <p>
+                Enhance your leadership and communication skills through
+                mentorship.
+              </p>
+            </div>
           </div>
         </div>
 
-        <div className="hr-footer">
-          <div className="hr-stat">
-            <h3>500+</h3>
-            <p>COMPANIES</p>
-          </div>
-          <div className="hr-stat">
-            <h3>10k+</h3>
-            <p>STUDENTS</p>
-          </div>
-        </div>
+        <img src={office} className="office-img" alt="office-icon" />
       </div>
-      <div className="hr-rightpage">
-        <h1>Create your HR account</h1>
 
-        <p>Join our ecosystem of professional employers.</p>
+      <div className="mentor-rightpage">
+        <h1>Mentor Registration</h1>
+
+        <p>Complete your profile to start connecting with students.</p>
 
         <div className="role-selection">
           <p className="role-title">Registering as</p>
@@ -158,7 +190,10 @@ function HRRegister() {
           <div className="role-container">
             <div
               className={`role-card ${selectedRole === "HR" ? "active" : ""}`}
-              onClick={() => setSelectedRole("HR")}
+              onClick={() => {
+                setSelectedRole("HR");
+                navigate("/hr-register");
+              }}
             >
               <div className="icon-circle">
                 <img src={HRicon} alt="HR-icon" />
@@ -170,9 +205,7 @@ function HRRegister() {
               className={`role-card ${
                 selectedRole === "mentor" ? "active" : ""
               }`}
-              onClick={() =>{setSelectedRole("mentor")
-                 navigate("/mentor-register");
-              }}
+              onClick={() => setSelectedRole("mentor")}
             >
               <div className="icon-circle">
                 <img src={mentor} alt="mentor-icon" />
@@ -184,8 +217,9 @@ function HRRegister() {
               className={`role-card ${
                 selectedRole === "intern" ? "active" : ""
               }`}
-              onClick={() => {setSelectedRole("intern")
-                 navigate("/intern-register");
+              onClick={() => {
+                setSelectedRole("intern");
+                navigate("/intern-register");
               }}
             >
               <div className="icon-circle">
@@ -198,7 +232,8 @@ function HRRegister() {
               className={`role-card ${
                 selectedRole === "company" ? "active" : ""
               }`}
-              onClick={() => {setSelectedRole("company")
+              onClick={() => {
+                setSelectedRole("company");
                 navigate("/company-register");
               }}
             >
@@ -210,9 +245,9 @@ function HRRegister() {
           </div>
         </div>
 
-        <form className="hr-form" onSubmit={handleSubmit}>
-          <div className="form-row">
-            <div className="inputgroup">
+        <form className="mentor-form" onSubmit={handleSubmit}>
+          <div className="mentor-form-row">
+            <div className="mentor-group">
               <label>
                 Full Name <span className="required">*</span>
               </label>
@@ -220,14 +255,14 @@ function HRRegister() {
               <input
                 type="text"
                 name="fullName"
-                placeholder="John Doe"
+                placeholder="Enter your full name"
                 value={formData.fullName}
                 onChange={handleChange}
               />
               {errors.fullName && <p className="error">{errors.fullName}</p>}
             </div>
 
-            <div className="inputgroup">
+            <div className="mentor-group">
               <label>
                 Work Email Address <span className="required">*</span>
               </label>
@@ -235,7 +270,7 @@ function HRRegister() {
               <input
                 type="email"
                 name="email"
-                placeholder="john.doe@company.com"
+                placeholder="Enter your email address"
                 value={formData.email}
                 onChange={handleChange}
               />
@@ -243,8 +278,8 @@ function HRRegister() {
             </div>
           </div>
 
-          <div className="form-row">
-            <div className="inputgroup">
+          <div className="mentor-form-row">
+            <div className="mentor-group">
               <label>
                 Phone Number <span className="required">*</span>
               </label>
@@ -256,51 +291,84 @@ function HRRegister() {
                 <input
                   type="tel"
                   name="phone"
+                  placeholder="Enter your number"
                   value={formData.phone}
                   onChange={handleChange}
-                  placeholder="Enter your number"
                 />
               </div>
               {errors.phone && <p className="error">{errors.phone}</p>}
             </div>
-            <div className="inputgroup">
+            <div className="mentor-group">
               <label>
-                Department <span className="required">*</span>
+                Professional Title <span className="required">*</span>
+              </label>
+
+              <input
+                type="text"
+                name="title"
+                placeholder="e.g., Senior Software Engineer"
+                value={formData.title}
+                onChange={handleChange}
+              />
+              {errors.title && <p className="error">{errors.title}</p>}
+            </div>
+          </div>
+          <div className="mentor-form-row">
+            <div className="mentor-group">
+              <label>
+                Skills / Expertise <span className="required">*</span>
+              </label>
+
+              <input
+                type="text"
+                name="skills"
+                placeholder="e.g., UI/UX, React, Mentoring"
+                value={formData.skills}
+                onChange={handleChange}
+              />
+              {errors.skills && <p className="error">{errors.skills}</p>}
+            </div>
+
+            <div className="mentor-group">
+              <label>
+                Years of Experience<span className="required">*</span>
               </label>
 
               <select
-                name="department"
-                value={formData.department}
+                name="experience"
+                value={formData.experience}
                 onChange={handleChange}
               >
-                <option value="">Select Department</option>
-                <option value="HR">HR</option>
+                <option value="">Select experience level</option>
+                <option value="0-1">0-1 Years</option>
+                <option value="2-5">2-5 Years</option>
+                <option value="5-10">5-10 Years</option>
               </select>
-              {errors.department && (
-                <p className="error">{errors.department}</p>
+              {errors.experience && (
+                <p className="error">{errors.experience}</p>
               )}
             </div>
           </div>
-
-          <div className="inputgroup-full">
+          <div className="mentor-group-full">
             <label>
-              Company Name<span className="required">*</span>
+              Bio / About You <span className="required">*</span>
             </label>
 
-            <div className="company-input">
-              <img src={internhub} className="interhub" alt="interhub-icon" />
-              <input
-                type="text"
-                name="company"
-                value={formData.company}
-                onChange={handleChange}
-                placeholder="InternHub Inc."
-              />
-            </div>
-            {errors.company && <p className="error">{errors.company}</p>}
+            <small className="bio-count">{formData.bio.length}/500</small>
+            <textarea
+              name="bio"
+              placeholder="Tell us about yourself, your background and why you're passionate about 
+mentoring..."
+              value={formData.bio}
+              onChange={handleChange}
+              maxLength={200}
+            />
+
+            {errors.bio && <p className="error">{errors.bio}</p>}
           </div>
-          <div className="form-row">
-            <div className="password-input">
+
+          <div className="mentor-form-row">
+            <div className="mentor-password">
               <label>
                 Password<span className="required">*</span>
               </label>
@@ -315,14 +383,14 @@ function HRRegister() {
 
               <img
                 src={eyeicon}
-                className="eye"
+                className="eyes-icon"
                 alt="eye-icon"
                 onClick={() => setShowPassword(!showPassword)}
               />
               {errors.password && <p className="error">{errors.password}</p>}
             </div>
 
-            <div className="password-input">
+            <div className="mentor-password">
               <label>
                 Confirm Password <span className="required">*</span>
               </label>
@@ -337,7 +405,7 @@ function HRRegister() {
 
               <img
                 src={eyeicon}
-                className="eye"
+                className="eyes-icon"
                 alt="eye-icon"
                 onClick={() => setShowConfirmPassword(!showConfirmPassword)}
               />
@@ -346,6 +414,7 @@ function HRRegister() {
               )}
             </div>
           </div>
+
           <div className="terms">
             <input
               type="checkbox"
@@ -363,16 +432,28 @@ function HRRegister() {
             Create Account
           </button>
 
-          <div className="OR-divider">
+          <div className="OR-line">
             <hr />
             <p>OR</p>
             <hr />
           </div>
-          <div className="signin-section">
+          <div className="signin-section-line">
             <p>
               Already have an account?
-              <span onClick={() => navigate("/login")}>Sign in</span>
+              <span onClick={() => navigate("/login")}> Sign in</span>
             </p>
+          </div>
+
+          <hr className="hr-line" />
+
+          <div className="mentor-footer">
+            <p>&copy; 2024 InternHub. All rights reserved.</p>
+
+            <div className="mentor-footerlinks">
+              <span>Support</span>
+
+              <span>Contact Us</span>
+            </div>
           </div>
         </form>
       </div>
@@ -380,4 +461,4 @@ function HRRegister() {
   );
 }
 
-export default HRRegister;
+export default MentorRegister;

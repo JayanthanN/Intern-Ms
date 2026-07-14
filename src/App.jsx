@@ -8,6 +8,8 @@ import ForgotOtp from "./Components-Login/ForgotOtp";
 import ResetPassword from "./Components-Login/ResetPassword";
 import ResetSuccess from "./Components-Login/ResetSuccess";
 import HRRegister from "./Components-Register/HRRegister";
+import MentorRegister from "./Components-Register/MentorRegister";
+import InternRegister from "./Components-Register/InternRegister";
 import "./App.css";
 
 function App() {
@@ -24,6 +26,9 @@ function App() {
         <Route path="/reset-success" element={<ResetSuccess />} />
 
         <Route path="/hr-register" element={<HRRegister/>}/>
+        <Route path="/mentor-register" element={<MentorRegister/>}/>
+        <Route path="/intern-register" element={<InternRegister/>}/>
+        
       </Routes>
     </BrowserRouter>
   );
