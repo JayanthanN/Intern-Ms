@@ -23,6 +23,7 @@ function InternRegister() {
     resume: "",
     password: "",
     confirmPassword: "",
+    
   });
 
   const [errors, setErrors] = useState({});
@@ -115,7 +116,7 @@ function InternRegister() {
       navigate("/login");
     }
   };
-  
+
 
   return (
     <div className="intern-page">

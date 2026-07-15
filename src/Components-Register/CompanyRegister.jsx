@@ -24,6 +24,7 @@ function CompanyRegister() {
     registrationNumber: "",
     password: "",
     confirmPassword: "",
+    
   });
 
   const [errors, setErrors] = useState({});
