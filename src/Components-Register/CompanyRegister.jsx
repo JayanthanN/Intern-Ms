@@ -9,7 +9,7 @@ import vshield from "../assets/register/shield1.png";
 import handshake from "../assets/register/handshake.png";
 import privacy from "../assets/register/eye-icon.png";
 import share from "../assets/register/share.png";
-import link from "../assets/register/link.png";
+import link from "../assets/register/Link.png";
 import mention from "../assets/register/email-icon.png";
 import "./CompanyRegister.css";
 
