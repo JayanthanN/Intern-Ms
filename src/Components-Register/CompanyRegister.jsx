@@ -491,7 +491,6 @@ function CompanyRegister() {
           <img src={link} className="company-link" alt="company-link" />
 
           <img src={mention} className="mention" alt="mention-icon" />
-          
 
           <img src={share} className="share" alt="share-icon" />
         </div>
@@ -501,4 +500,3 @@ function CompanyRegister() {
 }
 
 export default CompanyRegister;
-

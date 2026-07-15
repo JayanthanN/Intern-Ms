@@ -118,7 +118,7 @@
   padding-bottom: 131px;
 }
 
-.company-rightpage{
+.company-rightpage {
   width: 60%;
   min-height: 100vh;
   background: white;
@@ -127,22 +127,21 @@
   flex-direction: column;
 }
 
-.company-header h1{
-   font-size: 32px;
+.company-header h1 {
+  font-size: 32px;
   color: #111c2d;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
-.company-header p{
+.company-header p {
   font-size: 16px;
   color: #464555;
   margin-left: 5px;
   margin-bottom: 10px;
-  
 }
 
-.company-form{
+.company-form {
   width: 100%;
   margin-top: 20px;
   display: flex;
@@ -150,27 +149,27 @@
   gap: 20px;
 }
 
-.company-form-row{
+.company-form-row {
   display: flex;
   gap: 20px;
   margin-top: 10px;
 }
 
-.company-group{
-    display: flex;
+.company-group {
+  display: flex;
   flex-direction: column;
   flex: 1;
 }
 
-.company-group label{
-    margin-bottom: 8px;
+.company-group label {
+  margin-bottom: 8px;
   font-size: 14px;
   font-weight: 600;
-  color: #111C2D;
+  color: #111c2d;
 }
 
-.company-group input{
-    width: 100%;
+.company-group input {
+  width: 100%;
   height: 50px;
   padding: 0 16px;
   border: 1px solid #c7c4d8;
@@ -178,8 +177,8 @@
   outline: none;
 }
 
-.company-group select{
-    width: 100%;
+.company-group select {
+  width: 100%;
   height: 50px;
   border: 1px solid #c7c4d8;
   border-radius: 8px;
@@ -188,22 +187,22 @@
   cursor: pointer;
 }
 
-.company-password{
-    position: relative;
+.company-password {
+  position: relative;
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-.company-password label{
-    margin-bottom: 8px;
+.company-password label {
+  margin-bottom: 8px;
   font-size: 14px;
   font-weight: 600;
-  color: #111C2D;
+  color: #111c2d;
 }
 
-.company-password input{
-     width: 100%;
+.company-password input {
+  width: 100%;
   height: 50px;
   border-radius: 8px;
   font-size: 14px;
@@ -213,25 +212,24 @@
   padding: 0 16px;
 }
 
-.privacy-icon{
-    position: absolute;
+.privacy-icon {
+  position: absolute;
   right: 20px;
   top: 45px;
   width: 15px;
   height: 10px;
-    
 }
 
-.company-form .error{
-     color: #ef4444;
+.company-form .error {
+  color: #ef4444;
   font-size: 12px;
   margin-top: 6px;
   margin-left: 2px;
   font-weight: 500;
 }
 
-.company-register{
-    width: 100%;
+.company-register {
+  width: 100%;
   height: 52px;
   margin-top: 10px;
   background: #3525cd;
@@ -243,103 +241,100 @@
   cursor: pointer;
 }
 
-.company-divline{
-     display: flex;
+.company-divline {
+  display: flex;
   align-items: center;
   gap: 16px;
   margin-top: 10px;
 }
 
-.company-divline hr{
+.company-divline hr {
   flex: 1;
   margin-bottom: 10px;
 }
 
-.signin-company{
-     text-align: center;
+.signin-company {
+  text-align: center;
   margin-bottom: 12px;
 }
 
-.signin-company p{
-    font-size: 16px;
+.signin-company p {
+  font-size: 16px;
   color: #464555;
 }
 
-.signin-company span{
-    color: #3525cd;
+.signin-company span {
+  color: #3525cd;
   cursor: pointer;
 }
-.company-footer{
-    width: 100%;
-    margin-top: 40px;
+.company-footer {
+  width: 100%;
+  margin-top: 40px;
 }
-.company-footer h4{
-    font-size: 14px;
-    color: #3525CD;
-}
-
-.company-footer-top{
-display: flex;
-align-items: center;
-margin-bottom: 20px;
+.company-footer h4 {
+  font-size: 14px;
+  color: #3525cd;
 }
 
-.company-footer-links{
-display: flex;
-gap: 30px;
-margin-left: auto;
-cursor: pointer;
+.company-footer-top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.company-footer-links span{
-    font-size: 14px;
-    color:#111C2D;
+.company-footer-links {
+  display: flex;
+  gap: 30px;
+  margin-left: auto;
+  cursor: pointer;
 }
 
-.company-footer-bottom{
-display: flex;
-justify-content: space-between;
-margin: 30px 0;
-gap: 40px;
+.company-footer-links span {
+  font-size: 14px;
+  color: #111c2d;
 }
 
-
-.company-footer-bottom h5{
-margin-bottom: 12px;
-font-size: 15px;
+.company-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+  gap: 40px;
 }
 
-.company-footer-bottom p{
-font-size: 14px;
-color: #666;
-margin: 8px 0;
+.company-footer-bottom h5 {
+  margin-bottom: 12px;
+  font-size: 15px;
 }
 
-.company-copyright{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-margin-top: 20px;
+.company-footer-bottom p {
+  font-size: 14px;
+  color: #666;
+  margin: 8px 0;
 }
 
-.company-copyright p{
-font-size: 13px;
-color: #777;
+.company-copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
 }
 
-.company-link{
-    width:48px;
-    height:24px;
+.company-copyright p {
+  font-size: 13px;
+  color: #777;
 }
 
-.share{
-    width: 18px;
-    height: 24px;
+.company-link {
+  width: 48px;
+  height: 24px;
 }
 
+.share {
+  width: 18px;
+  height: 24px;
+}
 
-
-.mention{
-    width: 20px;
-    height: 24px;
+.mention {
+  width: 20px;
+  height: 24px;
 }
