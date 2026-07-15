@@ -295,6 +295,7 @@ function HRRegister() {
                 value={formData.company}
                 onChange={handleChange}
                 placeholder="InternHub Inc."
+                
               />
             </div>
             {errors.company && <p className="error">{errors.company}</p>}

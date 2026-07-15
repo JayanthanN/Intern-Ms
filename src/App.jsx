@@ -31,6 +31,7 @@ function App() {
         <Route path="/intern-register" element={<InternRegister/>}/>
         <Route path="/company-register" element={<CompanyRegister/>}/>
         
+        
       </Routes>
     </BrowserRouter>
   );

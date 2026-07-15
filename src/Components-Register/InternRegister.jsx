@@ -115,6 +115,7 @@ function InternRegister() {
       navigate("/login");
     }
   };
+  
 
   return (
     <div className="intern-page">
