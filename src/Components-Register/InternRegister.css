@@ -1,0 +1,434 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.intern-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+}
+
+.intern-leftpage {
+  width: 40%;
+  min-height: 100vh;
+  background: linear-gradient(170.73deg, #16224b 0.69%, #26569f 97.54%);
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.intern-heading h1 {
+  width: 400px;
+  font-size: 40px;
+  color: #ffffff;
+  margin-top: 60px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.intern-text {
+  color: #dad7ffe5;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+.intern-features {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.intern-card {
+  display: flex;
+  align-items: flex-start;
+  padding: 16px;
+  gap: 16px;
+  border-radius: 16px;
+  background: #ffffff0d;
+  border: 1px solid #ffffff1a;
+  backdrop-filter: blur(4px);
+  margin-top: 10px;
+}
+
+.verified {
+  width: 22px;
+  height: 21px;
+}
+
+.track {
+  width: 18px;
+  height: 18px;
+}
+
+.intern-content h4 {
+  color: #ffffff;
+  font-size: 14px;
+  margin-top: 4px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.intern-content p {
+  color: #dad7ffb2;
+  font-size: 14px;
+  margin-top: 2px;
+  line-height: 1.8;
+}
+
+.smart {
+  width: 285px;
+}
+
+.intern-hr {
+  border: none;
+  border-top: 1px solid #ffffff1a;
+  margin-top: 40px;
+}
+
+.intern-testimonial-text {
+  color: #dad7ff99;
+  font-style: italic;
+  line-height: 1.7;
+  font-size: 14px;
+  width: 430px;
+}
+
+.intern-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.user-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: white;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.intern-user h5 {
+  font-size: 12px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.intern-rightpage {
+  width: 60%;
+  min-height: 100vh;
+  background: white;
+  padding: 44px 45px;
+}
+
+.intern-rightpage h1 {
+  font-size: 32px;
+  color: #111c2d;
+  font-weight: 600;
+}
+
+.intern-rightpage p {
+  font-size: 16px;
+  color: #464555;
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+
+.intern-form {
+  width: 100%;
+  max-width: 760px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.intern-form-row {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.intern-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.intern-group label {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.intern-group input {
+  width: 100%;
+  height: 50px;
+  padding: 0 16px;
+  border: 1px solid #c7c4d8;
+  border-radius: 8px;
+  outline: none;
+}
+
+.intern-group select {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #c7c4d8;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+}
+
+.upload-box {
+  width: 100%;
+  height: 50px;
+  border: 1.5px dashed #3525cd;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  color: #3525cd;
+  background: #4f46e50d;
+}
+
+.upload-box img {
+  width: 16px;
+  height: 16px;
+}
+
+.upload-box span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.intern-password {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.intern-password label {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.intern-password input {
+  width: 100%;
+  height: 50px;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  border: 1px solid #c7c4d8;
+  cursor: pointer;
+  padding: 0 16px;
+}
+
+.Eyes-icon {
+  position: absolute;
+  right: 20px;
+  top: 45px;
+  width: 15px;
+  height: 10px;
+}
+
+.intern-form .error {
+  color: #ef4444;
+  font-size: 12px;
+  margin-top: 6px;
+  margin-left: 2px;
+  font-weight: 500;
+}
+
+.create-button {
+  width: 100%;
+  height: 52px;
+  margin-top: 10px;
+  background: #3525cd;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .intern-page {
+    flex-direction: column;
+  }
+
+  .intern-leftpage,
+  .intern-rightpage {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .intern-leftpage {
+    min-height: auto;
+    padding: 40px;
+  }
+
+  .intern-rightpage {
+    padding: 35px 25px;
+  }
+
+  .intern-heading h1,
+  .intern-text,
+  .intern-testimonial-text {
+    width: 100%;
+  }
+
+  .intern-form {
+    max-width: 100%;
+  }
+
+  .intern-user {
+    margin-bottom: 20px;
+  }
+
+  .user-icon {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .intern-leftpage {
+    display: none;
+  }
+
+  .intern-rightpage {
+    width: 100%;
+    padding: 25px 20px;
+  }
+
+  .intern-rightpage h1 {
+    font-size: 28px;
+  }
+
+  .intern-rightpage p {
+    font-size: 14px;
+  }
+
+  .role-title {
+    margin-left: 0;
+  }
+
+  .role-container {
+    margin-left: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .role-card {
+    width: 100px;
+    height: 90px;
+  }
+
+  .intern-form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .phone-input {
+    width: 100%;
+  }
+
+  .phone-input input {
+    width: 100%;
+    margin-left: 8px;
+  }
+
+  .upload-box {
+    width: 100%;
+  }
+
+  .intern-password input {
+    width: 100%;
+  }
+
+  .create-button {
+    width: 100%;
+  }
+
+  .OR-line {
+    width: 100%;
+  }
+
+  .terms {
+    align-items: flex-start;
+  }
+
+  .terms label {
+    line-height: 1.5;
+  }
+
+  .signin-section-line p {
+    font-size: 14px;
+  }
+
+  .intern-footer {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .intern-footerlinks {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .intern-rightpage {
+    padding: 20px 15px;
+  }
+
+  .intern-rightpage h1 {
+    font-size: 24px;
+  }
+
+  .role-card {
+    width: 90px;
+    height: 85px;
+  }
+
+  .role-card h4 {
+    font-size: 14px;
+  }
+
+  .role-card img {
+    width: 26px;
+    height: 26px;
+  }
+
+  .intern-group label,
+  .intern-password label {
+    font-size: 13px;
+  }
+
+  .upload-box span {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .create-button {
+    height: 48px;
+  }
+
+  .intern-footer {
+    font-size: 13px;
+  }
+}

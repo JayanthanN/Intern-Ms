@@ -7,9 +7,9 @@ import company from "../assets/register/company.png";
 import verified from "../assets/register/verified.png";
 import track from "../assets/register/track.png";
 import user from "../assets/register/user.png";
-import Eyeicon from "../assets/register/eye-icon.png";
+import upload from "../assets/register/upload.png";
+import passicon from "../assets/register/eye-icon.png";
 import "./InternRegister.css";
-import { resume } from "react-dom/server";
 
 function InternRegister() {
   const [formData, setFormData] = useState({
@@ -30,6 +30,7 @@ function InternRegister() {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [acceptedTerms, setAcceptedTerms] = useState(false);
   const [selectedRole, setSelectedRole] = useState("intern");
+  const [resume, setResume] = useState(null);
 
   const navigate = useNavigate();
 
@@ -149,7 +150,9 @@ function InternRegister() {
             <div className="intern-content">
               <h4>Smart Tracking</h4>
 
-              <p>Manage all your applications in one organized dashboard.</p>
+              <p className="smart">
+                Manage all your applications in one organized dashboard.
+              </p>
             </div>
           </div>
 
@@ -237,7 +240,6 @@ function InternRegister() {
         </div>
 
         <form className="intern-form" onSubmit={handleSubmit}>
-
           <div className="intern-form-row">
             <div className="intern-group">
               <label>
@@ -291,28 +293,175 @@ function InternRegister() {
               {errors.phone && <p className="error">{errors.phone}</p>}
             </div>
 
-           <div className="intern-group">
+            <div className="intern-group">
               <label>
                 Date of Birth <span className="required">*</span>
               </label>
-                
-                <input
-                  type="date"
-                  name="dob"
-                  placeholder="Enter your dob"
-                  value={formData.dob}
-                  onChange={handleChange}
-                />
-             
+
+              <input
+                type="text"
+                name="dob"
+                placeholder="mm/dd/yyyy"
+                value={formData.dob}
+                onChange={handleChange}
+              />
+
               {errors.dob && <p className="error">{errors.dob}</p>}
-            
+            </div>
           </div>
 
+          <div className="intern-form-row">
+            <div className="intern-group">
+              <label>
+                College / University <span className="required">*</span>
+              </label>
+
+              <input
+                type="text"
+                name="college"
+                placeholder="Enter your university name"
+                value={formData.college}
+                onChange={handleChange}
+              />
+              {errors.college && <p className="error">{errors.college}</p>}
+            </div>
+
+            <div className="intern-group">
+              <label>
+                Field of Study <span className="required">*</span>
+              </label>
+
+              <select
+                name="fieldOfStudy"
+                value={formData.fieldOfStudy}
+                onChange={handleChange}
+              >
+                <option value="">Select your field of study</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Information Technology">
+                  Information Technology
+                </option>
+              </select>
+              {errors.fieldOfStudy && (
+                <p className="error">{errors.fieldOfStudy}</p>
+              )}
+            </div>
           </div>
 
+          <div className="intern-form-row">
+            <div className="intern-group">
+              <label>
+                Graduation Year <span className="required">*</span>
+              </label>
 
+              <select
+                name="graduationYear"
+                value={formData.graduationYear}
+                onChange={handleChange}
+              >
+                <option value="">Select your graduation year</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+              </select>
+              {errors.graduationYear && (
+                <p className="error">{errors.graduationYear}</p>
+              )}
+            </div>
 
+            <div className="intern-group">
+              <label>Resume (Optional)</label>
+              <label className="upload-box">
+                <img src={upload} alt="upload-icon" />
+                <span>
+                  {resume ? resume.name : "Upload PDF, DOCX (Max 5MB)"}
+                </span>
 
+                <input
+                  type="file"
+                  accept="pdf,doc,docx"
+                  hidden
+                  onChange={(e) => setResume(e.target.files[0])}
+                />
+              </label>
+            </div>
+          </div>
+
+          <div className="intern-form-row">
+            <div className="intern-password">
+              <label>
+                Password<span className="required">*</span>
+              </label>
+
+              <input
+                type={showPassword ? "text" : "password"}
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                placeholder="Create a strong password"
+              />
+
+              <img
+                src={passicon}
+                className="Eyes-icon"
+                alt="eye-icon"
+                onClick={() => setShowPassword(!showPassword)}
+              />
+              {errors.password && <p className="error">{errors.password}</p>}
+            </div>
+
+            <div className="intern-password">
+              <label>
+                Confirm Password <span className="required">*</span>
+              </label>
+
+              <input
+                type={showConfirmPassword ? "text" : "password"}
+                name="confirmPassword"
+                value={formData.confirmPassword}
+                onChange={handleChange}
+                placeholder="Confirm your password"
+              />
+
+              <img
+                src={passicon}
+                className="Eyes-icon"
+                alt="eye-icon"
+                onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+              />
+              {errors.confirmPassword && (
+                <p className="error">{errors.confirmPassword}</p>
+              )}
+            </div>
+          </div>
+
+          <div className="terms">
+            <input
+              type="checkbox"
+              checked={acceptedTerms}
+              onChange={(e) => setAcceptedTerms(e.target.checked)}
+            />
+            <label>
+              I agree to the <span className="check-box">Terms of Service</span>{" "}
+              and <span className="check-box">Privacy Policy</span>
+            </label>
+          </div>
+          {errors.terms && <p className="error">{errors.terms}</p>}
+
+          <button type="submit" className="create-button">
+            Create Account
+          </button>
+
+          <div className="OR-line">
+            <hr />
+            <p>OR</p>
+            <hr />
+          </div>
+          <div className="signin-section-line">
+            <p>
+              Already have an account?
+              <span onClick={() => navigate("/login")}> Sign in</span>
+            </p>
+          </div>
         </form>
       </div>
     </div>

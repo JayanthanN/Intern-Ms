@@ -10,6 +10,7 @@ import ResetSuccess from "./Components-Login/ResetSuccess";
 import HRRegister from "./Components-Register/HRRegister";
 import MentorRegister from "./Components-Register/MentorRegister";
 import InternRegister from "./Components-Register/InternRegister";
+import CompanyRegister from "./Components-Register/CompanyRegister";
 import "./App.css";
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path="/hr-register" element={<HRRegister/>}/>
         <Route path="/mentor-register" element={<MentorRegister/>}/>
         <Route path="/intern-register" element={<InternRegister/>}/>
+        <Route path="/company-register" element={<CompanyRegister/>}/>
         
       </Routes>
     </BrowserRouter>
