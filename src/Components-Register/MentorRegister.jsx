@@ -7,7 +7,8 @@ import company from "../assets/register/company.png";
 import shield1 from "../assets/register/shield1.png";
 import connection from "../assets/register/connection.png";
 import growth from "../assets/register/growth.png";
-import eyeicon from "../assets/register/eye-icon.png";
+import eyeOpen from "../assets/register/eye-icon.png";
+import eyeClose from "../assets/register/closed-eye.png";
 import office from "../assets/register/office.png";
 import "./MentorRegister.css";
 
@@ -382,7 +383,7 @@ mentoring..."
               />
 
               <img
-                src={eyeicon}
+                src={showPassword ? eyeClose : eyeOpen}
                 className="eyes-icon"
                 alt="eye-icon"
                 onClick={() => setShowPassword(!showPassword)}
@@ -404,7 +405,7 @@ mentoring..."
               />
 
               <img
-                src={eyeicon}
+                src={showConfirmPassword ? eyeClose : eyeOpen}
                 className="eyes-icon"
                 alt="eye-icon"
                 onClick={() => setShowConfirmPassword(!showConfirmPassword)}
@@ -443,7 +444,6 @@ mentoring..."
               <span onClick={() => navigate("/login")}> Sign in</span>
             </p>
           </div>
-          
 
           <hr className="hr-line" />
 

@@ -1,4 +1,5 @@
 import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import shields from "../assets/login/shield2.png";
 import contact from "../assets/login/contact.png";
 import sendcode from "../assets/right-arrow.png";
@@ -7,6 +8,7 @@ import "./Otp.css";
 
 function Otp() {
   const location = useLocation();
+  const navigate = useNavigate();
 
   const method = location.state?.method;
   return (
@@ -56,14 +58,14 @@ function Otp() {
         <img src={divide} className="divide" alt="line" />
 
         <div className="footer-otp">
-          <a href="/verification" className="back-option">
+          <p  className="back-option" onClick={() => navigate("/verification")}>
             <img src={contact} className="contact-icon" alt="contact-icon" />
             Back to verification options
-          </a>
+          </p>
 
-          <a href="/" className="support">
+          <p className="support">
             Contact Support
-          </a>
+          </p>
         </div>
       </div>
     </div>

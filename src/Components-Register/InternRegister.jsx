@@ -8,7 +8,8 @@ import verified from "../assets/register/verified.png";
 import track from "../assets/register/track.png";
 import user from "../assets/register/user.png";
 import upload from "../assets/register/upload.png";
-import passicon from "../assets/register/eye-icon.png";
+import eyeOpen from "../assets/register/eye-icon.png";
+import eyeClose from "../assets/register/closed-eye.png";
 import "./InternRegister.css";
 
 function InternRegister() {
@@ -23,7 +24,6 @@ function InternRegister() {
     resume: "",
     password: "",
     confirmPassword: "",
-    
   });
 
   const [errors, setErrors] = useState({});
@@ -105,7 +105,6 @@ function InternRegister() {
 
     return Object.keys(newErrors).length === 0;
   };
-  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -116,7 +115,6 @@ function InternRegister() {
       navigate("/login");
     }
   };
-
 
   return (
     <div className="intern-page">
@@ -404,7 +402,7 @@ function InternRegister() {
               />
 
               <img
-                src={passicon}
+                src={showPassword ? eyeClose : eyeOpen}
                 className="Eyes-icon"
                 alt="eye-icon"
                 onClick={() => setShowPassword(!showPassword)}
@@ -426,7 +424,7 @@ function InternRegister() {
               />
 
               <img
-                src={passicon}
+                src={showConfirmPassword ? eyeClose : eyeOpen}
                 className="Eyes-icon"
                 alt="eye-icon"
                 onClick={() => setShowConfirmPassword(!showConfirmPassword)}

@@ -231,7 +231,7 @@
   margin-top: 30px;
   margin-left: 0px;
 }
-.help a {
+.help  span{
   text-decoration: none;
   color: #3525cd;
   font-size: 14px;

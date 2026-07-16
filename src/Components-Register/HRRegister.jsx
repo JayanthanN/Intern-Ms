@@ -7,7 +7,8 @@ import mentor from "../assets/register/mentor.png";
 import intern from "../assets/register/intern.png";
 import company from "../assets/register/company.png";
 import internhub from "../assets/register/internhub.png";
-import eyeicon from "../assets/register/eye-icon.png";
+import eyeOpen from "../assets/register/eye-icon.png";
+import eyeClose from "../assets/register/closed-eye.png";
 import "./HRRegister.css";
 
 function HRRegister() {
@@ -37,13 +38,14 @@ function HRRegister() {
       [name]: value,
     }));
   };
-  
+
   const validate = () => {
     let newErrors = {};
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const phoneRegex = /^[6-9]\d{9}$/;
-    const passwordRegex =/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
+    const passwordRegex =
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
 
     if (!formData.fullName.trim()) {
       newErrors.fullName = "Full Name is required";
@@ -170,8 +172,9 @@ function HRRegister() {
               className={`role-card ${
                 selectedRole === "mentor" ? "active" : ""
               }`}
-              onClick={() =>{setSelectedRole("mentor")
-                 navigate("/mentor-register");
+              onClick={() => {
+                setSelectedRole("mentor");
+                navigate("/mentor-register");
               }}
             >
               <div className="icon-circle">
@@ -184,8 +187,9 @@ function HRRegister() {
               className={`role-card ${
                 selectedRole === "intern" ? "active" : ""
               }`}
-              onClick={() => {setSelectedRole("intern")
-                 navigate("/intern-register");
+              onClick={() => {
+                setSelectedRole("intern");
+                navigate("/intern-register");
               }}
             >
               <div className="icon-circle">
@@ -198,7 +202,8 @@ function HRRegister() {
               className={`role-card ${
                 selectedRole === "company" ? "active" : ""
               }`}
-              onClick={() => {setSelectedRole("company")
+              onClick={() => {
+                setSelectedRole("company");
                 navigate("/company-register");
               }}
             >
@@ -295,7 +300,6 @@ function HRRegister() {
                 value={formData.company}
                 onChange={handleChange}
                 placeholder="InternHub Inc."
-                
               />
             </div>
             {errors.company && <p className="error">{errors.company}</p>}
@@ -315,7 +319,7 @@ function HRRegister() {
               />
 
               <img
-                src={eyeicon}
+                src={showPassword ? eyeClose : eyeOpen}
                 className="eye"
                 alt="eye-icon"
                 onClick={() => setShowPassword(!showPassword)}
@@ -337,7 +341,7 @@ function HRRegister() {
               />
 
               <img
-                src={eyeicon}
+                src={showConfirmPassword ? eyeClose : eyeOpen}
                 className="eye"
                 alt="eye-icon"
                 onClick={() => setShowConfirmPassword(!showConfirmPassword)}

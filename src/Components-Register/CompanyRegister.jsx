@@ -7,7 +7,8 @@ import company from "../assets/register/company.png";
 import hire from "../assets/register/job-hire.png";
 import vshield from "../assets/register/shield1.png";
 import handshake from "../assets/register/handshake.png";
-import privacy from "../assets/register/eye-icon.png";
+import eyeOpen from "../assets/register/eye-icon.png";
+import eyeClose from "../assets/register/closed-eye.png";
 import share from "../assets/register/share.png";
 import link from "../assets/register/Link.png";
 import mention from "../assets/register/email-icon.png";
@@ -24,7 +25,6 @@ function CompanyRegister() {
     registrationNumber: "",
     password: "",
     confirmPassword: "",
-    
   });
 
   const [errors, setErrors] = useState({});
@@ -380,7 +380,7 @@ function CompanyRegister() {
                 />
 
                 <img
-                  src={privacy}
+                  src={showPassword ? eyeClose : eyeOpen}
                   className="privacy-icon"
                   alt="eye-icon"
                   onClick={() => setShowPassword(!showPassword)}
@@ -402,7 +402,7 @@ function CompanyRegister() {
                 />
 
                 <img
-                  src={privacy}
+                  src={showConfirmPassword ? eyeClose : eyeOpen}
                   className="privacy-icon"
                   alt="eye-icon"
                   onClick={() => setShowConfirmPassword(!showConfirmPassword)}
@@ -446,56 +446,63 @@ function CompanyRegister() {
           </form>
         </div>
       </div>
-      <div className="company-footer">
+      <footer className="company-footer">
         <div className="company-footer-top">
-          <h4>InternMS</h4>
+          <div className="company-logo">
+            <h4>InternMS</h4>
+          </div>
+
           <div className="company-footer-links">
             <span>Find Talent</span>
             <span>Internships</span>
             <span>Pricing</span>
-            <h4>Log In</h4>
+          </div>
+          <div className="footer-login">
+            <h4 onClick={() => navigate("/admin-register")}> Log In </h4>
           </div>
         </div>
-        <hr />
-        <div className="company-footer-bottom">
-          <div>
-            <h5>InternMS</h5>
-            <p>
-              Connecting the next generation of talent with world-class
-              opportunities.
-            </p>
+        <div className="company-footer-container">
+          <div className="company-footer-bottom">
+            <div className="company-footer-text">
+              <h5>InternMS</h5>
+              <p>
+                Connecting the next generation of talent with world-class
+                opportunities. Build your future with InternHub.
+              </p>
+            </div>
+            <div>
+              <h5>Company</h5>
+              <p>About Us</p>
+              <p>Careers</p>
+              <p>Blog</p>
+            </div>
+            <div>
+              <h5>For Employers</h5>
+              <p>Post a Job</p>
+              <p>Hiring Solutions</p>
+              <p>Pricing</p>
+            </div>
+            <div>
+              <h5>Support</h5>
+              <p>Help Center</p>
+              <p>Contact Us</p>
+              <p>Privacy</p>
+            </div>
           </div>
-          <div>
-            <h5>Company</h5>
-            <p>About Us</p>
-            <p>Careers</p>
-            <p>Blog</p>
-          </div>
-          <div>
-            <h5>For Employers</h5>
-            <p>Post a Job</p>
-            <p>Hiring Solutions</p>
-            <p>Pricing</p>
-          </div>
-          <div>
-            <h5>Support</h5>
-            <p>Help Center</p>
-            <p>Contact Us</p>
-            <p>Privacy</p>
-          </div>
-        </div>
-        <hr />
-        <div className="company-copyright">
-          <p>&copy; 2024 InternMS. All rights reserved.</p>
-        </div>
-        <div className="company-links">
-          <img src={link} className="company-link" alt="company-link" />
 
-          <img src={mention} className="mention" alt="mention-icon" />
+          <div className="company-copyright">
+            <p>&copy; 2024 InternMS. All rights reserved.</p>
 
-          <img src={share} className="share" alt="share-icon" />
+            <div className="company-links">
+              <img src={link} className="company-link" alt="company-link" />
+
+              <img src={mention} className="mention" alt="mention-icon" />
+
+              <img src={share} className="share" alt="share-icon" />
+            </div>
+          </div>
         </div>
-      </div>
+      </footer>
     </>
   );
 }

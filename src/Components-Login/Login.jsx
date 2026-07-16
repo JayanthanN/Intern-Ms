@@ -2,7 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import MailIcon from "../assets/login/mail-icon.png";
 import lockIcon from "../assets/login/lock-icon.png";
-import eyeIcon from "../assets/login/eye-icon.png";
+import eyeOpen from "../assets/login/eye-icon.png";
+import eyeClose from "../assets/eye-close.png";
 import ArrowIcon from "../assets/login/arrow.png";
 import GoogleIcon from "../assets/login/Google-icon.png";
 import "./Login.css";
@@ -124,7 +125,7 @@ function Login() {
             />
 
             <img
-              src={eyeIcon}
+              src={showPassword ? eyeClose : eyeOpen}
               className="eye-icon"
               onClick={() => setShowPassword(!showPassword)}
             />

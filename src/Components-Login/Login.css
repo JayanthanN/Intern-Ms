@@ -65,7 +65,7 @@
   font-size: 14px;
   font-weight: 400;
   color: #ffffff80;
-  margin-left:50px
+  margin-left: 50px;
 }
 
 .login-form {
@@ -126,10 +126,6 @@
   padding-left: 45px;
   border: 1px solid gray;
   border-radius: 8px;
-}
-
-.login-pass {
- 
 }
 
 .password-box {

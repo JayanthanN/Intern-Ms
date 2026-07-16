@@ -137,7 +137,6 @@
 }
 
 .back-option {
-  text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -145,10 +144,10 @@
   color: #464555;
   font-size: 14px;
   margin: 0;
+  cursor: pointer;
 }
 
 .support {
-  text-decoration: none;
   margin-top: 15px;
   font-size: 12px;
   color: #777587;

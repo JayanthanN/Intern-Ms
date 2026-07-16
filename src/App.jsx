@@ -11,6 +11,7 @@ import HRRegister from "./Components-Register/HRRegister";
 import MentorRegister from "./Components-Register/MentorRegister";
 import InternRegister from "./Components-Register/InternRegister";
 import CompanyRegister from "./Components-Register/CompanyRegister";
+import AdminRegister from "./Components-Register/AdminRegister";
 import "./App.css";
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Route path="/mentor-register" element={<MentorRegister/>}/>
         <Route path="/intern-register" element={<InternRegister/>}/>
         <Route path="/company-register" element={<CompanyRegister/>}/>
+        <Route path="/admin-register" element={<AdminRegister/>}/>
 
         
       </Routes>
