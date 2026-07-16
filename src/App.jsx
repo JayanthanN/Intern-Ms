@@ -10,7 +10,7 @@ import ResetSuccess from "./Components-Login/ResetSuccess";
 import HRRegister from "./Components-Register/HRRegister";
 import MentorRegister from "./Components-Register/MentorRegister";
 import InternRegister from "./Components-Register/InternRegister";
-import CompanyRegister from "./components-Register/CompanyRegister";
+import CompanyRegister from "./Components-Register/CompanyRegister";
 import "./App.css";
 
 function App() {
