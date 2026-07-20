@@ -1,13 +1,8 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .admin-page {
   width: 100%;
   min-height: 100vh;
   display: flex;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 
 .admin-leftpage {
@@ -26,6 +21,7 @@
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 70px;
+  font-family: "Manrope", sans-serif;
 }
 
 .admin-heading h1 {
@@ -35,6 +31,7 @@
   font-weight: 700;
   margin-top: 30px;
   margin-bottom: 24px;
+  font-family: "Manrope", sans-serif;
 }
 
 .admin-heading p {
@@ -116,6 +113,7 @@
   font-weight: 600;
   color: #111c2d;
   margin-bottom: 8px;
+  font-family: "Manrope", sans-serif;
 }
 
 .admin-header p {
@@ -197,6 +195,7 @@
   border: 1px solid #c7c4d8;
   border-radius: 8px;
   outline: none;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 
 .admin-group select {
@@ -225,6 +224,7 @@
   border: 1px solid #c7c4d8;
   cursor: pointer;
   padding: 0 16px;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 
 .admin-password {
@@ -296,6 +296,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 
 .admin-footer p {
@@ -363,7 +364,9 @@
     flex-direction: column;
   }
 
-  .admin-leftpage,
+  .admin-leftpage {
+    display: none;
+  }
   .admin-rightpage {
     width: 100%;
     padding: 30px 20px;

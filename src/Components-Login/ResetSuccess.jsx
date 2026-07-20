@@ -2,7 +2,6 @@ import { useNavigate } from "react-router-dom";
 import successicon from "../assets/login/success-icon.png";
 import successimg from "../assets/login/success-img.png";
 import successtick from "../assets/login/success-tick.png";
-import Divline from "../assets/Divider.png";
 import "./ResetSuccess.css";
 
 function ResetSuccess() {
@@ -49,13 +48,13 @@ function ResetSuccess() {
               recommend not sharing your password with anyone.
             </p>
           </div>
+
+          <button onClick={handleLogin} className="success-login">
+            Back to Login
+          </button>
+
+          <hr className="divline" alt="line" />
         </div>
-
-        <button onClick={handleLogin} className="success-login">
-          Back to Login
-        </button>
-
-        <img src={Divline} className="divline" alt="line" />
       </div>
     </div>
   );

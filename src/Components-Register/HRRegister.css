@@ -1,13 +1,8 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .HR-page {
   width: 100%;
   min-height: 100vh;
   display: flex;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 
 .hr-leftpage {
@@ -26,6 +21,7 @@
   color: #ffffff;
   font-size: 24px;
   font-weight: 700;
+  font-family: "Manrope", sans-serif;
 }
 
 .hr-heading h1 {
@@ -34,6 +30,7 @@
   color: #ffffff;
   margin-top: 100px;
   line-height: 1.2;
+  font-family: "Manrope", sans-serif;
 }
 
 .hr-heading p {
@@ -109,6 +106,7 @@
   color: #ffffff;
   font-size: 24px;
   margin-bottom: 4px;
+  font-family: "Manrope", sans-serif;
 }
 
 .hr-stat p {
@@ -136,6 +134,7 @@
   font-size: 32px;
   color: #111c2d;
   letter-spacing: -0.32px;
+  font-family: "Manrope", sans-serif;
 }
 
 .hr-rightpage p {
@@ -170,6 +169,8 @@
   transition: 0.3s;
   margin-left: 5px;
   margin-top: 5px;
+  padding: 24px;
+  gap: 16px;
 }
 
 .icon-circle {
@@ -180,19 +181,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 10px;
+  margin-top: 20px;
 }
 
 .role-card img {
   width: 32px;
   height: 32px;
-  margin-bottom: 10px;
   background: transparent;
-  margin-top: 10px;
 }
 
 .role-card h4 {
   font-size: 16px;
+  font-family: "Manrope", sans-serif;
 }
 
 .role-card.active {
@@ -228,6 +228,7 @@
   border: 1px solid #c7c4d8;
   border-radius: 8px;
   outline: none;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 
 .inputgroup select {
@@ -238,6 +239,7 @@
   font-size: 14px;
   outline: none;
   cursor: pointer;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 
 .phone-input {
@@ -274,6 +276,7 @@
   font-size: 14px;
   outline: none;
   border: 1px solid #c7c4d8;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 
 .inputgroup-full img {
@@ -298,6 +301,7 @@
   outline: none;
   height: 100%;
   font-size: 14px;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 
 .password-input {
@@ -322,6 +326,7 @@
   border: 1px solid #c7c4d8;
   cursor: pointer;
   padding: 0 16px;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 .eye {
   position: absolute;
@@ -364,6 +369,7 @@
   margin-top: 6px;
   margin-left: 2px;
   font-weight: 500;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 
 .create-btn {
@@ -377,6 +383,7 @@
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 
 .OR-divider {

@@ -5,14 +5,21 @@ import leftarrow from "../assets/login/left-arrow.png";
 import rightarrow from "../assets/right-arrow.png";
 import verifymail from "../assets/login/verify-mail.png";
 import verifymobile from "../assets/login/mobile.png";
-import dividerline from "../assets/Divider.png";
 import "./Verification.css";
 
 function Verification() {
   const [selected, setSelected] = useState("");
+  const [error, setError] = useState("");
   const navigate = useNavigate();
 
   const handleSend = () => {
+    if (!selected) {
+      setError("Please select a verification method.");
+      return;
+    }
+
+    setError("");
+
     navigate("/Otp", {
       state: {
         method: selected,
@@ -54,7 +61,10 @@ function Verification() {
 
         <label
           className={`Mail-card ${selected === "email" ? "active" : ""}`}
-          onClick={() => setSelected("email")}
+          onClick={() => {
+            setSelected("email");
+            setError("");
+          }}
         >
           <div className="icon-section">
             <img
@@ -81,7 +91,10 @@ function Verification() {
 
         <label
           className={`Mobile-card ${selected === "mobile" ? "active" : ""}`}
-          onClick={() => setSelected("mobile")}
+          onClick={() => {
+            setSelected("mobile");
+            setError("");
+          }}
         >
           <div className="icon-section2">
             <img
@@ -110,16 +123,17 @@ function Verification() {
           Send Verification Code
           <img src={rightarrow} className="right-arrow" alt="right-arrow" />
         </button>
+        {error && <p className="verify-error">{error}</p>}
 
         <p className="back-login" onClick={() => navigate("/login")}>
           <img src={leftarrow} className="left-arrow" alt="left-arrow" />
           Back to login{" "}
         </p>
 
-        <img src={dividerline} className="divider-line" alt="divider-line" />
+        <hr className="divider-line" alt="divider-line" />
 
         <p className="help">
-           Need help?
+          Need help?
           <span>Contact Support</span>
         </p>
       </div>

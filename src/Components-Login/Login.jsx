@@ -57,7 +57,7 @@ function Login() {
       <div className="hero-container">
         <h2 className="hero-logo">InternHub</h2>
 
-        <h2 className="hero-heading">Your next big leap starts here</h2>
+        <h2 className="hero-heading">Your next big leap starts here.</h2>
 
         <p className="hero-text">
           Connect with industry leaders, manage your applications, and
@@ -68,12 +68,12 @@ function Login() {
         <div className="hero-stats">
           <div className="hero-statbox">
             <h3>500+</h3>
-            <p>Partner Companies</p>
+            <p>PARTNER COMPANIES</p>
           </div>
 
           <div className="hero-statbox">
             <h3>10k+</h3>
-            <p>Success Stories</p>
+            <p>SUCCESS STORIES</p>
           </div>
         </div>
 
@@ -84,7 +84,7 @@ function Login() {
         <form className="login-form" onSubmit={handleSubmit}>
           <h1 className="login-heading">Welcome Back</h1>
 
-          <p className="login-text">Manage your career journey</p>
+          <p className="login-text">Manage your career journey.</p>
 
           <label className="login-mail">Email Address</label>
 
@@ -103,22 +103,21 @@ function Login() {
           <div className="password-top">
             <label className="login-pass">Password</label>
 
-            <a
-              href="#"
+            <span
               onClick={(e) => {
                 e.preventDefault();
                 navigate("/forgot-password");
               }}
             >
               Forgot Password?
-            </a>
+            </span>
           </div>
 
           <div className="password-box">
             <img src={lockIcon} className="lock-icon" alt="lock-icon" />
             <input
               type={showPassword ? "text" : "password"}
-              placeholder="Enter Password"
+              placeholder="Enter your password"
               className="pass-input"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -127,6 +126,7 @@ function Login() {
             <img
               src={showPassword ? eyeClose : eyeOpen}
               className="eye-icon"
+              alt="eye-icon"
               onClick={() => setShowPassword(!showPassword)}
             />
           </div>
@@ -150,26 +150,25 @@ function Login() {
 
           <div className="google">
             <button type="button" className="google-btn">
-              <img src={GoogleIcon} className="Google-icon" />
+              <img src={GoogleIcon} className="Google-icon" alt="google-icon" />
               Google
             </button>
 
             <p className="createAcct">
               Don't have an account?
               <span onClick={() => navigate("/hr-register")}>
-                {" "}
                 Create Account
               </span>
             </p>
           </div>
 
-          <div className="footer-line">
-            <a href="/">Help</a>
+          <footer className="footer-line">
+            <p>Help</p>
             <span className="dots"></span>
-            <a href="/">Privacy</a>
+            <p>Privacy</p>
             <span className="dots"></span>
-            <a href="/">Terms</a>
-          </div>
+            <p>Terms</p>
+          </footer>
         </form>
       </div>
     </div>

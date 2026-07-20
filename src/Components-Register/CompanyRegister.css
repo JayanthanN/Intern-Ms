@@ -1,14 +1,9 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .company-page {
   width: 100%;
   min-height: 100vh;
   display: flex;
   margin-bottom: 0;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 
 .company-leftpage {
@@ -35,6 +30,7 @@
   letter-spacing: 0.8px;
   color: #ffffff;
   margin-bottom: 12px;
+  font-family: "Manrope", sans-serif;
 }
 
 .company-heading p {
@@ -133,6 +129,7 @@
   color: #111c2d;
   font-weight: 600;
   margin-bottom: 10px;
+  font-family: "Manrope", sans-serif;
 }
 
 .company-header p {
@@ -176,6 +173,7 @@
   border: 1px solid #c7c4d8;
   border-radius: 8px;
   outline: none;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 
 .company-group select {
@@ -186,6 +184,7 @@
   font-size: 14px;
   outline: none;
   cursor: pointer;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 
 .company-password {
@@ -211,6 +210,7 @@
   border: 1px solid #c7c4d8;
   cursor: pointer;
   padding: 0 16px;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 
 .privacy-icon {
@@ -228,6 +228,7 @@
   margin-top: 6px;
   margin-left: 2px;
   font-weight: 500;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 
 .company-register {
@@ -241,6 +242,7 @@
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 
 .company-divline {
@@ -274,6 +276,7 @@
   margin-top: 0;
   padding-top: 0;
   background: #ffffff;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 
 .company-footer-container {
@@ -284,6 +287,8 @@
 
 .company-footer-text p {
   width: 300px;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .company-footer-text h5 {
@@ -306,6 +311,7 @@
 .company-logo {
   justify-self: start;
   margin-left: 25px;
+  font-family: "Manrope", sans-serif;
 }
 
 .company-footer-links {
@@ -313,6 +319,10 @@
   justify-self: center;
   gap: 30px;
   cursor: pointer;
+}
+
+.company-footer-links span {
+  font-weight: 600;
 }
 
 .footer-login {
@@ -343,6 +353,7 @@
 .company-footer-bottom h5 {
   margin-bottom: 12px;
   font-size: 16px;
+  font-family: "Manrope", sans-serif;
 }
 
 .company-footer-bottom p {
@@ -427,10 +438,11 @@
 
 @media (max-width: 768px) {
   .company-leftpage {
-    padding: 30px 20px;
+    display: none;
   }
 
   .company-rightpage {
+    width: 100%;
     padding: 30px 20px;
   }
 

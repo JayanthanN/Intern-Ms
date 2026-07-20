@@ -22,6 +22,7 @@ function ResetPassword() {
   const isFormValid = isLengthValid && isPasswordMatch;
 
   const navigate = useNavigate();
+
   const handleUpdate = () => {
     navigate("/reset-success");
   };
@@ -49,83 +50,91 @@ function ResetPassword() {
       </div>
 
       <div className="reset-right-container">
-        <div className="lock-top">
-          <img src={lockicon} className="lockicon" alt="forgot-icon" />
-        </div>
-
-        <div className="reset-head">
-          <h1>Set New Password</h1>
-
-          <p>Your new password must be different from previous passwords.</p>
-        </div>
-
-        <label className="new-pass">New Password</label>
-
-        <div className="pass-box">
-          <img src={Lockedicon} className="Lockedicon" alt="lock-icon" />
-
-          <input
-            type="password"
-            placeholder="Min.8characters"
-            value={Password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-
-        <label className="new-pass"> Confirm New Password</label>
-
-        <div className="pass-box">
-          <img src={guardicon} className="guardicon" alt="guard-icon" />
-
-          <input
-            type="password"
-            placeholder="Repeat your password"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-          />
-        </div>
-
-        <div className="validation-box">
-          <div className="validation-item">
-            <span
-              className={isLengthValid ? "status success" : "status"}
-            ></span>
-
-            <p>At least 8 characters</p>
+        <div className="reset-form">
+          <div className="lock-top">
+            <img src={lockicon} className="lockicon" alt="forgot-icon" />
           </div>
-          <div className="validation-item">
-            <span
-              className={
-                isPasswordMatch
-                  ? "status success"
-                  : isPasswordMisMatch
-                    ? "status error"
-                    : "status"
-              }
-            ></span>
 
-            <p>
-              {confirmPassword === ""
-                ? "Passwords match"
-                : isPasswordMatch
+          <div className="reset-head">
+            <h1>Set New Password</h1>
+
+            <p>Your new password must be different from previous passwords.</p>
+          </div>
+
+          <label className="new-pass">New Password</label>
+
+          <div className="pass-box">
+            <img src={Lockedicon} className="Lockedicon" alt="lock-icon" />
+
+            <input
+              type="password"
+              placeholder="Min.8characters"
+              value={Password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+
+          <label className="new-pass"> Confirm New Password</label>
+
+          <div className="pass-box">
+            <img src={guardicon} className="guardicon" alt="guard-icon" />
+
+            <input
+              type="password"
+              placeholder="Repeat your password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+            />
+          </div>
+
+          <div className="validation-box">
+            <div className="validation-item">
+              <span
+                className={
+                  Password === ""
+                    ? "status"
+                    : isLengthValid
+                      ? "status success"
+                      : "status error"
+                }
+              ></span>
+
+              <p>At least 8 characters</p>
+            </div>
+            <div className="validation-item">
+              <span
+                className={
+                  isPasswordMatch
+                    ? "status success"
+                    : isPasswordMisMatch
+                      ? "status error"
+                      : "status"
+                }
+              ></span>
+
+              <p>
+                {confirmPassword === ""
                   ? "Passwords match"
-                  : "Passwords do not match"}
-            </p>
+                  : isPasswordMatch
+                    ? "Passwords match"
+                    : "Passwords do not match"}
+              </p>
+            </div>
           </div>
+
+          <button
+            className="update-btn"
+            disabled={!isFormValid}
+            onClick={handleUpdate}
+          >
+            Update Password
+            <img src={resetarrow} className="resetarrow" />
+          </button>
+
+          <p onClick={() => navigate("/login")} className="reset-login">
+            Back to Login
+          </p>
         </div>
-
-        <button
-          className="update-btn"
-          disabled={!isFormValid}
-          onClick={handleUpdate}
-        >
-          Update Password
-          <img src={resetarrow} className="resetarrow" />
-        </button>
-
-        <p onClick={() => navigate("/login")} className="reset-login">
-          Back to Login
-        </p>
       </div>
     </div>
   );

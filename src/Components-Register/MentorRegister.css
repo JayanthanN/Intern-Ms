@@ -1,13 +1,8 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .mentor-page {
   width: 100%;
   min-height: 100vh;
   display: flex;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 
 .mentor-leftpage {
@@ -25,6 +20,7 @@
   color: #ffffff;
   font-size: 24px;
   font-weight: 700;
+  font-family: "Manrope", sans-serif;
 }
 
 .mentor-heading h1 {
@@ -34,6 +30,7 @@
   margin-top: 100px;
   line-height: 1.2;
   font-weight: 700;
+  font-family: "Manrope", sans-serif;
 }
 
 .mentor-heading p {
@@ -119,6 +116,7 @@
   font-size: 32px;
   color: #111c2d;
   font-weight: 600;
+  font-family: "Manrope", sans-serif;
 }
 
 .mentor-rightpage p {
@@ -166,6 +164,7 @@
   border: 1px solid #c7c4d8;
   border-radius: 8px;
   outline: none;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 
 .mentor-group select {
@@ -176,6 +175,7 @@
   font-size: 14px;
   outline: none;
   cursor: pointer;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 
 .mentor-group-full {
@@ -197,6 +197,7 @@
   border: 1px solid #c7c4d8;
   outline: none;
   resize: none;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 
 .bio-count {
@@ -225,6 +226,7 @@
   border: 1px solid #c7c4d8;
   cursor: pointer;
   padding: 0 16px;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 .eyes-icon {
   position: absolute;
@@ -245,6 +247,7 @@
   margin-top: 6px;
   margin-left: 2px;
   font-weight: 500;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 
 .OR-line {

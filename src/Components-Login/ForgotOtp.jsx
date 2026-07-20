@@ -3,7 +3,6 @@ import Guard from "../assets/login/guard.png";
 import shield2 from "../assets/login/shield2.png";
 import locked from "../assets/login/lock-icon.png";
 import forgotright from "../assets/right-arrow.png";
-import split from "../assets/Divider.png";
 import "./ForgotOtp.css";
 
 function ForgotOtp() {
@@ -28,7 +27,7 @@ function ForgotOtp() {
       </div>
       <div className="Forgot-right">
         <div className="otp-container">
-          <h1 className="forgot-heading">Enter Verification Code</h1>
+          <h1 className="forgot-otp-heading">Enter Verification Code</h1>
 
           <p className="para-forgot">
             We've sent a 6-digit code to your registered Email and phone
@@ -37,12 +36,12 @@ function ForgotOtp() {
           </p>
 
           <div className="forgototp-box">
-            <input maxLength="1" className="forgototp-input" />
-            <input maxLength="1" className="forgototp-input" />
-            <input maxLength="1" className="forgototp-input" />
-            <input maxLength="1" className="forgototp-input" />
-            <input maxLength="1" className="forgototp-input" />
-            <input maxLength="1" className="forgototp-input" />
+            <input type="text" maxLength={1} className="forgototp-input" />
+            <input type="text" maxLength={1} className="forgototp-input" />
+            <input type="text" maxLength={1} className="forgototp-input" />
+            <input type="text" maxLength={1} className="forgototp-input" />
+            <input type="text" maxLength={1} className="forgototp-input" />
+            <input type="text" maxLength={1} className="forgototp-input" />
           </div>
 
           <button onClick={handleVerify} className="otp-send" type="button">
@@ -54,7 +53,7 @@ function ForgotOtp() {
             Didn't receive the code? Resend (in 00:55)
           </p>
 
-          <img src={split} className="split" />
+          <hr className="split" />
 
           <div className="forgot-end">
             <img src={locked} className="locked" alt="lock-icon" />

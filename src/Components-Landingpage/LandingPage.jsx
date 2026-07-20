@@ -33,10 +33,12 @@ function LandingPage() {
             Management.
           </h2>
 
+          <hr />
+
           <p>
             Bridging the gap between ambitious talent and global opportunities.
-            The definitive operating system for universities, students and
-            employers.
+            The definitive operating system for universities, students, and
+            world-class employers.
           </p>
 
           <div className="hero-buttons">
@@ -74,7 +76,7 @@ function LandingPage() {
         </div>
 
         <div className="stat-box">
-          <h2>10K+</h2>
+          <h2>10k+</h2>
           <p>GLOBAL COMPANIES</p>
         </div>
 
@@ -93,14 +95,14 @@ function LandingPage() {
             </p>
           </div>
 
-          <a href="/">
+          <span>
             Explore all features
             <img
               src={bluearrow}
               className="Feature-arrow"
               alt="Feature-arrow"
             />
-          </a>
+          </span>
         </div>
 
         <div className="features-grid">

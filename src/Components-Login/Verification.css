@@ -2,52 +2,58 @@
   width: 100%;
   min-height: 100vh;
   display: flex;
-  padding: 10px;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 
 .left-container {
-  width: 45%;
+  width: 50%;
   min-height: 95vh;
   background: linear-gradient(192.15deg, #3d79ea 5.68%, #1b1a2d 89.15%);
   color: white;
   padding: 30px;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .verify-heading {
   font-weight: 700;
-  font-style: Bold;
   font-size: 40px;
   line-height: 48px;
   letter-spacing: -0.8px;
-  margin-top: 200px;
+  margin-top: 210px;
+  font-family: "Manrope", sans-serif;
 }
 
 .verify-text {
   font-weight: 400;
   color: #dad7ff;
   font-size: 18px;
-  line-height: 29.25px;
-  width: 380px;
+  line-height: 29px;
+  width: 400px;
   margin-top: 20px;
 }
 .verify-stats {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 24px;
   margin-top: 60px;
 }
 
 .verify-statbox h4 {
   margin: 0;
   font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: #ffffff;
 }
 
 .verify-statbox p {
   margin: 4px 0 0;
   font-size: 14px;
-  color: #ffffff99;
+  line-height: 20px;
+  color: #ffffff60;
 }
 
 .shield-icon {
@@ -63,17 +69,19 @@
   justify-content: center;
   align-items: center;
   background: rgba(255, 255, 255, 0.12);
+  border: 1px solid #ffffff33;
   backdrop-filter: blur(12px);
 }
 
 .verify-footer {
-  margin-top: 40%;
+  margin-top: auto;
   font-size: 12px;
+  padding-bottom: 30px;
   color: #ffffff66;
 }
 
 .right-container {
-  width: 55%;
+  width: 50%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -84,18 +92,24 @@
 
 .Two-step {
   font-weight: 600;
-  font-size: 28px;
-  line-height: 36px;
-  letter-spacing: 2px;
-  margin-top: 130px;
+  font-size: 32px;
+  line-height: 40px;
+  font-family: "Manrope", sans-serif;
+  text-align: left;
+  margin-bottom: 6px;
 }
 
 .Two-step-text {
   color: #464555;
-  padding: 5px;
-  font-weight: 400px;
+  font-weight: 400;
   font-size: 16px;
+  margin-top: 4px;
+  text-align: left;
   margin-bottom: 24px;
+}
+
+.verify-mail {
+  width: 475px;
 }
 
 .Mail-card,
@@ -103,24 +117,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 440px;
-  min-height: 90px;
-  padding: 18px;
+  width: 475px;
+  height: 94px;
+  padding: 20px 22px;
   margin-bottom: 18px;
   border-radius: 12px;
   border: 1px solid #c7c4d8;
-  margin-top: 30px;
-}
-
-.Mail-card:hover .icon-box,
-.Mobile-card:hover .icon-box2 {
-  background: #f0f3ff;
+  margin-top: 24px;
 }
 
 .Mail-card.active,
 .Mobile-card.active {
   border: 2px solid #3525cd;
   box-shadow: 0 0 12px rgba(53, 37, 205, 0.15);
+  background: #f0f3ff;
 }
 
 .Mail-card h4,
@@ -138,12 +148,13 @@
 .info {
   display: flex;
   flex-direction: column;
-  margin-right: 150px;
+  flex: 1;
+  margin-left: 18px;
 }
 
 .icon-section {
-  width: 52px;
-  height: 52px;
+  width: 56px;
+  height: 56px;
   background: #dee8ff;
   border-radius: 5px;
   display: flex;
@@ -152,8 +163,8 @@
 }
 
 .icon-section2 {
-  width: 52px;
-  height: 52px;
+  width: 56px;
+  height: 56px;
   background: #dee8ff;
   border-radius: 5px;
   display: flex;
@@ -172,8 +183,8 @@
 }
 
 .verification {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   appearance: none;
   border: 2px solid #3525cd;
   border-radius: 50%;
@@ -182,18 +193,20 @@
 }
 
 .verification:checked {
-  border: 6px solid #3525cd;
+  border: 8px solid #3525cd;
 }
 
 .send-btn {
   background: #3525cd;
-  width: 443px;
-  height: 48px;
+  width: 475px;
+  height: 52px;
   border-radius: 8px;
   color: white;
   border: none;
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: 600;
   margin-top: 20px;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 
 .right-arrow {
@@ -202,12 +215,19 @@
   margin-left: 8px;
 }
 
+.verify-error {
+  color: #dc2626;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 10px;
+}
+
 .back-login {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
-  width: 443px;
+  width: 475px;
   font-size: 14px;
   color: #3525cd;
   margin: 20px auto;
@@ -221,7 +241,7 @@
 }
 
 .divider-line {
-  width: 443px;
+  width: 475px;
   margin-top: 20px;
 }
 
@@ -231,185 +251,162 @@
   margin-top: 30px;
   margin-left: 0px;
 }
-.help  span{
-  text-decoration: none;
+.help span {
   color: #3525cd;
   font-size: 14px;
+  margin-left: 10px;
 }
 
-@media (max-width: 992px) {
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .left-container,
+  .right-container {
+    width: 50%;
+  }
+
+  .verify-heading {
+    font-size: 36px;
+    margin-top: 170px;
+  }
+
+  .verify-text {
+    width: 360px;
+    font-size: 16px;
+  }
+
+  .verify-mail,
+  .Mail-card,
+  .Mobile-card,
+  .send-btn,
+  .back-login,
+  .divider-line {
+    width: 430px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
   .verification-container {
     flex-direction: column;
-    padding: 0;
   }
 
   .left-container,
   .right-container {
     width: 100%;
-    min-height: auto;
     border-radius: 0;
   }
 
   .left-container {
-    padding: 50px 30px;
+    min-height: 420px;
   }
 
   .verify-heading {
-    margin-top: 0;
+    margin-top: 80px;
     font-size: 36px;
   }
 
   .verify-text {
     width: 100%;
-    max-width: 420px;
+    max-width: 500px;
   }
 
   .verify-footer {
     margin-top: 60px;
   }
 
-  .right-container {
-    padding: 40px 30px;
-  }
-
-  .Two-step,
-  .Two-step-text {
-    margin-left: 0;
-  }
-
+  .verify-mail,
   .Mail-card,
   .Mobile-card,
   .send-btn,
+  .back-login,
   .divider-line {
-    width: 100%;
-    margin-left: 0;
+    width: 90%;
+    max-width: 500px;
   }
 
-  .back-login {
-    justify-content: flex-start;
-    margin-right: 0;
-  }
-
-  .help {
-    margin-left: 0;
-    text-align: center;
+  .right-container {
+    padding: 60px 20px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+  .verification-container {
+    flex-direction: column;
+  }
+
+  .right-container {
+    width: 100%;
+    border-radius: 0;
+  }
+
   .left-container {
     display: none;
   }
 
-  .right-container {
-    width: 100%;
-    min-height: 100vh;
-    padding: 30px 20px;
-  }
-
-  .Two-step {
+  .verify-heading {
+    margin-top: 40px;
     font-size: 30px;
     line-height: 38px;
-    margin-top: 0;
-    margin-left: 0;
-    letter-spacing: 0;
   }
 
-  .Two-step-text {
-    margin-left: 0;
-    padding: 0;
+  .verify-text {
+    width: 100%;
     font-size: 15px;
-    margin-bottom: 30px;
+    line-height: 25px;
   }
 
+  .verify-stats {
+    margin-top: 40px;
+  }
+
+  .verify-footer {
+    margin-top: 50px;
+    padding-bottom: 10px;
+  }
+
+  .right-container {
+    padding: 40px 16px;
+  }
+
+  .verify-mail,
   .Mail-card,
-  .Mobile-card {
-    width: 100%;
-    margin-left: 0;
-    padding: 16px;
-  }
-
-  .info {
-    margin-right: 0;
-    flex: 1;
-    margin-left: 15px;
-  }
-
-  .send-btn {
-    width: 100%;
-    margin-left: 0;
-  }
-
-  .back-login {
-    margin-top: 25px;
-    justify-content: flex-start;
-  }
-
+  .Mobile-card,
+  .send-btn,
+  .back-login,
   .divider-line {
     width: 100%;
-    margin-left: 0;
-  }
-
-  .help {
-    margin-top: 25px;
-    margin-left: 0;
-    text-align: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .right-container {
-    padding: 25px 18px;
-  }
-
-  .Two-step {
-    font-size: 26px;
-    line-height: 34px;
-  }
-
-  .Two-step-text {
-    font-size: 14px;
   }
 
   .Mail-card,
   .Mobile-card {
     height: auto;
+    padding: 16px;
   }
 
-  .Mail-card h4,
-  .Mobile-card h4 {
-    font-size: 16px;
+  .Two-step {
+    font-size: 28px;
+    line-height: 34px;
   }
 
-  .Mail-card p,
-  .Mobile-card p {
-    font-size: 13px;
-  }
-
-  .verification {
-    width: 22px;
-    height: 22px;
-  }
-
-  .send-btn {
-    height: 48px;
+  .Two-step-text {
     font-size: 15px;
   }
 
-  .divider-line {
-    width: 100%;
-    margin-left: 0;
+  .icon-section,
+  .icon-section2 {
+    width: 48px;
+    height: 48px;
   }
 
-  .back-login {
-    width: 100%;
-    margin-left: 0;
-    justify-content: center;
+  .verification {
+    width: 24px;
+    height: 24px;
   }
+
+  .verification:checked {
+    border: 7px solid #3525cd;
+  }
+
   .help {
+    font-size: 13px;
     text-align: center;
-    width: 100%;
-    margin-top: 20px;
-    margin-left: 0;
   }
 }

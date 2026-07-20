@@ -1,13 +1,8 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .intern-page {
   width: 100%;
   min-height: 100vh;
   display: flex;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 
 .intern-leftpage {
@@ -28,6 +23,7 @@
   margin-top: 60px;
   line-height: 1.2;
   font-weight: 700;
+  font-family: "Manrope", sans-serif;
 }
 
 .intern-text {
@@ -35,6 +31,7 @@
   font-size: 18px;
   font-weight: 400;
   margin-top: 20px;
+  width: 432px;
 }
 
 .intern-features {
@@ -132,6 +129,7 @@
   font-size: 32px;
   color: #111c2d;
   font-weight: 600;
+  font-family: "Manrope", sans-serif;
 }
 
 .intern-rightpage p {
@@ -175,6 +173,7 @@
   border: 1px solid #c7c4d8;
   border-radius: 8px;
   outline: none;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 
 .intern-group select {
@@ -185,6 +184,7 @@
   font-size: 14px;
   outline: none;
   cursor: pointer;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 
 .upload-box {
@@ -233,6 +233,7 @@
   border: 1px solid #c7c4d8;
   cursor: pointer;
   padding: 0 16px;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 
 .Eyes-icon {
@@ -250,6 +251,7 @@
   margin-top: 6px;
   margin-left: 2px;
   font-weight: 500;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 
 .create-button {
@@ -263,6 +265,7 @@
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 
 @media (max-width: 1024px) {

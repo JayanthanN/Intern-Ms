@@ -278,7 +278,7 @@ function HRRegister() {
                 value={formData.department}
                 onChange={handleChange}
               >
-                <option value="">Select Department</option>
+                <option value="">Select department</option>
                 <option value="HR">HR</option>
               </select>
               {errors.department && (

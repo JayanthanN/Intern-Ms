@@ -1,14 +1,7 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding: 18px 50px;
   background: #ffffff;
   border-bottom: 1px solid #ececec;
@@ -16,10 +9,10 @@
 
 .logo {
   font-size: 32px;
-  font-weight: 800;
-  color: #0b63ce;
-  cursor: pointer;
-  letter-spacing: -0.5px;
+  font-weight: 900;
+  color: #0058be;
+  letter-spacing: -0.8px;
+  line-height: 40px;
 }
 
 .nav-buttons {

@@ -19,7 +19,7 @@ function ForgotPassword() {
   return (
     <div className="forgot-container">
       <div className="forgot-left-container">
-        <h1 className="forgot-heading">
+        <h1 className="forgot-header">
           Regain access to your professional future.
         </h1>
 
@@ -41,73 +41,75 @@ function ForgotPassword() {
           <p onClick={() => navigate("/login")}> Login </p>
         </div>
 
-        <div className="forgot-header">
-          <div className="lock">
-            <img src={lock} className="header-lock" alt="forgotlock-icon" />
+        <div className="forgot-form">
+          <div className="forgot-head">
+            <div className="lock">
+              <img src={lock} className="header-lock" alt="forgotlock-icon" />
+            </div>
+            <h2>Forgot Password?</h2>
+
+            <p className="forgot-text">
+              Choose your preferred method to receive a one-time verification
+              code.
+            </p>
+
+            <h5>Verification Method</h5>
           </div>
-          <h2>Forgot Password?</h2>
 
-          <p className="forgot-text">
-            Choose your preferred method to receive a one-time verification
-            code.
-          </p>
+          <div className="method-card">
+            <label
+              className={`Mail-forgot ${selected === "email" ? "active" : ""}`}
+              onClick={() => setSelected("email")}
+            >
+              <input
+                type="radio"
+                name="forgot"
+                checked={selected === "email"}
+                onChange={() => setSelected("email")}
+                className="forgot"
+              />
 
-          <h5>Verification Method</h5>
-        </div>
+              <div className="forgot-info">
+                <h4>Email Address</h4>
 
-        <div className="method-card">
-          <label
-            className={`Mail-forgot ${selected === "email" ? "active" : ""}`}
-            onClick={() => setSelected("email")}
-          >
-            <input
-              type="radio"
-              name="forgot"
-              checked={selected === "email"}
-              onChange={() => setSelected("email")}
-              className="forgot"
-            />
+                <p>Send code to j**n@g***l.com</p>
+              </div>
+            </label>
+          </div>
 
-            <div className="forgot-info">
-              <h4>Email Address</h4>
+          <div className="method-card">
+            <label
+              className={`Mobile-forgot ${selected === "mobile" ? "active" : ""}`}
+              onClick={() => setSelected("mobile")}
+            >
+              <input
+                type="radio"
+                name="forgot"
+                checked={selected === "mobile"}
+                onChange={() => setSelected("mobile")}
+                className="forgot"
+              />
 
-              <p>Send code to j**n@g***l.com</p>
-            </div>
-          </label>
-        </div>
+              <div className="forgot-info">
+                <h4>SMS / Text Message</h4>
 
-        <div className="method-card">
-          <label
-            className={`Mobile-forgot ${selected === "mobile" ? "active" : ""}`}
-            onClick={() => setSelected("mobile")}
-          >
-            <input
-              type="radio"
-              name="forgot"
-              checked={selected === "mobile"}
-              onChange={() => setSelected("mobile")}
-              className="forgot"
-            />
+                <p>Send code to +91 9•••• •5678</p>
+              </div>
+            </label>
+          </div>
 
-            <div className="forgot-info">
-              <h4>SMS / Text Message</h4>
+          <button className="sendv-code" onClick={handleSend}>
+            Send Verification Code
+            <img src={RightArrow} className="RightArrow" />
+          </button>
 
-              <p>Send code to +91 9•••• •5678</p>
-            </div>
-          </label>
-        </div>
+          <div className="right-footer">
+            <img src={backarrow} className="backarrow" alt="backarrow" />
 
-        <button className="sendv-code" onClick={handleSend}>
-          Send Verification Code
-          <img src={RightArrow} className="RightArrow" />
-        </button>
-
-        <div className="right-footer">
-          <img src={backarrow} className="backarrow" alt="backarrow" />
-
-          <p className="login-back" onClick={() => navigate("/login")}>
-            Back to Login
-          </p>
+            <p className="login-back" onClick={() => navigate("/login")}>
+              Back to Login
+            </p>
+          </div>
         </div>
       </div>
     </div>

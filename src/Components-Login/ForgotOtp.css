@@ -2,12 +2,15 @@
   width: 100%;
   min-height: 100vh;
   display: flex;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 
 .Forgot-left {
   width: 45%;
   height: 100vh;
   background: linear-gradient(171.62deg, #5883f0 3.15%, #323b50 97.7%);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,13 +35,17 @@
 
 .Forgot-left h1 {
   font-size: 40px;
+  line-height: 48px;
+  font-weight: 700;
   color: #ffffff;
   margin-top: 10px;
+  font-family: "Manrope", sans-serif;
 }
 
 .Forgot-left p {
   font-size: 18px;
-  color: #c3c0ff;
+  line-height: 29px;
+  color: #c3c0ff80;
   margin-top: 10px;
   width: 397px;
 }
@@ -47,24 +54,35 @@
   width: 55%;
   height: 100vh;
   background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .otp-container {
-  width: 50%;
-  margin-left: 80px;
+  width: 480px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
 }
 
-.forgot-heading {
+.forgot-otp-heading {
   font-size: 32px;
   color: #111c2d;
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  text-align: left;
+  margin: 0;
 }
 
 .para-forgot {
   font-size: 16px;
-  width: 350px;
+  width: 100%;
   color: #464555;
-  margin-left: 35px;
+  margin: 12px auto 0;
   line-height: 24px;
+  text-align: left;
 }
 
 .num {
@@ -73,9 +91,9 @@
 
 .forgototp-box {
   display: flex;
+  justify-content: flex-start;
   gap: 16px;
   margin: 40px 0;
-  margin-left: 10px;
 }
 
 .forgototp-input {
@@ -93,9 +111,10 @@
   color: #ffffff;
   background: #3525cd;
   font-size: 14px;
-  width: 480px;
+  width: 100%;
   height: 52px;
   border-radius: 8px;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 
 .forgotright {
@@ -107,20 +126,23 @@
 .code-resend {
   font-size: 14px;
   margin-top: 15px;
-  margin-left: 110px;
+  text-align: center;
+  margin: 18px 0;
   color: #777587;
 }
 
 .split {
-  width: 110%;
-  margin-left: 10px;
+  width: 100%;
+  display: block;
+  margin: 30px auto;
 }
 
 .forgot-end {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 30px;
-  margin-left: 20px;
+  gap: 8px;
 }
 
 .locked {
@@ -140,37 +162,57 @@
   margin: 5px;
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .Forgot-left {
+    width: 45%;
+  }
+
   .Forgot-right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 55%;
+  }
+
+  .Forgot-left h1 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .Forgot-left p {
+    width: 340px;
+    font-size: 16px;
+    line-height: 26px;
   }
 
   .otp-container {
-    width: 80%;
-    margin: 0 auto;
+    width: 440px;
   }
 
-  .forgot-end {
-    margin-top: 40px;
-    justify-content: center;
-    gap: 25px;
+  .forgot-otp-heading {
+    font-size: 30px;
+  }
+
+  .para-forgot {
+    font-size: 15px;
+  }
+
+  .forgototp-input {
+    width: 56px;
+    height: 56px;
+  }
+
+  .forgototp-box {
+    gap: 14px;
+  }
+
+  .otp-send {
+    width: 100%;
   }
 
   .split {
     width: 100%;
-    margin: 30px auto 0;
-    display: block;
-  }
-
-  .code-resend {
-    text-align: center;
-    margin: 20px 0;
   }
 }
 
-@media (max-width: 992px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .Forgototp-page {
     flex-direction: column;
   }
@@ -183,102 +225,46 @@
 
   .Forgot-left {
     padding: 50px 30px;
+    border-radius: 0;
   }
 
   .Forgot-left h1 {
     font-size: 36px;
+    line-height: 44px;
   }
 
   .Forgot-left p {
     width: 100%;
-    max-width: 450px;
+    max-width: 420px;
+    font-size: 16px;
+    line-height: 26px;
   }
 
   .Forgot-right {
-    padding: 40px 30px;
+    padding: 50px 20px;
   }
 
   .otp-container {
-    width: 100%;
-    max-width: 500px;
+    width: 90%;
+    max-width: 480px;
     margin: 0 auto;
   }
 
-  .forgot-heading,
-  .para-forgot {
-    margin-left: 0;
-  }
-
-  .forgototp-box {
-    margin-left: 0;
-  }
-
-  .otp-send {
-    width: 100%;
-  }
-
-  .code-resend {
-    margin: 20px 0;
-    text-align: center;
-  }
-
-  .split {
-    width: 100%;
-    margin-left: 0;
-  }
-
-  .forgot-end {
-    margin: 30px 0 0;
-    margin-left: 0;
-  }
-}
-
-@media (max-width: 480px) {
-  .Forgot-left,
-  .Forgot-right {
-    padding: 25px;
-  }
-
-  .proshield-icon {
-    width: 72px;
-    height: 72px;
-  }
-
-  .proshield {
-    width: 26px;
-    height: 32px;
-  }
-
-  .Forgot-left h1 {
+  .forgot-otp-heading {
     font-size: 30px;
   }
 
-  .Forgot-left p {
-    width: 100%;
-    font-size: 14px;
-    line-height: 24px;
-  }
-
-  .forgot-heading {
-    font-size: 28px;
-    text-align: center;
-  }
-
   .para-forgot {
     width: 100%;
-    text-align: center;
-    font-size: 14px;
-    line-height: 22px;
   }
 
   .forgototp-box {
-    justify-content: center;
-    gap: 8px;
-    margin: 30px 0;
+    justify-content: flex-start;
+    gap: 14px;
   }
 
   .forgototp-input {
-    width: 48px;
+    width: 56px;
     height: 56px;
   }
 
@@ -286,16 +272,68 @@
     width: 100%;
   }
 
-  .code-resend {
-    font-size: 13px;
-    text-align: center;
+  .split {
+    width: 100%;
+  }
+
+  .forgot-end {
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .Forgototp-page {
+    flex-direction: column;
+  }
+
+  .Forgot-left {
+    display: none;
+  }
+
+  .Forgot-right {
+    width: 100%;
+    height: auto;
+    padding: 40px 16px;
+  }
+
+  .otp-container {
+    width: 100%;
+    margin: 0;
+  }
+
+  .forgot-otp-heading {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .para-forgot {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .forgototp-box {
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .forgototp-input {
+    width: 46px;
+    height: 46px;
+  }
+
+  .otp-send {
+    width: 100%;
+    height: 50px;
+  }
+
+  .split {
+    width: 100%;
   }
 
   .forgot-end {
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-    text-align: center;
+    gap: 6px;
+    margin-top: 20px;
   }
 
   .forgot-end p {
