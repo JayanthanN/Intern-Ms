@@ -1,3 +1,4 @@
+import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import Guard from "../assets/login/guard.png";
 import shield2 from "../assets/login/shield2.png";
@@ -6,9 +7,42 @@ import forgotright from "../assets/right-arrow.png";
 import "./ForgotOtp.css";
 
 function ForgotOtp() {
+  const [otp, setOtp] = useState(["", "", "", "", "", ""]);
+  const [error, setError] = useState("");
+
+  const inputRefs = useRef([]);
   const navigate = useNavigate();
 
+  const handleChange = (value, index) => {
+    if (!/^\d?$/.test(value)) return;
+
+    const newOtp = [...otp];
+    newOtp[index] = value;
+    setOtp(newOtp);
+
+    if (value && index < 5) {
+      inputRefs.current[index + 1].focus();
+    }
+
+    setError("");
+  };
+
+  const handleKeyDown = (e, index) => {
+    if (e.key === "Backspace") {
+      if (otp[index] === "" && index > 0) {
+        inputRefs.current[index - 1].focus();
+      }
+    }
+  };
+
   const handleVerify = () => {
+    const enteredOtp = otp.join("");
+
+    if (enteredOtp.length !== 6) {
+      setError("Please enter the complete 6-digit OTP.");
+      return;
+    }
+
     navigate("/reset-password");
   };
   return (
@@ -36,18 +70,26 @@ function ForgotOtp() {
           </p>
 
           <div className="forgototp-box">
-            <input type="text" maxLength={1} className="forgototp-input" />
-            <input type="text" maxLength={1} className="forgototp-input" />
-            <input type="text" maxLength={1} className="forgototp-input" />
-            <input type="text" maxLength={1} className="forgototp-input" />
-            <input type="text" maxLength={1} className="forgototp-input" />
-            <input type="text" maxLength={1} className="forgototp-input" />
+            {otp.map((digit, index) => (
+              <input
+                key={index}
+                ref={(el) => (inputRefs.current[index] = el)}
+                type="text"
+                maxLength={1}
+                value={digit}
+                className="forgototp-input"
+                onChange={(e) => handleChange(e.target.value, index)}
+                onKeyDown={(e) => handleKeyDown(e, index)}
+              />
+            ))}
           </div>
 
           <button onClick={handleVerify} className="otp-send" type="button">
             Verify and Continue
             <img src={forgotright} className="forgotright" alt="right-arrow" />
           </button>
+
+          {error && <p className="otp-error">{error}</p>}
 
           <p className="code-resend">
             Didn't receive the code? Resend (in 00:55)

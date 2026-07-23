@@ -1,3 +1,4 @@
+import { useState, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import shields from "../assets/login/shield2.png";
@@ -6,10 +7,45 @@ import sendcode from "../assets/right-arrow.png";
 import "./Otp.css";
 
 function Otp() {
+  const [otp, setOtp] = useState(["", "", "", "", "", ""]);
+  const [error, setError] = useState("");
+
+  const inputRefs = useRef([]);
   const location = useLocation();
   const navigate = useNavigate();
 
   const method = location.state?.method;
+
+  const handleChange = (value, index) => {
+    if (!/^\d?$/.test(value)) return;
+
+    const newOtp = [...otp];
+    newOtp[index] = value;
+    setOtp(newOtp);
+
+    if (value && index < 5) {
+      inputRefs.current[index + 1].focus();
+    }
+
+    setError("");
+  };
+
+  const handleKeyDown = (e, index) => {
+    if (e.key === "Backspace" && otp[index] === "" && index > 0) {
+      inputRefs.current[index - 1].focus();
+    }
+  };
+
+  const handleVerify = () => {
+    const enteredOtp = otp.join("");
+
+    if (enteredOtp.length !== 6) {
+      setError("Please enter the complete 6-digit OTP.");
+      return;
+    }
+
+    navigate("/");
+  };
   return (
     <div className="otp-content">
       <div className="otp-left-container">
@@ -41,18 +77,26 @@ function Otp() {
         </div>
 
         <div className="otp-boxes">
-          <input type="text" maxLength={1} className="otp-input" />
-          <input type="text" maxLength={1} className="otp-input" />
-          <input type="text" maxLength={1} className="otp-input" />
-          <input type="text" maxLength={1} className="otp-input" />
-          <input type="text" maxLength={1} className="otp-input" />
-          <input type="text" maxLength={1} className="otp-input" />
+          {otp.map((digit, index) => (
+            <input
+              key={index}
+              ref={(el) => (inputRefs.current[index] = el)}
+              type="text"
+              inputMode="numeric"
+              maxLength={1}
+              value={digit}
+              className="otp-input"
+              onChange={(e) => handleChange(e.target.value, index)}
+              onKeyDown={(e) => handleKeyDown(e, index)}
+            />
+          ))}
         </div>
 
-        <button className="code-send" type="button">
+        <button className="code-send" type="button" onClick={handleVerify}>
           Verify Identity
           <img src={sendcode} className="send-code" alt="send-btn" />
         </button>
+        {error && <p className="otp-error">{error}</p>}
 
         <p className="resend">Didn't receive the code? Resend in 00.58 </p>
 

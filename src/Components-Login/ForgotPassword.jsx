@@ -6,7 +6,7 @@ import backarrow from "../assets/login/backarrow.png";
 import "./ForgotPassword.css";
 
 function ForgotPassword() {
-  const [selected, setSelected] = useState("");
+  const [selected, setSelected] = useState("email");
   const navigate = useNavigate();
 
   const handleSend = () => {
