@@ -44,7 +44,7 @@ function Otp() {
       return;
     }
 
-    navigate("/");
+    navigate("/mentor-dashboard");
   };
   return (
     <div className="otp-content">
