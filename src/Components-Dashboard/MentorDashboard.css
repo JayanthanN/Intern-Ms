@@ -271,7 +271,7 @@
   object-fit: contain;
 }
 
-.active-bgcolor {
+.present-bgcolor {
   width: 45px;
   height: 45px;
   background: #d5fee7;
