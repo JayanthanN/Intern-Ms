@@ -2,6 +2,7 @@
   width: 100%;
   min-height: 100vh;
   display: flex;
+  overflow: hidden;
 }
 
 .dashboard-navbar {
@@ -36,6 +37,12 @@
   margin-top: 6px;
   font-weight: 500;
 }
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+}
+
 .menu-items {
   display: flex;
   align-items: center;
@@ -60,7 +67,6 @@
 .menu-items.active {
   background: #ffffff30;
   border-radius: 5px;
-  width: 100%;
   height: 48px;
 }
 
@@ -219,7 +225,6 @@
   width: 100%;
   min-height: 110px;
   gap: 12px;
-  
 }
 
 .content-stat {
@@ -260,7 +265,7 @@
   flex-shrink: 0;
 }
 
-.active {
+.present {
   width: 18px;
   height: 18px;
   object-fit: contain;
@@ -528,7 +533,6 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-
 }
 
 .deadline-content {
@@ -536,7 +540,6 @@
   flex-direction: column;
   align-items: flex-start;
   flex: 1;
-  
 }
 
 .deadline-content h4 {
@@ -580,14 +583,11 @@
   font-family: "Inter", sans-serif;
   width: fit-content;
   flex-shrink: 0;
-  
-  
 }
 
 .red {
   background: #ffdbdb;
   color: #ff0505;
-  
 }
 
 .yellow {
@@ -637,7 +637,6 @@
   align-items: center;
   flex-shrink: 0;
 }
-
 
 .activity-icon img {
   width: 16px;
@@ -834,286 +833,161 @@
   padding-top: 16px;
 }
 
-
-@media (min-width:1440px){
-
-  .dashboard-main{
-    padding:30px;
+@media (max-width: 1200px) {
+  .mentor-stats {
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  .mentor-stats{
-    grid-template-columns:repeat(5,1fr);
-    gap:20px;
+  .mentor-dashboard-row,
+  .mentor-dashboard-bottom {
+    grid-template-columns: 1fr;
   }
 
-  .mentor-dashboard-row{
-    grid-template-columns:2.2fr 1.3fr 1.5fr;
+  .search-box {
+    width: 280px;
   }
-
-  .mentor-dashboard-bottom{
-    grid-template-columns:repeat(3,1fr);
-  }
-
 }
 
-
-@media (max-width:1439px){
-
-  .mentor-stats{
-    grid-template-columns:repeat(5,1fr);
-    gap:16px;
+@media (max-width: 900px) {
+  .mentor-dashboardpage {
+    flex-direction: column;
   }
 
-  .mentor-dashboard-row{
-    grid-template-columns:2fr 1.3fr 1.3fr;
+  .mentor-sidebar {
+    width: 100%;
+    max-width: 100%;
+    min-height: auto;
   }
 
-  .mentor-dashboard-bottom{
-    grid-template-columns:repeat(3,1fr);
+  .sidebar-logo {
+    padding: 16px 20px;
+    margin-left: 0;
   }
 
-  .search-box{
-    width:280px;
+  .sidebar-nav {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    gap: 10px;
+    padding: 12px 16px;
+    scrollbar-width: none;
   }
 
+  .sidebar-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .menu-items {
+    flex: 0 0 auto;
+    min-width: max-content;
+    padding: 12px 18px;
+  }
+
+  .menu-items h4 {
+    white-space: nowrap;
+  }
+
+  .dashboard-navbar {
+    width: 100%;
+  }
+
+  .mentor-navbar {
+    padding: 16px;
+  }
+
+  .dashboard-main {
+    padding: 20px;
+  }
 }
 
-
-@media (max-width:1024px){
-
-  .mentor-sidebar{
-    width:270px;
-    max-width:270px;
-  }
-
-  .mentor-navbar{
-    padding:18px;
-    gap:16px;
-    flex-wrap:wrap;
-  }
-
-  .navbar-left{
-    flex:1;
-  }
-
-  .navbar-center{
-    flex:1;
-    justify-content:flex-end;
-  }
-
-  .search-box{
-    width:240px;
-    margin-right:0;
-  }
-
-  .mentor-stats{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .mentor-dashboard-row{
-    grid-template-columns:1fr;
-  }
-
-  .mentor-dashboard-bottom{
-    grid-template-columns:1fr;
-  }
-
-}
-
-@media (max-width:768px){
-
-  .mentor-dashboardpage{
-    display:flex;
-  }
-
-  .mentor-sidebar{
-    width:270px;
-    max-width:270px;
-  }
-
-  .mentor-navbar{
-    flex-direction:column;
-    align-items:stretch;
-    gap:15px;
-    padding:18px;
+@media (max-width: 768px) {
+  .mentor-navbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px;
   }
 
   .navbar-left,
   .navbar-center,
-  .navbar-right{
-    width:100%;
-  }
-
-  .navbar-right{
-    justify-content:flex-start;
-  }
-
-  .search-box{
-    width:100%;
-  }
-
-  .dashboard-main{
-    padding:20px;
-  }
-
-  .mentor-stats{
-    grid-template-columns:1fr;
-  }
-
-  .mentor-dashboard-row{
-    grid-template-columns:1fr;
-  }
-
-  .mentor-dashboard-bottom{
-    grid-template-columns:1fr;
-  }
-
-  .status-content{
-    flex-direction:column;
-    align-items:center;
-  }
-
-  .chart-points{
-    flex-direction:column;
-    align-items:center;
-    gap:10px;
-  }
-
-}
-
-
-@media (max-width:576px){
-
-  .mentor-dashboardpage{
-    flex-direction:column;
-  }
-
-  .mentor-sidebar{
-    width:100%;
-    max-width:100%;
-    min-height:auto;
-  }
-
-  .dashboard-navbar{
-    width:100%;
-  }
-
-  .mentor-navbar{
+  .navbar-right {
     width: 100%;
-    padding:15px;
   }
 
-    .dashboard-main{
-    width:100%;
-    padding:12px;
+  .search-box {
+    width: 100%;
+    margin: 0;
   }
 
-  .navbar-right{
-    flex-wrap:wrap;
-    gap:12px;
+  .navbar-right {
+    display: flex;
+    justify-content: flex-start;
+    gap: 14px;
   }
-
-  .search-box{
-    width:100%;
-    height:44px;
-  }
-
-  .dashboard-main{
-    padding:15px;
-  }
-
-  .mentor-stat{
-    padding:16px;
-  }
-
-  .status-content{
-    flex-direction:column;
-  }
-
-  .deadline-header{
-    flex-direction:column;
-    align-items:flex-start;
-    gap:6px;
-  }
-
-  .top-item,
-  .schedule-item,
-  .activity-item{
-    gap:10px;
-  }
-
 }
 
-@media (max-width:480px){
-
-  .dashboard-main{
-    padding:12px;
+@media (max-width: 560px) {
+  .mentor-stats {
+    grid-template-columns: 1fr;
   }
 
-  .mentor-dashboardpage{
-    flex-direction: column;
-}
+  .mentor-navbar {
+    padding: 15px;
+  }
 
+  .dashboard-main {
+    padding: 15px;
+  }
+
+  .mentor-stat,
   .performance-card,
   .status-card,
   .deadline-card,
   .recent-card,
   .top-performing-card,
-  .schedule-card{
-    padding:16px;
+  .schedule-card {
+    padding: 16px;
   }
 
-  .deadline-item{
-    gap:10px;
-    padding:10px 0;
+  .deadline-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
   }
 
-  .deadline-date{
-    width:38px;
-  }
-    .deadline-header{
-    display:block;
-  }
-
-  .deadline-content h4{
-    font-size:9px;
-    margin-bottom: 6px;
-  }
-
-  .deadline-content p{
-    font-size:9px;
-  }
-
-  .due-text{
-    font-size:9px;
-    padding:3px 6px;
-    display: inline-block;
-    margin-bottom: 6px;
-  }
-
-  .view-deadline{
-    font-size:9px;
+  .status-content {
+    flex-direction: column;
   }
 
   .activity-item,
   .top-item,
-  .schedule-item{
-    gap:8px;
+  .schedule-item {
+    gap: 10px;
   }
 
   .activity-content h4,
-  .schedule-content h4{
-    font-size:10px;
+  .schedule-content h4 {
+    font-size: 10px;
   }
 
   .activity-content p,
-  .schedule-content p{
-    font-size:9px;
+  .schedule-content p,
+  .deadline-content p {
+    font-size: 9px;
   }
 
-  .status-points div{
-    width:100%;
-    font-size:10px;
+  .due-text {
+    font-size: 9px;
+    padding: 3px 6px;
   }
 
+  .view-deadline {
+    font-size: 9px;
+  }
+
+  .search-box {
+    height: 44px;
+  }
 }

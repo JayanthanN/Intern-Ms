@@ -1,4 +1,4 @@
-import active from "../assets/dashboard/active.png";
+import present from "../assets/dashboard/active.png";
 import mentorarrow from "../assets/dashboard/arrow.png";
 import attendance from "../assets/dashboard/attendance.png";
 import calendar from "../assets/dashboard/calendar.png";
@@ -164,124 +164,127 @@ function MentorDashboard() {
 
           <p>Internship Management System</p>
         </div>
+        <div className="sidebar-nav">
+          <div
+            className={
+              activeMenu === "Dashboard" ? "menu-items active" : "menu-items"
+            }
+            onClick={() => setActiveMenu("Dashboard")}
+          >
+            <img src={homeicon} className="menu-icon" alt="Home" />
+            <h4>Dashboard</h4>
+          </div>
 
-        <div
-          className={
-            activeMenu === "Dashboard" ? "menu-items active" : "menu-items"
-          }
-          onClick={() => setActiveMenu("Dashboard")}
-        >
-          <img src={homeicon} className="menu-icon" alt="Home" />
-          <h4>Dashboard</h4>
-        </div>
+          <div
+            className={
+              activeMenu === "My Interns" ? "menu-items active" : "menu-items"
+            }
+            onClick={() => setActiveMenu("My Interns")}
+          >
+            <img src={internusers} className="menu-icon" alt="intern-user" />
+            <h4>My Interns</h4>
+          </div>
 
-        <div
-          className={
-            activeMenu === "My Interns" ? "menu-items active" : "menu-items"
-          }
-          onClick={() => setActiveMenu("My Interns")}
-        >
-          <img src={internusers} className="menu-icon" alt="intern-user" />
-          <h4>My Interns</h4>
-        </div>
+          <div
+            className={
+              activeMenu === "Tasks & Reviews"
+                ? "menu-items active"
+                : "menu-items"
+            }
+            onClick={() => setActiveMenu("Tasks & Reviews")}
+          >
+            <img src={task} className="menu-icon" alt="task" />
 
-        <div
-          className={
-            activeMenu === "Tasks & Reviews"
-              ? "menu-items active"
-              : "menu-items"
-          }
-          onClick={() => setActiveMenu("Tasks & Reviews")}
-        >
-          <img src={task} className="menu-icon" alt="task" />
+            <h4>Tasks & Reviews</h4>
+          </div>
 
-          <h4>Tasks & Reviews</h4>
-        </div>
+          <div
+            className={
+              activeMenu === "Attendance" ? "menu-items active" : "menu-items"
+            }
+            onClick={() => setActiveMenu("Attendance")}
+          >
+            <img src={clock} className="menu-icon" alt="clock" />
 
-        <div
-          className={
-            activeMenu === "Attendance" ? "menu-items active" : "menu-items"
-          }
-          onClick={() => setActiveMenu("Attendance")}
-        >
-          <img src={clock} className="menu-icon" alt="clock" />
+            <h4>Attendance</h4>
+          </div>
 
-          <h4>Attendance</h4>
-        </div>
+          <div
+            className={
+              activeMenu === "Performance" ? "menu-items active" : "menu-items"
+            }
+            onClick={() => setActiveMenu("Performance")}
+          >
+            <img src={performance} className="menu-icon" alt="performicon" />
 
-        <div
-          className={
-            activeMenu === "Performance" ? "menu-items active" : "menu-items"
-          }
-          onClick={() => setActiveMenu("Performance")}
-        >
-          <img src={performance} className="menu-icon" alt="performicon" />
+            <h4>Performance</h4>
+          </div>
 
-          <h4>Performance</h4>
-        </div>
+          <div
+            className={
+              activeMenu === "Messages" ? "menu-items active" : "menu-items"
+            }
+            onClick={() => setActiveMenu("Messages")}
+          >
+            <img src={message} className="menu-icon" alt="message" />
 
-        <div
-          className={
-            activeMenu === "Messages" ? "menu-items active" : "menu-items"
-          }
-          onClick={() => setActiveMenu("Messages")}
-        >
-          <img src={message} className="menu-icon" alt="message" />
+            <h4>Messages</h4>
+          </div>
 
-          <h4>Messages</h4>
-        </div>
+          <div
+            className={
+              activeMenu === "Resources" ? "menu-items active" : "menu-items"
+            }
+            onClick={() => setActiveMenu("Resources")}
+          >
+            <img src={resource} className="menu-icon" alt="resourceicon" />
 
-        <div
-          className={
-            activeMenu === "Resources" ? "menu-items active" : "menu-items"
-          }
-          onClick={() => setActiveMenu("Resources")}
-        >
-          <img src={resource} className="menu-icon" alt="resourceicon" />
+            <h4>Resources</h4>
+          </div>
 
-          <h4>Resources</h4>
-        </div>
+          <div
+            className={
+              activeMenu === "Announcements"
+                ? "menu-items active"
+                : "menu-items"
+            }
+            onClick={() => setActiveMenu("Announcements")}
+          >
+            <img src={speaker} className="menu-icon" alt="speaker" />
 
-        <div
-          className={
-            activeMenu === "Announcements" ? "menu-items active" : "menu-items"
-          }
-          onClick={() => setActiveMenu("Announcements")}
-        >
-          <img src={speaker} className="menu-icon" alt="speaker" />
+            <h4>Announcements</h4>
+          </div>
 
-          <h4>Announcements</h4>
-        </div>
+          <div
+            className={
+              activeMenu === "Reports" ? "menu-items active" : "menu-items"
+            }
+            onClick={() => setActiveMenu("Reports")}
+          >
+            <img src={reports} className="menu-icon" alt="report" />
 
-        <div
-          className={
-            activeMenu === "Reports" ? "menu-items active" : "menu-items"
-          }
-          onClick={() => setActiveMenu("Reports")}
-        >
-          <img src={reports} className="menu-icon" alt="report" />
+            <h4>Reports</h4>
+          </div>
+          <div
+            className={
+              activeMenu === "Calendar" ? "menu-items active" : "menu-items"
+            }
+            onClick={() => setActiveMenu("Calendar")}
+          >
+            <img src={calendar} className="menu-icon" alt="calendar" />
 
-          <h4>Reports</h4>
-        </div>
-        <div
-          className={
-            activeMenu === "Calendar" ? "menu-items active" : "menu-items"
-          }
-          onClick={() => setActiveMenu("Calendar")}
-        >
-          <img src={calendar} className="menu-icon" alt="calendar" />
+            <h4>Calendar</h4>
+          </div>
+          <div
+            className={
+              activeMenu === "Settings" ? "menu-items active" : "menu-items"
+            }
+            onClick={() => setActiveMenu("Settings")}
+          >
+            <img src={settings} className="menu-icon" alt="settings" />
 
-          <h4>Calendar</h4>
-        </div>
-        <div
-          className={
-            activeMenu === "Settings" ? "menu-items active" : "menu-items"
-          }
-          onClick={() => setActiveMenu("Settings")}
-        >
-          <img src={settings} className="menu-icon" alt="settings" />
-
-          <h4>Settings</h4>
+            <h4>Settings</h4>
+          </div>
         </div>
       </div>
 
@@ -344,8 +347,8 @@ function MentorDashboard() {
             </div>
 
             <div className="mentor-stat">
-              <div className="active-bgcolor">
-                <img src={active} className="active" alt="active" />
+              <div className="present-bgcolor">
+                <img src={present} className="present" alt="active" />
               </div>
 
               <div className="content-stat">
