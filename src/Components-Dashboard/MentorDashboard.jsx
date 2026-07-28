@@ -1,51 +1,42 @@
-import present from "../assets/dashboard/active.png";
-import mentorarrow from "../assets/dashboard/arrow.png";
-import attendance from "../assets/dashboard/attendance.png";
-import calendar from "../assets/dashboard/calendar.png";
-import clipboard from "../assets/dashboard/clipboard.png";
-import clock from "../assets/dashboard/clock.png";
-import downarrow from "../assets/dashboard/downarrow.png";
-import downarrow1 from "../assets/dashboard/downarrow1.png";
-import guidelines from "../assets/dashboard/guidelines.png";
-import hamburgericon from "../assets/dashboard/hamburgericon.png";
-import homeicon from "../assets/dashboard/home-icon.png";
-import internusers from "../assets/dashboard/intern-users.png";
-import interncount from "../assets/dashboard/interncount.png";
-import mentoruser from "../assets/dashboard/mentoruser.png";
-import message from "../assets/dashboard/message.png";
-import notification from "../assets/dashboard//notification.png";
-import performance from "../assets/dashboard/performance.png";
-import reports from "../assets/dashboard/reports.png";
-import resource from "../assets/dashboard/resource.png";
-import reviews from "../assets/dashboard/reviews.png";
-import searchicon from "../assets/dashboard/search-icon.png";
-import settings from "../assets/dashboard/settings.png";
-import speaker from "../assets/dashboard/speaker.png";
-import star from "../assets/dashboard/star.png";
-import submit from "../assets/dashboard/submit.png";
-import task from "../assets/dashboard/task.png";
-import taskreport from "../assets/dashboard/taskreport.png";
-import topintern1 from "../assets/dashboard/top-intern1.png";
-import topintern2 from "../assets/dashboard/top-intern2.png";
-import topintern3 from "../assets/dashboard/top-intern3.png";
-import topintern4 from "../assets/dashboard/top-intern4.png";
 import { useState } from "react";
-import {
-  ResponsiveContainer,
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  Tooltip,
-  CartesianGrid,
-} from "recharts";
-import { PieChart, Pie, Cell } from "recharts";
 import "./MentorDashboard.css";
+import {ResponsiveContainer,LineChart,Line,XAxis,YAxis,Tooltip,CartesianGrid,PieChart,Pie,Cell,} from "recharts";
+import Present from "../assets/dashboard/active.png";
+import MentorArrow from "../assets/dashboard/arrow.png";
+import Attendance from "../assets/dashboard/attendance.png";
+import Calendar from "../assets/dashboard/calendar.png";
+import Clipboard from "../assets/dashboard/clipboard.png";
+import Clock from "../assets/dashboard/clock.png";
+import ProfileArrow from "../assets/dashboard/downarrow.png";
+import MonthArrow from "../assets/dashboard/downarrow1.png";
+import Guidelines from "../assets/dashboard/guidelines.png";
+import Hamburger from "../assets/dashboard/hamburgericon.png";
+import Home from "../assets/dashboard/home-icon.png";
+import InternUsers from "../assets/dashboard/intern-users.png";
+import InternCount from "../assets/dashboard/interncount.png";
+import MentorUser from "../assets/dashboard/mentoruser.png";
+import Message from "../assets/dashboard/message.png";
+import Notification from "../assets/dashboard/notification.png";
+import Performance from "../assets/dashboard/performance.png";
+import Reports from "../assets/dashboard/reports.png";
+import Resource from "../assets/dashboard/resource.png";
+import Reviews from "../assets/dashboard/reviews.png";
+import Search from "../assets/dashboard/search-icon.png";
+import Settings from "../assets/dashboard/settings.png";
+import Speaker from "../assets/dashboard/speaker.png";
+import Star from "../assets/dashboard/star.png";
+import Submit from "../assets/dashboard/submit.png";
+import Task from "../assets/dashboard/task.png";
+import TaskReport from "../assets/dashboard/taskreport.png";
+import TopInternOne from "../assets/dashboard/top-intern1.png";
+import TopInternTwo from "../assets/dashboard/top-intern2.png";
+import TopInternThree from "../assets/dashboard/top-intern3.png";
+import TopInternFour from "../assets/dashboard/top-intern4.png";
 
-function MentorDashboard() {
+export const MentorDashboard = () => {
   const [activeMenu, setActiveMenu] = useState("Dashboard");
 
-  const performanceData = [
+  const PerformanceData = [
     { week: "Week 1", averageScore: 21, taskCompletion: 0 },
     { week: "Week 2", averageScore: 24, taskCompletion: 3 },
     { week: "Week 3", averageScore: 41, taskCompletion: 17 },
@@ -53,20 +44,20 @@ function MentorDashboard() {
     { week: "Week 5", averageScore: 50, taskCompletion: 16 },
   ];
 
-  const internStatus = [
+  const InternStatusData = [
     { name: "Active", value: 8, color: "#1BBC58" },
     { name: "On Leave", value: 2, color: "#F0D941" },
     { name: "Completed", value: 2, color: "#E33C3F" },
   ];
 
-  const deadlines = [
+  const DeadlineData = [
     {
       month: "MAY",
       date: "22",
       title: "Project Report",
       name: "Aryan Verma",
       due: "Due in 2 days",
-      color: "red",
+      color: "Red",
     },
     {
       month: "MAY",
@@ -74,7 +65,7 @@ function MentorDashboard() {
       title: "UI/UX Case Study",
       name: "Neha Singh",
       due: "Due in 4 days",
-      color: "yellow",
+      color: "Yellow",
     },
     {
       month: "MAY",
@@ -82,162 +73,182 @@ function MentorDashboard() {
       title: "Final Presentation",
       name: "Rahul Mehta",
       due: "Due in 7 days",
-      color: "iceblue",
+      color: "IceBlue",
     },
   ];
 
-  const recentActivities = [
+  const RecentActivityData = [
     {
-      icon: submit,
-      bgColor: "activity-green",
+      icon: Submit,
+      bgColor: "ActivityIconContainerGreen",
       title: 'Aryan Verma submitted the task "Landing Page Design"',
       time: "2 Hours ago",
     },
     {
-      icon: taskreport,
-      bgColor: "activity-blue",
+      icon: TaskReport,
+      bgColor: "ActivityIconContainerBlue",
       title: 'You reviewed Neha Singh\'s task "User Research Report"',
       time: "5 Hours ago",
     },
     {
-      icon: attendance,
-      bgColor: "activity-yellow",
+      icon: Attendance,
+      bgColor: "ActivityIconContainerYellow",
       title: "Rahul Mehta marked attendance for today",
       time: "1 Day ago",
     },
     {
-      icon: guidelines,
-      bgColor: "activity-pink",
+      icon: Guidelines,
+      bgColor: "ActivityIconContainerPink",
       title: 'New resources "Design System Guidelines" shared',
       time: "2 Days ago",
     },
   ];
 
-  const topInterns = [
+  const TopInternData = [
     {
-      image: topintern1,
+      image: TopInternOne,
       name: "Aryan Verma",
       progress: 90,
     },
     {
-      image: topintern2,
+      image: TopInternTwo,
       name: "Neha Singh",
       progress: 88,
     },
     {
-      image: topintern3,
+      image: TopInternThree,
       name: "Rahul Mehta",
       progress: 85,
     },
     {
-      image: topintern4,
+      image: TopInternFour,
       name: "Priya Sharma",
       progress: 82,
     },
   ];
 
-  const schedules = [
+  const ScheduleData = [
     {
       time: "10:00 AM",
       title: "1:1 Meeting with Neha Singh",
       subTitle: "Mentorship Discussion",
-      color: "schedule-purple",
+      color: "SchedulePurple",
     },
     {
       time: "2:00 PM",
       title: "Project Review - Team Alpha",
       subTitle: "Review & Feedback",
-      color: "schedule-yellow",
+      color: "ScheduleYellow",
     },
     {
       time: "4:00 PM",
       title: "Weekly Mentor Sync",
       subTitle: "Team Meeting",
-      color: "schedule-cyan",
+      color: "ScheduleCyan",
     },
   ];
   return (
-    <div className="mentor-dashboardpage">
-      <div className="mentor-sidebar">
-        <div className="sidebar-logo">
+    <div className="MentorDashboardContainer">
+      <div className="MentorSidebar">
+        <div className="MentorLogoSection">
           <h2>InternMS</h2>
 
           <p>Internship Management System</p>
         </div>
-        <div className="sidebar-nav">
+        <div className="MentorSidebarNav">
           <div
             className={
-              activeMenu === "Dashboard" ? "menu-items active" : "menu-items"
+              activeMenu === "Dashboard"
+                ? "MentorNavItem active"
+                : "MentorNavItem"
             }
             onClick={() => setActiveMenu("Dashboard")}
           >
-            <img src={homeicon} className="menu-icon" alt="Home" />
+            <img src={Home} className="MentorNavIcon" alt="Home" />
             <h4>Dashboard</h4>
           </div>
 
           <div
             className={
-              activeMenu === "My Interns" ? "menu-items active" : "menu-items"
+              activeMenu === "My Interns"
+                ? "MentorNavItem active"
+                : "MentorNavItem"
             }
             onClick={() => setActiveMenu("My Interns")}
           >
-            <img src={internusers} className="menu-icon" alt="intern-user" />
+            <img
+              src={InternUsers}
+              className="MentorNavIcon"
+              alt="intern-user"
+            />
             <h4>My Interns</h4>
           </div>
 
           <div
             className={
               activeMenu === "Tasks & Reviews"
-                ? "menu-items active"
-                : "menu-items"
+                ? "MentorNavItem active"
+                : "MentorNavItem"
             }
             onClick={() => setActiveMenu("Tasks & Reviews")}
           >
-            <img src={task} className="menu-icon" alt="task" />
+            <img src={Task} className="MentorNavIcon" alt="task" />
 
             <h4>Tasks & Reviews</h4>
           </div>
 
           <div
             className={
-              activeMenu === "Attendance" ? "menu-items active" : "menu-items"
+              activeMenu === "Attendance"
+                ? "MentorNavItem active"
+                : "MentorNavItem"
             }
             onClick={() => setActiveMenu("Attendance")}
           >
-            <img src={clock} className="menu-icon" alt="clock" />
+            <img src={Clock} className="MentorNavIcon" alt="clock" />
 
             <h4>Attendance</h4>
           </div>
 
           <div
             className={
-              activeMenu === "Performance" ? "menu-items active" : "menu-items"
+              activeMenu === "Performance"
+                ? "MentorNavItem active"
+                : "MentorNavItem"
             }
             onClick={() => setActiveMenu("Performance")}
           >
-            <img src={performance} className="menu-icon" alt="performicon" />
+            <img
+              src={Performance}
+              className="MentorNavIcon"
+              alt="performicon"
+            />
 
             <h4>Performance</h4>
           </div>
 
           <div
             className={
-              activeMenu === "Messages" ? "menu-items active" : "menu-items"
+              activeMenu === "Messages"
+                ? "MentorNavItem active"
+                : "MentorNavItem"
             }
             onClick={() => setActiveMenu("Messages")}
           >
-            <img src={message} className="menu-icon" alt="message" />
+            <img src={Message} className="MentorNavIcon" alt="message" />
 
             <h4>Messages</h4>
           </div>
 
           <div
             className={
-              activeMenu === "Resources" ? "menu-items active" : "menu-items"
+              activeMenu === "Resources"
+                ? "MentorNavItem active"
+                : "MentorNavItem"
             }
             onClick={() => setActiveMenu("Resources")}
           >
-            <img src={resource} className="menu-icon" alt="resourceicon" />
+            <img src={Resource} className="MentorNavIcon" alt="resourceicon" />
 
             <h4>Resources</h4>
           </div>
@@ -245,100 +256,114 @@ function MentorDashboard() {
           <div
             className={
               activeMenu === "Announcements"
-                ? "menu-items active"
-                : "menu-items"
+                ? "MentorNavItem active"
+                : "MentorNavItem"
             }
             onClick={() => setActiveMenu("Announcements")}
           >
-            <img src={speaker} className="menu-icon" alt="speaker" />
+            <img src={Speaker} className="MentorNavIcon" alt="speaker" />
 
             <h4>Announcements</h4>
           </div>
 
           <div
             className={
-              activeMenu === "Reports" ? "menu-items active" : "menu-items"
+              activeMenu === "Reports"
+                ? "MentorNavItem active"
+                : "MentorNavItem"
             }
             onClick={() => setActiveMenu("Reports")}
           >
-            <img src={reports} className="menu-icon" alt="report" />
+            <img src={Reports} className="MentorNavIcon" alt="report" />
 
             <h4>Reports</h4>
           </div>
           <div
             className={
-              activeMenu === "Calendar" ? "menu-items active" : "menu-items"
+              activeMenu === "Calendar"
+                ? "MentorNavItem active"
+                : "MentorNavItem"
             }
             onClick={() => setActiveMenu("Calendar")}
           >
-            <img src={calendar} className="menu-icon" alt="calendar" />
+            <img src={Calendar} className="MentorNavIcon" alt="calendar" />
 
             <h4>Calendar</h4>
           </div>
           <div
             className={
-              activeMenu === "Settings" ? "menu-items active" : "menu-items"
+              activeMenu === "Settings"
+                ? "MentorNavItem active"
+                : "MentorNavItem"
             }
             onClick={() => setActiveMenu("Settings")}
           >
-            <img src={settings} className="menu-icon" alt="settings" />
+            <img src={Settings} className="MentorNavIcon" alt="settings" />
 
             <h4>Settings</h4>
           </div>
         </div>
       </div>
 
-      <div className="dashboard-navbar">
-        <div className="mentor-navbar">
-          <div className="navbar-left">
-            <img src={hamburgericon} className="hamburger" alt="hamburger" />
+      <div className="MentorMainContainer">
+        <div className="MentorNavbar">
+          <div className="MentorNavbarLeft">
+            <img src={Hamburger} className="Hamburger" alt="HamburgerIcon" />
 
-            <div className="welcome-text">
+            <div className="MentorWelcomeSection">
               <h4>Welcome back, Mentor</h4>
 
               <p>Welcome back, John Mentor!</p>
             </div>
           </div>
 
-          <div className="navbar-center">
-            <div className="search-box">
-              <img src={searchicon} className="search" alt="search" />
+          <div className="MentorNavbarCenter">
+            <div className="MentorSearchBox">
+              <img src={Search} className="SearchIcon" alt="search" />
 
               <input type="text" placeholder="Search anything......" />
             </div>
           </div>
 
-          <div className="navbar-right">
-            <div className="bell">
-              <img src={notification} className="notify" alt="notify" />
-              <span className="notification-dot"></span>
+          <div className="MentorNavbarRight">
+            <div className="NotificationSection">
+              <img
+                src={Notification}
+                className="NotificationIcon"
+                alt="NotificationIcon"
+              />
+              <span className="NotificationBadge"></span>
             </div>
 
-            <div className="profile-circle">
-              <img src={mentoruser} className="mentor-user" alt="mentor-icon" />
+            <div className="MentorProfileCircle">
+              <img
+                src={MentorUser}
+                className="MentorProfileImage"
+                alt="mentor-icon"
+              />
             </div>
 
-            <div className="mentor-detail">
+            <div className="MentorDetails">
               <h4>Mentor</h4>
               <p>Mentor Dashboard</p>
             </div>
 
-            <img src={downarrow} className="downarrow" alt="arrow" />
+            <img src={ProfileArrow} className="ProfileArrow" alt="arrow" />
           </div>
         </div>
 
-        <div className="dashboard-main">
-          <div className="mentor-stats">
-            <div className="mentor-stat">
-              <div className="intern-bgcolor">
+        <div className="MentorDashboardContent">
+          <div className="MentorStatsContainer">
+            <div className="MentorStatCard">
+              <div className="InternIconContainer">
                 <img
-                  src={interncount}
-                  className="interncount"
+                  src={InternCount}
+                  className="InternCount"
                   alt="interncount"
                 />
               </div>
 
-              <div className="content-stat">
+              <div className="MentorStatContent">
                 <h2>12</h2>
 
                 <p>Total Interns</p>
@@ -346,12 +371,12 @@ function MentorDashboard() {
               </div>
             </div>
 
-            <div className="mentor-stat">
-              <div className="present-bgcolor">
-                <img src={present} className="present" alt="active" />
+            <div className="MentorStatCard">
+              <div className="ActiveInternIconContainer">
+                <img src={Present} className="PresentIcon" alt="active" />
               </div>
 
-              <div className="content-stat">
+              <div className="MentorStatContent">
                 <h2>8</h2>
 
                 <p>Active Interns</p>
@@ -359,23 +384,23 @@ function MentorDashboard() {
               </div>
             </div>
 
-            <div className="mentor-stat">
-              <div className="clipboard-bgcolor">
-                <img src={clipboard} className="clipboard" alt="clipboard" />
+            <div className="MentorStatCard">
+              <div className="TaskIconContainer">
+                <img src={Clipboard} className="Clipboard" alt="clipboard" />
               </div>
 
-              <div className="content-stat">
+              <div className="MentorStatContent">
                 <h2>16</h2>
                 <p>Task Assigned</p>
                 <p>This Month</p>
               </div>
             </div>
 
-            <div className="mentor-stat">
-              <div className="reviews-bgcolor">
-                <img src={reviews} className="reviews" alt="reviews" />
+            <div className="MentorStatCard">
+              <div className="ReviewIconContainer">
+                <img src={Reviews} className="Reviews" alt="reviews" />
               </div>
-              <div className="content-stat">
+              <div className="MentorStatContent">
                 <h2>6</h2>
 
                 <p>Pending Reviews</p>
@@ -384,12 +409,12 @@ function MentorDashboard() {
               </div>
             </div>
 
-            <div className="mentor-stat">
-              <div className="star-bgcolor">
-                <img src={star} className="star" alt="star" />
+            <div className="MentorStatCard">
+              <div className="StarIconContainer">
+                <img src={Star} className="Star" alt="star" />
               </div>
 
-              <div className="content-stat">
+              <div className="MentorStatContent">
                 <h2>4.7</h2>
 
                 <p>Average Performance</p>
@@ -399,19 +424,23 @@ function MentorDashboard() {
             </div>
           </div>
 
-          <div className="mentor-dashboard-row">
-            <div className="performance-card">
-              <div className="performance-header">
+          <div className="MentorAnalyticsSection">
+            <div className="PerformanceCard">
+              <div className="PerformanceCardHeader">
                 <h3>Intern Performance Overview</h3>
-                <span className="month-text">
+                <span className="SelectedMonth">
                   This Month
-                  <img src={downarrow1} className="month-arrow" alt="arrow" />
+                  <img
+                    src={MonthArrow}
+                    className="MonthArrowIcon"
+                    alt="arrow"
+                  />
                 </span>
               </div>
 
               <ResponsiveContainer width="100%" height={250}>
                 <LineChart
-                  data={performanceData}
+                  data={PerformanceData}
                   margin={{
                     top: 10,
                     right: 20,
@@ -455,27 +484,27 @@ function MentorDashboard() {
                   />
                 </LineChart>
               </ResponsiveContainer>
-              <div className="chart-points">
+              <div className="ChartPoint">
                 <span>
-                  <span className="points-dot blue"></span>
+                  <span className="PointDot Blue"></span>
                   Average Score
                 </span>
 
                 <span>
-                  <span className="points-dot green"></span>
+                  <span className="PointDot Green"></span>
                   Task Completion (%)
                 </span>
               </div>
             </div>
 
-            <div className="status-card">
+            <div className="InternStatusCard">
               <h3>Intern By Status</h3>
-              <div className="status-content">
-                <div className="donut-wrapper">
+              <div className="InternStatusContent">
+                <div className="DonutChartContainer">
                   <ResponsiveContainer width={220} height={220}>
                     <PieChart>
                       <Pie
-                        data={internStatus}
+                        data={InternStatusData}
                         dataKey="value"
                         innerRadius={58}
                         outerRadius={82}
@@ -483,52 +512,53 @@ function MentorDashboard() {
                         startAngle={90}
                         endAngle={-270}
                       >
-                        {internStatus.map((item, index) => (
+                        {InternStatusData.map((item, index) => (
                           <Cell key={index} fill={item.color} />
                         ))}
                       </Pie>
                     </PieChart>
                   </ResponsiveContainer>
-                  <div className="donut-center">
+
+                  <div className="DonutChartCenter">
                     <h2>12</h2>
                     <p>Total</p>
                   </div>
                 </div>
 
-                <div className="status-points">
+                <div className="StatusPoint">
                   <div>
-                    <span className="point green"></span>
+                    <span className="StatusDot Green"></span>
                     <p> Active 8(66.7%)</p>
                   </div>
 
                   <div>
-                    <span className="point yellow"></span>
+                    <span className="StatusDot Yellow"></span>
                     <p>On leave 2(16.7%)</p>
                   </div>
 
                   <div>
-                    <span className="point red"></span>
+                    <span className="StatusDot Red"></span>
                     <p> Completed 2(16.7%)</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="deadline-card">
+            <div className="DeadlineCard">
               <h3>Upcoming Deadlines</h3>
 
-              {deadlines.map((item, index) => (
-                <div className="deadline-item" key={index}>
-                  <div className="deadline-date">
+              {DeadlineData.map((item, index) => (
+                <div className="DeadlineItem" key={index}>
+                  <div className="DeadlineDateBox">
                     <span>{item.month}</span>
                     <h4>{item.date}</h4>
                   </div>
 
-                  <div className="deadline-content">
-                    <div className="deadline-header">
+                  <div className="DeadlineContent">
+                    <div className="DeadlineHeader">
                       <h4>{item.title}</h4>
 
-                      <span className={`due-text ${item.color}`}>
+                      <span className={`DeadlineStatus ${item.color}`}>
                         {item.due}
                       </span>
                     </div>
@@ -537,49 +567,53 @@ function MentorDashboard() {
                 </div>
               ))}
 
-              <span className="view-deadline">
+              <span className="ViewAllDeadlines">
                 View All Deadlines{" "}
-                <img src={mentorarrow} className="mentorarrow" alt="arrow" />
+                <img src={MentorArrow} className="MentorArrow" alt="arrow" />
               </span>
             </div>
           </div>
 
-          <div className="mentor-dashboard-bottom">
-            <div className="recent-card">
+          <div className="MentorBottomSection">
+            <div className="RecentActivityCard">
               <h3>Recent Activities</h3>
 
-              {recentActivities.map((item, index) => (
-                <div className="activity-item" key={index}>
-                  <div className={`activity-icon ${item.bgColor}`}>
+              {RecentActivityData.map((item, index) => (
+                <div className="ActivityItem" key={index}>
+                  <div className={`ActivityIconContainer ${item.bgColor}`}>
                     <img src={item.icon} alt="activity" />
                   </div>
 
-                  <div className="activity-content">
+                  <div className="ActivityContent">
                     <h4>{item.title}</h4>
                     <p>{item.time}</p>
                   </div>
                 </div>
               ))}
 
-              <div className="activity-footer">
+              <div className="ActivityFooter">
                 <span>View all activities</span>
-                <img src={mentorarrow} className="mentorarrow" alt="arrow" />
+                <img src={MentorArrow} className="MentorArrow" alt="arrow" />
               </div>
             </div>
-            <div className="top-performing-card">
-              <div className="top-performing-header">
+            <div className="TopInternCard">
+              <div className="TopInternHeader">
                 <h3>Top Performing Interns</h3>
                 <span>View all</span>
               </div>
 
-              {topInterns.map((item, index) => (
-                <div className="top-item" key={index}>
-                  <img src={item.image} className="top-user" alt="intern" />
+              {TopInternData.map((item, index) => (
+                <div className="TopInternItem" key={index}>
+                  <img
+                    src={item.image}
+                    className="TopInternImage"
+                    alt="intern"
+                  />
 
-                  <div className="progress-section">
-                    <div className="progress-bar">
+                  <div className="ProgressSection">
+                    <div className="ProgressBar">
                       <div
-                        className="progress-fill"
+                        className="ProgressFill"
                         style={{ width: `${item.progress}%` }}
                       ></div>
                     </div>
@@ -590,32 +624,32 @@ function MentorDashboard() {
               ))}
             </div>
 
-            <div className="schedule-card">
-              <div className="schedule-header">
+            <div className="ScheduleCard">
+              <div className="ScheduleHeader">
                 <h3>My Schedule</h3>
                 <span>View Calendar</span>
               </div>
 
-              {schedules.map((item, index) => (
-                <div className="schedule-item" key={index}>
-                  <div className={`schedule-time ${item.color}`}>
+              {ScheduleData.map((item, index) => (
+                <div className="ScheduleItem" key={index}>
+                  <div className={`ScheduleTime ${item.color}`}>
                     {item.time}
                   </div>
 
-                  <div className="schedule-content">
+                  <div className="ScheduleContent">
                     <h4>{item.title}</h4>
 
                     <p>
-                      <span className="schedule-dot"></span>
+                      <span className="ScheduleDot"></span>
                       {item.subTitle}
                     </p>
                   </div>
                 </div>
               ))}
 
-              <div className="schedule-footer">
+              <div className="ScheduleFooter">
                 <span>View full Schedule</span>
-                <img src={mentorarrow} className="mentorarrow" alt="arrow" />
+                <img src={MentorArrow} className="MentorArrow" alt="arrow" />
               </div>
             </div>
           </div>
@@ -623,6 +657,4 @@ function MentorDashboard() {
       </div>
     </div>
   );
-}
-
-export default MentorDashboard;
+};

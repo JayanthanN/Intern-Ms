@@ -12,7 +12,7 @@ import MentorRegister from "./Components-Register/MentorRegister";
 import InternRegister from "./Components-Register/InternRegister";
 import CompanyRegister from "./Components-Register/CompanyRegister";
 import AdminRegister from "./Components-Register/AdminRegister";
-import MentorDashboard from "./Components-Dashboard/MentorDashboard";
+import {MentorDashboard} from "./Components-Dashboard/MentorDashboard"
 import "./App.css";
 
 function App() {
@@ -42,3 +42,4 @@ function App() {
 }
 
 export default App;
+
