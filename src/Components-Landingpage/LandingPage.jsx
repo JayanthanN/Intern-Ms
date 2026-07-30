@@ -1,25 +1,25 @@
-import heroImg from "../assets/InternshipDashboard.png";
-import successIcon from "../assets/success.png";
-import rightarrow from "../assets/right-arrow.png";
-import NextGenIcon from "../assets/nextgen-icon.png";
-import automated from "../assets/automated.png";
-import realtime from "../assets/realtime.png";
-import secure from "../assets/secure.png";
-import bluearrow from "../assets/bluearrow.png";
-import office from "../assets/Office.png";
-import tick from "../assets/tick.png";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
 import "./LandingPage.css";
+import HeroImg from "../assets/InternshipDashboard.png";
+import SuccessIcon from "../assets/success.png";
+import RightArrow from "../assets/right-arrow.png";
+import NextGenIcon from "../assets/nextgen-icon.png";
+import Automated from "../assets/automated.png";
+import RealTime from "../assets/realtime.png";
+import Secure from "../assets/secure.png";
+import BlueArrow from "../assets/bluearrow.png";
+import Office from "../assets/Office.png";
+import Tick from "../assets/tick.png";
+import { Navbar } from "./Navbar";
+import { Footer } from "./Footer";
 
-function LandingPage() {
+export const LandingPage = () => {
   return (
-    <div className="Landing-page">
+    <div className="LandingPage">
       <Navbar />
 
-      <div className="hero">
-        <div className="hero-left">
-          <div className="hero-badge">
+      <div className="Hero">
+        <div className="HeroLeft">
+          <div className="HeroBadge">
             <img src={NextGenIcon} alt="Next-Generation Icon" />
             Next-Generation Placement OS
           </div>
@@ -41,27 +41,27 @@ function LandingPage() {
             world-class employers.
           </p>
 
-          <div className="hero-buttons">
-            <button className="start-btn">
+          <div className="HeroButtons">
+            <button className="StartBtn">
               Get Started
-              <img src={rightarrow} alt="Icon" />
+              <img src={RightArrow} alt="Icon" />
             </button>
 
-            <button className="demo-btn">Book a Demo</button>
+            <button className="DemoBtn">Book a Demo</button>
           </div>
         </div>
 
-        <div className="hero-right">
-          <img src={heroImg} alt="HeroImg" className="hero-image" />
+        <div className="HeroRight">
+          <img src={HeroImg} className="HeroImage" alt="HeroImg" />
 
-          <div className="floating-card">
+          <div className="FloatingCard">
             <img
-              src={successIcon}
+              src={SuccessIcon}
+              className="SuccessIconImg"
               alt="Success Icon"
-              className="success-icon-img"
             />
 
-            <div className="card-text">
+            <div className="CardText">
               <h5>Success Rate</h5>
               <h3>+24% Increase</h3>
             </div>
@@ -69,24 +69,24 @@ function LandingPage() {
         </div>
       </div>
 
-      <div className="stats">
-        <div className="stat-box">
+      <div className="Stats">
+        <div className="StatBox">
           <h2>500+</h2>
           <p>UNIVERSITIES</p>
         </div>
 
-        <div className="stat-box">
+        <div className="StatBox">
           <h2>10k+</h2>
           <p>GLOBAL COMPANIES</p>
         </div>
 
-        <div className="stat-box">
+        <div className="StatBox">
           <h2>1M+</h2>
           <p>PLACEMENTS</p>
         </div>
       </div>
-      <div className="features">
-        <div className="features-top">
+      <div className="Features">
+        <div className="FeaturesTop">
           <div>
             <h2>Engineered for Efficiency</h2>
             <p>
@@ -97,18 +97,14 @@ function LandingPage() {
 
           <span>
             Explore all features
-            <img
-              src={bluearrow}
-              className="Feature-arrow"
-              alt="Feature-arrow"
-            />
+            <img src={BlueArrow} className="FeatureArrow" alt="Feature-arrow" />
           </span>
         </div>
 
-        <div className="features-grid">
-          <div className="feature-card">
-            <div className="icon-box">
-              <img src={automated} alt="automated-icon" />
+        <div className="FeaturesGrid">
+          <div className="FeatureCard">
+            <div className="IconBox">
+              <img src={Automated} alt="automated-icon" />
             </div>
             <h3>Automated Matching</h3>
             <p>
@@ -117,9 +113,9 @@ function LandingPage() {
             </p>
           </div>
 
-          <div className="feature-card">
-            <div className="icon-box">
-              <img src={realtime} alt="realtime-icon" />
+          <div className="FeatureCard">
+            <div className="IconBox">
+              <img src={RealTime} alt="realtime-icon" />
             </div>
             <h3>Real-time Tracking</h3>
             <p>
@@ -128,9 +124,9 @@ function LandingPage() {
             </p>
           </div>
 
-          <div className="feature-card">
-            <div className="icon-box">
-              <img src={secure} alt="secure-icon" />
+          <div className="FeatureCard">
+            <div className="IconBox">
+              <img src={Secure} alt="secure-icon" />
             </div>
             <h3>Secure Documents</h3>
             <p>
@@ -140,17 +136,17 @@ function LandingPage() {
           </div>
         </div>
       </div>
-      <div className="audience">
-        <div className="audience-left">
+      <div className="Audience">
+        <div className="AudienceLeft">
           <h1>
             For Students: <br />
           </h1>
           <h2>Your Career Launchpad.</h2>
 
-          <div className="audience-points">
-            <div className="points">
-              <span className="tick">
-                <img src={tick} alt="tick-icon" />
+          <div className="AudiencePoints">
+            <div className="Points">
+              <span className="Tick">
+                <img src={Tick} alt="tick-icon" />
               </span>
               <div>
                 <h4>One-click Applications</h4>
@@ -160,9 +156,9 @@ function LandingPage() {
               </div>
             </div>
 
-            <div className="points">
-              <span className="tick">
-                <img src={tick} alt="tick-icon" />
+            <div className="Points">
+              <span className="Tick">
+                <img src={Tick} alt="tick-icon" />
               </span>
               <div>
                 <h4>AI Career Coaching</h4>
@@ -172,9 +168,9 @@ function LandingPage() {
               </div>
             </div>
 
-            <div className="points">
-              <span className="tick">
-                <img src={tick} alt="tick-icon" />
+            <div className="Points">
+              <span className="Tick">
+                <img src={Tick} alt="tick-icon" />
               </span>
               <div>
                 <h4>Verified Credentials</h4>
@@ -183,20 +179,18 @@ function LandingPage() {
             </div>
           </div>
 
-          <div className="audience-buttons">
+          <div className="AudienceButtons">
             <button>Students</button>
             <button>Employers</button>
             <button>Universities</button>
           </div>
         </div>
 
-        <div className="audience-right">
-          <img src={office} alt="office-icon" className="audience-image" />
+        <div className="AudienceRight">
+          <img src={Office} className="AudienceImage" alt="office-icon" />
         </div>
       </div>
       <Footer />
     </div>
-  );
+  )
 }
-
-export default LandingPage;

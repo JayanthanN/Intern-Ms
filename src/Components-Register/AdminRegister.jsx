@@ -1,14 +1,15 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import admin from "../assets/register/admin.png";
-import future from "../assets/register/future.png";
-import adminverify from "../assets/register/shield.png";
-import adminshield from "../assets/register/shield1.png";
-import eyeOpen from "../assets/register/eye-icon.png";
-import eyeClose from "../assets/register/closed-eye.png";
 import "./AdminRegister.css";
+import AdminIcon from "../assets/register/admin.png";
+import FutureImage from "../assets/register/future.png";
+import AdminVerify from "../assets/register/shield.png";
+import AdminShield from "../assets/register/shield1.png";
+import EyeOpen from "../assets/register/eye-icon.png";
+import EyeClose from "../assets/register/closed-eye.png";
 
-function AdminRegister() {
+
+export const AdminRegister = () => {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -45,42 +46,42 @@ function AdminRegister() {
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
 
     if (!formData.fullName.trim()) {
-      newErrors.fullName = "Full Name is required";
+      newErrors.fullName = "Full Name is Required";
     }
 
     if (!formData.email.trim()) {
-      newErrors.email = "Email is required";
+      newErrors.email = "Email is Required";
     } else if (!emailRegex.test(formData.email)) {
       newErrors.email = "Enter a valid email address";
     }
 
     if (!formData.phone.trim()) {
-      newErrors.phone = "Phone Number is required";
+      newErrors.phone = "Phone Number is Required";
     } else if (!phoneRegex.test(formData.phone)) {
       newErrors.phone = "Enter a valid 10-digit phone number";
     }
 
     if (!formData.organization.trim()) {
-      newErrors.organization = "Organization Name is required";
+      newErrors.organization = "Organization Name is Required";
     }
 
     if (!formData.designation.trim()) {
-      newErrors.designation = "Designation is required";
+      newErrors.designation = "Designation is Required";
     }
 
     if (!formData.country) {
-      newErrors.country = "Country is required";
+      newErrors.country = "Country is Required";
     }
 
     if (!formData.password) {
-      newErrors.password = "Password is required";
+      newErrors.password = "Password is Required";
     } else if (!passwordRegex.test(formData.password)) {
       newErrors.password =
         "Password must contain 8+ characters, uppercase, lowercase, number & special character";
     }
 
     if (!formData.confirmPassword) {
-      newErrors.confirmPassword = "Confirm Password is required";
+      newErrors.confirmPassword = "Confirm Password is Required";
     } else if (formData.password !== formData.confirmPassword) {
       newErrors.confirmPassword = "Passwords do not match";
     }
@@ -106,13 +107,13 @@ function AdminRegister() {
 
   return (
     <>
-      <div className="admin-page">
-        <div className="admin-leftpage">
-          <div className="admin-logo">
+      <div className="AdminRegisterPage">
+        <div className="AdminLeftContainer">
+          <div className="AdminRegisterLogo">
             <h3>InternMS</h3>
           </div>
 
-          <div className="admin-heading">
+          <div className="AdminRegisterHeading">
             <h1>Regain access to your professional future.</h1>
 
             <p>
@@ -122,37 +123,37 @@ function AdminRegister() {
             </p>
           </div>
 
-          <div className="admin-img">
-            <img src={future} className="future-img" alt="future-img" />
+          <div className="AdminImageBox">
+            <img src={FutureImage} className="FutureImage" alt="future-img" />
           </div>
 
-          <div className="admin-features">
-            <div className="admin-card">
-              <div className="admin-card-icon">
+          <div className="AdminRegisterFeatures">
+            <div className="AdminRegisterCard">
+              <div className="AdminRegisterCardIcon">
                 <img
-                  src={adminverify}
-                  className="admin-verify"
+                  src={AdminVerify}
+                  className="AdminVerify"
                   alt="verify-icon"
                 />
               </div>
 
-              <div className="admin-content">
+              <div className="AdminRegisterContent">
                 <h4>Role-based access</h4>
 
                 <p>Secure and personalized experience for every user.</p>
               </div>
             </div>
 
-            <div className="admin-card">
-              <div className="admin-card-icon">
+            <div className="AdminRegisterCard">
+              <div className="AdminRegisterCardIcon">
                 <img
-                  src={adminshield}
-                  className="adminshield"
+                  src={AdminShield}
+                  className="AdminShield"
                   alt="adminshield-icon"
                 />
               </div>
 
-              <div className="admin-content">
+              <div className="AdminRegisterContent">
                 <h4>Trusted & Secure</h4>
 
                 <p>Your data is protected with industry-standard security.</p>
@@ -161,31 +162,31 @@ function AdminRegister() {
           </div>
         </div>
 
-        <div className="admin-rightpage">
-          <div className="admin-header">
+        <div className="AdminRightContainer">
+          <div className="AdminRegisterHeader">
             <h1>Admin Registration</h1>
 
             <p>Fill in the details below to create your account</p>
           </div>
 
-          <div className="admin-role">
-            <p className="admin-title">Registering as</p>
+          <div className="AdminRegisterRole">
+            <p className="AdminRegisterTitle">Registering as</p>
 
-            <div className="admin-container">
-              <div className="admin-card">
-                <div className="admin-circle">
-                  <img src={admin} alt="admin-icon" />
+            <div className="AdminRoleContainer">
+              <div className="AdminRoleCard">
+                <div className="AdminRoleIcon">
+                  <img src={AdminIcon} alt="admin-icon" />
                 </div>
                 <h4>Admin</h4>
               </div>
             </div>
           </div>
 
-          <form className="admin-form" onSubmit={handleSubmit}>
-            <div className="admin-form-row">
-              <div className="admin-group">
+          <form className="AdminRegisterForm" onSubmit={handleSubmit}>
+            <div className="AdminRegisterFormRow">
+              <div className="AdminRegisterGroup">
                 <label>
-                  Full Name <span className="required">*</span>
+                  Full Name <span className="Required">*</span>
                 </label>
 
                 <input
@@ -198,9 +199,9 @@ function AdminRegister() {
                 {errors.fullName && <p className="error">{errors.fullName}</p>}
               </div>
 
-              <div className="admin-group">
+              <div className="AdminRegisterGroup">
                 <label>
-                  Email Address <span className="required">*</span>
+                  Email Address <span className="Required">*</span>
                 </label>
 
                 <input
@@ -214,14 +215,14 @@ function AdminRegister() {
               </div>
             </div>
 
-            <div className="admin-form-row">
-              <div className="admin-group">
+            <div className="AdminRegisterFormRow">
+              <div className="AdminRegisterGroup">
                 <label>
-                  Phone Number <span className="required">*</span>
+                  Phone Number <span className="Required">*</span>
                 </label>
 
-                <div className="phone-input">
-                  <div className="country-code">
+                <div className="PhoneInput">
+                  <div className="CountryCode">
                     <h5>+91</h5>
                   </div>
                   <input
@@ -235,10 +236,10 @@ function AdminRegister() {
                 {errors.phone && <p className="error">{errors.phone}</p>}
               </div>
 
-              <div className="admin-group">
+              <div className="AdminRegisterGroup">
                 <label>
                   Organization / Institution Name{" "}
-                  <span className="required">*</span>
+                  <span className="Required">*</span>
                 </label>
 
                 <input
@@ -254,10 +255,10 @@ function AdminRegister() {
               </div>
             </div>
 
-            <div className="admin-form-row">
-              <div className="admin-group">
+            <div className="AdminRegisterFormRow">
+              <div className="AdminRegisterGroup">
                 <label>
-                  Job Title / Designation <span className="required">*</span>
+                  Job Title / Designation <span className="Required">*</span>
                 </label>
 
                 <input
@@ -272,9 +273,9 @@ function AdminRegister() {
                 )}
               </div>
 
-              <div className="admin-group">
+              <div className="AdminRegisterGroup">
                 <label>
-                  Country <span className="required">*</span>
+                  Country <span className="Required">*</span>
                 </label>
 
                 <select
@@ -291,10 +292,10 @@ function AdminRegister() {
               </div>
             </div>
 
-            <div className="admin-form-row">
-              <div className="admin-password">
+            <div className="AdminRegisterFormRow">
+              <div className="AdminPassword">
                 <label>
-                  Password<span className="required">*</span>
+                  Password<span className="Required">*</span>
                 </label>
 
                 <input
@@ -306,7 +307,7 @@ function AdminRegister() {
                 />
 
                 <img
-                  src={showPassword ? eyeClose : eyeOpen}
+                  src={showPassword ? EyeClose : EyeOpen}
                   className="AdminEye"
                   alt="eye-icon"
                   onClick={() => setShowPassword(!showPassword)}
@@ -314,9 +315,9 @@ function AdminRegister() {
                 {errors.password && <p className="error">{errors.password}</p>}
               </div>
 
-              <div className="admin-password">
+              <div className="AdminPassword">
                 <label>
-                  Confirm Password <span className="required">*</span>
+                  Confirm Password <span className="Required">*</span>
                 </label>
 
                 <input
@@ -328,7 +329,7 @@ function AdminRegister() {
                 />
 
                 <img
-                  src={showConfirmPassword ? eyeClose : eyeOpen}
+                  src={showConfirmPassword ? EyeClose : EyeOpen}
                   className="AdminEye"
                   alt="eye-icon"
                   onClick={() => setShowConfirmPassword(!showConfirmPassword)}
@@ -339,7 +340,7 @@ function AdminRegister() {
               </div>
             </div>
 
-            <div className="terms">
+            <div className="Terms">
               <input
                 type="checkbox"
                 checked={acceptedTerms}
@@ -347,27 +348,27 @@ function AdminRegister() {
               />
               <label>
                 I agree to the{" "}
-                <span className="check-box">Terms of Service </span>
-                and <span className="check-box">Privacy Policy</span>
+                <span className="AdminTerms">Terms of Service </span>
+                and <span className="AdminTerms">Privacy Policy</span>
               </label>
             </div>
             {errors.terms && <p className="error">{errors.terms}</p>}
 
-            <button type="submit" className="admin-create">
+            <button type="submit" className="AdminRegisterButton">
               Create Account
             </button>
 
-            <div className="admin-divline">
+            <div className="AdminRegisterDivider">
               <hr />
               <p>OR</p>
               <hr />
             </div>
 
-            <div className="admin-sigin-line">
+            <div className="AdminRegisterSignin">
               <p>
                 Already have an account?
                 <span
-                  className="admin-signin"
+                  className="AdminSigninLink"
                   onClick={() => navigate("/login")}
                 >
                   {" "}
@@ -378,10 +379,10 @@ function AdminRegister() {
           </form>
         </div>
       </div>
-      <footer className="admin-footer">
+      <footer className="AdminRegisterFooter">
         <p>&copy; 2024 InternMS. All rights reserved.</p>
 
-        <div className="footer-policy">
+        <div className="AdminFooterLinks">
           <span>Privacy Policy</span>
           <span>Terms of Service</span>
           <span>Support</span>
@@ -391,4 +392,4 @@ function AdminRegister() {
   );
 }
 
-export default AdminRegister;
+

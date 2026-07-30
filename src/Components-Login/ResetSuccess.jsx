@@ -1,10 +1,11 @@
 import { useNavigate } from "react-router-dom";
-import successicon from "../assets/login/success-icon.png";
-import successimg from "../assets/login/success-img.png";
-import successtick from "../assets/login/success-tick.png";
 import "./ResetSuccess.css";
+import SuccessIcon from "../assets/login/success-icon.png";
+import SuccessImg from "../assets/login/success-img.png";
+import SuccessTick from "../assets/login/success-tick.png";
 
-function ResetSuccess() {
+
+export const ResetSuccess = () => {
   const navigate = useNavigate();
 
   const handleLogin = () => {
@@ -12,12 +13,12 @@ function ResetSuccess() {
   };
 
   return (
-    <div className="Reset-successpage">
-      <div className="success-left-container">
-        <div className="success-tick">
+    <div className="ResetSuccessPage">
+      <div className="ResetSuccessLeftContainer">
+        <div className="ResetSuccessTickBox">
           <img
-            src={successtick}
-            className="successtick"
+            src={SuccessTick}
+            className="SuccessTick"
             alt="successtick-icon"
           />
         </div>
@@ -29,18 +30,18 @@ function ResetSuccess() {
           credentials.
         </p>
 
-        <div className="img-box">
-          <img src={successimg} className="successimg" alt="successimg" />
-        </div>
+      
+          <img src={SuccessImg} className="ResetSuccessImage" alt="successimg" />
+        
       </div>
-      <div className="success-rightcontainer">
-        <div className="success-content">
-          <div className="action">
-            <img src={successicon} className="successicon" />
+      <div className="ResetSuccessRightContainer">
+        <div className="SuccessContent">
+          <div className="ResetSuccessAction">
+            <img src={SuccessIcon} className="SuccessActionIcon"  alt="success-icon"/>
             <p>Action Complete</p>
           </div>
 
-          <div className="success-text">
+          <div className="ResetSuccessText">
             <h1>Success</h1>
 
             <p>
@@ -49,14 +50,14 @@ function ResetSuccess() {
             </p>
           </div>
 
-          <button onClick={handleLogin} className="success-login">
+          <button onClick={handleLogin} className="SuccessLoginButton">
             Back to Login
           </button>
 
-          <hr className="divline" alt="line" />
+          <hr className="SuccessDivider"  />
         </div>
       </div>
     </div>
-  );
+  )
 }
-export default ResetSuccess;
+

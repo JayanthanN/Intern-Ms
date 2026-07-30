@@ -1,11 +1,11 @@
-.mentor-page {
+.MentorRegisterPage {
   width: 100%;
   min-height: 100vh;
   display: flex;
   font-family: "Hanken Grotesk", sans-serif;
 }
 
-.mentor-leftpage {
+.MentorLeftContainer {
   width: 40%;
   min-height: 100vh;
   background: linear-gradient(188.64deg, #275ec3 1.01%, #0d204a 99.65%);
@@ -16,14 +16,14 @@
   border-bottom-right-radius: 10px;
 }
 
-.intern-logo {
+.MentorRegisterLogo {
   color: #ffffff;
   font-size: 24px;
   font-weight: 700;
   font-family: "Manrope", sans-serif;
 }
 
-.mentor-heading h1 {
+.MentorRegisterHeading h1 {
   width: 400px;
   font-size: 40px;
   color: #ffffff;
@@ -33,7 +33,7 @@
   font-family: "Manrope", sans-serif;
 }
 
-.mentor-heading p {
+.MentorRegisterText {
   font-size: 18px;
   color: #dad7ff;
   width: 430px;
@@ -41,22 +41,22 @@
   margin-top: 16px;
 }
 
-.mentor-dashboard {
+.MentorRegisterDashboard {
   margin-top: 40px;
   display: flex;
   flex-direction: column;
   gap: 28px;
 }
 
-.dashboard-item {
+.MentorRegisterDashboardItem {
   display: flex;
   align-items: flex-start;
-  gap: 18px;
+  gap: 16px;
 }
 
-.dashboard-icon {
+.MentorRegisterDashboardIcon {
   background: #4f46e5;
-  width: 30px;
+  width: 32px;
   height: 32px;
   border-radius: 9999px;
   display: flex;
@@ -64,40 +64,41 @@
   justify-content: center;
 }
 
-.shield1 {
+.MentorShield {
   width: 10px;
   height: 13px;
 }
 
-.connection {
+.Connection {
   width: 16px;
   height: 8px;
 }
 
-.growth {
+.Growth {
   width: 14px;
   height: 14px;
 }
 
-.mentor-dashboard-content {
+.MentorRegisterDashboardContent {
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 
-.mentor-dashboard-content h4 {
+.MentorRegisterDashboardContent h4 {
   color: #ffffff;
   font-size: 14px;
-  margin: 0;
+  
 }
 
-.mentor-dashboard-content p {
+.MentorRegisterDashboardContent p {
   color: #dad7ff;
   font-size: 14px;
   line-height: 1.5;
   max-width: 360px;
 }
 
-.office-img {
+.OfficeImage {
   width: 100%;
   max-width: 445px;
   height: 192px;
@@ -105,59 +106,59 @@
   margin-top: auto;
 }
 
-.mentor-rightpage {
+.MentorRightContainer {
   width: 60%;
   min-height: 100vh;
   background: white;
   padding: 24px 45px;
 }
 
-.mentor-rightpage h1 {
+.MentorRightContainer h1 {
   font-size: 32px;
   color: #111c2d;
   font-weight: 600;
   font-family: "Manrope", sans-serif;
 }
 
-.mentor-rightpage p {
+.MentorRightContainer p {
   font-size: 16px;
   color: #464555;
   margin-top: 8px;
   margin-bottom: 20px;
 }
 
-.mentor-form {
+.MentorRegisterForm {
   width: 100%;
-  max-width: 760px;
+  max-width: 900px;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.role-selection p {
+.RoleSelection p {
   font-size: 14px;
 }
 
-.mentor-form-row {
+.MentorRegisterFormRow {
   display: flex;
   gap: 20px;
   margin-top: 10px;
 }
 
-.mentor-group {
+.MentorRegisterGroup {
   display: flex;
   flex-direction: column;
   flex: 1;
 }
 
-.mentor-group label {
+.MentorRegisterGroup label {
   margin-bottom: 8px;
   font-size: 14px;
   font-weight: 600;
 }
 
-.mentor-group input {
+.MentorRegisterGroup input {
   width: 100%;
   height: 50px;
   padding: 0 16px;
@@ -167,7 +168,7 @@
   font-family: "Hanken Grotesk", sans-serif;
 }
 
-.mentor-group select {
+.MentorRegisterGroup select {
   width: 100%;
   height: 50px;
   border: 1px solid #c7c4d8;
@@ -178,18 +179,18 @@
   font-family: "Hanken Grotesk", sans-serif;
 }
 
-.mentor-group-full {
+.MentorRegisterGroupFull {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.mentor-group-full label {
+.MentorRegisterGroupFull label {
   font-size: 14px;
   font-weight: 600;
 }
 
-.mentor-group-full textarea {
+.MentorRegisterGroupFull textarea {
   width: 100%;
   height: 120px;
   padding: 12px 16px;
@@ -200,24 +201,24 @@
   font-family: "Hanken Grotesk", sans-serif;
 }
 
-.bio-count {
+.MentorBioCount {
   text-align: end;
 }
 
-.mentor-password {
+.MentorPasswordInput {
   position: relative;
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-.mentor-password label {
+.MentorPasswordInput label {
   margin-bottom: 8px;
   font-size: 14px;
   font-weight: 600;
 }
 
-.mentor-password input {
+.MentorPasswordInput input {
   width: 100%;
   height: 50px;
   border-radius: 8px;
@@ -228,7 +229,7 @@
   padding: 0 16px;
   font-family: "Hanken Grotesk", sans-serif;
 }
-.eyes-icon {
+.MentorEyeIcon {
   position: absolute;
   right: 20px;
   top: 45px;
@@ -237,11 +238,11 @@
   cursor: pointer;
 }
 
-.required {
+.Required {
   color: #ef4444;
 }
 
-.mentor-form .error {
+.MentorRegisterForm .error {
   color: #ef4444;
   font-size: 12px;
   margin-top: 6px;
@@ -250,72 +251,92 @@
   font-family: "Hanken Grotesk", sans-serif;
 }
 
-.OR-line {
+
+.MentorTermsLink{
+   color: #3525cd;
+}
+
+.MentorCreateButton{
+  width: 100%;
+  height: 52px;
+  margin-top: 10px;
+  background: #3525cd;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+.MentorDivider {
   display: flex;
   align-items: center;
   gap: 16px;
   margin: 24px 0 8px;
 }
 
-.OR-line hr {
+.MentorDivider hr {
   flex: 1;
   margin-bottom: 15px;
 }
 
-.signin-section-line {
+.MentorSigninSection {
   text-align: center;
   margin-bottom: 12px;
 }
 
-.signin-section-line p {
+.MentorSigninSection p {
   font-size: 16px;
   color: #464555;
 }
 
-.signin-section-line span {
+.MentorSigninSection span {
   color: #3525cd;
   cursor: pointer;
 }
 
-.mentor-footer {
+
+.MentorFooter {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.mentor-footer p {
+.MentorFooter p {
   font-size: 14px;
   color: #777587;
 }
 
-.mentor-footerlinks span {
+.MentorFooterLinks span {
   color: #464555;
   font-size: 14px;
 }
 
-.mentor-footerlinks {
+.MentorFooterLinks {
   display: flex;
   gap: 24px;
   cursor: pointer;
 }
 
 @media (max-width: 1024px) {
-  .mentor-page {
+  .MentorRegisterPage {
     flex-direction: column;
   }
 
-  .mentor-leftpage,
-  .mentor-rightpage {
+  .MentorLeftContainer,
+  .MentorRightContainer {
     width: 100%;
     border-radius: 0;
   }
 
-  .mentor-leftpage {
+  .MentorLeftContainer {
     min-height: auto;
     padding: 40px;
   }
 
-  .office-img {
+  .OfficeImage {
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -323,151 +344,151 @@
     margin-top: 30px;
   }
 
-  .mentor-rightpage {
+  .MentorRightContainer {
     padding: 35px 25px;
   }
 
-  .mentor-heading h1,
-  .mentor-heading p,
-  .office-img {
+  .MentorRegisterHeading h1,
+  .MentorRegisterHeading p,
+  .OfficeImage {
     width: 100%;
     max-width: 100%;
   }
 
-  .mentor-form {
+  .MentorRegisterForm {
     max-width: 100%;
   }
 
-  .role-title,
-  .role-container {
+  .RoleTitle,
+  .RoleContainer {
     margin-left: 0;
   }
 }
 
 @media (max-width: 768px) {
-  .mentor-leftpage {
+  .MentorLeftContainer {
     display: none;
   }
 
-  .mentor-rightpage {
+  .MentorRightContainer {
     width: 100%;
     padding: 25px 20px;
   }
 
-  .mentor-rightpage h1 {
+  .MentorRightContainer h1 {
     font-size: 28px;
   }
 
-  .mentor-rightpage > p {
+  .MentorRightContainer > p {
     font-size: 14px;
   }
 
-  .role-container {
+  .RoleContainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 12px;
   }
 
-  .mentor-form-row {
+  .MentorRegisterFormRow {
     flex-direction: column;
     gap: 15px;
   }
 
-  .mentor-group,
-  .mentor-password {
+  .MentorRegisterGroup,
+  .MentorPasswordInput {
     width: 100%;
   }
 
-  .mentor-group input,
-  .mentor-group select,
-  .mentor-password input,
-  .mentor-group-full textarea {
+  .MentorRegisterGroup input,
+  .MentorRegisterGroup select,
+  .MentorPasswordInput input,
+  .MentorRegisterGroupFull textarea {
     width: 100%;
   }
 
-  .phone-input {
+  .PhoneInput {
     width: 100%;
   }
 
-  .phone-input input {
+  .PhoneInput input {
     flex: 1;
   }
 
-  .create-btn {
+  .MentorCreateButton {
     width: 100%;
   }
 
-  .OR-line {
+  .MentorDivider {
     width: 100%;
   }
 
-  .terms {
+  .Terms {
     align-items: flex-start;
   }
 
-  .terms label {
+  .Terms label {
     line-height: 1.5;
   }
 
-  .mentor-footer {
+  .MentorFooter {
     flex-direction: column;
     gap: 10px;
     text-align: center;
   }
 
-  .mentor-footerlinks {
+  .MentorFooterLinks {
     justify-content: center;
   }
 }
 
 @media (max-width: 480px) {
-  .mentor-rightpage {
+  .MentorRightContainer {
     padding: 20px 15px;
   }
 
-  .mentor-rightpage h1 {
+  .MentorRightContainer h1 {
     font-size: 24px;
   }
 
-  .mentor-rightpage > p {
+  .MentorRightContainer > p {
     font-size: 13px;
   }
 
-  .role-card {
+  .RoleCard {
     width: 90px;
     height: 85px;
   }
 
-  .role-card h4 {
+  .RoleCard h4 {
     font-size: 14px;
   }
 
-  .icon-circle {
+  .IconCircle {
     width: 38px;
     height: 38px;
   }
 
-  .mentor-group label,
-  .mentor-password label,
-  .mentor-group-full label {
+  .MentorRegisterGroup label,
+  .MentorPasswordInput label,
+  .MentorRegisterGroupFull label {
     font-size: 13px;
   }
 
-  .mentor-group input,
-  .mentor-group select,
-  .mentor-password input {
+  .MentorRegisterGroup input,
+  .MentorRegisterGroup select,
+  .MentorPasswordInput input {
     height: 46px;
     font-size: 13px;
   }
 
-  .mentor-group-full textarea {
+  .MentorRegisterGroupFull textarea {
     height: 110px;
     font-size: 13px;
   }
 
-  .mentor-footer p,
-  .mentor-footerlinks span {
+  .MentorFooter p,
+  .MentorFooterLinks span {
     font-size: 12px;
   }
 }

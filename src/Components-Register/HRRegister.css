@@ -1,11 +1,11 @@
-.HR-page {
+.HRRegisterPage {
   width: 100%;
   min-height: 100vh;
   display: flex;
   font-family: "Hanken Grotesk", sans-serif;
 }
 
-.hr-leftpage {
+.HRLeftContainer {
   width: 40%;
   min-height: 100vh;
   background: linear-gradient(165.73deg, #3571ca 2.49%, #29436b 100%);
@@ -17,14 +17,14 @@
   border-bottom-right-radius: 10px;
 }
 
-.inter-logo {
+.HRRegisterLogo {
   color: #ffffff;
   font-size: 24px;
   font-weight: 700;
   font-family: "Manrope", sans-serif;
 }
 
-.hr-heading h1 {
+.HRRegisterHeading h1 {
   width: 400px;
   font-size: 40px;
   color: #ffffff;
@@ -33,14 +33,14 @@
   font-family: "Manrope", sans-serif;
 }
 
-.hr-heading p {
+.HRRegisterHeading p {
   font-size: 18px;
   color: #dad7ff;
   width: 400px;
   margin-top: 16px;
 }
 
-.hr-dashboard {
+.HRDashboard {
   width: 400px;
   padding: 20px;
   background: #ffffff1a;
@@ -50,29 +50,29 @@
   border-radius: 16px;
 }
 
-.hr-dashboard-header {
+.HRDashboardHeader {
   display: flex;
   align-items: center;
   gap: 16px;
 }
 
-.hr-dashboard-content h3,
-.hr-dashboard-content h5 {
+.HRDashboardContent h3,
+.HRDashboardContent h5 {
   margin: 0;
   color: #dad7ff;
   font-size: 14px;
 }
 
-.hr-dashboard-content h5 {
+.HRDashboardContent h5 {
   margin-top: 5px;
 }
 
-.group {
+.Group {
   width: 24px;
   height: 12px;
 }
 
-.group-icon {
+.GroupIcon {
   background: #8a4cfc;
   width: 48px;
   height: 48px;
@@ -82,12 +82,12 @@
   justify-content: center;
 }
 
-.line {
+.ProgressLine {
   width: 100%;
   margin: 20px 0;
 }
 
-.hr-dashboard-footer {
+.HRDashboardFooter {
   display: flex;
   justify-content: space-between;
   margin-top: 16px;
@@ -95,60 +95,60 @@
   font-size: 10px;
 }
 
-.hr-footer {
+.HRRegisterFooter {
   display: flex;
   gap: 60px;
   margin-top: auto;
   padding-top: 30px;
 }
 
-.hr-stat h3 {
+.HRStats h3 {
   color: #ffffff;
   font-size: 24px;
   margin-bottom: 4px;
   font-family: "Manrope", sans-serif;
 }
 
-.hr-stat p {
+.HRStats p {
   color: #dad7ff;
   font-size: 16px;
 }
 
-.hr-rightpage {
+.HRRightContainer {
   width: 60%;
   min-height: 100vh;
   padding: 24px 45px;
   background: white;
 }
 
-.hr-form {
+.HRRegisterForm {
   width: 100%;
-  max-width: 760px;
+  max-width: 900px;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.hr-rightpage h1 {
+.HRRightContainer h1 {
   font-size: 32px;
   color: #111c2d;
   letter-spacing: -0.32px;
   font-family: "Manrope", sans-serif;
 }
 
-.hr-rightpage p {
+.HRRightContainer p {
   color: #464555;
   font-size: 15px;
   margin-top: 10px;
   margin-bottom: 25px;
 }
 
-.role-title {
+.RoleTitle {
   margin-left: 57px;
 }
 
-.role-container {
+.RoleContainer {
   display: flex;
   gap: 16px;
   margin-top: 12px;
@@ -156,7 +156,7 @@
   background: transparent;
 }
 
-.role-card {
+.RoleCard {
   width: 110px;
   height: 90px;
   border: 1px solid #c7c4d8;
@@ -173,7 +173,7 @@
   gap: 16px;
 }
 
-.icon-circle {
+.IconCircle {
   width: 20px;
   height: 20px;
   background: white;
@@ -184,44 +184,44 @@
   margin-top: 20px;
 }
 
-.role-card img {
+.RoleCard img {
   width: 32px;
   height: 32px;
   background: transparent;
 }
 
-.role-card h4 {
+.RoleCard h4 {
   font-size: 16px;
   font-family: "Manrope", sans-serif;
 }
 
-.role-card.active {
+.RoleCard.active {
   background: #c7e6ff;
 }
 
-.required {
+.Required {
   color: #ef4444;
 }
 
-.form-row {
+.HRFormRow {
   display: flex;
   gap: 20px;
   margin-top: 10px;
 }
 
-.inputgroup {
+.HRInputGroup {
   display: flex;
   flex-direction: column;
   flex: 1;
 }
 
-.inputgroup label {
+.HRInputGroup label {
   margin-bottom: 8px;
   font-size: 14px;
   font-weight: 600;
 }
 
-.inputgroup input {
+.HRInputGroup input {
   width: 100%;
   height: 50px;
   padding: 0 16px;
@@ -231,7 +231,7 @@
   font-family: "Hanken Grotesk", sans-serif;
 }
 
-.inputgroup select {
+.HRInputGroup select {
   width: 100%;
   height: 52px;
   border: 1px solid #c7c4d8;
@@ -242,12 +242,12 @@
   font-family: "Hanken Grotesk", sans-serif;
 }
 
-.phone-input {
+.PhoneInput {
   display: flex;
   gap: 8px;
 }
 
-.phone-input input {
+.PhoneInput input {
   height: 50px;
   padding: 0 16px;
   border: 1px solid #c7c4d8;
@@ -257,7 +257,7 @@
   flex: 1;
 }
 
-.country-code {
+.CountryCode {
   width: 50px;
   height: 50px;
   display: flex;
@@ -267,7 +267,7 @@
   border-radius: 8px;
 }
 
-.inputgroup-full input {
+.HRInputGroupFull input {
   width: 80%;
   height: 50px;
   display: flex;
@@ -279,13 +279,13 @@
   font-family: "Hanken Grotesk", sans-serif;
 }
 
-.inputgroup-full img {
+.HRInputGroupFull img {
   width: 20px;
   height: 18px;
   margin-left: 0;
 }
 
-.company-input {
+.HRCompanyInput {
   width: 100%;
   height: 50px;
   display: flex;
@@ -295,7 +295,7 @@
   padding: 0 14px;
   gap: 10px;
 }
-.company-input input {
+.HRCompanyInput input {
   flex: 1;
   border: none;
   outline: none;
@@ -304,20 +304,20 @@
   font-family: "Hanken Grotesk", sans-serif;
 }
 
-.password-input {
+.HRPasswordInput {
   position: relative;
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-.password-input label {
+.HRPasswordInput label {
   margin-bottom: 8px;
   font-size: 14px;
   font-weight: 600;
 }
 
-.password-input input {
+.HRPasswordInput input {
   width: 100%;
   height: 50px;
   border-radius: 8px;
@@ -328,7 +328,7 @@
   padding: 0 16px;
   font-family: "Hanken Grotesk", sans-serif;
 }
-.eye {
+.HREyeIcon {
   position: absolute;
   right: 20px;
   top: 45px;
@@ -337,14 +337,14 @@
   cursor: pointer;
 }
 
-.terms {
+.Terms {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-top: 8px;
 }
 
-.terms input {
+.Terms input {
   width: 20px;
   height: 20px;
   cursor: pointer;
@@ -352,18 +352,18 @@
   border-radius: 4px;
 }
 
-.terms label {
+.Terms label {
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
   color: #464555;
 }
 
-.check-box {
+.HRTermsLink {
   color: #3525cd;
 }
 
-.hr-form .error {
+.HRRegisterForm .error {
   color: #ef4444;
   font-size: 12px;
   margin-top: 6px;
@@ -372,7 +372,7 @@
   font-family: "Hanken Grotesk", sans-serif;
 }
 
-.create-btn {
+.HRCreateButton {
   width: 100%;
   height: 52px;
   margin-top: 10px;
@@ -386,187 +386,188 @@
   font-family: "Hanken Grotesk", sans-serif;
 }
 
-.OR-divider {
+.HRDivider {
   display: flex;
   align-items: center;
   gap: 16px;
   margin: 24px 0;
 }
 
-.OR-divider hr {
+.HRDivider hr {
   flex: 1;
   margin-bottom: 15px;
 }
 
-.OR-divider p {
+.HRDivider p {
   color: #464555;
   font-size: 10px;
+
 }
 
-.signin-section {
+.HRSigninSection {
   text-align: center;
   margin-bottom: 15px;
 }
 
-.signin-section p {
+.HRSigninSection p {
   font-size: 16px;
   color: #464555;
 }
 
-.signin-section span {
+.HRSigninSection span {
   color: #3525cd;
   cursor: pointer;
 }
 
 @media (max-width: 1024px) {
-  .HR-page {
+  .HRRegisterPage {
     flex-direction: column;
   }
 
-  .hr-leftpage,
-  .hr-rightpage {
+  .HRLeftContainer,
+  .HRRightContainer {
     width: 100%;
     border-radius: 0;
   }
 
-  .hr-leftpage {
+  .HRLeftContainer {
     min-height: auto;
     padding: 40px;
   }
 
-  .hr-rightpage {
+  .HRRightContainer {
     padding: 35px 25px;
   }
 
-  .hr-heading h1,
-  .hr-heading p,
-  .hr-dashboard {
+  .HRRegisterHeading h1,
+  .HRRegisterHeading p,
+  .HRDashboard {
     width: 100%;
   }
 
-  .hr-footer {
+  .HRRegisterFooter {
     margin-top: 50px;
   }
 
-  .role-title,
-  .role-container {
+  .RoleTitle,
+  .RoleContainer {
     margin-left: 0;
   }
 
-  .hr-form {
+  .HRRegisterForm {
     max-width: 100%;
   }
 }
 
 @media (max-width: 768px) {
-  .hr-leftpage {
+  .HRLeftContainer {
     display: none;
   }
 
-  .hr-rightpage {
+  .HRRightContainer {
     width: 100%;
     padding: 25px 20px;
   }
 
-  .hr-rightpage h1 {
+  .HRRightContainer h1 {
     font-size: 28px;
   }
 
-  .hr-rightpage p {
+  .HRRightContainer p {
     font-size: 14px;
   }
 
-  .role-title {
+  .RoleTitle {
     margin-left: 0;
   }
 
-  .role-container {
+  .RoleContainer {
     margin-left: 0;
     justify-content: center;
     flex-wrap: wrap;
     gap: 12px;
   }
 
-  .role-card {
+  .RoleCard {
     width: 100px;
     height: 90px;
   }
 
-  .form-row {
+  .HRFormRow {
     flex-direction: column;
     gap: 15px;
   }
 
-  .phone-input {
+  .PhoneInput {
     width: 100%;
   }
 
-  .phone-input input {
+  .PhoneInput input {
     width: 100%;
     margin-left: 8px;
   }
 
-  .company-input {
+  .HRCompanyInput {
     width: 100%;
   }
 
-  .password-input input {
+  .HRPasswordInput input {
     width: 100%;
   }
 
-  .create-btn {
+  .HRCreateButton {
     width: 100%;
   }
 
-  .OR-divider {
+  .HRDivider {
     width: 100%;
   }
 
-  .terms {
+  .Terms {
     align-items: flex-start;
   }
 
-  .terms label {
+  .Terms label {
     line-height: 1.5;
   }
 
-  .signin-section p {
+  .HRSigninSection p {
     font-size: 14px;
   }
 }
 
 @media (max-width: 480px) {
-  .hr-rightpage {
+  .HRRightContainer {
     padding: 20px 15px;
   }
 
-  .hr-rightpage h1 {
+  .HRRightContainer h1 {
     font-size: 24px;
   }
 
-  .role-card {
+  .RoleCard {
     width: 90px;
     height: 85px;
   }
 
-  .role-card h4 {
+  .RoleCard h4 {
     font-size: 14px;
   }
 
-  .role-card img {
+  .RoleCard img {
     width: 26px;
     height: 26px;
   }
 
-  .terms label {
+  .Terms label {
     font-size: 13px;
   }
 
-  .create-btn {
+  .HRCreateButton {
     height: 48px;
   }
 
-  .signin-section p {
+  .HRSigninSection p {
     font-size: 13px;
   }
 }

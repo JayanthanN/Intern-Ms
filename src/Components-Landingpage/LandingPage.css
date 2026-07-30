@@ -1,8 +1,8 @@
-.Landing-page {
+.LandingPage {
   font-family: "Inter", sans-serif;
 }
 
-.hero {
+.Hero {
   display: flex;
   justify-content: center;
   gap: 48px;
@@ -14,7 +14,7 @@
   overflow: hidden;
 }
 
-.hero::after {
+.Hero::after {
   content: "";
   position: absolute;
   top: -50px;
@@ -26,13 +26,49 @@
   z-index: 1;
 }
 
-.hero-left {
+.HeroLeft {
   width: 52%;
   position: relative;
   z-index: 2;
 }
 
-.hero-badge {
+.HeroLeft h1 {
+  font-size: 72px;
+  line-height: 72px;
+  color: #0b1c30;
+  letter-spacing: -1.8px;
+  font-weight: 400;
+}
+
+.HeroLeft h2 {
+  font-size: 72px;
+  line-height: 72px;
+  letter-spacing: -1.8px;
+  color: #2563eb;
+  position: relative;
+  font-weight: 400;
+}
+
+.HeroLeft hr {
+  width: 100%;
+  max-width: 446px;
+  height: 8px;
+  border: none;
+  border: 4px solid #0058be33;
+  margin-top: 12px;
+}
+
+.HeroLeft p {
+  color: #45464d;
+  font-size: 20px;
+  line-height: 32px;
+  margin-top: 15px;
+  margin-bottom: 38px;
+  font-weight: 400;
+  max-width: 500px;
+}
+
+.HeroBadge {
   display: inline-block;
   background: #e8f1ff;
   color: #0058be;
@@ -44,57 +80,21 @@
   line-height: 24px;
 }
 
-.hero-badge img {
+.HeroBadge img {
   width: 12px;
   height: 12px;
   object-fit: contain;
   margin-right: 8px;
 }
 
-.hero-left h1 {
-  font-size: 72px;
-  line-height: 72px;
-  color: #0b1c30;
-  letter-spacing: -1.8px;
-  font-weight: 400;
-}
-
-.hero-left h2 {
-  font-size: 72px;
-  line-height: 72px;
-  letter-spacing: -1.8px;
-  color: #2563eb;
-  position: relative;
-  font-weight: 400;
-}
-
-.hero-left hr {
-  width: 100%;
-  max-width: 446px;
-  height: 8px;
-  border: none;
-  border: 4px solid #0058be33;
-  margin-top: 12px;
-}
-
-.hero-left p {
-  color: #45464d;
-  font-size: 20px;
-  line-height: 32px;
-  margin-top: 15px;
-  margin-bottom: 38px;
-  font-weight: 400;
-  max-width: 500px;
-}
-
-.hero-buttons {
+.HeroButtons {
   display: flex;
   gap: 24px;
   margin-top: 10px;
 }
 
-.start-btn,
-.demo-btn {
+.StartBtn,
+.DemoBtn {
   padding: 25px 48px;
   border: none;
   cursor: pointer;
@@ -107,38 +107,38 @@
   transition: 0.3s ease;
 }
 
-.start-btn {
+.StartBtn {
   background: #0058be;
   color: white;
   box-shadow: 0 8px 18px rgba(37, 99, 235, 0.2);
 }
 
-.start-btn img {
+.StartBtn img {
   width: 16px;
   height: 16px;
   object-fit: contain;
   margin-left: 8px;
 }
 
-.demo-btn {
+.DemoBtn {
   background: white;
   border: 1px solid #c6c6cd;
   color: #0b1c30;
 }
 
-.start-btn:hover,
-.demo-btn:hover {
+.StartBtn:hover,
+.DemoBtn:hover {
   transform: translateY(-3px);
 }
 
-.hero-right {
+.HeroRight {
   width: 42%;
   position: relative;
   z-index: 2;
   margin-top: 25px;
 }
 
-.hero-image {
+.HeroImage {
   width: 100%;
   border-radius: 22px;
   border: 8px solid #ffffff;
@@ -146,7 +146,7 @@
   position: relative;
 }
 
-.floating-card {
+.FloatingCard {
   width: 250px;
   height: 94px;
   position: absolute;
@@ -161,36 +161,36 @@
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
 
-.card-text {
+.CardText {
   display: flex;
   flex-direction: column;
 }
 
-.floating-card p {
+.FloatingCard p {
   font-size: 13px;
   color: gray;
   margin: 0;
 }
 
-.floating-card h6 {
+.FloatingCard h6 {
   color: #45464d;
   font-size: 12px;
 }
 
-.floating-card h3 {
+.FloatingCard h3 {
   margin: 2px 0 0 0;
   font-size: 20px;
   color: #0b1c30;
 }
 
-.success-icon-img {
+.SuccessIconImg {
   width: 38px;
   height: 38px;
   object-fit: contain;
   flex-shrink: 0;
 }
 
-.stats {
+.Stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   background: white;
@@ -199,7 +199,7 @@
   border-bottom: 1px solid #eeeeee;
 }
 
-.stat-box {
+.StatBox {
   text-align: center;
   padding: 18px 10px;
   border-right: 1px solid #eeeeee;
@@ -207,11 +207,11 @@
   transition: 0.3s ease;
 }
 
-.stat-box:last-child {
+.StatBox:last-child {
   border-right: none;
 }
 
-.stat-box h2 {
+.StatBox h2 {
   font-size: 48px;
   margin-bottom: 6px;
   font-weight: 900;
@@ -219,7 +219,7 @@
   line-height: 48px;
 }
 
-.stat-box p {
+.StatBox p {
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 2.4px;
@@ -227,23 +227,23 @@
   font-weight: 600;
 }
 
-.stat-box:hover {
+.StatBox:hover {
   background: #f8faff;
 }
 
-.features {
+.Features {
   padding: 90px 60px;
   background: #f7f8fc;
 }
 
-.features-top {
+.FeaturesTop {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 55px;
 }
 
-.features-top h2 {
+.FeaturesTop h2 {
   font-size: 48px;
   margin-bottom: 14px;
   font-weight: 500;
@@ -251,7 +251,7 @@
   line-height: 48px;
 }
 
-.features-top p {
+.FeaturesTop p {
   width: 600px;
   color: #45464d;
   line-height: 24px;
@@ -259,25 +259,25 @@
   font-weight: 500;
 }
 
-.features-top span {
+.FeaturesTop span {
   color: #2563eb;
   font-size: 16px;
   margin-top: 30px;
   cursor: pointer;
 }
 
-.features-top img {
+.FeaturesTop img {
   width: 9px;
   height: 9px;
   margin-left: 5px;
 }
-.features-grid {
+.FeaturesGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
 }
 
-.feature-card {
+.FeatureCard {
   background: white;
   padding: 36px;
   border-radius: 20px;
@@ -286,11 +286,11 @@
   transition: 0.3s ease;
 }
 
-.feature-card:hover {
+.FeatureCard:hover {
   transform: translateY(-4px);
 }
 
-.icon-box {
+.IconBox {
   width: 70px;
   height: 70px;
   display: flex;
@@ -299,20 +299,20 @@
   margin-bottom: 28px;
 }
 
-.icon-box img {
+.IconBox img {
   width: 60px;
   height: 60px;
   object-fit: contain;
 }
 
-.feature-card h3 {
+.FeatureCard h3 {
   margin-bottom: 18px;
   font-size: 24px;
   font-weight: 600;
   color: #111827;
 }
 
-.feature-card p {
+.FeatureCard p {
   color: #45464d;
   line-height: 26px;
   font-size: 16px;
@@ -320,7 +320,7 @@
   max-width: 290px;
 }
 
-.audience {
+.Audience {
   padding: 100px 60px;
   background: white;
   display: flex;
@@ -329,12 +329,12 @@
   gap: 80px;
 }
 
-.audience-left {
+.AudienceLeft {
   flex: 1;
   margin-top: 25px;
 }
 
-.audience-left h1 {
+.AudienceLeft h1 {
   font-size: 48px;
   font-weight: 400;
   margin-bottom: 10px;
@@ -342,25 +342,25 @@
   line-height: 48px;
 }
 
-.audience-left h2 {
+.AudienceLeft h2 {
   font-size: 48px;
   color: #0058be;
   margin-bottom: 15px;
   font-weight: 400;
 }
 
-.audience-points {
+.AudiencePoints {
   margin-bottom: 55px;
 }
 
-.points {
+.Points {
   display: flex;
   align-items: flex-start;
   gap: 18px;
   margin-bottom: 34px;
 }
 
-.tick {
+.Tick {
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -372,13 +372,13 @@
   margin-top: 5px;
 }
 
-.tick img {
+.Tick img {
   width: 10px;
   height: 8px;
   object-fit: contain;
 }
 
-.point h4 {
+.Points h4 {
   font-size: 18px;
   font-weight: 500;
   color: #0b1c30;
@@ -386,19 +386,19 @@
   line-height: 28px;
 }
 
-.point p {
+.Points p {
   color: #45464d;
   line-height: 24px;
   font-size: 16px;
   max-width: 470px;
 }
 
-.audience-buttons {
+.AudienceButtons {
   display: flex;
   gap: 20px;
 }
 
-.audience-buttons button {
+.AudienceButtons button {
   padding: 20px 0;
   min-width: 180px;
   border: 1px solid #d1d5db;
@@ -409,20 +409,20 @@
   font-weight: 600;
 }
 
-.audience-buttons button:hover {
+.AudienceButtons button:hover {
   background: #0058be;
   color: white;
   border: 2px solid #0058be;
 }
 
-.audience-right {
+.AudienceRight {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.audience-image {
+.AudienceImage {
   width: 550px;
   height: 700px;
   object-fit: cover;
@@ -433,160 +433,160 @@
 }
 
 @media (max-width: 1200px) {
-  .hero {
+  .Hero {
     padding: 60px 32px;
     gap: 32px;
   }
 
-  .hero-left {
+  .HeroLeft {
     width: 50%;
   }
 
-  .hero-left hr {
+  .HeroLeft hr {
     max-width: 420px;
   }
 
-  .hero-right {
+  .HeroRight {
     width: 44%;
   }
 
-  .stats {
+  .Stats {
     padding: 35px 32px;
   }
 
-  .features {
+  .Features {
     padding: 80px 32px;
   }
 
-  .audience {
+  .Audience {
     padding: 80px 32px;
     gap: 40px;
   }
 
-  .audience-image {
+  .AudienceImage {
     width: 380px;
     height: auto;
   }
 
-  .footer {
+  .Footer {
     padding: 60px 32px 30px;
   }
 }
 
 @media (max-width: 992px) {
-  .navbar {
+  .Navbar {
     padding: 18px 30px;
   }
 
-  .logo {
+  .Logo {
     font-size: 26px;
   }
 
-  .hero {
+  .Hero {
     flex-direction: column;
     text-align: center;
     padding: 60px 30px;
     min-height: auto;
   }
 
-  .hero::after {
+  .Hero::after {
     display: none;
   }
 
-  .hero-left,
-  .hero-right {
+  .HeroLeft,
+  .HeroRight {
     width: 100%;
   }
 
-  .hero-left h1 {
+  .HeroLeft h1 {
     font-size: 42px;
     line-height: 48px;
   }
 
-  .hero-left h2 {
+  .HeroLeft h2 {
     font-size: 42px;
     line-height: 48px;
   }
 
-  .hero-left hr {
+  .HeroLeft hr {
     margin: 12px auto 0;
     max-width: 300px;
   }
 
-  .hero-left p {
+  .HeroLeft p {
     margin: auto;
     margin-bottom: 30px;
   }
 
-  .hero-buttons {
+  .HeroButtons {
     justify-content: center;
   }
 
-  .floating-card {
+  .FloatingCard {
     left: 10px;
     bottom: 10px;
   }
 
-  .stats {
+  .Stats {
     grid-template-columns: 1fr;
     padding: 20px;
   }
 
-  .stat-box {
+  .StatBox {
     border-right: none;
     border-bottom: 1px solid #eee;
   }
 
-  .stat-box:last-child {
+  .StatBox:last-child {
     border-bottom: none;
   }
 
-  .features {
+  .Features {
     padding: 70px 30px;
   }
 
-  .features-top {
+  .FeaturesTop {
     flex-direction: column;
     gap: 20px;
   }
 
-  .features-top p {
+  .FeaturesTop p {
     width: 100%;
   }
 
-  .features-grid {
+  .FeaturesGrid {
     grid-template-columns: 1fr;
   }
 
-  .audience {
+  .Audience {
     flex-direction: column;
     padding: 70px 30px;
   }
 
-  .audience-left {
+  .AudienceLeft {
     text-align: center;
   }
 
-  .points {
+  .Points {
     text-align: left;
   }
 
-  .audience-buttons {
+  .AudienceButtons {
     justify-content: center;
     flex-wrap: wrap;
   }
 
-  .audience-image {
+  .AudienceImage {
     width: 420px;
     height: auto;
   }
 
-  .footer-top {
+  .FooterTop {
     grid-template-columns: 1fr;
     gap: 40px;
   }
 
-  .footer-bottom {
+  .FooterBottom {
     flex-direction: column;
     gap: 10px;
     text-align: center;
@@ -594,88 +594,103 @@
 }
 
 @media (max-width: 480px) {
-  .hero {
+
+  
+  .Hero {
     padding: 40px 16px;
   }
 
-  .hero-left,
-  .hero-right {
+  .HeroLeft,
+  .HeroRight {
     width: 100%;
   }
 
-  .hero-left h1 {
+  .HeroLeft h1 {
     font-size: 42px;
     line-height: 38px;
   }
 
-  .hero-left h2 {
+  .HeroLeft h2 {
     font-size: 42px;
     line-height: 38px;
     margin-bottom: 10px;
   }
 
-  .hero-left hr {
-    width: 300px;
+  .HeroLeft hr {
+  
+    max-width: 300px;
   }
 
-  .hero-left p {
+  .HeroButtons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .StartBtn,
+  .DemoBtn {
+    width: 100%;
+    padding: 18px;
+  }
+
+  .HeroLeft p {
     font-size: 14px;
     line-height: 24px;
   }
 
-  .hero-image {
+  .HeroImage {
     width: 100%;
     height: auto;
   }
 
-  .floating-card {
+  .FloatingCard {
     width: 100%;
     padding: 16px;
   }
 
-  .stats {
+  .Stats {
     padding: 15px;
   }
 
-  .stat-box {
+  .StatBox {
     padding: 20px 10px;
   }
 
-  .features {
+  .Features {
     padding: 50px 16px;
   }
 
-  .features-grid {
+  .FeaturesGrid {
     gap: 20px;
   }
 
-  .feature-card {
+  .FeatureCard {
     padding: 20px;
   }
 
-  .audience {
+  .Audience {
     padding: 50px 16px;
   }
 
-  .audience-image {
+  .AudienceImage {
     width: 100%;
     max-width: 280px;
     margin: auto;
   }
 
-  .audience-buttons button {
+  .AudienceButtons button {
     width: 100%;
   }
 
-  .footer {
+  .Footer {
     padding: 40px 16px 20px;
   }
 
-  .footer-top {
+  .FooterTop {
     gap: 30px;
   }
 
-  .footer-bottom {
+  .FooterBottom {
     font-size: 12px;
   }
 }
+

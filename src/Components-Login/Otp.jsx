@@ -1,18 +1,18 @@
 import { useState, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import shields from "../assets/login/shield2.png";
-import contact from "../assets/login/contact.png";
-import sendcode from "../assets/right-arrow.png";
 import "./Otp.css";
+import Shields from "../assets/login/shield2.png";
+import Contact from "../assets/login/contact.png";
+import SendCode from "../assets/right-arrow.png";
 
-function Otp() {
+export const Otp = () => {
   const [otp, setOtp] = useState(["", "", "", "", "", ""]);
   const [error, setError] = useState("");
 
-  const inputRefs = useRef([]);
-  const location = useLocation();
   const navigate = useNavigate();
+  const location = useLocation();
+  const inputRefs = useRef([]);
 
   const method = location.state?.method;
 
@@ -47,10 +47,10 @@ function Otp() {
     navigate("/mentor-dashboard");
   };
   return (
-    <div className="otp-content">
-      <div className="otp-left-container">
-        <div className="shields-box">
-          <img src={shields} className="shields-icon" alt="shields-icon" />
+    <div className="OtpPage">
+      <div className="OtpLeftContainer">
+        <div className="ShieldsBox">
+          <img src={Shields} className="ShieldsIcon" alt="shields-icon" />
         </div>
 
         <h2>Security first.</h2>
@@ -60,23 +60,23 @@ function Otp() {
           protect your internship applications and sensitive professional data.
         </p>
 
-        <div className="otp-footer">
+        <div className="OtpFooter">
           <p>Joined by 10k+ professionals</p>
         </div>
       </div>
 
-      <div className="otp-right-container">
-        <div className="otp-header">
-          <h1 className="otp-heading">Enter Verification Code</h1>
+      <div className="OtpRightContainer">
+        <div className="OtpHeader">
+          <h1 className="OtpHeading">Enter Verification Code</h1>
 
-          <p className="otp-text">
+          <p className="OtpText">
             {method === "email"
               ? "We've sent a 6-digit code to your email j**n@g***l.com"
               : "We've sent a 6-digit code to your mobile number +91 9•••• 5678"}
           </p>
         </div>
 
-        <div className="otp-boxes">
+        <div className="OtpBoxes">
           {otp.map((digit, index) => (
             <input
               key={index}
@@ -85,33 +85,32 @@ function Otp() {
               inputMode="numeric"
               maxLength={1}
               value={digit}
-              className="otp-input"
+              className="OtpInput"
               onChange={(e) => handleChange(e.target.value, index)}
               onKeyDown={(e) => handleKeyDown(e, index)}
             />
           ))}
         </div>
 
-        <button className="code-send" type="button" onClick={handleVerify}>
+        <button className="CodeSendBtn" type="button" onClick={handleVerify}>
           Verify Identity
-          <img src={sendcode} className="send-code" alt="send-btn" />
+          <img src={SendCode} className="SendCodeArrow" alt="send-btn" />
         </button>
-        {error && <p className="otp-error">{error}</p>}
+        {error && <p className="OtpError">{error}</p>}
 
-        <p className="resend">Didn't receive the code? Resend in 00.58 </p>
+        <p className="Resend">Didn't receive the code? Resend in 00.58 </p>
 
-        <hr className="divide" alt="line" />
+        <hr className="DivideLine" />
 
-        <div className="footer-otp">
-          <p className="back-option" onClick={() => navigate("/verification")}>
-            <img src={contact} className="contact-icon" alt="contact-icon" />
+        <div className="FooterOtp">
+          <p className="BackOption" onClick={() => navigate("/verification")}>
+            <img src={Contact} className="ContactIcon" alt="contact-icon" />
             Back to verification options
           </p>
 
-          <p className="support">Contact Support</p>
+          <p className="SupportLink">Contact Support</p>
         </div>
       </div>
     </div>
-  );
+  )
 }
-export default Otp;

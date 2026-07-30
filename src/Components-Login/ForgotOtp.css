@@ -1,11 +1,11 @@
-.Forgototp-page {
+.ForgotOtpPage {
   width: 100%;
   min-height: 100vh;
   display: flex;
   font-family: "Hanken Grotesk", sans-serif;
 }
 
-.Forgot-left {
+.ForgotOtpLeftContainer {
   width: 45%;
   height: 100vh;
   background: linear-gradient(171.62deg, #5883f0 3.15%, #323b50 97.7%);
@@ -18,12 +18,12 @@
   text-align: center;
 }
 
-.proshield {
+.ForgotOtpShieldIcon {
   width: 32px;
   height: 40px;
 }
 
-.proshield-icon {
+.ForgotOtpShieldBox {
   width: 96px;
   height: 96px;
   background: #4f46e54d;
@@ -33,7 +33,7 @@
   align-items: center;
 }
 
-.Forgot-left h1 {
+.ForgotOtpLeftContainer h1 {
   font-size: 40px;
   line-height: 48px;
   font-weight: 700;
@@ -42,7 +42,7 @@
   font-family: "Manrope", sans-serif;
 }
 
-.Forgot-left p {
+.ForgotOtpLeftContainer p {
   font-size: 18px;
   line-height: 29px;
   color: #c3c0ff80;
@@ -50,7 +50,7 @@
   width: 397px;
 }
 
-.Forgot-right {
+.ForgotOtpRightContainer {
   width: 55%;
   height: 100vh;
   background: white;
@@ -60,14 +60,14 @@
   align-items: center;
 }
 
-.otp-container {
+.ForgotOtpContainer {
   width: 480px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
 }
 
-.forgot-otp-heading {
+.ForgotOtpHeading {
   font-size: 32px;
   color: #111c2d;
   font-family: "Manrope", sans-serif;
@@ -76,7 +76,7 @@
   margin: 0;
 }
 
-.para-forgot {
+.ForgotOtpText {
   font-size: 16px;
   width: 100%;
   color: #464555;
@@ -85,18 +85,18 @@
   text-align: left;
 }
 
-.num {
+.ForgotOtpTimer {
   color: #3525cd;
 }
 
-.forgototp-box {
+.ForgotOtpBoxes {
   display: flex;
   justify-content: flex-start;
   gap: 16px;
   margin: 40px 0;
 }
 
-.forgototp-input {
+.ForgotOtpInput {
   width: 60px;
   height: 60px;
   border-radius: 12px;
@@ -104,9 +104,11 @@
   background-color: #f9f9ff;
   border: 2px solid #e2e8f0;
   text-align: center;
+  font-size: 15px;
+  font-weight: 700;
 }
 
-.otp-send {
+.ForgotOtpButton {
   border: none;
   color: #ffffff;
   background: #3525cd;
@@ -115,22 +117,23 @@
   height: 52px;
   border-radius: 8px;
   font-family: "Hanken Grotesk", sans-serif;
+  cursor: pointer;
 }
 
-.otp-error {
+.ForgotOtpError {
   color: #ff4d4f;
   font-size: 14px;
   margin-top: 10px;
   text-align: center;
 }
 
-.forgotright {
+.ForgotOtpArrow {
   width: 12px;
   height: 12px;
   margin-left: 8px;
 }
 
-.code-resend {
+.ForgotOtpResend {
   font-size: 14px;
   margin-top: 15px;
   text-align: center;
@@ -138,13 +141,13 @@
   color: #777587;
 }
 
-.split {
+.ForgotOtpDivider {
   width: 100%;
   display: block;
   margin: 30px auto;
 }
 
-.forgot-end {
+.ForgotOtpFooter {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -152,198 +155,198 @@
   gap: 8px;
 }
 
-.locked {
+.ForgotOtpLockIcon {
   width: 11px;
   height: 14px;
   margin-top: 4px;
 }
 
-.Guard {
+.ForgotOtpGuardIcon {
   width: 11px;
   height: 14px;
   margin-top: 4px;
 }
-.forgot-end p {
+.ForgotOtpFooter p {
   font-size: 12px;
   color: #777587;
   margin: 5px;
 }
 
 @media (min-width: 1024px) and (max-width: 1439px) {
-  .Forgot-left {
+  .ForgotOtpLeftContainer {
     width: 45%;
   }
 
-  .Forgot-right {
+  .ForgotOtpRightContainer {
     width: 55%;
   }
 
-  .Forgot-left h1 {
+  .ForgotOtpLeftContainer h1 {
     font-size: 36px;
     line-height: 44px;
   }
 
-  .Forgot-left p {
+  .ForgotOtpLeftContainer p {
     width: 340px;
     font-size: 16px;
     line-height: 26px;
   }
 
-  .otp-container {
+  .ForgotOtpContainer {
     width: 440px;
   }
 
-  .forgot-otp-heading {
+  .ForgotOtpHeading {
     font-size: 30px;
   }
 
-  .para-forgot {
+  .ForgotOtpText {
     font-size: 15px;
   }
 
-  .forgototp-input {
+  .ForgotOtpInput {
     width: 56px;
     height: 56px;
   }
 
-  .forgototp-box {
+  .ForgotOtpBoxes {
     gap: 14px;
   }
 
-  .otp-send {
+  .ForgotOtpButton {
     width: 100%;
   }
 
-  .split {
+  .ForgotOtpDivider {
     width: 100%;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-  .Forgototp-page {
+  .ForgotOtpPage {
     flex-direction: column;
   }
 
-  .Forgot-left,
-  .Forgot-right {
+  .ForgotOtpLeftContainer,
+  .ForgotOtpRightContainer {
     width: 100%;
     height: auto;
   }
 
-  .Forgot-left {
+  .ForgotOtpLeftContainer {
     padding: 50px 30px;
     border-radius: 0;
   }
 
-  .Forgot-left h1 {
+  .ForgotOtpLeftContainer h1 {
     font-size: 36px;
     line-height: 44px;
   }
 
-  .Forgot-left p {
+  .ForgotOtpLeftContainer p {
     width: 100%;
     max-width: 420px;
     font-size: 16px;
     line-height: 26px;
   }
 
-  .Forgot-right {
+  .ForgotOtpRightContainer {
     padding: 50px 20px;
   }
 
-  .otp-container {
+  .ForgotOtpContainer {
     width: 90%;
     max-width: 480px;
     margin: 0 auto;
   }
 
-  .forgot-otp-heading {
+  .ForgotOtpHeading {
     font-size: 30px;
   }
 
-  .para-forgot {
+  .ForgotOtpText {
     width: 100%;
   }
 
-  .forgototp-box {
+  .ForgotOtpBoxes {
     justify-content: flex-start;
     gap: 14px;
   }
 
-  .forgototp-input {
+  .ForgotOtpInput {
     width: 56px;
     height: 56px;
   }
 
-  .otp-send {
+  .ForgotOtpButton {
     width: 100%;
   }
 
-  .split {
+  .ForgotOtpDivider {
     width: 100%;
   }
 
-  .forgot-end {
+  .ForgotOtpFooter {
     margin-top: 24px;
   }
 }
 
 @media (max-width: 767px) {
-  .Forgototp-page {
+  .ForgotOtpPage {
     flex-direction: column;
   }
 
-  .Forgot-left {
+  .ForgotOtpLeftContainer {
     display: none;
   }
 
-  .Forgot-right {
+  .ForgotOtpRightContainer {
     width: 100%;
     height: auto;
     padding: 40px 16px;
   }
 
-  .otp-container {
+  .ForgotOtpContainer {
     width: 100%;
     margin: 0;
   }
 
-  .forgot-otp-heading {
+  .ForgotOtpHeading {
     font-size: 28px;
     line-height: 36px;
   }
 
-  .para-forgot {
+  .ForgotOtpText {
     font-size: 15px;
     line-height: 22px;
   }
 
-  .forgototp-box {
+  .ForgotOtpBoxes {
     justify-content: space-between;
     gap: 8px;
   }
 
-  .forgototp-input {
+  .ForgotOtpInput {
     width: 46px;
     height: 46px;
   }
 
-  .otp-send {
+  .ForgotOtpButton {
     width: 100%;
     height: 50px;
   }
 
-  .split {
+  .ForgotOtpDivider {
     width: 100%;
   }
 
-  .forgot-end {
+  .ForgotOtpFooter {
     flex-wrap: wrap;
     gap: 6px;
     margin-top: 20px;
   }
 
-  .forgot-end p {
+  .ForgotOtpFooter p {
     font-size: 11px;
   }
 }

@@ -1,11 +1,11 @@
-.admin-page {
+.AdminRegisterPage {
   width: 100%;
   min-height: 100vh;
   display: flex;
   font-family: "Hanken Grotesk", sans-serif;
 }
 
-.admin-leftpage {
+.AdminLeftContainer {
   width: 40%;
   min-height: 100vh;
   background: linear-gradient(180deg, #2560cd 0%, #102b5c 100%);
@@ -16,7 +16,7 @@
   border-bottom-right-radius: 10px;
 }
 
-.admin-logo {
+.AdminRegisterLogo {
   color: #ffffff;
   font-size: 24px;
   font-weight: 700;
@@ -24,7 +24,7 @@
   font-family: "Manrope", sans-serif;
 }
 
-.admin-heading h1 {
+.AdminRegisterHeading h1 {
   font-size: 40px;
   color: #ffffff;
   line-height: 48px;
@@ -34,14 +34,14 @@
   font-family: "Manrope", sans-serif;
 }
 
-.admin-heading p {
+.AdminRegisterHeading p {
   width: 400px;
   font-size: 18px;
   line-height: 28px;
   color: #ffffff;
 }
 
-.admin-img {
+.AdminImageBox {
   width: 416px;
   height: 416px;
   background: #ffffff0d;
@@ -54,31 +54,31 @@
   align-items: center;
 }
 
-.future-img {
+.FutureImage {
   width: 350px;
   height: 350px;
   border-radius: 12px;
 }
 
-.admin-features {
+.AdminRegisterFeatures {
   display: flex;
   flex-direction: column;
   gap: 28px;
   margin-top: 40px;
 }
 
-.admin-card {
+.AdminRegisterCard {
   display: flex;
   align-items: center;
   gap: 18px;
 }
 
-.admin-card-icon img {
+.AdminRegisterCardIcon img {
   width: 12px;
   height: 14px;
 }
 
-.admin-card-icon {
+.AdminRegisterCardIcon {
   width: 25px;
   height: 31px;
   background: #ffffff1a;
@@ -89,17 +89,17 @@
   padding: 9px 8px 9px 8px;
 }
 
-.admin-content h4 {
+.AdminRegisterContent h4 {
   font-size: 14px;
   color: #ffffff;
 }
 
-.admin-content p {
+.AdminRegisterContent p {
   font-size: 14px;
   color: #6b7280;
 }
 
-.admin-rightpage {
+.AdminRightContainer {
   width: 60%;
   min-height: 100vh;
   background: #ffffff;
@@ -108,7 +108,7 @@
   flex-direction: column;
 }
 
-.admin-header h1 {
+.AdminRegisterHeader h1 {
   font-size: 32px;
   font-weight: 600;
   color: #111c2d;
@@ -116,23 +116,27 @@
   font-family: "Manrope", sans-serif;
 }
 
-.admin-header p {
+.AdminRegisterHeader p {
   font-size: 16px;
   color: #464555;
   margin-bottom: 30px;
 }
 
-.admin-title {
+.AdminRegisterTitle {
   font-size: 14px;
   color: #111c2d;
   margin-bottom: 14px;
 }
 
-.admin-container {
+.AdminRoleContainer {
   margin-bottom: 30px;
 }
 
-.admin-container .admin-card {
+.AdminRegisterRole {
+  margin-bottom: 30px;
+}
+
+.AdminRoleCard {
   width: 150px;
   height: 90px;
   border: 1px solid #c7c4d8;
@@ -147,7 +151,7 @@
   margin-top: 5px;
 }
 
-.admin-circle {
+.AdminRoleIcon {
   width: 20px;
   height: 20px;
   background: #fff7ed;
@@ -157,38 +161,40 @@
   justify-content: center;
 }
 
-.admin-card img {
+.AdminRoleIcon img {
   width: 32px;
   height: 32px;
 }
 
-.admin-form {
+.AdminRegisterForm {
+  width: 100%;
+  max-width: 900px;
   display: flex;
   flex-direction: column;
   gap: 22px;
 }
 
-.admin-form-row {
+.AdminRegisterFormRow {
   display: flex;
   gap: 24px;
 }
 
-.admin-group,
-.admin-password {
+.AdminRegisterGroup,
+.AdminPassword {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-.admin-group label,
-.admin-password label {
+.AdminRegisterGroup label,
+.AdminPassword label {
   margin-bottom: 8px;
   font-size: 14px;
   font-weight: 600;
   color: #111c2d;
 }
 
-.admin-group input {
+.AdminRegisterGroup input {
   width: 100%;
   height: 50px;
   padding: 0 16px;
@@ -198,7 +204,7 @@
   font-family: "Hanken Grotesk", sans-serif;
 }
 
-.admin-group select {
+.AdminRegisterGroup select {
   width: 100%;
   height: 52px;
   border: 1px solid #c7c4d8;
@@ -208,14 +214,9 @@
   cursor: pointer;
 }
 
-.password input {
-  position: relative;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
 
-.admin-password input {
+
+.AdminPassword input {
   width: 100%;
   height: 50px;
   border-radius: 8px;
@@ -227,7 +228,7 @@
   font-family: "Hanken Grotesk", sans-serif;
 }
 
-.admin-password {
+.AdminPassword {
   position: relative;
 }
 
@@ -240,7 +241,7 @@
   cursor: pointer;
 }
 
-.admin-create {
+.AdminRegisterButton {
   width: 100%;
   height: 52px;
   margin-top: 10px;
@@ -253,7 +254,7 @@
   cursor: pointer;
 }
 
-.admin-form .error {
+.AdminRegisterForm .error {
   color: #ef4444;
   font-size: 12px;
   margin-top: 6px;
@@ -261,34 +262,40 @@
   font-weight: 500;
 }
 
-.admin-divline {
+.AdminTerms{
+   color: #3525cd;
+}
+
+
+
+.AdminRegisterDivider {
   display: flex;
   align-items: center;
   gap: 16px;
   margin-top: 10px;
 }
 
-.admin-divline hr {
+.AdminRegisterDivider hr {
   flex: 1;
   margin-bottom: 10px;
 }
 
-.admin-sigin-line {
+.AdminRegisterSignin {
   text-align: center;
   margin-bottom: 12px;
 }
 
-.admin-sigin-line p {
+.AdminRegisterSignin p {
   font-size: 16px;
   color: #464555;
 }
 
-.admin-signin {
+.AdminSigninLink {
   color: #3525cd;
   cursor: pointer;
 }
 
-.admin-footer {
+.AdminRegisterFooter {
   width: 100%;
   padding: 20px 50px;
   border-top: 1px solid #c7c4d8;
@@ -299,17 +306,17 @@
   font-family: "Hanken Grotesk", sans-serif;
 }
 
-.admin-footer p {
+.AdminRegisterFooter p {
   font-size: 14px;
   color: #464555;
 }
 
-.footer-policy {
+.AdminFooterLinks {
   display: flex;
   gap: 24px;
 }
 
-.footer-policy span {
+.AdminFooterLinks span {
   font-size: 14px;
   color: #464555;
   cursor: pointer;
@@ -317,120 +324,120 @@
 }
 
 @media (max-width: 1024px) {
-  .admin-page {
+  .AdminRegisterPage {
     flex-direction: column;
   }
 
-  .admin-leftpage,
-  .admin-rightpage {
+  .AdminLeftContainer,
+  .AdminRightContainer {
     width: 100%;
     min-height: auto;
     border-radius: 0;
   }
 
-  .admin-leftpage {
+  .AdminLeftContainer {
     align-items: center;
     text-align: center;
     padding: 40px;
   }
 
-  .admin-heading p {
+  .AdminRegisterHeading p {
     width: 100%;
     max-width: 550px;
   }
 
-  .admin-img {
+  .AdminImageBox {
     width: 360px;
     height: 360px;
   }
 
-  .future-img {
+  .FutureImage {
     width: 300px;
     height: 300px;
   }
 
-  .admin-features {
+  .AdminRegisterFeatures {
     width: 100%;
     max-width: 500px;
   }
 
-  .admin-rightpage {
+  .AdminRightContainer  {
     padding: 40px;
   }
 }
 
 @media (max-width: 768px) {
-  .admin-page {
+  .AdminRegisterPage  {
     flex-direction: column;
   }
 
-  .admin-leftpage {
+  .AdminLeftContainer  {
     display: none;
   }
-  .admin-rightpage {
+  .AdminRightContainer {
     width: 100%;
     padding: 30px 20px;
   }
 
-  .admin-logo {
+  .AdminRegisterLogo {
     margin-bottom: 40px;
     text-align: center;
   }
 
-  .admin-heading h1 {
+  .AdminRegisterHeading h1 {
     font-size: 32px;
     line-height: 40px;
     text-align: center;
   }
 
-  .admin-heading p {
+  .AdminRegisterHeading p {
     width: 100%;
     font-size: 16px;
     line-height: 24px;
     text-align: center;
   }
 
-  .admin-img {
+  .AdminImageBox {
     width: 100%;
     max-width: 320px;
     height: 320px;
     margin: 35px auto;
   }
 
-  .future-img {
+  .FutureImage {
     width: 260px;
     height: 260px;
   }
 
-  .admin-features {
+  .AdminRegisterFeatures  {
     margin-top: 20px;
   }
 
-  .admin-form-row {
+  .AdminRegisterFormRow {
     flex-direction: column;
     gap: 18px;
   }
 
-  .admin-container .admin-card {
+  .AdminRoleCard {
     margin: auto;
   }
 
-  .admin-header h1 {
+  .AdminRegisterHeader h1 {
     font-size: 28px;
   }
 
-  .admin-header p {
+  .AdminRegisterHeader p {
     font-size: 15px;
   }
 
-  .admin-footer {
+  .AdminRegisterFooter {
     flex-direction: column;
     gap: 12px;
     text-align: center;
     padding: 20px;
   }
 
-  .footer-policy {
+  .AdminFooterLinks {
     flex-wrap: wrap;
     justify-content: center;
     gap: 16px;
@@ -438,27 +445,27 @@
 }
 
 @media (max-width: 480px) {
-  .admin-heading h1 {
+  .AdminRegisterHeading h1 {
     font-size: 28px;
     line-height: 36px;
   }
 
-  .admin-img {
+  .AdminImageBox {
     max-width: 280px;
     height: 280px;
   }
 
-  .future-img {
+  .FutureImage {
     width: 220px;
     height: 220px;
   }
 
-  .admin-container .admin-card {
+  .AdminRegisterCard {
     width: 130px;
     height: 85px;
   }
 
-  .admin-create {
+  .AdminRegisterButton {
     height: 48px;
   }
 }

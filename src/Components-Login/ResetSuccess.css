@@ -1,10 +1,10 @@
-.Reset-successpage {
+.ResetSuccessPage {
   width: 100%;
   min-height: 100vh;
   display: flex;
   font-family: "Hanken Grotesk", sans-serif;
 }
-.success-left-container {
+.ResetSuccessLeftContainer {
   width: 45%;
   height: 100vh;
   background: linear-gradient(191.75deg, #2656bf 0.41%, #050d1b 99.38%);
@@ -17,12 +17,12 @@
   text-align: center;
 }
 
-.successtick {
+.SuccessTick {
   width: 53px;
   height: 53px;
 }
 
-.success-tick {
+.ResetSuccessTickBox {
   width: 118px;
   height: 118px;
   border-radius: 50%;
@@ -33,7 +33,7 @@
   align-items: center;
 }
 
-.success-left-container h1 {
+.ResetSuccessLeftContainer h1 {
   font-weight: 700;
   font-size: 40px;
   line-height: 48px;
@@ -45,7 +45,7 @@
   font-family: "Manrope", sans-serif;
 }
 
-.success-left-container p {
+.ResetSuccessLeftContainer p {
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
@@ -55,13 +55,13 @@
   margin-left: 0;
 }
 
-.successimg {
+.ResetSuccessImage {
   width: 364px;
   height: 245px;
   margin-left: 0;
 }
 
-.success-rightcontainer {
+.ResetSuccessRightContainer {
   width: 55%;
   height: 100vh;
   background: white;
@@ -70,13 +70,13 @@
   align-items: center;
 }
 
-.success-content {
+.SuccessContent {
   width: 480px;
   display: flex;
   flex-direction: column;
 }
 
-.action {
+.ResetSuccessAction {
   display: flex;
   align-items: center;
   border-radius: 999px;
@@ -86,17 +86,17 @@
   padding: 6px 12px;
 }
 
-.successicon {
+.SuccessActionIcon {
   width: 15px;
   height: 15px;
 }
 
-.action p {
+.ResetSuccessAction p {
   font-size: 14px;
   color: #3525cd;
 }
 
-.success-text h1 {
+.ResetSuccessText h1 {
   margin: 20px 0 12px;
   font-size: 40px;
   line-height: 48px;
@@ -104,7 +104,7 @@
   font-family: "Manrope", sans-serif;
 }
 
-.success-text p {
+.ResetSuccessText p {
   margin: 0;
   width: 100%;
   max-width: 440px;
@@ -113,7 +113,7 @@
   color: #464555;
 }
 
-.success-login {
+.SuccessLoginButton {
   background: #3525cd;
   color: white;
   border: none;
@@ -127,127 +127,127 @@
   font-family: "Hanken Grotesk", sans-serif;
 }
 
-.divline {
+.SuccessDivider {
   width: 100%;
   max-width: 446px;
   margin: 0;
 }
 
 @media (max-width: 992px) {
-  .Reset-successpage {
+  .ResetSuccessPage {
     flex-direction: column;
   }
 
-  .success-left-container,
-  .success-rightcontainer {
+  .ResetSuccessLeftContainer,
+  .ResetSuccessRightContainer {
     width: 100%;
     height: auto;
     border-radius: 0;
   }
 
-  .success-left-container {
+  .ResetSuccessLeftContainer {
     padding: 50px 30px;
   }
 
-  .success-left-container h1 {
+  .ResetSuccessLeftContainer h1 {
     width: 100%;
     font-size: 36px;
     line-height: 44px;
   }
 
-  .success-left-container p {
+  .ResetSuccessLeftContainer p {
     width: 100%;
     margin: 20px 0 0;
   }
 
-  .successimg {
+  .ResetSuccessImage {
     width: 320px;
     height: auto;
     margin: 40px auto 0;
     display: block;
   }
 
-  .success-rightcontainer {
+  .ResetSuccessRightContainer {
     padding: 40px 30px;
   }
 
-  .action,
-  .success-text h1,
-  .success-text p,
-  .success-login {
+  .ResetSuccessAction,
+  .ResetSuccessText h1,
+  .ResetSuccessText p,
+  .ResetSuccessLoginButton {
     margin-left: 0;
   }
 
-  .action {
+  .ResetSuccessAction {
     margin-top: 0;
   }
 
-  .success-text p {
+  .ResetSuccessText p {
     width: 100%;
   }
 
-  .success-login {
+  .ResetSuccessLoginButton {
     width: 100%;
   }
 
-  .divline {
+  .SuccessDivider {
     width: 100%;
     margin: 30px 0 0;
   }
 }
 
 @media (max-width: 480px) {
-  .success-left-container,
-  .success-rightcontainer {
+  .ResetSuccessLeftContainer,
+  .ResetSuccessRightContainer {
     padding: 25px;
   }
 
-  .success-tick {
+  .ResetSuccessTickBox {
     width: 90px;
     height: 90px;
   }
 
-  .successtick {
+  .SuccessTick {
     width: 42px;
     height: 42px;
   }
 
-  .success-left-container h1 {
+  .ResetSuccessLeftContainer h1 {
     font-size: 30px;
     line-height: 38px;
   }
 
-  .success-left-container p {
+  .ResetSuccessLeftContainer p {
     font-size: 14px;
     line-height: 24px;
   }
 
-  .successimg {
+  .ResetSuccessImage {
     width: 100%;
     max-width: 280px;
     height: auto;
   }
 
-  .action {
+  .ResetSuccessAction {
     margin: 0 auto;
   }
 
-  .success-text h1 {
+  .ResetSuccessText h1 {
     text-align: center;
     font-size: 28px;
   }
 
-  .success-text p {
+  .ResetSuccessText p {
     text-align: center;
     font-size: 14px;
     line-height: 24px;
   }
 
-  .success-login {
+  .ResetSuccessLoginButton {
     width: 100%;
   }
 
-  .divline {
+  .SuccessDivider {
     width: 100%;
     margin: 20px 0 0;
   }

@@ -1,4 +1,4 @@
-.otp-content {
+.OtpPage {
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -6,7 +6,7 @@
   background: white;
 }
 
-.otp-left-container {
+.OtpLeftContainer {
   width: 40%;
   min-height: 80vh;
   background: linear-gradient(161.29deg, #3a6fe3 2.07%, #133767 87.35%);
@@ -16,12 +16,12 @@
   border-radius: 12px;
 }
 
-.shields-icon {
+.ShieldsIcon {
   width: 32px;
   height: 40px;
 }
 
-.shields-box {
+.ShieldsBox {
   background: #ffffff33;
   width: 66px;
   height: 74px;
@@ -31,7 +31,7 @@
   margin-top: 50px;
 }
 
-.otp-left-container h2 {
+.OtpLeftContainer h2 {
   color: #ffffff;
   font-weight: 700;
   font-family: "Manrope", sans-serif;
@@ -40,7 +40,7 @@
   margin-top: 30px;
 }
 
-.otp-left-container p {
+.OtpLeftContainer p {
   font-size: 18px;
   line-height: 28px;
   font-weight: 400;
@@ -49,13 +49,13 @@
   width: 410px;
 }
 
-.otp-footer p {
+.OtpFooter p {
   font-size: 12px;
   color: #dad7ff;
   margin-top: 100px;
 }
 
-.otp-right-container {
+.OtpRightContainer {
   width: 55%;
   min-height: 80vh;
   background: white;
@@ -65,7 +65,7 @@
   align-items: center;
 }
 
-.otp-heading {
+.OtpHeading {
   font-size: 32px;
   color: #111c2d;
   letter-spacing: -0.32px;
@@ -74,14 +74,14 @@
   margin: 0;
 }
 
-.otp-header {
+.OtpHeader {
   margin: 0;
   text-align: left;
   width: 440px;
   margin-top: 70px;
 }
 
-.otp-text {
+.OtpText {
   color: #464555;
   text-align: left;
   font-size: 16px;
@@ -90,14 +90,14 @@
   margin-top: 8px;
 }
 
-.otp-boxes {
+.OtpBoxes {
   display: flex;
   gap: 16px;
   margin: 40px 0;
   justify-content: center;
 }
 
-.otp-input {
+.OtpInput {
   width: 64px;
   height: 80px;
   border-radius: 12px;
@@ -105,9 +105,11 @@
   background-color: #f9f9ff;
   border: 2px solid #e2e8f0;
   text-align: center;
+  font-weight: 700;
+  font-size: 15px;
 }
 
-.code-send {
+.CodeSendBtn {
   background-color: #3525cd;
   color: #ffffff;
   border: none;
@@ -122,38 +124,38 @@
   font-family: "Hanken Grotesk", sans-serif;
   cursor: pointer;
 }
-.send-code {
+.SendCodeArrow {
   width: 12px;
   height: 12px;
   margin-left: 8px;
 }
 
-.resend {
+.Resend {
   font-size: 14px;
   color: #464555;
   margin: 30px 0;
   text-align: center;
 }
 
-.divide {
+.DivideLine {
   width: 440px;
   display: block;
   margin: 30px auto;
 }
 
-.contact-icon {
+.ContactIcon {
   width: 13px;
   height: 16px;
 }
 
-.footer-otp {
+.FooterOtp {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
 }
 
-.back-option {
+.BackOption {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -164,7 +166,7 @@
   cursor: pointer;
 }
 
-.support {
+.SupportLink {
   margin-top: 15px;
   font-size: 12px;
   color: #777587;
@@ -172,164 +174,164 @@
 }
 
 @media (min-width: 1024px) and (max-width: 1439px) {
-  .otp-left-container {
+  .OtpLeftContainer {
     width: 42%;
     margin-left: 40px;
     padding: 40px;
   }
 
-  .otp-right-container {
+  .OtpRightContainer {
     width: 58%;
   }
 
-  .otp-left-container p {
+  .OtpLeftContainer p {
     width: 360px;
     font-size: 16px;
   }
 
-  .otp-heading {
+  .OtpHeading {
     font-size: 34px;
   }
 
-  .otp-header {
+  .OtpHeader {
     width: 420px;
   }
 
-  .code-send,
-  .divide {
+  .CodeSendBtn,
+  .DivideLine {
     width: 420px;
   }
 
-  .otp-input {
+  .OtpInput {
     width: 60px;
     height: 76px;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-  .otp-content {
+  .OtpPage {
     flex-direction: column;
   }
 
-  .otp-left-container,
-  .otp-right-container {
+  .OtpLeftContainer,
+  .OtpRightContainer {
     width: 100%;
     margin: 0;
     border-radius: 0;
   }
 
-  .otp-left-container {
+  .OtpLeftContainer {
     height: auto;
     padding: 40px;
   }
 
-  .otp-left-container h2 {
+  .OtpLeftContainer h2 {
     font-size: 36px;
   }
 
-  .otp-left-container p {
+  .OtpLeftContainer p {
     width: 100%;
     max-width: 500px;
   }
 
-  .otp-footer p {
+  .OtpFooter p {
     margin-top: 50px;
   }
 
-  .otp-right-container {
+  .OtpRightContainer {
     height: auto;
     padding: 50px 20px;
   }
 
-  .otp-heading {
+  .OtpHeading {
     margin-top: 0;
   }
 
-  .otp-header {
+  .OtpHeader {
     width: 90%;
     max-width: 460px;
     margin-top: 0;
   }
 
-  .code-send,
-  .divide {
+  .CodeSendBtn,
+  .DivideLine {
     width: 90%;
     max-width: 460px;
   }
 
-  .otp-boxes {
+  .OtpBoxes {
     gap: 14px;
   }
 
-  .otp-input {
+  .OtpInput {
     width: 60px;
     height: 74px;
   }
 }
 
 @media (max-width: 767px) {
-  .otp-content {
+  .OtpPage {
     flex-direction: column;
   }
 
-  .otp-left-container {
+  .OtpLeftContainer {
     display: none;
   }
 
-  .otp-right-container {
+  .OtpRightContainer {
     width: 100%;
     height: auto;
     margin: 0;
     padding: 40px 16px;
   }
 
-  .otp-heading {
+  .OtpHeading {
     margin-top: 0;
     font-size: 28px;
     line-height: 36px;
   }
 
-  .otp-header {
+  .OtpHeader {
     width: 100%;
     margin-top: 0;
   }
 
-  .otp-text {
+  .OtpText {
     font-size: 15px;
     line-height: 24px;
   }
 
-  .otp-boxes {
+  .OtpBoxes {
     gap: 8px;
     margin: 30px 0;
   }
 
-  .otp-input {
+  .OtpInput {
     width: 46px;
     height: 60px;
     font-size: 22px;
   }
 
-  .code-send,
-  .divide {
+  .CodeSendBtn,
+  .DivideLine {
     width: 100%;
   }
 
-  .code-send {
+  .CodeSendBtn {
     height: 50px;
   }
 
-  .resend {
+  .Resend {
     font-size: 13px;
     margin: 24px 0;
   }
 
-  .back-option {
+  .BackOption {
     font-size: 13px;
     text-align: center;
   }
 
-  .support {
+  .SupportLink {
     font-size: 12px;
   }
 }

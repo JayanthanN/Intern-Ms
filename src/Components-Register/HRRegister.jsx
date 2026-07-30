@@ -1,17 +1,18 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import group from "../assets/register/group.png";
-import line from "../assets/register/progressline.png";
-import HRicon from "../assets/register/HR-icon.png";
-import mentor from "../assets/register/mentor.png";
-import intern from "../assets/register/intern.png";
-import company from "../assets/register/company.png";
-import internhub from "../assets/register/internhub.png";
-import eyeOpen from "../assets/register/eye-icon.png";
-import eyeClose from "../assets/register/closed-eye.png";
 import "./HRRegister.css";
+import Group from "../assets/register/group.png";
+import ProgressLine from "../assets/register/progressline.png";
+import HRIcon from "../assets/register/HR-icon.png";
+import MentorIcon from "../assets/register/mentor.png";
+import InternIcon from "../assets/register/intern.png";
+import CompanyIcon from "../assets/register/company.png";
+import InternHub from "../assets/register/internhub.png";
+import EyeOpen from "../assets/register/eye-icon.png";
+import EyeClose from "../assets/register/closed-eye.png";
 
-function HRRegister() {
+
+export const HRRegister = () => {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -48,38 +49,38 @@ function HRRegister() {
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
 
     if (!formData.fullName.trim()) {
-      newErrors.fullName = "Full Name is required";
+      newErrors.fullName = "Full Name is Required";
     }
 
     if (!formData.email.trim()) {
-      newErrors.email = "Email is required";
+      newErrors.email = "Email is Required";
     } else if (!emailRegex.test(formData.email)) {
       newErrors.email = "Enter a valid email address";
     }
 
     if (!formData.phone.trim()) {
-      newErrors.phone = "Phone Number is required";
+      newErrors.phone = "Phone Number is Required";
     } else if (!phoneRegex.test(formData.phone)) {
       newErrors.phone = "Enter a valid 10-digit phone number";
     }
 
     if (!formData.department) {
-      newErrors.department = "Department is required";
+      newErrors.department = "Department is Required";
     }
 
     if (!formData.company.trim()) {
-      newErrors.company = "Company Name is required";
+      newErrors.company = "Company Name is Required";
     }
 
     if (!formData.password) {
-      newErrors.password = "Password is required";
+      newErrors.password = "Password is Required";
     } else if (!passwordRegex.test(formData.password)) {
       newErrors.password =
         "Password must contain 8+ characters, uppercase, lowercase, number & special character";
     }
 
     if (!formData.confirmPassword) {
-      newErrors.confirmPassword = "Confirm Password is required";
+      newErrors.confirmPassword = "Confirm Password is Required";
     } else if (formData.password !== formData.confirmPassword) {
       newErrors.confirmPassword = "Passwords do not match";
     }
@@ -103,73 +104,73 @@ function HRRegister() {
   };
 
   return (
-    <div className="HR-page">
-      <div className="hr-leftpage">
-        <h3 className="inter-logo">InternMS</h3>
+    <div className="HRRegisterPage">
+      <div className="HRLeftContainer">
+        <h3 className="HRRegisterLogo">InternMS</h3>
 
-        <div className="hr-heading">
+        <div className="HRRegisterHeading">
           <h1>Empower your team with top-tier talent.</h1>
 
-          <p className="hr-text">
+          <p className="HRRegisterText">
             Streamline your recruitment process, manage internships with ease,
             and connect with the next generation of industry leaders.
           </p>
         </div>
 
-        <div className="hr-dashboard">
-          <div className="hr-dashboard-header">
-            <div className="group-icon">
-              <img src={group} className="group" alt="group-icon" />
+        <div className="HRDashboard">
+          <div className="HRDashboardHeader">
+            <div className="GroupIcon">
+              <img src={Group} className="Group" alt="group-icon" />
             </div>
 
-            <div className="hr-dashboard-content">
+            <div className="HRDashboardContent">
               <h3>Unified Talent Dashboard</h3>
 
               <h5>Monitor all applications in real-time.</h5>
             </div>
           </div>
 
-          <img src={line} className="line" alt="line-icon" />
+          <img src={ProgressLine} className="ProgressLine" alt="line-icon" />
 
-          <div className="hr-dashboard-footer">
+          <div className="HRDashboardFooter">
             <p>75% Efficiency Boost</p>
 
             <p>120+ Placements</p>
           </div>
         </div>
 
-        <div className="hr-footer">
-          <div className="hr-stat">
+        <div className="HRRegisterFooter">
+          <div className="HRStats">
             <h3>500+</h3>
             <p>COMPANIES</p>
           </div>
-          <div className="hr-stat">
+          <div className="HRStats">
             <h3>10k+</h3>
             <p>STUDENTS</p>
           </div>
         </div>
       </div>
-      <div className="hr-rightpage">
+      <div className="HRRightContainer">
         <h1>Create your HR account</h1>
 
         <p>Join our ecosystem of professional employers.</p>
 
-        <div className="role-selection">
-          <p className="role-title">Registering as</p>
+        <div className="RoleSelection">
+          <p className="RoleTitle">Registering as</p>
 
-          <div className="role-container">
+          <div className="RoleContainer">
             <div
-              className={`role-card ${selectedRole === "HR" ? "active" : ""}`}
+              className={`RoleCard ${selectedRole === "HR" ? "active" : ""}`}
               onClick={() => setSelectedRole("HR")}
             >
-              <div className="icon-circle">
-                <img src={HRicon} alt="HR-icon" />
+              <div className="IconCircle">
+                <img src={HRIcon} alt="HR-icon" />
               </div>
               <h4>HR</h4>
             </div>
 
             <div
-              className={`role-card ${
+              className={`RoleCard ${
                 selectedRole === "mentor" ? "active" : ""
               }`}
               onClick={() => {
@@ -177,14 +178,14 @@ function HRRegister() {
                 navigate("/mentor-register");
               }}
             >
-              <div className="icon-circle">
-                <img src={mentor} alt="mentor-icon" />
+              <div className="IconCircle">
+                <img src={MentorIcon} alt="mentor-icon" />
               </div>
               <h4>Mentor</h4>
             </div>
 
             <div
-              className={`role-card ${
+              className={`RoleCard ${
                 selectedRole === "intern" ? "active" : ""
               }`}
               onClick={() => {
@@ -192,14 +193,14 @@ function HRRegister() {
                 navigate("/intern-register");
               }}
             >
-              <div className="icon-circle">
-                <img src={intern} alt="intern-icon" />
+              <div className="IconCircle">
+                <img src={InternIcon} alt="intern-icon" />
               </div>
               <h4>Intern</h4>
             </div>
 
             <div
-              className={`role-card ${
+              className={`RoleCard ${
                 selectedRole === "company" ? "active" : ""
               }`}
               onClick={() => {
@@ -207,19 +208,19 @@ function HRRegister() {
                 navigate("/company-register");
               }}
             >
-              <div className="icon-circle">
-                <img src={company} alt="company-icon" />
+              <div className="IconCircle">
+                <img src={CompanyIcon} alt="company-icon" />
               </div>
               <h4>Company</h4>
             </div>
           </div>
         </div>
 
-        <form className="hr-form" onSubmit={handleSubmit}>
-          <div className="form-row">
-            <div className="inputgroup">
+        <form className="HRRegisterForm" onSubmit={handleSubmit}>
+          <div className="HRFormRow">
+            <div className="HRInputGroup">
               <label>
-                Full Name <span className="required">*</span>
+                Full Name <span className="Required">*</span>
               </label>
 
               <input
@@ -232,9 +233,9 @@ function HRRegister() {
               {errors.fullName && <p className="error">{errors.fullName}</p>}
             </div>
 
-            <div className="inputgroup">
+            <div className="HRInputGroup">
               <label>
-                Work Email Address <span className="required">*</span>
+                Work Email Address <span className="Required">*</span>
               </label>
 
               <input
@@ -248,14 +249,14 @@ function HRRegister() {
             </div>
           </div>
 
-          <div className="form-row">
-            <div className="inputgroup">
+          <div className="HRFormRow">
+            <div className="HRInputGroup">
               <label>
-                Phone Number <span className="required">*</span>
+                Phone Number <span className="Required">*</span>
               </label>
 
-              <div className="phone-input">
-                <div className="country-code">
+              <div className="PhoneInput">
+                <div className="CountryCode">
                   <h5>+91</h5>
                 </div>
                 <input
@@ -268,9 +269,9 @@ function HRRegister() {
               </div>
               {errors.phone && <p className="error">{errors.phone}</p>}
             </div>
-            <div className="inputgroup">
+            <div className="HRInputGroup">
               <label>
-                Department <span className="required">*</span>
+                Department <span className="Required">*</span>
               </label>
 
               <select
@@ -287,13 +288,13 @@ function HRRegister() {
             </div>
           </div>
 
-          <div className="inputgroup-full">
+          <div className="HRInputGroupFull">
             <label>
-              Company Name<span className="required">*</span>
+              Company Name<span className="Required">*</span>
             </label>
 
-            <div className="company-input">
-              <img src={internhub} className="interhub" alt="interhub-icon" />
+            <div className="HRCompanyInput">
+              <img src={InternHub} className="InterHub" alt="interhub-icon" />
               <input
                 type="text"
                 name="company"
@@ -304,10 +305,10 @@ function HRRegister() {
             </div>
             {errors.company && <p className="error">{errors.company}</p>}
           </div>
-          <div className="form-row">
-            <div className="password-input">
+          <div className="HRFormRow">
+            <div className="HRPasswordInput">
               <label>
-                Password<span className="required">*</span>
+                Password<span className="Required">*</span>
               </label>
 
               <input
@@ -319,17 +320,17 @@ function HRRegister() {
               />
 
               <img
-                src={showPassword ? eyeClose : eyeOpen}
-                className="eye"
+                src={showPassword ? EyeClose : EyeOpen}
+                className="HREyeIcon"
                 alt="eye-icon"
                 onClick={() => setShowPassword(!showPassword)}
               />
               {errors.password && <p className="error">{errors.password}</p>}
             </div>
 
-            <div className="password-input">
+            <div className="HRPasswordInput">
               <label>
-                Confirm Password <span className="required">*</span>
+                Confirm Password <span className="Required">*</span>
               </label>
 
               <input
@@ -341,8 +342,8 @@ function HRRegister() {
               />
 
               <img
-                src={showConfirmPassword ? eyeClose : eyeOpen}
-                className="eye"
+                src={showConfirmPassword ? EyeClose : EyeOpen}
+                className="HREyeIcon"
                 alt="eye-icon"
                 onClick={() => setShowConfirmPassword(!showConfirmPassword)}
               />
@@ -351,29 +352,29 @@ function HRRegister() {
               )}
             </div>
           </div>
-          <div className="terms">
+          <div className="Terms">
             <input
               type="checkbox"
               checked={acceptedTerms}
               onChange={(e) => setAcceptedTerms(e.target.checked)}
             />
             <label>
-              I agree to the <span className="check-box">Terms of Service</span>{" "}
-              and <span className="check-box">Privacy Policy</span>
+              I agree to the <span className="HRTermsLink">Terms of Service</span>{" "}
+              and <span className="HRTermsLink">Privacy Policy</span>
             </label>
           </div>
           {errors.terms && <p className="error">{errors.terms}</p>}
 
-          <button type="submit" className="create-btn">
+          <button type="submit" className="HRCreateButton">
             Create Account
           </button>
 
-          <div className="OR-divider">
+          <div className="HRDivider">
             <hr />
             <p>OR</p>
             <hr />
           </div>
-          <div className="signin-section">
+          <div className="HRSigninSection">
             <p>
               Already have an account?
               <span onClick={() => navigate("/login")}>Sign in</span>
@@ -385,4 +386,4 @@ function HRRegister() {
   );
 }
 
-export default HRRegister;
+

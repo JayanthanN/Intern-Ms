@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import MailIcon from "../assets/login/mail-icon.png";
-import lockIcon from "../assets/login/lock-icon.png";
-import eyeOpen from "../assets/login/eye-icon.png";
-import eyeClose from "../assets/eye-close.png";
-import ArrowIcon from "../assets/login/arrow.png";
-import GoogleIcon from "../assets/login/Google-icon.png";
 import "./Login.css";
+import MailIcon from "../assets/Login/mail-icon.png";
+import LockIcon from "../assets/Login/lock-icon.png";
+import EyeOpen from "../assets/Login/eye-icon.png";
+import EyeClose from "../assets/eye-close.png";
+import ArrowIcon from "../assets/Login/arrow.png";
+import GoogleIcon from "../assets/Login/Google-icon.png";
 
-function Login() {
+export const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -23,14 +23,17 @@ function Login() {
 
     if (!email.trim()) {
       newErrors.email = "Email is required";
-    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(email)) {
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
       newErrors.email = "Enter a valid email address";
     }
 
     if (!password.trim()) {
       newErrors.password = "Password is required";
-    } else if (password.length < 6) {
-      newErrors.password = "Password must be at least 6 characters";
+    } else if (
+      !/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/.test(password)
+    ) {
+      newErrors.password =
+        "Password must be at least 8 characters and include uppercase, lowercase, number, and special character.";
     }
 
     setErrors(newErrors);
@@ -53,55 +56,55 @@ function Login() {
     }
   };
   return (
-    <div className="login-page">
-      <div className="hero-container">
-        <h2 className="hero-logo">InternHub</h2>
+    <div className="LoginPage">
+      <div className="HeroContainer">
+        <h2 className="HeroLogo">InternHub</h2>
 
-        <h2 className="hero-heading">Your next big leap starts here.</h2>
+        <h2 className="HeroHeading">Your next big leap starts here.</h2>
 
-        <p className="hero-text">
+        <p className="HeroText">
           Connect with industry leaders, manage your applications, and
           accelerate your career path with our comprehensive internship
           management platform.
         </p>
 
-        <div className="hero-stats">
-          <div className="hero-statbox">
+        <div className="HeroStats">
+          <div className="HeroStatBox">
             <h3>500+</h3>
             <p>PARTNER COMPANIES</p>
           </div>
 
-          <div className="hero-statbox">
+          <div className="HeroStatBox">
             <h3>10k+</h3>
             <p>SUCCESS STORIES</p>
           </div>
         </div>
 
-        <p className="hero-footer">&copy;2024 InternMS</p>
+        <p className="HeroFooter">&copy;2024 InternMS</p>
       </div>
 
-      <div className="login-container">
-        <form className="login-form" onSubmit={handleSubmit}>
-          <h1 className="login-heading">Welcome Back</h1>
+      <div className="LoginContainer">
+        <form className="LoginForm" onSubmit={handleSubmit}>
+          <h1 className="LoginHeading">Welcome Back</h1>
 
-          <p className="login-text">Manage your career journey.</p>
+          <p className="LoginText">Manage your career journey.</p>
 
-          <label className="login-mail">Email Address</label>
+          <label className="LoginMail">Email Address</label>
 
-          <div className="email-box">
-            <img src={MailIcon} className="mail-icon" alt="mail-icon" />
+          <div className="EmailBox">
+            <img src={MailIcon} className="MailIcon" alt="mail-icon" />
             <input
               type="email"
               placeholder="Enter Email Address"
-              className="mail-input"
+              className="MailInput"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
-          {errors.email && <p className="error">{errors.email}</p>}
+          {errors.email && <p className="Error">{errors.email}</p>}
 
-          <div className="password-top">
-            <label className="login-pass">Password</label>
+          <div className="PasswordTop">
+            <label className="LoginPass">Password</label>
 
             <span
               onClick={(e) => {
@@ -113,48 +116,48 @@ function Login() {
             </span>
           </div>
 
-          <div className="password-box">
-            <img src={lockIcon} className="lock-icon" alt="lock-icon" />
+          <div className="PasswordBox">
+            <img src={LockIcon} className="LockIcon" alt="lock-icon" />
             <input
               type={showPassword ? "text" : "password"}
               placeholder="Enter your password"
-              className="pass-input"
+              className="PassInput"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
 
             <img
-              src={showPassword ? eyeClose : eyeOpen}
-              className="eye-icon"
+              src={showPassword ? EyeClose : EyeOpen}
+              className="EyeIcon"
               alt="eye-icon"
               onClick={() => setShowPassword(!showPassword)}
             />
           </div>
-          {errors.password && <p className="error">{errors.password}</p>}
+          {errors.password && <p className="Error">{errors.password}</p>}
 
-          <div className="checkbox">
+          <div className="CheckBox">
             <input type="checkbox" />
             <p>Keep me signed in</p>
           </div>
 
-          <button className="sign-in" type="submit">
+          <button className="SignInButton" type="submit">
             Sign In
-            <img src={ArrowIcon} className="arrow-icon" alt="arrow-icon" />
+            <img src={ArrowIcon} className="ArrowIcon" alt="arrow-icon" />
           </button>
 
-          <div className="line">
+          <div className="LoginDivider">
             <hr />
             <p>OR CONTINUE WITH</p>
             <hr />
           </div>
 
-          <div className="google">
-            <button type="button" className="google-btn">
-              <img src={GoogleIcon} className="Google-icon" alt="google-icon" />
+          <div className="GoogleSection">
+            <button type="button" className="GoogleBtn">
+              <img src={GoogleIcon} className="GoogleIcon" alt="google-icon" />
               Google
             </button>
 
-            <p className="createAcct">
+            <p className="CreateAcct">
               Don't have an account?
               <span onClick={() => navigate("/hr-register")}>
                 Create Account
@@ -162,17 +165,15 @@ function Login() {
             </p>
           </div>
 
-          <footer className="footer-line">
+          <footer className="FooterLine">
             <p>Help</p>
-            <span className="dots"></span>
+            <span className="Dots"></span>
             <p>Privacy</p>
-            <span className="dots"></span>
+            <span className="Dots"></span>
             <p>Terms</p>
           </footer>
         </form>
       </div>
     </div>
-  );
+  )
 }
-
-export default Login;

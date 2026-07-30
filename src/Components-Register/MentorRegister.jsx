@@ -1,18 +1,19 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import HRicon from "../assets/register/HR-icon.png";
-import mentor from "../assets/register/mentor.png";
-import intern from "../assets/register/intern.png";
-import company from "../assets/register/company.png";
-import shield1 from "../assets/register/shield1.png";
-import connection from "../assets/register/connection.png";
-import growth from "../assets/register/growth.png";
-import eyeOpen from "../assets/register/eye-icon.png";
-import eyeClose from "../assets/register/closed-eye.png";
-import office from "../assets/register/office.png";
 import "./MentorRegister.css";
+import HRIcon from "../assets/register/HR-icon.png";
+import MentorIcon from "../assets/register/mentor.png";
+import InternIcon from "../assets/register/intern.png";
+import CompanyIcon from "../assets/register/company.png";
+import MentorShield from "../assets/register/shield1.png";
+import Connection from "../assets/register/connection.png";
+import Growth from "../assets/register/growth.png";
+import EyeOpen from "../assets/register/eye-icon.png";
+import EyeClose from "../assets/register/closed-eye.png";
+import Office from "../assets/register/office.png";
 
-function MentorRegister() {
+
+export const MentorRegister = () => {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -51,46 +52,46 @@ function MentorRegister() {
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
 
     if (!formData.fullName.trim()) {
-      newErrors.fullName = "Full Name is required";
+      newErrors.fullName = "Full Name is Required";
     }
 
     if (!formData.email.trim()) {
-      newErrors.email = "Email is required";
+      newErrors.email = "Email is Required";
     } else if (!emailRegex.test(formData.email)) {
       newErrors.email = "Enter a valid email address";
     }
 
     if (!formData.phone.trim()) {
-      newErrors.phone = "Phone Number is required";
+      newErrors.phone = "Phone Number is Required";
     } else if (!phoneRegex.test(formData.phone)) {
       newErrors.phone = "Enter a valid 10-digit phone number";
     }
 
     if (!formData.title.trim()) {
-      newErrors.title = "Professional Title is required";
+      newErrors.title = "Professional Title is Required";
     }
 
     if (!formData.skills.trim()) {
-      newErrors.skills = "Skills / Expertise is required";
+      newErrors.skills = "Skills / Expertise is Required";
     }
 
     if (!formData.experience) {
-      newErrors.experience = "Experience is required";
+      newErrors.experience = "Experience is Required";
     }
 
     if (!formData.bio.trim()) {
-      newErrors.bio = "Bio is required";
+      newErrors.bio = "Bio is Required";
     }
 
     if (!formData.password) {
-      newErrors.password = "Password is required";
+      newErrors.password = "Password is Required";
     } else if (!passwordRegex.test(formData.password)) {
       newErrors.password =
         "Password must contain 8+ characters, uppercase, lowercase, number & special character";
     }
 
     if (!formData.confirmPassword) {
-      newErrors.confirmPassword = "Confirm Password is required";
+      newErrors.confirmPassword = "Confirm Password is Required";
     } else if (formData.password !== formData.confirmPassword) {
       newErrors.confirmPassword = "Passwords do not match";
     }
@@ -115,26 +116,26 @@ function MentorRegister() {
   };
 
   return (
-    <div className="mentor-page">
-      <div className="mentor-leftpage">
-        <h3 className="intern-logo">InternMS</h3>
+    <div className="MentorRegisterPage">
+      <div className="MentorLeftContainer">
+        <h3 className="MentorRegisterLogo">InternMS</h3>
 
-        <div className="mentor-heading">
+        <div className="MentorRegisterHeading">
           <h1>Empower the next generation of talent.</h1>
 
-          <p className="mentor-text">
+          <p className="MentorRegisterText">
             Join a community of experts dedicated to guiding students through
-            their career journey. Share your wisdom, foster growth, and shape
+            their career journey. Share your wisdom, foster gRowth, and shape
             the industry's future.
           </p>
         </div>
 
-        <div className="mentor-dashboard">
-          <div className="dashboard-item">
-            <div className="dashboard-icon">
-              <img src={shield1} className="shield1" alt="shield-icon" />
+        <div className="MentorRegisterDashboard">
+          <div className="MentorRegisterDashboardItem">
+            <div className="MentorRegisterDashboardIcon">
+              <img src={MentorShield} className="MentorShield" alt="shield-icon" />
             </div>
-            <div className="mentor-dashboard-content">
+            <div className="MentorRegisterDashboardContent">
               <h4>Industry Impact</h4>
 
               <p>
@@ -144,15 +145,15 @@ function MentorRegister() {
             </div>
           </div>
 
-          <div className="dashboard-item">
-            <div className="dashboard-icon">
+          <div className="MentorRegisterDashboardItem">
+            <div className="MentorRegisterDashboardIcon">
               <img
-                src={connection}
-                className="connection"
+                src={Connection}
+                className="Connection"
                 alt="connection-icon"
               />
             </div>
-            <div className="mentor-dashboard-content">
+            <div className="MentorRegisterDashboardContent">
               <h4>Meaningful Connections</h4>
 
               <p>
@@ -162,12 +163,12 @@ function MentorRegister() {
             </div>
           </div>
 
-          <div className="dashboard-item">
-            <div className="dashboard-icon">
-              <img src={growth} className="growth" alt="growth-icon" />
+          <div className="MentorRegisterDashboardItem">
+            <div className="MentorRegisterDashboardIcon">
+              <img src={Growth} className="Growth" alt="growth-icon" />
             </div>
-            <div className="mentor-dashboard-content">
-              <h4>Personal Growth</h4>
+            <div className="MentorRegisterDashboardContent">
+              <h4>Personal GRowth</h4>
 
               <p>
                 Enhance your leadership and communication skills through
@@ -177,45 +178,45 @@ function MentorRegister() {
           </div>
         </div>
 
-        <img src={office} className="office-img" alt="office-icon" />
+        <img src={Office} className="OfficeImage" alt="office-icon" />
       </div>
 
-      <div className="mentor-rightpage">
+      <div className="MentorRightContainer">
         <h1>Mentor Registration</h1>
 
         <p>Complete your profile to start connecting with students.</p>
 
-        <div className="role-selection">
-          <p className="role-title">Registering as</p>
+        <div className="RoleSelection">
+          <p className="RoleTitle">Registering as</p>
 
-          <div className="role-container">
+          <div className="RoleContainer">
             <div
-              className={`role-card ${selectedRole === "HR" ? "active" : ""}`}
+              className={`RoleCard ${selectedRole === "HR" ? "active" : ""}`}
               onClick={() => {
                 setSelectedRole("HR");
                 navigate("/hr-register");
               }}
             >
-              <div className="icon-circle">
-                <img src={HRicon} alt="HR-icon" />
+              <div className="IconCircle">
+                <img src={HRIcon} alt="HR-icon" />
               </div>
               <h4>HR</h4>
             </div>
 
             <div
-              className={`role-card ${
+              className={`RoleCard ${
                 selectedRole === "mentor" ? "active" : ""
               }`}
               onClick={() => setSelectedRole("mentor")}
             >
-              <div className="icon-circle">
-                <img src={mentor} alt="mentor-icon" />
+              <div className="IconCircle">
+                <img src={MentorIcon} alt="mentor-icon" />
               </div>
               <h4>Mentor</h4>
             </div>
 
             <div
-              className={`role-card ${
+              className={`RoleCard ${
                 selectedRole === "intern" ? "active" : ""
               }`}
               onClick={() => {
@@ -223,14 +224,14 @@ function MentorRegister() {
                 navigate("/intern-register");
               }}
             >
-              <div className="icon-circle">
-                <img src={intern} alt="intern-icon" />
+              <div className="IconCircle">
+                <img src={InternIcon} alt="intern-icon" />
               </div>
               <h4>Intern</h4>
             </div>
 
             <div
-              className={`role-card ${
+              className={`RoleCard ${
                 selectedRole === "company" ? "active" : ""
               }`}
               onClick={() => {
@@ -238,19 +239,19 @@ function MentorRegister() {
                 navigate("/company-register");
               }}
             >
-              <div className="icon-circle">
-                <img src={company} alt="company-icon" />
+              <div className="IconCircle">
+                <img src={CompanyIcon} alt="company-icon" />
               </div>
               <h4>Company</h4>
             </div>
           </div>
         </div>
 
-        <form className="mentor-form" onSubmit={handleSubmit}>
-          <div className="mentor-form-row">
-            <div className="mentor-group">
+        <form className="MentorRegisterForm" onSubmit={handleSubmit}>
+          <div className="MentorRegisterFormRow">
+            <div className="MentorRegisterGroup">
               <label>
-                Full Name <span className="required">*</span>
+                Full Name <span className="Required">*</span>
               </label>
 
               <input
@@ -263,9 +264,9 @@ function MentorRegister() {
               {errors.fullName && <p className="error">{errors.fullName}</p>}
             </div>
 
-            <div className="mentor-group">
+            <div className="MentorRegisterGroup">
               <label>
-                Work Email Address <span className="required">*</span>
+                Work Email Address <span className="Required">*</span>
               </label>
 
               <input
@@ -279,14 +280,14 @@ function MentorRegister() {
             </div>
           </div>
 
-          <div className="mentor-form-row">
-            <div className="mentor-group">
+          <div className="MentorRegisterFormRow">
+            <div className="MentorRegisterGroup">
               <label>
-                Phone Number <span className="required">*</span>
+                Phone Number <span className="Required">*</span>
               </label>
 
-              <div className="phone-input">
-                <div className="country-code">
+              <div className="PhoneInput">
+                <div className="CountryCode">
                   <h5>+91</h5>
                 </div>
                 <input
@@ -299,9 +300,9 @@ function MentorRegister() {
               </div>
               {errors.phone && <p className="error">{errors.phone}</p>}
             </div>
-            <div className="mentor-group">
+            <div className="MentorRegisterGroup">
               <label>
-                Professional Title <span className="required">*</span>
+                Professional Title <span className="Required">*</span>
               </label>
 
               <input
@@ -314,10 +315,10 @@ function MentorRegister() {
               {errors.title && <p className="error">{errors.title}</p>}
             </div>
           </div>
-          <div className="mentor-form-row">
-            <div className="mentor-group">
+          <div className="MentorRegisterFormRow">
+            <div className="MentorRegisterGroup">
               <label>
-                Skills / Expertise <span className="required">*</span>
+                Skills / Expertise <span className="Required">*</span>
               </label>
 
               <input
@@ -330,9 +331,9 @@ function MentorRegister() {
               {errors.skills && <p className="error">{errors.skills}</p>}
             </div>
 
-            <div className="mentor-group">
+            <div className="MentorRegisterGroup">
               <label>
-                Years of Experience<span className="required">*</span>
+                Years of Experience<span className="Required">*</span>
               </label>
 
               <select
@@ -350,28 +351,28 @@ function MentorRegister() {
               )}
             </div>
           </div>
-          <div className="mentor-group-full">
+          <div className="MentorRegisterGroupFull">
             <label>
-              Bio / About You <span className="required">*</span>
+              Bio / About You <span className="Required">*</span>
             </label>
 
-            <small className="bio-count">{formData.bio.length}/500</small>
+            <small className="MentorBioCount">{formData.bio.length}/500</small>
             <textarea
               name="bio"
               placeholder="Tell us about yourself, your background and why you're passionate about 
 mentoring..."
               value={formData.bio}
               onChange={handleChange}
-              maxLength={200}
+              maxLength={500}
             />
 
             {errors.bio && <p className="error">{errors.bio}</p>}
           </div>
 
-          <div className="mentor-form-row">
-            <div className="mentor-password">
+          <div className="MentorRegisterFormRow">
+            <div className="MentorPasswordInput">
               <label>
-                Password<span className="required">*</span>
+                Password<span className="Required">*</span>
               </label>
 
               <input
@@ -383,17 +384,17 @@ mentoring..."
               />
 
               <img
-                src={showPassword ? eyeClose : eyeOpen}
-                className="eyes-icon"
+                src={showPassword ? EyeClose : EyeOpen}
+                className="MentorEyeIcon"
                 alt="eye-icon"
                 onClick={() => setShowPassword(!showPassword)}
               />
               {errors.password && <p className="error">{errors.password}</p>}
             </div>
 
-            <div className="mentor-password">
+            <div className="MentorPasswordInput">
               <label>
-                Confirm Password <span className="required">*</span>
+                Confirm Password <span className="Required">*</span>
               </label>
 
               <input
@@ -405,8 +406,8 @@ mentoring..."
               />
 
               <img
-                src={showConfirmPassword ? eyeClose : eyeOpen}
-                className="eyes-icon"
+                src={showConfirmPassword ? EyeClose : EyeOpen}
+                className="MentorEyeIcon"
                 alt="eye-icon"
                 onClick={() => setShowConfirmPassword(!showConfirmPassword)}
               />
@@ -416,41 +417,41 @@ mentoring..."
             </div>
           </div>
 
-          <div className="terms">
+          <div className="Terms">
             <input
               type="checkbox"
               checked={acceptedTerms}
               onChange={(e) => setAcceptedTerms(e.target.checked)}
             />
             <label>
-              I agree to the <span className="check-box">Terms of Service</span>{" "}
-              and <span className="check-box">Privacy Policy</span>
+              I agree to the <span className="MentorTermsLink">Terms of Service</span>{" "}
+              and <span className="MentorTermsLink">Privacy Policy</span>
             </label>
           </div>
           {errors.terms && <p className="error">{errors.terms}</p>}
 
-          <button type="submit" className="create-btn">
+          <button type="submit" className="MentorCreateButton">
             Create Account
           </button>
 
-          <div className="OR-line">
+          <div className="MentorDivider">
             <hr />
             <p>OR</p>
             <hr />
           </div>
-          <div className="signin-section-line">
+          <div className="MentorSigninSection">
             <p>
               Already have an account?
               <span onClick={() => navigate("/login")}> Sign in</span>
             </p>
           </div>
 
-          <hr className="hr-line" />
+          <hr className="MentorFooterDivider" />
 
-          <div className="mentor-footer">
+          <div className="MentorFooter">
             <p>&copy; 2024 InternHub. All rights reserved.</p>
 
-            <div className="mentor-footerlinks">
+            <div className="MentorFooterLinks">
               <span>Support</span>
 
               <span>Contact Us</span>
@@ -462,4 +463,4 @@ mentoring..."
   );
 }
 
-export default MentorRegister;
+

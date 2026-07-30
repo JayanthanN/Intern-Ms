@@ -1,11 +1,11 @@
-.verification-container {
+.VerificationPage {
   width: 100%;
   min-height: 100vh;
   display: flex;
   font-family: "Hanken Grotesk", sans-serif;
 }
 
-.left-container {
+.VerificationLeftContainer {
   width: 50%;
   min-height: 95vh;
   background: linear-gradient(192.15deg, #3d79ea 5.68%, #1b1a2d 89.15%);
@@ -17,7 +17,7 @@
   flex-direction: column;
 }
 
-.verify-heading {
+.VerificationHeading {
   font-weight: 700;
   font-size: 40px;
   line-height: 48px;
@@ -26,7 +26,7 @@
   font-family: "Manrope", sans-serif;
 }
 
-.verify-text {
+.VerificationText {
   font-weight: 400;
   color: #dad7ff;
   font-size: 18px;
@@ -34,14 +34,14 @@
   width: 400px;
   margin-top: 20px;
 }
-.verify-stats {
+.VerificationStats {
   display: flex;
   align-items: center;
   gap: 24px;
   margin-top: 60px;
 }
 
-.verify-statbox h4 {
+.VerificationStatBox h4 {
   margin: 0;
   font-size: 14px;
   line-height: 20px;
@@ -49,19 +49,19 @@
   color: #ffffff;
 }
 
-.verify-statbox p {
+.VerificationStatBox p {
   margin: 4px 0 0;
   font-size: 14px;
   line-height: 20px;
   color: #ffffff60;
 }
 
-.shield-icon {
+.ShieldIcon {
   width: 20px;
   height: 25px;
 }
 
-.shield-box {
+.ShieldBox {
   width: 64px;
   height: 64px;
   border-radius: 50%;
@@ -73,14 +73,14 @@
   backdrop-filter: blur(12px);
 }
 
-.verify-footer {
+.VerificationFooter {
   margin-top: auto;
   font-size: 12px;
   padding-bottom: 30px;
   color: #ffffff66;
 }
 
-.right-container {
+.VerificationRightContainer {
   width: 50%;
   min-height: 100vh;
   display: flex;
@@ -90,7 +90,7 @@
   background-color: white;
 }
 
-.Two-step {
+.VerificationTitle {
   font-weight: 600;
   font-size: 32px;
   line-height: 40px;
@@ -99,7 +99,7 @@
   margin-bottom: 6px;
 }
 
-.Two-step-text {
+.VerificationSubText {
   color: #464555;
   font-weight: 400;
   font-size: 16px;
@@ -108,12 +108,13 @@
   margin-bottom: 24px;
 }
 
-.verify-mail {
-  width: 475px;
+.VerificationHeader {
+  width: 100%;
+  max-width: 475px;
 }
 
-.Mail-card,
-.Mobile-card {
+.MailCard,
+.MobileCard {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -126,33 +127,33 @@
   margin-top: 24px;
 }
 
-.Mail-card.active,
-.Mobile-card.active {
+.MailCard.active,
+.MobileCard.active {
   border: 2px solid #3525cd;
   box-shadow: 0 0 12px rgba(53, 37, 205, 0.15);
   background: #f0f3ff;
 }
 
-.Mail-card h4,
-.Mobile-card h4 {
+.MailCard h4,
+.MobileCard h4 {
   font-size: 14px;
   margin: 0;
 }
 
-.Mail-card p,
-.Mobile-card p {
+.MailCard p,
+.MobileCard p {
   margin-top: 4px;
   font-size: 14px;
 }
 
-.info {
+.VerificationInfo {
   display: flex;
   flex-direction: column;
   flex: 1;
   margin-left: 18px;
 }
 
-.icon-section {
+.MailIconBox {
   width: 56px;
   height: 56px;
   background: #dee8ff;
@@ -162,7 +163,7 @@
   align-items: center;
 }
 
-.icon-section2 {
+.MobileIconBox {
   width: 56px;
   height: 56px;
   background: #dee8ff;
@@ -172,17 +173,17 @@
   align-items: center;
 }
 
-.icon-section img {
+.MailIconBox img {
   width: 20px;
   height: 16px;
 }
 
-.icon-section2 img {
+.MobileIconBox img {
   width: 15px;
   height: 22px;
 }
 
-.verification {
+.VerificationRadio {
   width: 28px;
   height: 28px;
   appearance: none;
@@ -192,11 +193,11 @@
   transition: all 0.2s ease;
 }
 
-.verification:checked {
+.VerificationRadio:checked {
   border: 8px solid #3525cd;
 }
 
-.send-btn {
+.VerificationSendButton {
   background: #3525cd;
   width: 475px;
   height: 52px;
@@ -209,13 +210,13 @@
   font-family: "Hanken Grotesk", sans-serif;
 }
 
-.right-arrow {
+.VerifyArrow {
   width: 10px;
   height: 10px;
   margin-left: 8px;
 }
 
-.verify-error {
+.VerifyError {
   color: #dc2626;
   font-size: 13px;
   font-weight: 500;
@@ -223,7 +224,7 @@
   margin-top: 10px;
 }
 
-.back-login {
+.BackLogin {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -234,178 +235,178 @@
   cursor: pointer;
 }
 
-.left-arrow {
+.LeftArrow {
   width: 12px;
   height: 12px;
   margin-right: 8px;
 }
 
-.divider-line {
+.DividerLine {
   width: 475px;
   margin-top: 20px;
 }
 
-.help {
+.HelpSection {
   white-space: nowrap;
   text-align: center;
   margin-top: 30px;
   margin-left: 0px;
 }
-.help span {
+.HelpSection span {
   color: #3525cd;
   font-size: 14px;
   margin-left: 10px;
 }
 
 @media (min-width: 1024px) and (max-width: 1439px) {
-  .left-container,
-  .right-container {
+  .VerificationLeftContainer,
+  .VerificationRightContainer {
     width: 50%;
   }
 
-  .verify-heading {
+  .VerificationHeading {
     font-size: 36px;
     margin-top: 170px;
   }
 
-  .verify-text {
+  .VerificationText {
     width: 360px;
     font-size: 16px;
   }
 
-  .verify-mail,
-  .Mail-card,
-  .Mobile-card,
-  .send-btn,
-  .back-login,
-  .divider-line {
+  .VerificationHeader,
+  .MailCard,
+  .MobileCard,
+  .VerificationSendButton,
+  .BackLogin,
+  .DividerLine {
     width: 430px;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-  .verification-container {
+  .VerificationPage {
     flex-direction: column;
   }
 
-  .left-container,
-  .right-container {
+  .VerificationLeftContainer,
+  .VerificationRightContainer {
     width: 100%;
     border-radius: 0;
   }
 
-  .left-container {
+  .VerificationLeftContainer {
     min-height: 420px;
   }
 
-  .verify-heading {
+  .VerificationHeading {
     margin-top: 80px;
     font-size: 36px;
   }
 
-  .verify-text {
+  .VerificationText {
     width: 100%;
     max-width: 500px;
   }
 
-  .verify-footer {
+  .VerificationFooter {
     margin-top: 60px;
   }
 
-  .verify-mail,
-  .Mail-card,
-  .Mobile-card,
-  .send-btn,
-  .back-login,
-  .divider-line {
+  .VerificationHeader,
+  .MailCard,
+  .MobileCard,
+  .VerificationSendButton,
+  .BackLogin,
+  .DividerLine {
     width: 90%;
     max-width: 500px;
   }
 
-  .right-container {
+  .VerificationRightContainer {
     padding: 60px 20px;
   }
 }
 
 @media (max-width: 767px) {
-  .verification-container {
+  .VerificationPage {
     flex-direction: column;
   }
 
-  .right-container {
+  .VerificationLeftContainer {
+    display: none;
+  }
+
+  .VerificationRightContainer {
     width: 100%;
     border-radius: 0;
   }
 
-  .left-container {
-    display: none;
-  }
-
-  .verify-heading {
+  .VerificationHeading {
     margin-top: 40px;
     font-size: 30px;
     line-height: 38px;
   }
 
-  .verify-text {
+  .VerificationHeader {
     width: 100%;
     font-size: 15px;
     line-height: 25px;
   }
 
-  .verify-stats {
+  .VerificationStats {
     margin-top: 40px;
   }
 
-  .verify-footer {
+  .VerificationFooter {
     margin-top: 50px;
     padding-bottom: 10px;
   }
 
-  .right-container {
+  .VerificationRightContainer {
     padding: 40px 16px;
   }
 
-  .verify-mail,
-  .Mail-card,
-  .Mobile-card,
-  .send-btn,
-  .back-login,
-  .divider-line {
+  .VerificationHeader,
+  .MailCard,
+  .MobileCard,
+  .VerificationSendButton,
+  .BackLogin,
+  .DividerLine {
     width: 100%;
   }
 
-  .Mail-card,
-  .Mobile-card {
+  .MailCard,
+  .MobileCard {
     height: auto;
     padding: 16px;
   }
 
-  .Two-step {
+  .VerificationTitle {
     font-size: 28px;
     line-height: 34px;
   }
 
-  .Two-step-text {
+  .VerificationSubText {
     font-size: 15px;
   }
 
-  .icon-section,
-  .icon-section2 {
+  .MailIconBox,
+  .MobileIconBox {
     width: 48px;
     height: 48px;
   }
 
-  .verification {
+  .VerificationRadio {
     width: 24px;
     height: 24px;
   }
 
-  .verification:checked {
+  .VerificationRadio:checked {
     border: 7px solid #3525cd;
   }
 
-  .help {
+  .HelpSection {
     font-size: 13px;
     text-align: center;
   }

@@ -1,4 +1,4 @@
-.login-page {
+.LoginPage {
   display: flex;
   width: 100%;
   min-height: 100vh;
@@ -7,7 +7,7 @@
   font-family: "Hanken Grotesk", sans-serif;
 }
 
-.hero-container {
+.HeroContainer {
   width: 50%;
   min-height: 100vh;
   background: linear-gradient(150.72deg, #181d3c 0%, #2a49e2 100%);
@@ -17,7 +17,7 @@
   border-bottom-right-radius: 10px;
 }
 
-.hero-logo {
+.HeroLogo {
   font-family: "Manrope", sans-serif;
   font-weight: 700;
   font-size: 40px;
@@ -27,7 +27,7 @@
   margin-left: 60px;
 }
 
-.hero-heading {
+.HeroHeading {
   font-weight: 700;
   font-size: 40px;
   font-family: "Manrope", sans-serif;
@@ -39,7 +39,7 @@
   margin-left: 50px;
 }
 
-.hero-text {
+.HeroText {
   max-width: 448px;
   font-size: 18px;
   line-height: 28px;
@@ -48,40 +48,34 @@
   margin-left: 50px;
 }
 
-.hero-stats {
+.HeroStats {
   display: flex;
   gap: 90px;
   margin-top: 70px;
   margin-left: 50px;
 }
 
-.hero-statbox h3 {
+.HeroStatBox h3 {
   font-size: 32px;
   margin-bottom: 4px;
   font-family: "Manrope", sans-serif;
 }
 
-.hero-stats p {
+.HeroStats p {
   color: #ffffff90;
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.6px;
 }
 
-.hero-footer {
-  margin-top: 150px;
+.HeroFooter {
   font-size: 14px;
   font-weight: 400;
   color: #ffffff80;
+   margin-top: 150px;
 }
 
-.login-form {
-  width: 100%;
-  max-width: 530px;
-  margin-top: 30px;
-}
-
-.login-container {
+.LoginContainer {
   width: 50%;
   min-height: 100vh;
   display: flex;
@@ -92,7 +86,13 @@
   padding: 50px 40px;
 }
 
-.login-heading {
+.LoginForm {
+  width: 100%;
+  max-width: 530px;
+  margin-top: 30px;
+}
+
+.LoginHeading {
   font-weight: 700;
   font-size: 32px;
   color: #111c2d;
@@ -100,7 +100,7 @@
   font-family: "Manrope", sans-serif;
 }
 
-.login-text {
+.LoginText {
   font-weight: 400;
   font-size: 16px;
   color: #464555;
@@ -109,12 +109,12 @@
   line-height: 24px;
 }
 
-.email-box {
+.EmailBox {
   position: relative;
   width: 100%;
 }
 
-.mail-icon {
+.MailIcon {
   width: 20px;
   height: 16px;
   position: absolute;
@@ -122,14 +122,14 @@
   top: 18px;
 }
 
-.login-mail,
-.login-pass {
+.LoginMail,
+.LoginPass {
   font-size: 14px;
   line-height: 20px;
   color: #111c2d;
 }
 
-.mail-input {
+.MailInput {
   width: 100%;
   max-width: 530px;
   height: 54px;
@@ -140,7 +140,7 @@
   font-family: "Hanken Grotesk", sans-serif;
 }
 
-.pass-input {
+.PassInput {
   width: 100%;
   max-width: 530px;
   height: 54px;
@@ -151,12 +151,12 @@
   font-family: "Hanken Grotesk", sans-serif;
 }
 
-.password-box {
+.PasswordBox {
   position: relative;
   width: 100%;
 }
 
-.password-top {
+.PasswordTop {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -164,7 +164,7 @@
   margin-top: 20px;
 }
 
-.password-top span {
+.PasswordTop span {
   font-size: 12px;
   line-height: 16px;
   font-weight: 500;
@@ -174,7 +174,7 @@
   margin-bottom: 8px;
 }
 
-.lock-icon {
+.LockIcon {
   width: 16px;
   height: 21px;
   position: absolute;
@@ -182,7 +182,7 @@
   top: 15px;
 }
 
-.eye-icon {
+.EyeIcon {
   position: absolute;
   right: 18px;
   top: 50%;
@@ -192,7 +192,7 @@
   cursor: pointer;
 }
 
-.error {
+.Error {
   color: red;
   font-size: 12px;
   margin: 6px 0 12px 5px;
@@ -200,7 +200,7 @@
   margin-left: 30px;
 }
 
-.checkbox {
+.CheckBox {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -209,14 +209,14 @@
   margin-bottom: 15px;
 }
 
-.checkbox p {
+.CheckBox p {
   font-size: 14px;
   line-height: 20px;
   color: #464555;
   margin-bottom: 2px;
 }
 
-.sign-in {
+.SignInButton {
   width: 100%;
   max-width: 530px;
   height: 52px;
@@ -236,12 +236,12 @@
   cursor: pointer;
 }
 
-.arrow-icon {
+.ArrowIcon {
   width: 13px;
   height: 13px;
 }
 
-.line {
+.LoginDivider {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -251,11 +251,11 @@
   max-width: 530px;
 }
 
-.line hr {
+.LoginDivider hr {
   flex: 1;
 }
 
-.line p {
+.LoginDivider p {
   color: #464555;
   font-size: 14px;
   line-height: 16px;
@@ -263,7 +263,7 @@
   white-space: nowrap;
 }
 
-.google-btn {
+.GoogleBtn {
   width: 230px;
   height: 48px;
   border: 1px solid #c7c4d8;
@@ -279,12 +279,12 @@
   font-family: "Hanken Grotesk", sans-serif;
 }
 
-.google-btn img {
+.GoogleBtn img {
   width: 20px;
   height: 20px;
 }
 
-.createAcct {
+.CreateAcct {
   color: #464555;
   display: flex;
   justify-content: start;
@@ -294,27 +294,27 @@
   font-weight: 400;
 }
 
-.google span {
+.GoogleSection span {
   color: #2a49e2;
   cursor: pointer;
   margin-left: 10px;
 }
 
-.footer-line {
+.FooterLine {
   display: flex;
   justify-content: start;
   gap: 12px;
   margin-top: 30px;
   margin-right: 0;
 }
-.footer-line p {
+.FooterLine p {
   color: #464555;
   font-size: 12px;
   line-height: 16px;
   margin-top: 60px;
 }
 
-.dots {
+.Dots {
   width: 4px;
   height: 4px;
   border-radius: 9999px;
@@ -322,169 +322,157 @@
   margin-top: 67px;
 }
 
-@media (max-width: 1439px) {
-  .hero-container {
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .HeroContainer {
     padding: 50px;
   }
 
-  .hero-logo {
+  .HeroLogo {
     margin-top: 60px;
     margin-left: 30px;
     font-size: 38px;
   }
 
-  .hero-heading {
+  .HeroHeading {
     width: 390px;
     font-size: 36px;
     line-height: 46px;
     margin-left: 30px;
   }
 
-  .hero-text {
+  .HeroText {
     max-width: 390px;
     margin-left: 30px;
     font-size: 17px;
   }
 
-  .hero-stats {
+  .HeroStats {
     margin-left: 30px;
     gap: 70px;
   }
 
-  .hero-footer {
+  .HeroFooter {
     margin-left: 30px;
     margin-top: 120px;
   }
 
-  .login-container {
+  .LoginContainer {
     padding: 40px 30px;
   }
 
-  .login-form {
+  .LoginForm {
     max-width: 460px;
   }
 
-  .mail-input,
-  .pass-input,
-  .sign-in,
-  .line {
+  .MailInput,
+  .PassInput,
+  .SignInButton,
+  .LoginDivider {
     max-width: 460px;
   }
 
-  .google-btn {
+  .GoogleBtn {
     width: 210px;
     margin: 0 auto;
   }
 }
 
-@media (max-width: 1023px) {
-  .hero-container {
+@media (min-width: 768px) and (max-width: 1023px) {
+  .HeroContainer {
     display: none;
   }
 
-  .login-container {
+  .LoginContainer {
     width: 100%;
     padding: 50px 35px;
   }
 
-  .login-form {
+  .LoginForm {
     max-width: 520px;
     margin: auto;
   }
 
-  .mail-input,
-  .pass-input,
-  .sign-in,
-  .line {
+  .MailInput,
+  .PassInput,
+  .SignInButton,
+  .LoginDivider {
     max-width: 100%;
   }
 
-  .google-btn {
+  .GoogleBtn {
     margin: 0 auto;
     width: 230px;
   }
 
-  .createAcct {
+  .CreateAcct {
     justify-content: center;
   }
 
-  .footer-line {
+  .FooterLine {
     justify-content: center;
   }
 }
 
 @media (max-width: 767px) {
-  .login-container {
+
+  .LoginPage{
+    flex-direction: column;
+  }
+
+  .HeroContainer{
+    display:none;
+  }
+  .LoginContainer {
+    width: 100%;
+    height: auto;
     padding: 24px;
   }
 
-  .login-form {
+  .LoginForm {
     width: 100%;
     margin-top: 0;
   }
 
-  .login-heading {
+  .LoginHeading {
     font-size: 30px;
     line-height: 36px;
   }
 
-  .login-text {
+  .LoginText {
     font-size: 15px;
     margin-bottom: 30px;
   }
 
-  .mail-input,
-  .pass-input,
-  .sign-in,
-  .line {
+  .MailInput,
+  .PassInput,
+  .SignInButton,
+  .LoginDivider {
     max-width: 100%;
   }
 
-  .password-top span {
+  .PasswordTop span {
     margin-right: 0;
     font-size: 12px;
   }
 
-  .eye-icon {
+  .EyeIcon {
     right: 18px;
   }
 
-  .google-btn {
+  .GoogleBtn {
     width: 100%;
     max-width: 260px;
     margin: 0 auto;
   }
 
-  .createAcct {
+  .CreateAcct {
     justify-content: center;
     text-align: center;
   }
 
-  .footer-line {
+  .FooterLine {
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .login-heading {
-    font-size: 28px;
-  }
-
-  .login-text {
-    font-size: 14px;
-  }
-
-  .checkbox p {
-    font-size: 13px;
-  }
-
-  .line p {
-    font-size: 12px;
-  }
-
-  .google-btn {
-    width: 100%;
   }
 }

@@ -1,17 +1,19 @@
 import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import Guard from "../assets/login/guard.png";
-import shield2 from "../assets/login/shield2.png";
-import locked from "../assets/login/lock-icon.png";
-import forgotright from "../assets/right-arrow.png";
 import "./ForgotOtp.css";
+import Guard from "../assets/login/guard.png";
+import ShieldIcon from "../assets/login/shield2.png";
+import ForgotLockIcon from "../assets/login/lock-icon.png";
+import OtpArrow from "../assets/right-arrow.png";
+ 
 
-function ForgotOtp() {
+export const ForgotOtp = () => {
   const [otp, setOtp] = useState(["", "", "", "", "", ""]);
   const [error, setError] = useState("");
 
+    const navigate = useNavigate();
   const inputRefs = useRef([]);
-  const navigate = useNavigate();
+
 
   const handleChange = (value, index) => {
     if (!/^\d?$/.test(value)) return;
@@ -46,10 +48,10 @@ function ForgotOtp() {
     navigate("/reset-password");
   };
   return (
-    <div className="Forgototp-page">
-      <div className="Forgot-left">
-        <div className="proshield-icon">
-          <img src={shield2} className="proshield" alt="shield-icon" />
+    <div className="ForgotOtpPage">
+      <div className="ForgotOtpLeftContainer">
+        <div className="ForgotOtpShieldBox">
+          <img src={ShieldIcon} className="ForgotOtpShieldIcon" alt="shield-icon" />
         </div>
 
         <h1>Verify Identity</h1>
@@ -59,17 +61,17 @@ function ForgotOtp() {
           continue.
         </p>
       </div>
-      <div className="Forgot-right">
-        <div className="otp-container">
-          <h1 className="forgot-otp-heading">Enter Verification Code</h1>
+      <div className="ForgotOtpRightContainer">
+        <div className="ForgotOtpContainer">
+          <h1 className="ForgotOtpHeading">Enter Verification Code</h1>
 
-          <p className="para-forgot">
+          <p className="ForgotOtpText">
             We've sent a 6-digit code to your registered Email and phone
-            number.The code will expire in <span className="num"> 09:59 </span>{" "}
+            number.The code will expire in <span className="ForgotOtpTimer"> 09:59 </span>{" "}
             minutes.
           </p>
 
-          <div className="forgototp-box">
+          <div className="ForgotOtpBoxes">
             {otp.map((digit, index) => (
               <input
                 key={index}
@@ -77,38 +79,38 @@ function ForgotOtp() {
                 type="text"
                 maxLength={1}
                 value={digit}
-                className="forgototp-input"
+                className="ForgotOtpInput"
                 onChange={(e) => handleChange(e.target.value, index)}
                 onKeyDown={(e) => handleKeyDown(e, index)}
               />
             ))}
           </div>
 
-          <button onClick={handleVerify} className="otp-send" type="button">
+          <button onClick={handleVerify} className="ForgotOtpButton" type="button">
             Verify and Continue
-            <img src={forgotright} className="forgotright" alt="right-arrow" />
+            <img src={OtpArrow} className="ForgotOtpArrow" alt="right-arrow" />
           </button>
 
-          {error && <p className="otp-error">{error}</p>}
+          {error && <p className="ForgotOtpError">{error}</p>}
 
-          <p className="code-resend">
+          <p className="ForgotOtpResend">
             Didn't receive the code? Resend (in 00:55)
           </p>
 
-          <hr className="split" />
+          <hr className="ForgotOtpDivider" />
 
-          <div className="forgot-end">
-            <img src={locked} className="locked" alt="lock-icon" />
+          <div className="ForgotOtpFooter">
+            <img src={ForgotLockIcon} className="ForgotOtpLockIcon" alt="lock-icon" />
 
             <p>END-TO-END ENCRYPTED</p>
 
-            <img src={Guard} className="Guard" alt="shield-icon" />
+            <img src={Guard} className="ForgotOtpGuardIcon" alt="shield-icon" />
 
             <p>SECURE HANDSHAKE</p>
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }
-export default ForgotOtp;
+

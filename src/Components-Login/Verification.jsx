@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import shieldicon from "../assets/login/shield.png";
-import leftarrow from "../assets/login/left-arrow.png";
-import rightarrow from "../assets/right-arrow.png";
-import verifymail from "../assets/login/verify-mail.png";
-import verifymobile from "../assets/login/mobile.png";
 import "./Verification.css";
+import ShieldIcon from "../assets/login/shield.png";
+import LeftArrow from "../assets/login/left-arrow.png";
+import VerifyArrow from "../assets/right-arrow.png";
+import VerifyMail from "../assets/login/verify-mail.png";
+import VerifyMobile from "../assets/login/mobile.png";
 
-function Verification() {
+export const Verification = () => {
   const [selected, setSelected] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
@@ -27,54 +27,50 @@ function Verification() {
     });
   };
   return (
-    <div className="verification-container">
-      <div className="left-container">
-        <h2 className="verify-heading">Secure Your Account</h2>
+    <div className="VerificationPage">
+      <div className="VerificationLeftContainer">
+        <h2 className="VerificationHeading">Secure Your Account</h2>
 
-        <p className="verify-text">
+        <p className="VerificationText">
           Protecting your professional profile and application history is our
           top priority. Choose a method to verify your identity.
         </p>
 
-        <div className="verify-stats">
-          <div className="shield-box">
-            <img src={shieldicon} className="shield-icon" alt="shield-icon" />
+        <div className="VerificationStats">
+          <div className="ShieldBox">
+            <img src={ShieldIcon} className="ShieldIcon" alt="shield-icon" />
           </div>
 
-          <div className="verify-statbox">
+          <div className="VerificationStatBox">
             <h4>256-bit Encryption</h4>
             <p>Bank-grade security standards</p>
           </div>
         </div>
 
-        <p className="verify-footer">&copy; 2024 InternMS</p>
+        <p className="VerificationFooter">&copy; 2024 InternMS</p>
       </div>
 
-      <div className="right-container">
-        <div className="verify-mail">
-          <h1 className="Two-step">Two-Step Verification</h1>
+      <div className="VerificationRightContainer">
+        <div className="VerificationHeader">
+          <h1 className="VerificationTitle">Two-Step Verification</h1>
 
-          <p className="Two-step-text">
+          <p className="VerificationSubText">
             Choose how you'd like to verify your identity.
           </p>
         </div>
 
         <label
-          className={`Mail-card ${selected === "email" ? "active" : ""}`}
+          className={`MailCard ${selected === "email" ? "active" : ""}`}
           onClick={() => {
             setSelected("email");
             setError("");
           }}
         >
-          <div className="icon-section">
-            <img
-              src={verifymail}
-              className="verify-mail-icon"
-              alt="mail-icon"
-            />
+          <div className="MailIconBox">
+            <img src={VerifyMail} alt="mail-icon" />
           </div>
 
-          <div className="info">
+          <div className="VerificationInfo">
             <h4>Email Verification</h4>
 
             <p>j**n@g***l.com</p>
@@ -85,26 +81,22 @@ function Verification() {
             name="verification"
             checked={selected === "email"}
             onChange={() => setSelected("email")}
-            className="verification"
+            className="VerificationRadio"
           />
         </label>
 
         <label
-          className={`Mobile-card ${selected === "mobile" ? "active" : ""}`}
+          className={`MobileCard ${selected === "mobile" ? "active" : ""}`}
           onClick={() => {
             setSelected("mobile");
             setError("");
           }}
         >
-          <div className="icon-section2">
-            <img
-              src={verifymobile}
-              className="verify-mobile-icon"
-              alt="mobile-icon"
-            />
+          <div className="MobileIconBox">
+            <img src={VerifyMobile} alt="mobile-icon" />
           </div>
 
-          <div className="info">
+          <div className="VerificationInfo">
             <h4>Mobile Verification</h4>
 
             <p>+91 9**** *5678</p>
@@ -115,30 +107,32 @@ function Verification() {
             name="verification"
             checked={selected === "mobile"}
             onChange={() => setSelected("mobile")}
-            className="verification"
+            className="VerificationRadio"
           />
         </label>
 
-        <button className="send-btn" type="button" onClick={handleSend}>
+        <button
+          className="VerificationSendButton"
+          type="button"
+          onClick={handleSend}
+        >
           Send Verification Code
-          <img src={rightarrow} className="right-arrow" alt="right-arrow" />
+          <img src={VerifyArrow} className="VerifyArrow" alt="right-arrow" />
         </button>
-        {error && <p className="verify-error">{error}</p>}
+        {error && <p className="VerifyError">{error}</p>}
 
-        <p className="back-login" onClick={() => navigate("/login")}>
-          <img src={leftarrow} className="left-arrow" alt="left-arrow" />
+        <p className="BackLogin" onClick={() => navigate("/login")}>
+          <img src={LeftArrow} className="LeftArrow" alt="left-arrow" />
           Back to login{" "}
         </p>
 
-        <hr className="divider-line" alt="divider-line" />
+        <hr className="DividerLine" />
 
-        <p className="help">
+        <p className="HelpSection">
           Need help?
           <span>Contact Support</span>
         </p>
       </div>
     </div>
-  );
+  )
 }
-
-export default Verification;

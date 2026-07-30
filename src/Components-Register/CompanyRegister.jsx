@@ -1,20 +1,21 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import HRicon from "../assets/register/HR-icon.png";
-import mentor from "../assets/register/mentor.png";
-import intern from "../assets/register/intern.png";
-import company from "../assets/register/company.png";
-import hire from "../assets/register/job-hire.png";
-import vshield from "../assets/register/shield1.png";
-import handshake from "../assets/register/handshake.png";
-import eyeOpen from "../assets/register/eye-icon.png";
-import eyeClose from "../assets/register/closed-eye.png";
-import share from "../assets/register/share.png";
-import link from "../assets/register/Link.png";
-import mention from "../assets/register/email-icon.png";
 import "./CompanyRegister.css";
+import HRIcon from "../assets/register/HR-icon.png";
+import MentorIcon from "../assets/register/mentor.png";
+import InternIcon from "../assets/register/intern.png";
+import CompanyIcon from "../assets/register/company.png";
+import Hire from "../assets/register/job-hire.png";
+import Vshield from "../assets/register/shield1.png";
+import Handshake from "../assets/register/handshake.png";
+import EyeOpen from "../assets/register/eye-icon.png";
+import EyeClose from "../assets/register/closed-eye.png";
+import Share from "../assets/register/share.png";
+import Link from "../assets/register/Link.png";
+import Mention from "../assets/register/email-icon.png";
 
-function CompanyRegister() {
+
+export const CompanyRegister = () => {
   const [formData, setFormData] = useState({
     companyName: "",
     website: "",
@@ -54,46 +55,48 @@ function CompanyRegister() {
     const websiteRegex = /^https?:\/\/.+/;
 
     if (!formData.companyName.trim()) {
-      newErrors.companyName = "Company Name is required";
+      newErrors.companyName = "Company Name is Required";
     }
 
     if (!formData.website.trim()) {
-      newErrors.website = "Company Website is required";
-    }
+  newErrors.website = "Company Website is Required";
+} else if (!websiteRegex.test(formData.website)) {
+  newErrors.website = "Enter a valid website URL";
+}
 
     if (!formData.email.trim()) {
-      newErrors.email = "Work Email is required";
+      newErrors.email = "Work Email is Required";
     } else if (!emailRegex.test(formData.email)) {
       newErrors.email = "Enter a valid email address";
     }
 
     if (!formData.phone.trim()) {
-      newErrors.phone = "Phone Number is required";
+      newErrors.phone = "Phone Number is Required";
     } else if (!phoneRegex.test(formData.phone)) {
       newErrors.phone = "Enter a valid 10-digit phone number";
     }
 
     if (!formData.industry) {
-      newErrors.industry = "Industry is required";
+      newErrors.industry = "Industry is Required";
     }
 
     if (!formData.companySize) {
-      newErrors.companySize = "Company Size is required";
+      newErrors.companySize = "Company Size is Required";
     }
 
     if (!formData.registrationNumber.trim()) {
-      newErrors.registrationNumber = "Registration Number is required";
+      newErrors.registrationNumber = "Registration Number is Required";
     }
 
     if (!formData.password) {
-      newErrors.password = "Password is required";
+      newErrors.password = "Password is Required";
     } else if (!passwordRegex.test(formData.password)) {
       newErrors.password =
         "Password must contain 8+ characters, uppercase, lowercase, number & special character";
     }
 
     if (!formData.confirmPassword) {
-      newErrors.confirmPassword = "Confirm Password is required";
+      newErrors.confirmPassword = "Confirm Password is Required";
     } else if (formData.password !== formData.confirmPassword) {
       newErrors.confirmPassword = "Passwords do not match";
     }
@@ -119,24 +122,24 @@ function CompanyRegister() {
 
   return (
     <>
-      <div className="company-page">
-        <div className=" company-leftpage">
-          <div className="company-heading">
+      <div className="CompanyRegisterPage">
+        <div className="CompanyLeftContainer">
+          <div className="CompanyHeading">
             <h1>Partner with InternMS to scale your team.</h1>
 
-            <p className="company-text">
+            <p className="CompanyText">
               Connect with over 100,000+ top-tier students and graduates ready
               to bring innovation to your company.
             </p>
           </div>
 
-          <div className="company-features">
-            <div className="company-card">
-              <div className="company-card-icon">
-                <img src={hire} className="hire" alt="hire-icon" />
+          <div className="CompanyFeatures">
+            <div className="CompanyFeatureCard">
+              <div className="CompanyFeatureCardIcon">
+                <img src={Hire} className="HireIcon" alt="hire-icon" />
               </div>
 
-              <div className="company-content">
+              <div className="CompanyContent">
                 <h4>Effortless Hiring</h4>
 
                 <p>
@@ -145,12 +148,12 @@ function CompanyRegister() {
               </div>
             </div>
 
-            <div className="company-card">
-              <div className="company-card-icon">
-                <img src={vshield} className="vshield" alt="vshield-icon" />
+            <div className="CompanyFeatureCard">
+              <div className="CompanyFeatureCardIcon">
+                <img src={Vshield} className="VerifiedShieldIcon" alt="vshield-icon" />
               </div>
 
-              <div className="company-content">
+              <div className="CompanyContent">
                 <h4>Verified Talent</h4>
 
                 <p>
@@ -161,13 +164,13 @@ function CompanyRegister() {
             </div>
           </div>
 
-          <div className="handshake-bg">
-            <img src={handshake} className="handshake" alt="handshake-icon" />
+          <div className="HandshakeContainer">
+            <img src={Handshake} className="HandshakeImage" alt="handshake-icon" />
           </div>
         </div>
 
-        <div className="company-rightpage">
-          <div className="company-header">
+        <div className="CompanyRightContainer">
+          <div className="CompanyHeader">
             <h1>Create Company Account</h1>
 
             <p>
@@ -176,25 +179,25 @@ function CompanyRegister() {
             </p>
           </div>
 
-          <div className="role-selection">
-            <p className="role-title">Registering as</p>
+          <div className="RoleSelection">
+            <p className="RoleTitle">Registering as</p>
 
-            <div className="role-container">
+            <div className="RoleContainer">
               <div
-                className={`role-card ${selectedRole === "HR" ? "active" : ""}`}
+                className={`RoleCard ${selectedRole === "HR" ? "active" : ""}`}
                 onClick={() => {
                   setSelectedRole("HR");
                   navigate("/hr-register");
                 }}
               >
-                <div className="icon-circle">
-                  <img src={HRicon} alt="HR-icon" />
+                <div className="IconCircle">
+                  <img src={HRIcon} alt="HR-icon" />
                 </div>
                 <h4>HR</h4>
               </div>
 
               <div
-                className={`role-card ${
+                className={`RoleCard ${
                   selectedRole === "mentor" ? "active" : ""
                 }`}
                 onClick={() => {
@@ -202,14 +205,14 @@ function CompanyRegister() {
                   navigate("/mentor-register");
                 }}
               >
-                <div className="icon-circle">
-                  <img src={mentor} alt="mentor-icon" />
+                <div className="IconCircle">
+                  <img src={MentorIcon} alt="mentor-icon" />
                 </div>
                 <h4>Mentor</h4>
               </div>
 
               <div
-                className={`role-card ${
+                className={`RoleCard ${
                   selectedRole === "intern" ? "active" : ""
                 }`}
                 onClick={() => {
@@ -217,31 +220,31 @@ function CompanyRegister() {
                   navigate("/intern-register");
                 }}
               >
-                <div className="icon-circle">
-                  <img src={intern} alt="intern-icon" />
+                <div className="IconCircle">
+                  <img src={InternIcon} alt="intern-icon" />
                 </div>
                 <h4>Intern</h4>
               </div>
 
               <div
-                className={`role-card ${
+                className={`RoleCard ${
                   selectedRole === "company" ? "active" : ""
                 }`}
                 onClick={() => setSelectedRole("company")}
               >
-                <div className="icon-circle">
-                  <img src={company} alt="company-icon" />
+                <div className="IconCircle">
+                  <img src={CompanyIcon} alt="company-icon" />
                 </div>
                 <h4>Company</h4>
               </div>
             </div>
           </div>
 
-          <form className="company-form" onSubmit={handleSubmit}>
-            <div className="company-form-row">
-              <div className="company-group">
+          <form className="CompanyRegisterForm" onSubmit={handleSubmit}>
+            <div className="CompanyRegisterFormRow">
+              <div className="CompanyRegisterGroup">
                 <label>
-                  Company Name <span className="required">*</span>
+                  Company Name <span className="Required">*</span>
                 </label>
 
                 <input
@@ -256,9 +259,9 @@ function CompanyRegister() {
                 )}
               </div>
 
-              <div className="company-group">
+              <div className="CompanyRegisterGroup">
                 <label>
-                  Company Website <span className="required">*</span>
+                  Company Website <span className="Required">*</span>
                 </label>
 
                 <input
@@ -272,10 +275,10 @@ function CompanyRegister() {
               </div>
             </div>
 
-            <div className="company-form-row">
-              <div className="company-group">
+            <div className="CompanyRegisterFormRow">
+              <div className="CompanyRegisterGroup">
                 <label>
-                  Work Email <span className="required">*</span>
+                  Work Email <span className="Required">*</span>
                 </label>
 
                 <input
@@ -288,13 +291,13 @@ function CompanyRegister() {
                 {errors.email && <p className="error">{errors.email}</p>}
               </div>
 
-              <div className="company-group">
+              <div className="CompanyRegisterGroup">
                 <label>
-                  Phone Number <span className="required">*</span>
+                  Phone Number <span className="Required">*</span>
                 </label>
 
-                <div className="phone-input">
-                  <div className="country-code">
+                <div className="PhoneInput">
+                  <div className="CountryCode">
                     <h5>+91</h5>
                   </div>
                   <input
@@ -309,10 +312,10 @@ function CompanyRegister() {
               </div>
             </div>
 
-            <div className="company-form-row">
-              <div className="company-group">
+            <div className="CompanyRegisterFormRow">
+              <div className="CompanyRegisterGroup">
                 <label>
-                  Industry <span className="required">*</span>
+                  Industry <span className="Required">*</span>
                 </label>
 
                 <select
@@ -327,9 +330,9 @@ function CompanyRegister() {
                 {errors.industry && <p className="error">{errors.industry}</p>}
               </div>
 
-              <div className="company-group">
+              <div className="CompanyRegisterGroup">
                 <label>
-                  Company Size <span className="required">*</span>
+                  Company Size <span className="Required">*</span>
                 </label>
 
                 <select
@@ -347,12 +350,12 @@ function CompanyRegister() {
               </div>
             </div>
 
-            <div className="company-full">
+            <div className="CompanyRegisterGroupFull">
               <label>
-                Registration Number <span className="required">*</span>
+                Registration Number <span className="Required">*</span>
               </label>
 
-              <div className="company-input">
+              
                 <input
                   type="text"
                   name="registrationNumber"
@@ -360,15 +363,15 @@ function CompanyRegister() {
                   onChange={handleChange}
                   placeholder="Business ID or Tax ID"
                 />
-              </div>
+              
               {errors.registrationNumber && (
                 <p className="error">{errors.registrationNumber}</p>
               )}
             </div>
-            <div className="company-form-row">
-              <div className="company-password">
+            <div className="CompanyRegisterFormRow">
+              <div className="CompanyPasswordInput">
                 <label>
-                  Password<span className="required">*</span>
+                  Password<span className="Required">*</span>
                 </label>
 
                 <input
@@ -380,17 +383,17 @@ function CompanyRegister() {
                 />
 
                 <img
-                  src={showPassword ? eyeClose : eyeOpen}
-                  className="privacy-icon"
+                  src={showPassword ? EyeClose : EyeOpen}
+                  className="CompanyEyeIcon"
                   alt="eye-icon"
                   onClick={() => setShowPassword(!showPassword)}
                 />
                 {errors.password && <p className="error">{errors.password}</p>}
               </div>
 
-              <div className="company-password">
+              <div className="CompanyPasswordInput">
                 <label>
-                  Confirm Password <span className="required">*</span>
+                  Confirm Password <span className="Required">*</span>
                 </label>
 
                 <input
@@ -402,8 +405,8 @@ function CompanyRegister() {
                 />
 
                 <img
-                  src={showConfirmPassword ? eyeClose : eyeOpen}
-                  className="privacy-icon"
+                  src={showConfirmPassword ? EyeClose : EyeOpen}
+                  className="CompanyEyeIcon"
                   alt="eye-icon"
                   onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                 />
@@ -413,7 +416,7 @@ function CompanyRegister() {
               </div>
             </div>
 
-            <div className="terms">
+            <div className="Terms">
               <input
                 type="checkbox"
                 checked={acceptedTerms}
@@ -421,23 +424,23 @@ function CompanyRegister() {
               />
               <label>
                 I agree to the{" "}
-                <span className="check-box">Terms of Service</span> and{" "}
-                <span className="check-box">Privacy Policy</span>
+                <span className="CompanyTermsLink">Terms of Service</span> and{" "}
+                <span className="CompanyTermsLink">Privacy Policy</span>
               </label>
             </div>
             {errors.terms && <p className="error">{errors.terms}</p>}
 
-            <button type="submit" className="company-register">
+            <button type="submit" className="CompanyRegisterButton">
               Register Company
             </button>
 
-            <div className="company-divline">
+            <div className="CompanyDivider">
               <hr />
               <p>OR</p>
               <hr />
             </div>
 
-            <div className="signin-company">
+            <div className="CompanySigninSection">
               <p>
                 Already have an account?
                 <span onClick={() => navigate("/login")}> Sign in</span>
@@ -446,24 +449,24 @@ function CompanyRegister() {
           </form>
         </div>
       </div>
-      <footer className="company-footer">
-        <div className="company-footer-top">
-          <div className="company-logo">
+      <footer className="CompanyFooter">
+        <div className="CompanyFooterTop">
+          <div className="CompanyFooterLogo">
             <h4>InternMS</h4>
           </div>
 
-          <div className="company-footer-links">
+          <div className="CompanyFooterLinks">
             <span>Find Talent</span>
             <span>Internships</span>
             <span>Pricing</span>
           </div>
-          <div className="footer-login">
+          <div className="CompanyFooterLogin">
             <h4 onClick={() => navigate("/admin-register")}> Log In </h4>
           </div>
         </div>
-        <div className="company-footer-container">
-          <div className="company-footer-bottom">
-            <div className="company-footer-text">
+        <div className="CompanyFooterContainer">
+          <div className="CompanyFooterBottom">
+            <div className="CompanyFooterText">
               <h5>InternMS</h5>
               <p>
                 Connecting the next generation of talent with world-class
@@ -490,15 +493,15 @@ function CompanyRegister() {
             </div>
           </div>
 
-          <div className="company-copyright">
+          <div className="CompanyCopyright">
             <p>&copy; 2024 InternMS. All rights reserved.</p>
 
-            <div className="company-links">
-              <img src={link} className="company-link" alt="company-link" />
+            <div className="CompanySocialLinks">
+              <img src={Link} className="CompanyLinkIcon" alt="company-link" />
 
-              <img src={mention} className="mention" alt="mention-icon" />
+              <img src={Mention} className="MentionIcon" alt="mention-icon" />
 
-              <img src={share} className="share" alt="share-icon" />
+              <img src={Share} className="ShareIcon" alt="share-icon" />
             </div>
           </div>
         </div>
@@ -507,4 +510,4 @@ function CompanyRegister() {
   );
 }
 
-export default CompanyRegister;
+

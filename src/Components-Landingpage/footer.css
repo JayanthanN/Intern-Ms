@@ -1,23 +1,23 @@
-.footer {
+.Footer {
   background: #081633;
   padding: 70px 60px 30px;
   color: white;
 }
 
-.footer-top {
+.FooterTop {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   gap: 80px;
   margin-bottom: 50px;
 }
 
-.footer-brand h2 {
+.FooterBrand h2 {
   font-size: 24px;
   margin-bottom: 20px;
   color: #ffffff;
 }
 
-.footer-brand p {
+.FooterBrand p {
   font-size: 16px;
   color: #7c839bb2;
   line-height: 26px;
@@ -25,12 +25,12 @@
   margin-bottom: 30px;
 }
 
-.social-icons {
+.SocialIcons {
   display: flex;
   gap: 18px;
 }
 
-.social-icon-img {
+.SocialIconImg {
   width: 48px;
   height: 48px;
   background: #132347;
@@ -41,25 +41,25 @@
   transition: all 0.3s ease;
 }
 
-.social-icon-img:hover {
+.SocialIconImg:hover {
   background: #2563eb;
   transform: translateY(-4px);
 }
 
-.footer-links h4 {
+.FooterLinks h4 {
   margin-bottom: 25px;
   font-size: 16px;
   font-weight: 400;
 }
 
-.footer-links p {
+.FooterLinks p {
   color: #7c839bb2;
   margin-bottom: 18px;
   font-size: 16px;
   line-height: 24px;
 }
 
-.footer-bottom {
+.FooterBottom {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding-top: 25px;
   display: flex;
@@ -68,7 +68,7 @@
   font-size: 14px;
 }
 
-.heart-icon {
+.HeartIcon {
   width: 12px;
   height: 11px;
 }

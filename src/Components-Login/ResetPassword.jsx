@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import guardicon from "../assets/login/guard.png";
-import resetsafe from "../assets/login/resetsafe.png";
-import lockicon from "../assets/login/forgot.png";
-import Lockedicon from "../assets/login/lock-icon.png";
-import resetarrow from "../assets/right-arrow.png";
 import "./ResetPassword.css";
+import PasswordGuard from "../assets/login/guard.png";
+import ResetSafe from "../assets/login/resetsafe.png";
+import ResetLockIcon from "../assets/login/forgot.png";
+import ResetLock from "../assets/login/lock-icon.png";
+import ResetArrow from "../assets/right-arrow.png";
 
-function ResetPassword() {
+export const ResetPassword = () => {
   const [Password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
@@ -28,9 +28,9 @@ function ResetPassword() {
   };
 
   return (
-    <div className="Reset-container">
-      <div className="reset-left-container">
-        <div className="reset-header">
+    <div className="ResetPasswordPage">
+      <div className="ResetLeftContainer">
+        <div className="ResetHeader">
           <h1>Secure your account.</h1>
 
           <p>
@@ -38,33 +38,37 @@ function ResetPassword() {
             continue your journey with InternHub.
           </p>
         </div>
-        <div className="security-box">
-          <img src={resetsafe} className="security-icon" alt="resetsafe-icon" />
+        <div className="SecurityBox">
+          <img src={ResetSafe} className="SecurityIcon" alt="resetsafe-icon" />
         </div>
 
-        <div className="reset-footer">
+        <div className="ResetFooter">
           <p>&copy;2024 InternMS</p>
-          <span className="point"></span>
+          <span className="Point"></span>
           <p>Privacy Policy</p>
         </div>
       </div>
 
-      <div className="reset-right-container">
-        <div className="reset-form">
-          <div className="lock-top">
-            <img src={lockicon} className="lockicon" alt="forgot-icon" />
+      <div className="ResetRightContainer">
+        <div className="ResetForm">
+          <div className="LockTop">
+            <img
+              src={ResetLockIcon}
+              className="ResetLockIcon"
+              alt="forgot-icon"
+            />
           </div>
 
-          <div className="reset-head">
+          <div className="ResetHeading">
             <h1>Set New Password</h1>
 
             <p>Your new password must be different from previous passwords.</p>
           </div>
 
-          <label className="new-pass">New Password</label>
+          <label className="ResetNewPass">New Password</label>
 
-          <div className="pass-box">
-            <img src={Lockedicon} className="Lockedicon" alt="lock-icon" />
+          <div className="ResetPassBox">
+            <img src={ResetLock} className="ResetLock" alt="lock-icon" />
 
             <input
               type="password"
@@ -74,10 +78,14 @@ function ResetPassword() {
             />
           </div>
 
-          <label className="new-pass"> Confirm New Password</label>
+          <label className="ResetNewPass"> Confirm New Password</label>
 
-          <div className="pass-box">
-            <img src={guardicon} className="guardicon" alt="guard-icon" />
+          <div className="ResetPassBox">
+            <img
+              src={PasswordGuard}
+              className="PasswordGuardIcon"
+              alt="guard-icon"
+            />
 
             <input
               type="password"
@@ -87,28 +95,28 @@ function ResetPassword() {
             />
           </div>
 
-          <div className="validation-box">
-            <div className="validation-item">
+          <div className="ValidationBox">
+            <div className="ValidationItem">
               <span
                 className={
                   Password === ""
-                    ? "status"
+                    ? "Status"
                     : isLengthValid
-                      ? "status success"
-                      : "status error"
+                      ? "Status Success"
+                      : "Status Error"
                 }
               ></span>
 
               <p>At least 8 characters</p>
             </div>
-            <div className="validation-item">
+            <div className="ValidationItem">
               <span
                 className={
                   isPasswordMatch
-                    ? "status success"
+                    ? "Status Success"
                     : isPasswordMisMatch
-                      ? "status error"
-                      : "status"
+                      ? "Status Error"
+                      : "Status"
                 }
               ></span>
 
@@ -123,21 +131,19 @@ function ResetPassword() {
           </div>
 
           <button
-            className="update-btn"
+            className="UpdateBtn"
             disabled={!isFormValid}
             onClick={handleUpdate}
           >
             Update Password
-            <img src={resetarrow} className="resetarrow" />
+            <img src={ResetArrow} className="ResetArrow" alt="right-arrow"/>
           </button>
 
-          <p onClick={() => navigate("/login")} className="reset-login">
+          <p onClick={() => navigate("/login")} className="ResetLogin">
             Back to Login
           </p>
         </div>
       </div>
     </div>
-  );
+  )
 }
-
-export default ResetPassword;

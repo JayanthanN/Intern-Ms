@@ -1,18 +1,19 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import HRicon from "../assets/register/HR-icon.png";
-import mentor from "../assets/register/mentor.png";
-import intern from "../assets/register/intern.png";
-import company from "../assets/register/company.png";
-import verified from "../assets/register/verified.png";
-import track from "../assets/register/track.png";
-import user from "../assets/register/user.png";
-import upload from "../assets/register/upload.png";
-import eyeOpen from "../assets/register/eye-icon.png";
-import eyeClose from "../assets/register/closed-eye.png";
 import "./InternRegister.css";
+import HRIcon from "../assets/register/HR-icon.png";
+import MentorIcon from "../assets/register/mentor.png";
+import InternIcon from "../assets/register/intern.png";
+import CompanyIcon from "../assets/register/company.png";
+import Verified from "../assets/register/verified.png";
+import Track from "../assets/register/track.png";
+import User from "../assets/register/user.png";
+import Upload from "../assets/register/upload.png";
+import EyeOpen from "../assets/register/eye-icon.png";
+import EyeClose from "../assets/register/closed-eye.png";
 
-function InternRegister() {
+
+export const InternRegister = () => {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -21,7 +22,6 @@ function InternRegister() {
     college: "",
     fieldOfStudy: "",
     graduationYear: "",
-    resume: "",
     password: "",
     confirmPassword: "",
   });
@@ -53,46 +53,46 @@ function InternRegister() {
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
 
     if (!formData.fullName.trim()) {
-      newErrors.fullName = "Full Name is required";
+      newErrors.fullName = "Full Name is Required";
     }
 
     if (!formData.email.trim()) {
-      newErrors.email = "Email is required";
+      newErrors.email = "Email is Required";
     } else if (!emailRegex.test(formData.email)) {
       newErrors.email = "Enter a valid email address";
     }
 
     if (!formData.phone.trim()) {
-      newErrors.phone = "Phone Number is required";
+      newErrors.phone = "Phone Number is Required";
     } else if (!phoneRegex.test(formData.phone)) {
       newErrors.phone = "Enter a valid 10-digit phone number";
     }
 
     if (!formData.dob) {
-      newErrors.dob = "Date of Birth is required";
+      newErrors.dob = "Date of Birth is Required";
     }
 
     if (!formData.college.trim()) {
-      newErrors.college = "College / University is required";
+      newErrors.college = "College / University is Required";
     }
 
     if (!formData.fieldOfStudy) {
-      newErrors.fieldOfStudy = "Field of Study is required";
+      newErrors.fieldOfStudy = "Field of Study is Required";
     }
 
     if (!formData.graduationYear) {
-      newErrors.graduationYear = "Graduation Year is required";
+      newErrors.graduationYear = "Graduation Year is Required";
     }
 
     if (!formData.password) {
-      newErrors.password = "Password is required";
+      newErrors.password = "Password is Required";
     } else if (!passwordRegex.test(formData.password)) {
       newErrors.password =
         "Password must contain 8+ characters, uppercase, lowercase, number & special character";
     }
 
     if (!formData.confirmPassword) {
-      newErrors.confirmPassword = "Confirm Password is required";
+      newErrors.confirmPassword = "Confirm Password is Required";
     } else if (formData.password !== formData.confirmPassword) {
       newErrors.confirmPassword = "Passwords do not match";
     }
@@ -117,56 +117,56 @@ function InternRegister() {
   };
 
   return (
-    <div className="intern-page">
-      <div className="intern-leftpage">
-        <h3 className="intern-logo">InternMS</h3>
+    <div className="InternRegisterPage">
+      <div className="InternLeftContainer">
+        <h3 className="InternRegisterLogo">InternMS</h3>
 
-        <div className="intern-heading">
+        <div className="InternRegisterHeading">
           <h1>Your gateway to professional excellence starts here.</h1>
 
-          <p className="intern-text">
+          <p className="InternText">
             Join thousands of ambitious students securing world-class
             internships at leading tech companies and creative agencies.
           </p>
         </div>
 
-        <div className="intern-features">
-          <div className="intern-card">
-            <div className="intern-card-icon">
-              <img src={verified} className="verified" alt="verified-icon" />
+        <div className="InternFeatures">
+          <div className="InternCard">
+            <div className="InternCardIcon">
+              <img src={Verified} className="Verified" alt="verified-icon" />
             </div>
 
-            <div className="intern-content">
+            <div className="InternContent">
               <h4>Verified Employers</h4>
 
               <p>Connect with pre-vetted top-tier companies worldwide.</p>
             </div>
           </div>
 
-          <div className="intern-card">
-            <div className="intern-card-icon">
-              <img src={track} className="track" alt="track-icon" />
+          <div className="InternCard">
+            <div className="InternCardIcon">
+              <img src={Track} className="Track" alt="track-icon" />
             </div>
 
-            <div className="intern-content">
+            <div className="InternContent">
               <h4>Smart Tracking</h4>
 
-              <p className="smart">
+              <p className="Smart">
                 Manage all your applications in one organized dashboard.
               </p>
             </div>
           </div>
 
-          <hr className="intern-hr" />
+          <hr className="InternRegisterHr" />
 
-          <div className="intern-testimonial">
-            <p className="intern-testimonial-text">
+          <div className="InternTestimonial">
+            <p className="InternTestimonialText">
               "InternMS helped me land my dream internship at a Fortune 500
               company within 3 weeks of joining."
             </p>
 
-            <div className="intern-user">
-              <img src={user} className="user-icon" alt="user-icon" />
+            <div className="InternUser">
+              <img src={User} className="UserIcon" alt="user-icon" />
 
               <h5>— Sarah J., Product Design Intern</h5>
             </div>
@@ -174,30 +174,30 @@ function InternRegister() {
         </div>
       </div>
 
-      <div className="intern-rightpage">
+      <div className="InternRightContainer">
         <h1>Intern Registration</h1>
 
         <p>Fill in the details below to create your professional account</p>
 
-        <div className="role-selection">
-          <p className="role-title">Registering as</p>
+        <div className="RoleSelection">
+          <p className="RoleTitle">Registering as</p>
 
-          <div className="role-container">
+          <div className="RoleContainer">
             <div
-              className={`role-card ${selectedRole === "HR" ? "active" : ""}`}
+              className={`RoleCard ${selectedRole === "HR" ? "active" : ""}`}
               onClick={() => {
                 setSelectedRole("HR");
                 navigate("/hr-register");
               }}
             >
-              <div className="icon-circle">
-                <img src={HRicon} alt="HR-icon" />
+              <div className="IconCircle">
+                <img src={HRIcon} alt="HR-icon" />
               </div>
               <h4>HR</h4>
             </div>
 
             <div
-              className={`role-card ${
+              className={`RoleCard ${
                 selectedRole === "mentor" ? "active" : ""
               }`}
               onClick={() => {
@@ -205,26 +205,26 @@ function InternRegister() {
                 navigate("/mentor-register");
               }}
             >
-              <div className="icon-circle">
-                <img src={mentor} alt="mentor-icon" />
+              <div className="IconCircle">
+                <img src={MentorIcon} alt="mentor-icon" />
               </div>
               <h4>Mentor</h4>
             </div>
 
             <div
-              className={`role-card ${
+              className={`RoleCard ${
                 selectedRole === "intern" ? "active" : ""
               }`}
               onClick={() => setSelectedRole("intern")}
             >
-              <div className="icon-circle">
-                <img src={intern} alt="intern-icon" />
+              <div className="IconCircle">
+                <img src={InternIcon} alt="intern-icon" />
               </div>
               <h4>Intern</h4>
             </div>
 
             <div
-              className={`role-card ${
+              className={`RoleCard ${
                 selectedRole === "company" ? "active" : ""
               }`}
               onClick={() => {
@@ -232,19 +232,19 @@ function InternRegister() {
                 navigate("/company-register");
               }}
             >
-              <div className="icon-circle">
-                <img src={company} alt="company-icon" />
+              <div className="IconCircle">
+                <img src={CompanyIcon} alt="company-icon" />
               </div>
               <h4>Company</h4>
             </div>
           </div>
         </div>
 
-        <form className="intern-form" onSubmit={handleSubmit}>
-          <div className="intern-form-row">
-            <div className="intern-group">
+        <form className="InternRegisterForm" onSubmit={handleSubmit}>
+          <div className="InternRegisterFormRow">
+            <div className="InternRegisterGroup">
               <label>
-                Full Name <span className="required">*</span>
+                Full Name <span className="Required">*</span>
               </label>
 
               <input
@@ -257,9 +257,9 @@ function InternRegister() {
               {errors.fullName && <p className="error">{errors.fullName}</p>}
             </div>
 
-            <div className="intern-group">
+            <div className="InternRegisterGroup">
               <label>
-                Work Email Address <span className="required">*</span>
+                Work Email Address <span className="Required">*</span>
               </label>
 
               <input
@@ -273,14 +273,14 @@ function InternRegister() {
             </div>
           </div>
 
-          <div className="intern-form-row">
-            <div className="intern-group">
+          <div className="InternRegisterFormRow">
+            <div className="InternRegisterGroup">
               <label>
-                Phone Number <span className="required">*</span>
+                Phone Number <span className="Required">*</span>
               </label>
 
-              <div className="phone-input">
-                <div className="country-code">
+              <div className="PhoneInput">
+                <div className="CountryCode">
                   <h5>+91</h5>
                 </div>
                 <input
@@ -294,9 +294,9 @@ function InternRegister() {
               {errors.phone && <p className="error">{errors.phone}</p>}
             </div>
 
-            <div className="intern-group">
+            <div className="InternRegisterGroup">
               <label>
-                Date of Birth <span className="required">*</span>
+                Date of Birth <span className="Required">*</span>
               </label>
 
               <input
@@ -311,10 +311,10 @@ function InternRegister() {
             </div>
           </div>
 
-          <div className="intern-form-row">
-            <div className="intern-group">
+          <div className="InternRegisterFormRow">
+            <div className="InternRegisterGroup">
               <label>
-                College / University <span className="required">*</span>
+                College / University <span className="Required">*</span>
               </label>
 
               <input
@@ -327,9 +327,9 @@ function InternRegister() {
               {errors.college && <p className="error">{errors.college}</p>}
             </div>
 
-            <div className="intern-group">
+            <div className="InternRegisterGroup">
               <label>
-                Field of Study <span className="required">*</span>
+                Field of Study <span className="Required">*</span>
               </label>
 
               <select
@@ -349,10 +349,10 @@ function InternRegister() {
             </div>
           </div>
 
-          <div className="intern-form-row">
-            <div className="intern-group">
+          <div className="InternRegisterFormRow">
+            <div className="InternRegisterGroup">
               <label>
-                Graduation Year <span className="required">*</span>
+                Graduation Year <span className="Required">*</span>
               </label>
 
               <select
@@ -369,10 +369,10 @@ function InternRegister() {
               )}
             </div>
 
-            <div className="intern-group">
+            <div className="InternRegisterGroup">
               <label>Resume (Optional)</label>
-              <label className="upload-box">
-                <img src={upload} alt="upload-icon" />
+              <label className="UploadBox">
+                <img src={Upload} alt="upload-icon" />
                 <span>
                   {resume ? resume.name : "Upload PDF, DOCX (Max 5MB)"}
                 </span>
@@ -387,10 +387,10 @@ function InternRegister() {
             </div>
           </div>
 
-          <div className="intern-form-row">
-            <div className="intern-password">
+          <div className="InternRegisterFormRow">
+            <div className="InternPasswordInput">
               <label>
-                Password<span className="required">*</span>
+                Password<span className="Required">*</span>
               </label>
 
               <input
@@ -402,17 +402,17 @@ function InternRegister() {
               />
 
               <img
-                src={showPassword ? eyeClose : eyeOpen}
-                className="Eyes-icon"
+                src={showPassword ? EyeClose : EyeOpen}
+                className="InternEyeIcon"
                 alt="eye-icon"
                 onClick={() => setShowPassword(!showPassword)}
               />
               {errors.password && <p className="error">{errors.password}</p>}
             </div>
 
-            <div className="intern-password">
+            <div className="InternPasswordInput">
               <label>
-                Confirm Password <span className="required">*</span>
+                Confirm Password <span className="Required">*</span>
               </label>
 
               <input
@@ -424,8 +424,8 @@ function InternRegister() {
               />
 
               <img
-                src={showConfirmPassword ? eyeClose : eyeOpen}
-                className="Eyes-icon"
+                src={showConfirmPassword ? EyeClose : EyeOpen}
+                className="InternEyeIcon"
                 alt="eye-icon"
                 onClick={() => setShowConfirmPassword(!showConfirmPassword)}
               />
@@ -435,38 +435,39 @@ function InternRegister() {
             </div>
           </div>
 
-          <div className="terms">
+          <div className="Terms">
             <input
               type="checkbox"
               checked={acceptedTerms}
               onChange={(e) => setAcceptedTerms(e.target.checked)}
             />
             <label>
-              I agree to the <span className="check-box">Terms of Service</span>{" "}
-              and <span className="check-box">Privacy Policy</span>
+              I agree to the <span className="InternTerms">Terms of Service</span>{" "}
+              and <span className="InternTerms">Privacy Policy</span>
             </label>
           </div>
           {errors.terms && <p className="error">{errors.terms}</p>}
 
-          <button type="submit" className="create-button">
+          <button type="submit" className="InternCreateButton">
             Create Account
           </button>
 
-          <div className="OR-line">
+          <div className="InternDivider">
             <hr />
             <p>OR</p>
             <hr />
           </div>
-          <div className="signin-section-line">
+          <div className="InternSigninSection">
             <p>
               Already have an account?
               <span onClick={() => navigate("/login")}> Sign in</span>
             </p>
           </div>
+          
         </form>
       </div>
     </div>
   );
 }
 
-export default InternRegister;
+

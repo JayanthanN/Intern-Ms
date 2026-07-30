@@ -1,13 +1,13 @@
-import mail from "../assets/mail.png";
-import globe from "../assets/globe.png";
-import heart from "../assets/heart.png";
-import "./footer.css";
+import "./Footer.css";
+import Mail from "../assets/mail.png";
+import Globe from "../assets/globe.png";
+import Heart from "../assets/heart.png";
 
-function Footer() {
+export const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="footer-top">
-        <div className="footer-brand">
+    <footer className="Footer">
+      <div className="FooterTop">
+        <div className="FooterBrand">
           <h2>InternMS</h2>
 
           <p>
@@ -15,13 +15,13 @@ function Footer() {
             and building the future of work.
           </p>
 
-          <div className="social-icons">
-            <img src={globe} alt="globe-icon" className="social-icon-img" />
-            <img src={mail} alt="mail-icon" className="social-icon-img" />
+          <div className="SocialIcons">
+            <img src={Globe} alt="globe-icon" className="SocialIconImg" />
+            <img src={Mail} alt="mail-icon" className="SocialIconImg" />
           </div>
         </div>
 
-        <div className="footer-links">
+        <div className="FooterLinks">
           <h4>Product</h4>
           <p>For Students</p>
           <p>For Employers</p>
@@ -29,7 +29,7 @@ function Footer() {
           <p>Pricing</p>
         </div>
 
-        <div className="footer-links">
+        <div className="FooterLinks">
           <h4>Company</h4>
           <p>Privacy Policy</p>
           <p>Terms of Service</p>
@@ -38,15 +38,13 @@ function Footer() {
         </div>
       </div>
 
-      <div className="footer-bottom">
+      <div className="FooterBottom">
         <p>&copy; 2026 InternMS. All rights reserved.</p>
         <p>
-          Made with <img src={heart} className="heart-icon" /> for future
+          Made with <img src={Heart} className="HeartIcon" /> for future
           workforce
         </p>
       </div>
     </footer>
-  );
+  )
 }
-
-export default Footer;

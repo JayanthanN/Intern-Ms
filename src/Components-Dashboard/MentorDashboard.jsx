@@ -444,7 +444,7 @@ export const MentorDashboard = () => {
                   margin={{
                     top: 10,
                     right: 20,
-                    left: 20,
+                    left: 5,
                     bottom: 10,
                   }}
                 >
@@ -464,6 +464,7 @@ export const MentorDashboard = () => {
                     tickLine={false}
                     domain={[0, 60]}
                     ticks={[0, 20, 40, 60]}
+                    width={40}
                   />
                   <Tooltip />
 
