@@ -44,7 +44,7 @@ export const Otp = () => {
       return;
     }
 
-    navigate("/mentor-dashboard");
+    navigate("/Intern-Ms/mentor-dashboard");
   };
   return (
     <div className="OtpPage">
@@ -103,7 +103,7 @@ export const Otp = () => {
         <hr className="DivideLine" />
 
         <div className="FooterOtp">
-          <p className="BackOption" onClick={() => navigate("/verification")}>
+          <p className="BackOption" onClick={() => navigate("/Intern-Ms/verification")}>
             <img src={Contact} className="ContactIcon" alt="contact-icon" />
             Back to verification options
           </p>

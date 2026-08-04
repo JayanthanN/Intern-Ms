@@ -45,7 +45,7 @@ export const ForgotOtp = () => {
       return;
     }
 
-    navigate("/reset-password");
+    navigate("/Intern-Ms/reset-password");
   };
   return (
     <div className="ForgotOtpPage">

@@ -24,7 +24,7 @@ export const ResetPassword = () => {
   const navigate = useNavigate();
 
   const handleUpdate = () => {
-    navigate("/reset-success");
+    navigate("/Intern-Ms/reset-success");
   };
 
   return (
@@ -139,7 +139,7 @@ export const ResetPassword = () => {
             <img src={ResetArrow} className="ResetArrow" alt="right-arrow"/>
           </button>
 
-          <p onClick={() => navigate("/login")} className="ResetLogin">
+          <p onClick={() => navigate("/Intern-Ms/login")} className="ResetLogin">
             Back to Login
           </p>
         </div>

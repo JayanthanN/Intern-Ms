@@ -10,7 +10,7 @@ export const ForgotPassword = () => {
   const navigate = useNavigate();
 
   const handleSend = () => {
-    navigate("/forgot-otp", {
+    navigate("/Intern-Ms/forgot-otp", {
       state: {
         method: selected,
       },
@@ -106,7 +106,7 @@ export const ForgotPassword = () => {
           <div className="ForgotRightFooter">
             <img src={BackArrow} className="BackArrow" alt="backarrow" />
 
-            <p className="LoginBack" onClick={() => navigate("/login")}>
+            <p className="LoginBack" onClick={() => navigate("/Intern-Ms/login")}>
               Back to Login
             </p>
           </div>

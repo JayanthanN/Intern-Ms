@@ -52,7 +52,7 @@ export const Login = () => {
         password,
       });
 
-      navigate("/verification");
+      navigate("/Intern-Ms/verification");
     }
   };
   return (
@@ -109,7 +109,7 @@ export const Login = () => {
             <span
               onClick={(e) => {
                 e.preventDefault();
-                navigate("/forgot-password");
+                navigate("/Intern-Ms/forgot-password");
               }}
             >
               Forgot Password?
@@ -159,7 +159,7 @@ export const Login = () => {
 
             <p className="CreateAcct">
               Don't have an account?
-              <span onClick={() => navigate("/hr-register")}>
+              <span onClick={() => navigate("/Intern-Ms/hr-register")}>
                 Create Account
               </span>
             </p>

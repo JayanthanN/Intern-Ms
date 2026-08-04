@@ -9,7 +9,7 @@ export const ResetSuccess = () => {
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    navigate("/login");
+    navigate("/Intern-Ms/login");
   };
 
   return (

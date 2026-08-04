@@ -20,7 +20,7 @@ export const Verification = () => {
 
     setError("");
 
-    navigate("/Otp", {
+    navigate("/Intern-Ms/Otp", {
       state: {
         method: selected,
       },
@@ -121,7 +121,7 @@ export const Verification = () => {
         </button>
         {error && <p className="VerifyError">{error}</p>}
 
-        <p className="BackLogin" onClick={() => navigate("/login")}>
+        <p className="BackLogin" onClick={() => navigate("/Intern-Ms/login")}>
           <img src={LeftArrow} className="LeftArrow" alt="left-arrow" />
           Back to login{" "}
         </p>
