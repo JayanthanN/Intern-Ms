@@ -101,7 +101,7 @@ export const AdminRegister = () => {
     if (validate()) {
       console.log(formData);
       alert("Account Created Successfully!");
-      navigate("/login");
+      navigate("/Intern-Ms/login");
     }
   };
 
@@ -369,7 +369,7 @@ export const AdminRegister = () => {
                 Already have an account?
                 <span
                   className="AdminSigninLink"
-                  onClick={() => navigate("/login")}
+                  onClick={() => navigate("/Intern-Ms/login")}
                 >
                   {" "}
                   Sign in

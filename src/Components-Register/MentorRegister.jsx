@@ -111,7 +111,7 @@ export const MentorRegister = () => {
     if (validate()) {
       console.log(formData);
       alert("Account Created Successfully!");
-      navigate("/login");
+      navigate("/Intern-Ms/login");
     }
   };
 
@@ -194,7 +194,7 @@ export const MentorRegister = () => {
               className={`RoleCard ${selectedRole === "HR" ? "active" : ""}`}
               onClick={() => {
                 setSelectedRole("HR");
-                navigate("/hr-register");
+                navigate("/Intern-Ms/hr-register");
               }}
             >
               <div className="IconCircle">
@@ -221,7 +221,7 @@ export const MentorRegister = () => {
               }`}
               onClick={() => {
                 setSelectedRole("intern");
-                navigate("/intern-register");
+                navigate("/Intern-Ms/intern-register");
               }}
             >
               <div className="IconCircle">
@@ -236,7 +236,7 @@ export const MentorRegister = () => {
               }`}
               onClick={() => {
                 setSelectedRole("company");
-                navigate("/company-register");
+                navigate("/Intern-Ms/company-register");
               }}
             >
               <div className="IconCircle">
@@ -442,7 +442,7 @@ mentoring..."
           <div className="MentorSigninSection">
             <p>
               Already have an account?
-              <span onClick={() => navigate("/login")}> Sign in</span>
+              <span onClick={() => navigate("/Intern-Ms/login")}> Sign in</span>
             </p>
           </div>
 
