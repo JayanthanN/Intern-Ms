@@ -1,7 +1,18 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./MentorDashboard.css";
-import { ResponsiveContainer,LineChart,Line,XAxis,YAxis,Tooltip,CartesianGrid,PieChart,Pie,Cell,} from "recharts";
+import {
+  ResponsiveContainer,
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  Tooltip,
+  CartesianGrid,
+  PieChart,
+  Pie,
+  Cell,
+} from "recharts";
 import MentorPresentIcon from "../assets/dashboard/active.png";
 import MentorArrowIcon from "../assets/dashboard/arrow.png";
 import MentorAttendanceIcon from "../assets/dashboard/attendance.png";
@@ -135,7 +146,7 @@ export const MentorDashboard = () => {
     { week: "Week 2", averageScore: 25, taskCompletion: 10 },
     { week: "Week 3", averageScore: 30, taskCompletion: 12 },
     { week: "Week 4", averageScore: 42, taskCompletion: 15 },
-    { week: "Week 4", averageScore: 50, taskCompletion: 20 },
+    { week: "Week 5", averageScore: 50, taskCompletion: 20 },
   ];
 
   const INTERN_STATUS_DATA = [

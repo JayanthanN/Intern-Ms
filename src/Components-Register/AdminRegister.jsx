@@ -8,7 +8,6 @@ import AdminShield from "../assets/register/shield1.png";
 import EyeOpen from "../assets/register/eye-icon.png";
 import EyeClose from "../assets/register/closed-eye.png";
 
-
 export const AdminRegister = () => {
   const [formData, setFormData] = useState({
     fullName: "",
@@ -195,6 +194,7 @@ export const AdminRegister = () => {
                   placeholder="Enter your full name"
                   value={formData.fullName}
                   onChange={handleChange}
+                  className={errors.fullName ? "AdminErrorInput" : ""}
                 />
                 {errors.fullName && <p className="error">{errors.fullName}</p>}
               </div>
@@ -210,6 +210,7 @@ export const AdminRegister = () => {
                   placeholder="Enter your email address"
                   value={formData.email}
                   onChange={handleChange}
+                  className={errors.email ? "AdminErrorInput" : ""}
                 />
                 {errors.email && <p className="error">{errors.email}</p>}
               </div>
@@ -231,6 +232,7 @@ export const AdminRegister = () => {
                     placeholder="Enter your number"
                     value={formData.phone}
                     onChange={handleChange}
+                    className={errors.phone ? "AdminErrorInput" : ""}
                   />
                 </div>
                 {errors.phone && <p className="error">{errors.phone}</p>}
@@ -248,6 +250,7 @@ export const AdminRegister = () => {
                   placeholder="Enter organization name"
                   value={formData.organization}
                   onChange={handleChange}
+                  className={errors.organization ? "AdminErrorInput" : ""}
                 />
                 {errors.organization && (
                   <p className="error">{errors.organization}</p>
@@ -267,6 +270,7 @@ export const AdminRegister = () => {
                   placeholder="Enter your job title"
                   value={formData.designation}
                   onChange={handleChange}
+                  className={errors.designation ? "AdminErrorInput" : ""}
                 />
                 {errors.designation && (
                   <p className="error">{errors.designation}</p>
@@ -282,6 +286,7 @@ export const AdminRegister = () => {
                   name="country"
                   value={formData.country}
                   onChange={handleChange}
+                  className={errors.country ? "AdminErrorInput" : ""}
                 >
                   <option value="">Select your country</option>
                   <option value="India">India</option>
@@ -304,6 +309,7 @@ export const AdminRegister = () => {
                   value={formData.password}
                   onChange={handleChange}
                   placeholder="Create a strong password"
+                  className={errors.password ? "AdminErrorInput" : ""}
                 />
 
                 <img
@@ -326,6 +332,7 @@ export const AdminRegister = () => {
                   value={formData.confirmPassword}
                   onChange={handleChange}
                   placeholder="Confirm your password"
+                  className={errors.confirmPassword ? "AdminErrorInput" : ""}
                 />
 
                 <img
@@ -345,6 +352,7 @@ export const AdminRegister = () => {
                 type="checkbox"
                 checked={acceptedTerms}
                 onChange={(e) => setAcceptedTerms(e.target.checked)}
+                className={errors.terms ? "AdminErrorInput" : ""}
               />
               <label>
                 I agree to the{" "}
@@ -390,6 +398,4 @@ export const AdminRegister = () => {
       </footer>
     </>
   );
-}
-
-
+};

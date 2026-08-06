@@ -96,7 +96,7 @@ export const Login = () => {
             <input
               type="email"
               placeholder="Enter Email Address"
-              className="MailInput"
+              className={`MailInput ${errors.email ? "LoginErrorInput" : ""}`}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -121,7 +121,7 @@ export const Login = () => {
             <input
               type={showPassword ? "text" : "password"}
               placeholder="Enter your password"
-              className="PassInput"
+              className={`PassInput ${errors.password ? "LoginErrorInput" : ""}`}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
@@ -175,5 +175,5 @@ export const Login = () => {
         </form>
       </div>
     </div>
-  )
-}
+  );
+};

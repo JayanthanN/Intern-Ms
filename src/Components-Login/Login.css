@@ -72,7 +72,7 @@
   font-size: 14px;
   font-weight: 400;
   color: #ffffff80;
-   margin-top: 150px;
+  margin-top: 150px;
 }
 
 .LoginContainer {
@@ -137,6 +137,7 @@
   padding-left: 45px;
   border: 1px solid #c7c4d8;
   border-radius: 8px;
+  outline: none;
   font-family: "Hanken Grotesk", sans-serif;
 }
 
@@ -148,6 +149,7 @@
   padding-left: 45px;
   border: 1px solid #c7c4d8;
   border-radius: 8px;
+  outline: none;
   font-family: "Hanken Grotesk", sans-serif;
 }
 
@@ -198,6 +200,11 @@
   margin: 6px 0 12px 5px;
   font-weight: 500;
   margin-left: 30px;
+}
+
+.LoginErrorInput {
+  border: 1px solid #ef4444;
+  box-shadow: 0 0 0 3px rgba(235, 57, 57, 0.15);
 }
 
 .CheckBox {
@@ -414,13 +421,12 @@
 }
 
 @media (max-width: 767px) {
-
-  .LoginPage{
+  .LoginPage {
     flex-direction: column;
   }
 
-  .HeroContainer{
-    display:none;
+  .HeroContainer {
+    display: none;
   }
   .LoginContainer {
     width: 100%;

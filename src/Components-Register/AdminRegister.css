@@ -262,6 +262,11 @@
   font-weight: 500;
 }
 
+.AdminErrorInput {
+  border: 1px solid #ef4444;
+  box-shadow: 0 0 0 3px rgba(235,57,57,.15);
+}
+
 .AdminTerms{
    color: #3525cd;
 }

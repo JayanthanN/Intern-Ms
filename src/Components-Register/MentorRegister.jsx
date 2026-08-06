@@ -12,7 +12,6 @@ import EyeOpen from "../assets/register/eye-icon.png";
 import EyeClose from "../assets/register/closed-eye.png";
 import Office from "../assets/register/office.png";
 
-
 export const MentorRegister = () => {
   const [formData, setFormData] = useState({
     fullName: "",
@@ -133,7 +132,11 @@ export const MentorRegister = () => {
         <div className="MentorRegisterDashboard">
           <div className="MentorRegisterDashboardItem">
             <div className="MentorRegisterDashboardIcon">
-              <img src={MentorShield} className="MentorShield" alt="shield-icon" />
+              <img
+                src={MentorShield}
+                className="MentorShield"
+                alt="shield-icon"
+              />
             </div>
             <div className="MentorRegisterDashboardContent">
               <h4>Industry Impact</h4>
@@ -260,6 +263,7 @@ export const MentorRegister = () => {
                 placeholder="Enter your full name"
                 value={formData.fullName}
                 onChange={handleChange}
+                className={errors.fullName ? "MentorErrorInput" : ""}
               />
               {errors.fullName && <p className="error">{errors.fullName}</p>}
             </div>
@@ -275,6 +279,7 @@ export const MentorRegister = () => {
                 placeholder="Enter your email address"
                 value={formData.email}
                 onChange={handleChange}
+                className={errors.email ? "MentorErrorInput" : ""}
               />
               {errors.email && <p className="error">{errors.email}</p>}
             </div>
@@ -296,6 +301,7 @@ export const MentorRegister = () => {
                   placeholder="Enter your number"
                   value={formData.phone}
                   onChange={handleChange}
+                  className={`PhoneInput ${errors.phone ? "MentorErrorInput" : ""}`}
                 />
               </div>
               {errors.phone && <p className="error">{errors.phone}</p>}
@@ -311,6 +317,7 @@ export const MentorRegister = () => {
                 placeholder="e.g., Senior Software Engineer"
                 value={formData.title}
                 onChange={handleChange}
+                className={errors.title ? "MentorErrorInput" : ""}
               />
               {errors.title && <p className="error">{errors.title}</p>}
             </div>
@@ -327,6 +334,7 @@ export const MentorRegister = () => {
                 placeholder="e.g., UI/UX, React, Mentoring"
                 value={formData.skills}
                 onChange={handleChange}
+                className={errors.skills ? "MentorErrorInput" : ""}
               />
               {errors.skills && <p className="error">{errors.skills}</p>}
             </div>
@@ -340,6 +348,7 @@ export const MentorRegister = () => {
                 name="experience"
                 value={formData.experience}
                 onChange={handleChange}
+                className={errors.experience ? "MentorErrorInput" : ""}
               >
                 <option value="">Select experience level</option>
                 <option value="0-1">0-1 Years</option>
@@ -364,6 +373,7 @@ mentoring..."
               value={formData.bio}
               onChange={handleChange}
               maxLength={500}
+              className={errors.bio ? "MentorErrorInput" : ""}
             />
 
             {errors.bio && <p className="error">{errors.bio}</p>}
@@ -381,6 +391,7 @@ mentoring..."
                 value={formData.password}
                 onChange={handleChange}
                 placeholder="Create a strong password"
+                className={errors.password ? "MentorErrorInput" : ""}
               />
 
               <img
@@ -403,6 +414,7 @@ mentoring..."
                 value={formData.confirmPassword}
                 onChange={handleChange}
                 placeholder="Confirm your password"
+                className={errors.confirmPassword ? "MentorErrorInput" : ""}
               />
 
               <img
@@ -422,10 +434,12 @@ mentoring..."
               type="checkbox"
               checked={acceptedTerms}
               onChange={(e) => setAcceptedTerms(e.target.checked)}
+              className={errors.terms ? "MentorErrorInput" : ""}
             />
             <label>
-              I agree to the <span className="MentorTermsLink">Terms of Service</span>{" "}
-              and <span className="MentorTermsLink">Privacy Policy</span>
+              I agree to the{" "}
+              <span className="MentorTermsLink">Terms of Service</span> and{" "}
+              <span className="MentorTermsLink">Privacy Policy</span>
             </label>
           </div>
           {errors.terms && <p className="error">{errors.terms}</p>}
@@ -461,6 +475,4 @@ mentoring..."
       </div>
     </div>
   );
-}
-
-
+};

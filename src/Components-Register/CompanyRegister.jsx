@@ -14,7 +14,6 @@ import Share from "../assets/register/share.png";
 import Link from "../assets/register/Link.png";
 import Mention from "../assets/register/email-icon.png";
 
-
 export const CompanyRegister = () => {
   const [formData, setFormData] = useState({
     companyName: "",
@@ -59,10 +58,10 @@ export const CompanyRegister = () => {
     }
 
     if (!formData.website.trim()) {
-  newErrors.website = "Company Website is Required";
-} else if (!websiteRegex.test(formData.website)) {
-  newErrors.website = "Enter a valid website URL";
-}
+      newErrors.website = "Company Website is Required";
+    } else if (!websiteRegex.test(formData.website)) {
+      newErrors.website = "Enter a valid website URL";
+    }
 
     if (!formData.email.trim()) {
       newErrors.email = "Work Email is Required";
@@ -150,7 +149,11 @@ export const CompanyRegister = () => {
 
             <div className="CompanyFeatureCard">
               <div className="CompanyFeatureCardIcon">
-                <img src={Vshield} className="VerifiedShieldIcon" alt="vshield-icon" />
+                <img
+                  src={Vshield}
+                  className="VerifiedShieldIcon"
+                  alt="vshield-icon"
+                />
               </div>
 
               <div className="CompanyContent">
@@ -165,7 +168,11 @@ export const CompanyRegister = () => {
           </div>
 
           <div className="HandshakeContainer">
-            <img src={Handshake} className="HandshakeImage" alt="handshake-icon" />
+            <img
+              src={Handshake}
+              className="HandshakeImage"
+              alt="handshake-icon"
+            />
           </div>
         </div>
 
@@ -253,6 +260,7 @@ export const CompanyRegister = () => {
                   placeholder="e.g. Acme Corp"
                   value={formData.companyName}
                   onChange={handleChange}
+                  className={errors.companyName ? "CompanyErrorInput" : ""}
                 />
                 {errors.companyName && (
                   <p className="error">{errors.companyName}</p>
@@ -270,6 +278,7 @@ export const CompanyRegister = () => {
                   placeholder="https://"
                   value={formData.website}
                   onChange={handleChange}
+                  className={errors.website ? "CompanyErrorInput" : ""}
                 />
                 {errors.website && <p className="error">{errors.website}</p>}
               </div>
@@ -287,6 +296,7 @@ export const CompanyRegister = () => {
                   placeholder="name@company.com"
                   value={formData.email}
                   onChange={handleChange}
+                  className={errors.email ? "CompanyErrorInput" : ""}
                 />
                 {errors.email && <p className="error">{errors.email}</p>}
               </div>
@@ -306,6 +316,7 @@ export const CompanyRegister = () => {
                     placeholder="Enter your number"
                     value={formData.phone}
                     onChange={handleChange}
+                    className={errors.phone ? "CompanyErrorInput" : ""}
                   />
                 </div>
                 {errors.phone && <p className="error">{errors.phone}</p>}
@@ -322,6 +333,7 @@ export const CompanyRegister = () => {
                   name="industry"
                   value={formData.industry}
                   onChange={handleChange}
+                  className={errors.industry ? "CompanyErrorInput" : ""}
                 >
                   <option value="">Select industry</option>
                   <option value="IT">IT</option>
@@ -339,6 +351,7 @@ export const CompanyRegister = () => {
                   name="companySize"
                   value={formData.companySize}
                   onChange={handleChange}
+                  className={errors.companySize ? "CompanyErrorInput" : ""}
                 >
                   <option value="">Select size</option>
                   <option value="1-10">1-10</option>
@@ -355,15 +368,15 @@ export const CompanyRegister = () => {
                 Registration Number <span className="Required">*</span>
               </label>
 
-              
-                <input
-                  type="text"
-                  name="registrationNumber"
-                  value={formData.registrationNumber}
-                  onChange={handleChange}
-                  placeholder="Business ID or Tax ID"
-                />
-              
+              <input
+                type="text"
+                name="registrationNumber"
+                value={formData.registrationNumber}
+                onChange={handleChange}
+                placeholder="Business ID or Tax ID"
+                className={errors.registrationNumber ? "CompanyErrorInput" : ""}
+              />
+
               {errors.registrationNumber && (
                 <p className="error">{errors.registrationNumber}</p>
               )}
@@ -380,6 +393,7 @@ export const CompanyRegister = () => {
                   value={formData.password}
                   onChange={handleChange}
                   placeholder="Create a strong password"
+                  className={errors.password ? "CompanyErrorInput" : ""}
                 />
 
                 <img
@@ -402,6 +416,7 @@ export const CompanyRegister = () => {
                   value={formData.confirmPassword}
                   onChange={handleChange}
                   placeholder="Confirm your password"
+                  className={errors.confirmPassword ? "CompanyErrorInput" : ""}
                 />
 
                 <img
@@ -421,6 +436,7 @@ export const CompanyRegister = () => {
                 type="checkbox"
                 checked={acceptedTerms}
                 onChange={(e) => setAcceptedTerms(e.target.checked)}
+                className={errors.terms ? "CompanyErrorInput" : ""}
               />
               <label>
                 I agree to the{" "}
@@ -443,7 +459,10 @@ export const CompanyRegister = () => {
             <div className="CompanySigninSection">
               <p>
                 Already have an account?
-                <span onClick={() => navigate("/Intern-Ms/login")}> Sign in</span>
+                <span onClick={() => navigate("/Intern-Ms/login")}>
+                  {" "}
+                  Sign in
+                </span>
               </p>
             </div>
           </form>
@@ -461,7 +480,10 @@ export const CompanyRegister = () => {
             <span>Pricing</span>
           </div>
           <div className="CompanyFooterLogin">
-            <h4 onClick={() => navigate("/Intern-Ms/admin-register")}> Log In </h4>
+            <h4 onClick={() => navigate("/Intern-Ms/admin-register")}>
+              {" "}
+              Log In{" "}
+            </h4>
           </div>
         </div>
         <div className="CompanyFooterContainer">
@@ -508,6 +530,4 @@ export const CompanyRegister = () => {
       </footer>
     </>
   );
-}
-
-
+};

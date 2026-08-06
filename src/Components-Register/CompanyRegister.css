@@ -254,6 +254,10 @@
   font-family: "Hanken Grotesk", sans-serif;
 }
 
+.CompanyErrorInput{
+  border: 1px solid #ef4444;
+  box-shadow: 0 0 0 3px rgba(235,57,57,.15);
+}
 .CompanyRegisterButton {
   width: 100%;
   height: 52px;

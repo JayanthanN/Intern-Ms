@@ -12,7 +12,6 @@ import Upload from "../assets/register/upload.png";
 import EyeOpen from "../assets/register/eye-icon.png";
 import EyeClose from "../assets/register/closed-eye.png";
 
-
 export const InternRegister = () => {
   const [formData, setFormData] = useState({
     fullName: "",
@@ -253,6 +252,7 @@ export const InternRegister = () => {
                 placeholder="Enter your full name"
                 value={formData.fullName}
                 onChange={handleChange}
+                className={errors.fullName ? "InternErrorInput" : ""}
               />
               {errors.fullName && <p className="error">{errors.fullName}</p>}
             </div>
@@ -268,6 +268,7 @@ export const InternRegister = () => {
                 placeholder="Enter your email address"
                 value={formData.email}
                 onChange={handleChange}
+                className={errors.email ? "InternErrorInput" : ""}
               />
               {errors.email && <p className="error">{errors.email}</p>}
             </div>
@@ -289,6 +290,7 @@ export const InternRegister = () => {
                   placeholder="Enter your number"
                   value={formData.phone}
                   onChange={handleChange}
+                  className={errors.phone ? "InternErrorInput" : ""}
                 />
               </div>
               {errors.phone && <p className="error">{errors.phone}</p>}
@@ -305,6 +307,7 @@ export const InternRegister = () => {
                 placeholder="mm/dd/yyyy"
                 value={formData.dob}
                 onChange={handleChange}
+                className={errors.dob ? "InternErrorInput" : ""}
               />
 
               {errors.dob && <p className="error">{errors.dob}</p>}
@@ -323,6 +326,7 @@ export const InternRegister = () => {
                 placeholder="Enter your university name"
                 value={formData.college}
                 onChange={handleChange}
+                className={errors.college ? "InternErrorInput" : ""}
               />
               {errors.college && <p className="error">{errors.college}</p>}
             </div>
@@ -336,6 +340,7 @@ export const InternRegister = () => {
                 name="fieldOfStudy"
                 value={formData.fieldOfStudy}
                 onChange={handleChange}
+                className={errors.fieldOfStudy ? "InternErrorInput" : ""}
               >
                 <option value="">Select your field of study</option>
                 <option value="Computer Science">Computer Science</option>
@@ -359,6 +364,7 @@ export const InternRegister = () => {
                 name="graduationYear"
                 value={formData.graduationYear}
                 onChange={handleChange}
+                className={errors.graduationYear ? "InternErrorInput" : ""}
               >
                 <option value="">Select your graduation year</option>
                 <option value="2024">2024</option>
@@ -399,6 +405,7 @@ export const InternRegister = () => {
                 value={formData.password}
                 onChange={handleChange}
                 placeholder="Create a strong password"
+                className={errors.password ? "InternErrorInput" : ""}
               />
 
               <img
@@ -421,6 +428,7 @@ export const InternRegister = () => {
                 value={formData.confirmPassword}
                 onChange={handleChange}
                 placeholder="Confirm your password"
+                className={errors.confirmPassword ? "InternErrorInput" : ""}
               />
 
               <img
@@ -440,10 +448,12 @@ export const InternRegister = () => {
               type="checkbox"
               checked={acceptedTerms}
               onChange={(e) => setAcceptedTerms(e.target.checked)}
+              className={errors.terms ? "InternErrorInput" : ""}
             />
             <label>
-              I agree to the <span className="InternTerms">Terms of Service</span>{" "}
-              and <span className="InternTerms">Privacy Policy</span>
+              I agree to the{" "}
+              <span className="InternTerms">Terms of Service</span> and{" "}
+              <span className="InternTerms">Privacy Policy</span>
             </label>
           </div>
           {errors.terms && <p className="error">{errors.terms}</p>}
@@ -463,11 +473,8 @@ export const InternRegister = () => {
               <span onClick={() => navigate("/Intern-Ms/login")}> Sign in</span>
             </p>
           </div>
-          
         </form>
       </div>
     </div>
   );
-}
-
-
+};

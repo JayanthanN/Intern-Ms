@@ -11,7 +11,6 @@ import InternHub from "../assets/register/internhub.png";
 import EyeOpen from "../assets/register/eye-icon.png";
 import EyeClose from "../assets/register/closed-eye.png";
 
-
 export const HRRegister = () => {
   const [formData, setFormData] = useState({
     fullName: "",
@@ -229,6 +228,7 @@ export const HRRegister = () => {
                 placeholder="John Doe"
                 value={formData.fullName}
                 onChange={handleChange}
+                className={errors.fullName ? "HRErrorInput" : ""}
               />
               {errors.fullName && <p className="error">{errors.fullName}</p>}
             </div>
@@ -244,6 +244,7 @@ export const HRRegister = () => {
                 placeholder="john.doe@company.com"
                 value={formData.email}
                 onChange={handleChange}
+                className={errors.email ? "HRErrorInput" : ""}
               />
               {errors.email && <p className="error">{errors.email}</p>}
             </div>
@@ -265,6 +266,7 @@ export const HRRegister = () => {
                   value={formData.phone}
                   onChange={handleChange}
                   placeholder="Enter your number"
+                  className={errors.phone ? "HRErrorInput" : ""}
                 />
               </div>
               {errors.phone && <p className="error">{errors.phone}</p>}
@@ -278,6 +280,7 @@ export const HRRegister = () => {
                 name="department"
                 value={formData.department}
                 onChange={handleChange}
+                className={errors.department ? "HRErrorInput" : ""}
               >
                 <option value="">Select department</option>
                 <option value="HR">HR</option>
@@ -293,7 +296,9 @@ export const HRRegister = () => {
               Company Name<span className="Required">*</span>
             </label>
 
-            <div className="HRCompanyInput">
+            <div
+              className={`HRCompanyInput ${errors.company ? "HRCompanyError" : ""}`}
+            >
               <img src={InternHub} className="InterHub" alt="interhub-icon" />
               <input
                 type="text"
@@ -301,6 +306,7 @@ export const HRRegister = () => {
                 value={formData.company}
                 onChange={handleChange}
                 placeholder="InternHub Inc."
+                
               />
             </div>
             {errors.company && <p className="error">{errors.company}</p>}
@@ -317,6 +323,7 @@ export const HRRegister = () => {
                 value={formData.password}
                 onChange={handleChange}
                 placeholder="Create a strong password"
+                className={errors.password ? "HRErrorInput" : ""}
               />
 
               <img
@@ -339,6 +346,7 @@ export const HRRegister = () => {
                 value={formData.confirmPassword}
                 onChange={handleChange}
                 placeholder="Confirm your password"
+                className={errors.confirmPassword ? "HRErrorInput" : ""}
               />
 
               <img
@@ -357,10 +365,12 @@ export const HRRegister = () => {
               type="checkbox"
               checked={acceptedTerms}
               onChange={(e) => setAcceptedTerms(e.target.checked)}
+              className={errors.terms ? "HRErrorInput" : ""}
             />
             <label>
-              I agree to the <span className="HRTermsLink">Terms of Service</span>{" "}
-              and <span className="HRTermsLink">Privacy Policy</span>
+              I agree to the{" "}
+              <span className="HRTermsLink">Terms of Service</span> and{" "}
+              <span className="HRTermsLink">Privacy Policy</span>
             </label>
           </div>
           {errors.terms && <p className="error">{errors.terms}</p>}
@@ -384,6 +394,4 @@ export const HRRegister = () => {
       </div>
     </div>
   );
-}
-
-
+};

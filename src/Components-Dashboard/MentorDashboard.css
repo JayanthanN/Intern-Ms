@@ -384,6 +384,7 @@
   font-weight: 600;
   color: #2563eb;
   text-decoration: none;
+  border-top: 1px solid var(--mdb-border);
 }
 
 .MentorDashboardViewAllDeadlines:hover,
@@ -598,11 +599,9 @@
   align-items: flex-start;
   padding-bottom: 14px;
   margin-bottom: 14px;
-  border-bottom: 1px solid var(--mdb-border);
 }
 
 .MentorDashboardActivityItem:last-of-type {
-  border-bottom: none;
   padding-bottom: 0;
   margin-bottom: 0;
 }
