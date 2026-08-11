@@ -19,6 +19,7 @@ import { AdminRegister } from "./Components-Register/AdminRegister";
 
 import { MentorDashboard } from "./Components-Dashboard/MentorDashboard";
 
+
 const router = createBrowserRouter([
   {
     path: "/Intern-Ms",
@@ -76,6 +77,8 @@ const router = createBrowserRouter([
     path: "/Intern-Ms/mentor-dashboard",
     element: <MentorDashboard />,
   },
+ 
+  
 ]);
 
 function App() {
