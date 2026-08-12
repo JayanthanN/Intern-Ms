@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "./MentorDashboardHome.css";
-import { MentorDashboard } from "./MentorDashboard";
 import MentorProfileArrowIcon from "../assets/dashboard/downarrow.png";
 import MentorHamburgerIcon from "../assets/dashboard/hamburgericon.png";
 import MentorHomeIcon from "../assets/dashboard/home-icon.png";
@@ -16,6 +15,8 @@ import MentorProfileIcon from "../assets/dashboard/mentoruser.png";
 import MentorMessageIcon from "../assets/dashboard/communicate.png";
 import MentorNotificationIcon from "../assets/dashboard/notification.png";
 import MentorSearchIcon from "../assets/dashboard/search-icon.png";
+import { MentorDashboard } from "./MentorDashboard";
+import { MentorProfile } from "./MentorProfile";
 
 
 export const MentorDashboardHome = () => {
@@ -191,7 +192,7 @@ export const MentorDashboardHome = () => {
         <div className="MentorDashboardContent">
           {activeMenu === "Dashboard" && <MentorDashboard />}
 
-          {activeMenu === "My Profile" && <h2>My Profile</h2>}
+          {activeMenu === "My Profile" && <MentorProfile />}
 
           {activeMenu === "Interns" && <h2>Interns</h2>}
 
