@@ -17,7 +17,7 @@ import { InternRegister } from "./Components-Register/InternRegister";
 import { CompanyRegister } from "./Components-Register/CompanyRegister";
 import { AdminRegister } from "./Components-Register/AdminRegister";
 
-import { MentorDashboard } from "./Components-Dashboard/MentorDashboard";
+import { MentorDashboardHome } from "./Components-Dashboard/MentorDashboardHome";
 
 
 const router = createBrowserRouter([
@@ -75,7 +75,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/Intern-Ms/mentor-dashboard",
-    element: <MentorDashboard />,
+    element: <MentorDashboardHome />,
   },
  
   
