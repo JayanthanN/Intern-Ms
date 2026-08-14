@@ -1,8 +1,72 @@
 import "./MentorProfile.css";
 import MentorProfileImage from "../assets/dashboard/mentorimage.png";
 import MentorProfileRole from "../assets/dashboard/mentorrole.png";
+import FullStarIcon from "../assets/dashboard/FullStar.png";
+import HalfStarIcon from "../assets/dashboard/HalfStar.png";
+import EditPenIcon from "../assets/dashboard/EditPen.png";
 
 export const MentorProfile = () => {
+  const REVIEWS_DATA = [
+    {
+      id: 1,
+      initials: "MS",
+      name: "Maya Singh",
+      role: "Intern at Amazon",
+      review:
+        "Alex helped me completely restructure my portfolio. His advice on system design was instrumental in landing my SDE internship. Truly a world-class mentor!",
+      fullStars: 5,
+      halfStar: false,
+    },
+    {
+      id: 2,
+      initials: "JD",
+      name: "Jordan Davis",
+      role: "Junior Developer",
+      review:
+        "Very technical and straight to the point. Helped me understand complex cloud concepts in just two sessions. Highly recommend for anyone looking to scale their skills.",
+      fullStars: 4,
+      halfStar: true,
+    },
+  ];
+
+  function StarRating({ fullStars, halfStar }) {
+    return (
+      <div className="MentorProfileStarRating">
+        {Array.from({ length: fullStars }).map((_, i) => (
+          <img
+            key={`full-${i}`}
+            src={FullStarIcon}
+            alt="star"
+            width={18}
+            height={18}
+          />
+        ))}
+        {halfStar && (
+          <img src={HalfStarIcon} alt="half-star" width={18} height={18} />
+        )}
+      </div>
+    );
+  }
+
+  function ReviewRow({ initials, name, role, review, fullStars, halfStar }) {
+    return (
+      <div className="MentorProfileReviewItem">
+        <div className="MentorProfileReviewAvatar">{initials}</div>
+
+        <div className="MentorProfileReviewContent">
+          <div className="MentorProfileReviewHeader">
+            <div>
+              <h4>{name}</h4>
+              <p>{role}</p>
+            </div>
+          </div>
+          <p className="MentorProfileReviewText">"{review}"</p>
+        </div>
+
+        <StarRating fullStars={fullStars} halfStar={halfStar} />
+      </div>
+    );
+  }
   return (
     <div className="MentorProfilePage">
       <div className="MentorProfileCard">
@@ -95,6 +159,49 @@ export const MentorProfile = () => {
           <span>Interview Prep</span>
           <span>Leadership</span>
         </div>
+      </div>
+      <div className="MentorProfileHistoryCard">
+        <h3>MENTORSHIP HISTORY</h3>
+
+        <h1>1,240</h1>
+        <p>Total Mentorship Minutes</p>
+
+        <div className="MentorProfileHistoryBar">
+          <div className="MentorProfileHistoryBarFill"></div>
+        </div>
+
+        <p className="MentorProfileHistoryFootnote">
+          85% Mentee Success Rate for Tier-1 Companies
+        </p>
+      </div>
+
+      <div className="MentorProfileAboutCard">
+        <div className="MentorProfileAboutHeader">
+          <h2>About Me</h2>
+          <button className="MentorProfileEditButton">
+            <img src={EditPenIcon} alt="edit" width={14} height={14} />
+            Edit Profile
+          </button>
+        </div>
+
+        <p>
+          I am a passionate engineering leader with over 12 years of experience
+          in the tech industry. Having navigated both the startup world and big
+          tech, I specialize in helping aspiring engineers find their path
+          through technical excellence and career strategy. My goal is to bridge
+          the gap between academic learning and industry requirements.
+        </p>
+      </div>
+
+      <div className="MentorProfileReviewsCard">
+        <div className="MentorProfileReviewsHeader">
+          <h2>Recent Reviews</h2>
+          <a href="#">View All 124 Reviews</a>
+        </div>
+
+        {REVIEWS_DATA.map((item) => (
+          <ReviewRow key={item.id} {...item} />
+        ))}
       </div>
     </div>
   );
