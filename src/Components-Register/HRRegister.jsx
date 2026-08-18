@@ -97,7 +97,6 @@ export const HRRegister = () => {
 
     if (validate()) {
       console.log(formData);
-      alert("Account Created Successfully!");
       navigate("/Intern-Ms/login");
     }
   };

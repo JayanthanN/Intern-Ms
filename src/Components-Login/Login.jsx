@@ -45,7 +45,7 @@ export const Login = () => {
     e.preventDefault();
 
     if (validate()) {
-      alert("Login Successful");
+  
 
       console.log({
         email,

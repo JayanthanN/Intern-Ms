@@ -99,7 +99,6 @@ export const AdminRegister = () => {
 
     if (validate()) {
       console.log(formData);
-      alert("Account Created Successfully!");
       navigate("/Intern-Ms/login");
     }
   };

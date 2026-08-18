@@ -114,7 +114,6 @@ export const CompanyRegister = () => {
 
     if (validate()) {
       console.log(formData);
-      alert("Account Created Successfully!");
       navigate("/Intern-Ms/login");
     }
   };
