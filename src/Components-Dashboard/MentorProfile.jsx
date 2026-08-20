@@ -1,208 +1,75 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./MentorProfile.css";
-import MentorProfileImage from "../assets/dashboard/mentorimage.png";
-import MentorProfileRole from "../assets/dashboard/mentorrole.png";
-import FullStarIcon from "../assets/dashboard/FullStar.png";
-import HalfStarIcon from "../assets/dashboard/HalfStar.png";
-import EditPenIcon from "../assets/dashboard/EditPen.png";
+import ProfileImage from "../assets/dashboard/profileImage.png";
+import CameraIcon from "../assets/dashboard/cameraIcon.png";
+import EditIcon from "../assets/dashboard/EditPen.png";
 
 export const MentorProfile = () => {
-  const REVIEWS_DATA = [
-    {
-      id: 1,
-      initials: "MS",
-      name: "Maya Singh",
-      role: "Intern at Amazon",
-      review:
-        "Alex helped me completely restructure my portfolio. His advice on system design was instrumental in landing my SDE internship. Truly a world-class mentor!",
-      fullStars: 5,
-      halfStar: false,
-    },
-    {
-      id: 2,
-      initials: "JD",
-      name: "Jordan Davis",
-      role: "Junior Developer",
-      review:
-        "Very technical and straight to the point. Helped me understand complex cloud concepts in just two sessions. Highly recommend for anyone looking to scale their skills.",
-      fullStars: 4,
-      halfStar: true,
-    },
-  ];
+  const [profileImage, setProfileImage] = useState(ProfileImage);
+  
 
-  function StarRating({ fullStars, halfStar }) {
-    return (
-      <div className="MentorProfileStarRating">
-        {Array.from({ length: fullStars }).map((_, i) => (
-          <img
-            key={`full-${i}`}
-            src={FullStarIcon}
-            alt="star"
-            width={18}
-            height={18}
-          />
-        ))}
-        {halfStar && (
-          <img src={HalfStarIcon} alt="half-star" width={18} height={18} />
-        )}
-      </div>
-    );
-  }
+  const handleProfileImageChange = (event) => {
+    const file = event.target.files[0];
 
-  function ReviewRow({ initials, name, role, review, fullStars, halfStar }) {
-    return (
-      <div className="MentorProfileReviewItem">
-        <div className="MentorProfileReviewAvatar">{initials}</div>
+    if (file) {
+      setProfileImage(URL.createObjectURL(file));
+    }
+  };
 
-        <div className="MentorProfileReviewContent">
-          <div className="MentorProfileReviewHeader">
-            <div>
-              <h4>{name}</h4>
-              <p>{role}</p>
-            </div>
-          </div>
-          <p className="MentorProfileReviewText">"{review}"</p>
-        </div>
-
-        <StarRating fullStars={fullStars} halfStar={halfStar} />
-      </div>
-    );
-  }
   return (
-    <div className="MentorProfilePage">
-      <div className="MentorProfileCard">
-        <div className="MentorProfileImageContainer">
-          <img
-            src={MentorProfileImage}
-            className="MentorProfileImage"
-            alt="Mentor Profile"
-          />
+    <>
+      <div className="MentorProfilePage">
+        <div className="MentorProfileHeader">
+          <h1>Mentor Profile</h1>
+
+          <p>Manage your professional details and intern assignments.</p>
         </div>
 
-        <h2>Alex Chen</h2>
+        <div className="MentorProfileMainCard">
+          <div className="MentorProfileImageContainer">
+            <img src={profileImage} alt="Profile" />
 
-        <p className="MentorProfileRole">Software Engineering Lead</p>
+            <label className="MentorProfileCameraButton">
+              <img src={CameraIcon} alt="Change Profile" />
 
-        <div className="MentorProfileStats">
-          <div className="MentorProfileStat">
-            <h4>MENTORED</h4>
-            <span>48</span>
-            <p>Students total</p>
-          </div>
-          <div className="MentorProfileStat">
-            <h4>RATING</h4>
-            <span>4.9</span>
-            <p>120+ reviews</p>
-          </div>
-        </div>
-
-        <button className="MentorProfileButton">Set Availability</button>
-      </div>
-
-      <div className="MentorProfileRoleCard">
-        <h3>CURRENT ROLE</h3>
-
-        <div className="MentorProfileRoleContent">
-          <div className="MentorProfileRoleIcon">
-            <img
-              src={MentorProfileRole}
-              className="ProfileRoleIcon"
-              alt="CurrentRole"
-            />
+              <input
+                type="file"
+                accept="image/*"
+                onChange={handleProfileImageChange}
+              />
+            </label>
           </div>
 
-          <div className="MentorProfileRoleDetails">
-            <h4>Senior Engineering Lead</h4>
+          <div className="MentorProfileDetails">
+            <div className="MentorProfileName">
+              <h2>Dr. Rajesh Kumar</h2>
+              <p className="ProfileActive">Active</p>
+            </div>
 
-            <p>Google • Cloud Platform</p>
+            <p className="MentorProfileRole">Senior Mentor</p>
 
-            <span>
-              "Scaling infrastructure for
-              <br />
-              billions of users worldwide."
-            </span>
-          </div>
-        </div>
-      </div>
-
-      <div className="MentorProfileAvailabilityCard">
-        <div className="MentorProfileAvailabilityHeader">
-          <h3>AVAILABILITY</h3>
-          <span>NEXT WEEK</span>
-        </div>
-
-        <div className="MentorProfileAvailabilityList">
-          <div className="MentorProfileAvailabilityItem">
-            <p>Monday</p>
-            <h4>6:00 PM - 8:00 PM</h4>
+            <p className="MentorProfileDescription">
+              Dedicated to guiding the next generation of engineers through
+              practical, hands-on enterprise projects.
+            </p>
           </div>
 
-          <div className="MentorProfileAvailabilityItem">
-            <p>Wednesday</p>
-            <h4>5:00 PM - 7:00 PM</h4>
-          </div>
-
-          <div className="MentorProfileAvailabilityItem booked">
-            <p>Friday</p>
-            <span>Fully Booked</span>
-          </div>
-        </div>
-      </div>
-
-      <div className="MentorProfileExpertiseCard">
-        <h3>AREAS OF EXPERTISE</h3>
-
-        <div className="MentorProfileExpertiseList">
-          <span>Software Engineering</span>
-          <span>System Design</span>
-          <span>Career Coaching</span>
-          <span>Cloud Architecture</span>
-          <span>Interview Prep</span>
-          <span>Leadership</span>
-        </div>
-      </div>
-      <div className="MentorProfileHistoryCard">
-        <h3>MENTORSHIP HISTORY</h3>
-
-        <h1>1,240</h1>
-        <p>Total Mentorship Minutes</p>
-
-        <div className="MentorProfileHistoryBar">
-          <div className="MentorProfileHistoryBarFill"></div>
-        </div>
-
-        <p className="MentorProfileHistoryFootnote">
-          85% Mentee Success Rate for Tier-1 Companies
-        </p>
-      </div>
-
-      <div className="MentorProfileAboutCard">
-        <div className="MentorProfileAboutHeader">
-          <h2>About Me</h2>
           <button className="MentorProfileEditButton">
-            <img src={EditPenIcon} alt="edit" width={14} height={14} />
+            <img src={EditIcon} alt="Editicon" />
             Edit Profile
           </button>
         </div>
-
-        <p>
-          I am a passionate engineering leader with over 12 years of experience
-          in the tech industry. Having navigated both the startup world and big
-          tech, I specialize in helping aspiring engineers find their path
-          through technical excellence and career strategy. My goal is to bridge
-          the gap between academic learning and industry requirements.
-        </p>
       </div>
+      <footer className="MentorProfileFooter">
+        <p>&copy; 2024 Corporate Systems Inc. All rights reserved.</p>
 
-      <div className="MentorProfileReviewsCard">
-        <div className="MentorProfileReviewsHeader">
-          <h2>Recent Reviews</h2>
-          <a href="#">View All 124 Reviews</a>
+        <div className="MentorProfileFooterLinks">
+          <Link to="#">Privacy Policy</Link>
+          <Link to="#">Terms of Service</Link>
+          <Link to="#">Help Center</Link>
         </div>
-
-        {REVIEWS_DATA.map((item) => (
-          <ReviewRow key={item.id} {...item} />
-        ))}
-      </div>
-    </div>
+      </footer>
+    </>
   );
 };
