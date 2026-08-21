@@ -43,12 +43,19 @@
   background: #e7eefe;
 }
 
-.MentorProfileImageContainer > img:first-child {
-    width:80px;
-    height: 80px;
-    display: block;
-    object-fit: cover;
+.MentorProfileImage.default {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 0;
+}
 
+.MentorProfileImage {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .MentorProfileCameraButton {
@@ -110,12 +117,12 @@
 }
 
 .ProfileActive::before {
-    content: "";
-    width: 6px;
-    height: 6px;
-    background:#7880EE;
-    border-radius: 50%;
-    flex-shrink: 0;
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: #7880ee;
+  border-radius: 50%;
+  flex-shrink: 0;
 }
 
 .MentorProfileRole {
@@ -159,15 +166,251 @@
   object-fit: contain;
 }
 
+.MentorProfileEditInput,
+.MentorProfileEditTextarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #c4c5d5;
+  border-radius: 6px;
+  outline: none;
+  font-family: "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #111c2d;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+.MentorProfileEditInput:focus,
+.MentorProfileEditTextarea:focus {
+  border-color: #5d66e6;
+}
+
+.MentorProfileEditInput.name {
+  max-width: 300px;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.MentorProfileEditTextarea {
+  min-height: 90px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.MentorProfileBioEdit {
+  min-height: 150px;
+}
+
+.MentorProfileGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 24px;
+  align-items: stretch;
+}
+
+.MentorProfileInfoCard,
+.MentorProfileBioCard {
+  background: #ffffff;
+  border: 1px solid #c4c5d5;
+  border-radius: 12px;
+  padding: 28px;
+  font-family: "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+.MentorProfileInfoCard h3,
+.MentorProfileBioCard h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #111c2d;
+  margin: 0 0 22px;
+}
+
+.MentorProfileInfoCard h3 img,
+.MentorProfileBioCard h3 img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.MentorProfileInfoList {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #c4c5d580;
+  border-bottom: 1px solid #c4c5d580;
+  padding-top: 10px;
+}
+
+.MentorProfileInfoRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  font-size: 14px;
+  font-weight: 400;
+  gap: 15px;
+}
+
+.MentorProfileInfoRow:first-child {
+  padding-top: 0;
+}
+
+.MentorProfileInfoRow span:first-child {
+  color: #464555;
+  font-weight: 400;
+}
+
+.MentorProfileInfoRow span:last-child {
+  color: #111c2d;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.MentorProfileContactList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.MentorProfileContactRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #444653;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+.MentorProfileContactRow img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.MentorProfileBioText {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #464555;
+  margin: 0 0 26px;
+  max-width: 550px;
+}
+
+.MentorProfileExpertise h4 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #444653;
+  margin: 0 0 14px;
+}
+
+.MentorProfileExpertise h4 img {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+
+.MentorProfileExpertiseList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 460px;
+}
+
+.MentorProfileExpertiseTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  background: #e7eefe;
+  border: 1px solid #c4c5d5;
+  color: #151c27;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 8px;
+}
+
+.MentorProfileRemoveExpertise {
+  width: 16px;
+  height: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  margin: 0;
+
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.MentorProfileRemoveExpertise img {
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
+  display: block;
+}
+
+.MentorProfileAddExpertise {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.MentorProfileAddExpertise input {
+  width: 200px;
+  padding: 8px 10px;
+
+  border: 1px solid #c4c5d5;
+  border-radius: 7px;
+  outline: none;
+
+  font-family: "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  color: #111c2d;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+.MentorProfileAddExpertise input:focus {
+  border-color: #5d66e6;
+}
+
+.MentorProfileAddExpertise button {
+  padding: 8px 14px;
+
+  border: none;
+  border-radius: 7px;
+
+  background: #0038a8;
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
 .MentorProfileFooter {
   position: fixed;
   left: 0;
   bottom: 0;
-  z-index: 100;  
+  z-index: 100;
   width: 100%;
   margin-top: 40px;
   padding: 22px 40px;
- 
 
   display: flex;
   align-items: center;
@@ -193,4 +436,109 @@
   color: #444651;
   text-decoration: none;
   font-weight: 500;
+}
+@media (max-width: 768px) {
+  .MentorProfilePage {
+    padding: 12px;
+  }
+
+  .MentorProfileMainCard {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .MentorProfileImageContainer {
+    align-self: center;
+  }
+
+  .MentorProfileDetails {
+    width: 100%;
+  }
+
+  .MentorProfileName {
+    flex-wrap: wrap;
+  }
+
+  .MentorProfileName h2 {
+    font-size: 24px;
+  }
+
+  .MentorProfileEditButton {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .MentorProfileFooter {
+    padding: 15px;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .MentorProfileFooterLinks {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 1000px) {
+
+  
+  .MentorProfileHeader h1 {
+    font-size: 26px;
+  }
+
+  .MentorProfileHeader p {
+    font-size: 14px;
+  }
+
+ 
+  .MentorProfileMainCard {
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 24px 20px;
+  }
+
+  .MentorProfileDetails {
+    min-width: 250px;
+  }
+
+  .MentorProfileName h2 {
+    font-size: 26px;
+  }
+
+  .MentorProfileRole {
+    font-size: 20px;
+  }
+
+  .MentorProfileDescription {
+    font-size: 14px;
+  }
+
+  .MentorProfileEditButton {
+    margin-left: auto;
+  }
+
+ 
+  .MentorProfileGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+
+  .MentorProfileFooter {
+    padding: 18px 25px;
+  }
+
+  .MentorProfileFooter p {
+    font-size: 11px;
+  }
+
+  .MentorProfileFooterLinks {
+    gap: 18px;
+  }
+
+  .MentorProfileFooterLinks a {
+    font-size: 11px;
+  }
 }
